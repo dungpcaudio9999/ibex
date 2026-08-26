@@ -150,6 +150,161 @@
     compare_final_value_only: 1
     verbose: 1
 
+- test: riscv_s4_dret_mem_confirmation
+  description: >
+    Bounded S4-only confirmation of DRet x IdStallTypeMem using a
+    side-effect-free load immediately before DRET.
+  iterations: 1
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +require_signature_addr=1 +gen_debug_section=1 +no_ebreak=1
+    +no_branch_jump=1 +instr_cnt=1000 +no_csr_instr=1 +no_fence=1
+    +num_of_sub_program=0 +randomize_csr=1
+    +uvm_set_type_override=riscv_debug_rom_gen,ibex_s4_dret_mem_debug_rom_gen
+  rtl_test: core_ibex_s4_dret_mem_test
+  sim_opts: >
+    +require_signature_addr=1 +max_interval=100 +enable_debug_seq=1
+  compare_opts:
+    compare_final_value_only: 1
+    verbose: 1
+
+- test: s5_illegal_delayed_confirmation
+  description: >
+    Bounded S5-only confirmation for the S4-WB-009 pipe_cross
+    illegal-instruction cluster (doc/s5_worklist.md), stalled shape only --
+    the fast shape was found architecturally unreachable for these
+    categories (S4-WB-011, retain_id). Same generator as
+    riscv_illegal_instr_test, but core_ibex_s4_delayed_dmem_test forces
+    every D-side response to be delayed, raising the odds of sampling an
+    illegal-encoding instruction while WB is stalled behind an outstanding
+    memory access. Iterations raised from the original 15 (which closed
+    2/16) to widen the sample now that only 12 target bins remain (Uncompressed
+    /CSRIllegal/CompressedIllegal) and the known riscv_illegal_instr_test
+    generator limitation (S3-F1) truncates most seeds early.
+  iterations: 40
+  gen_test: riscv_rand_instr_test
+  gen_opts: >
+    +illegal_instr_ratio=25
+  rtl_test: core_ibex_s4_delayed_dmem_test
+
+- test: s5_mem_error_delayed_confirmation
+  description: >
+    Bounded S5-only confirmation for the S4-WB-009 pipe_cross
+    illegal-instruction cluster's FetchError subset (doc/s5_worklist.md).
+    Same generator as riscv_mem_error_test (the only existing generator
+    that produces InstrCategoryFetchError, via instruction-side bus-error
+    injection), with core_ibex_s5_mem_error_delayed_test layering the same
+    always-delayed D-side memory profile on top.
+  iterations: 15
+  gen_test: riscv_rand_instr_test
+  gen_opts: >
+    +require_signature_addr=1 +instr_cnt=10000 +randomize_csr=1
+    +gen_all_csrs_by_default=1
+    +add_csr_write=MSTATUS,MEPC,MCAUSE,MTVAL,0x7c0,0x7c1
+    +enable_unaligned_load_store=1 +suppress_pmp_setup=1
+    +disable_pmp_exception_handler=1
+  rtl_test: core_ibex_s5_mem_error_delayed_test
+  sim_opts: >
+    +enable_mem_intg_err=0 +enable_double_fault_detector=0
+    +require_signature_addr=1 +enable_bad_intg_on_uninit_access=0
+  compare_opts:
+    compare_final_value_only: 1
+
+- test: s5_debug_delayed_confirmation
+  description: >
+    Bounded S5-only confirmation for the S4-WB-009 pipe_cross
+    debug/exception cluster (doc/s5_worklist.md), stalled shape only -- the
+    fast shape is architecturally unreachable for these categories
+    (S4-WB-011, retain_id). Same generator as riscv_debug_single_step_test,
+    the richest existing generator mixing DRET, EBREAK (both forms), ECALL,
+    WFI, illegal instructions and debug single-stepping in one program, with
+    core_ibex_s5_debug_delayed_test layering the same always-delayed D-side
+    memory profile validated on the illegal-instruction cluster.
+  iterations: 40
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +require_signature_addr=1 +gen_debug_section=1 +no_dret=0 +no_ebreak=0
+    +no_ecall=0 +no_branch_jump=0 +instr_cnt=10000 +no_csr_instr=0
+    +randomize_csr=1 +gen_all_csrs_by_default=1
+    +add_csr_write=MSTATUS,MEPC,MCAUSE,MTVAL,0x7c0,0x7c1 +no_fence=0
+    +no_wfi=0 +num_of_sub_program=1 +enable_debug_single_step=1
+    +illegal_instr_ratio=5 +hint_instr_ratio=1
+  rtl_test: core_ibex_s5_debug_delayed_test
+  sim_opts: >
+    +require_signature_addr=1 +max_interval=1500 +enable_debug_seq=1
+    +enable_bad_intg_on_uninit_access=0
+
+- test: s5_div_fast_confirmation
+  description: >
+    Bounded S5-only confirmation for the S4-WB-009 pipe_cross Div cluster
+    (doc/s5_worklist.md) -- the only remaining fast-shape target, since DIV
+    is not a special_req instruction and is unaffected by the retain_id
+    coupling (S4-WB-011). Same generator as riscv_arithmetic_basic_test
+    (arithmetic-only, no load/store/branch noise), with
+    core_ibex_s5_fast_dmem_test forcing every D-side request to be granted
+    and answered same-cycle (zero_delay_pct=100 and gnt_delay_min/max=0),
+    raising the odds of sampling a DIV retiring back-to-back with an
+    actively-fetching IF stage and an unstalled WB stage.
+  iterations: 15
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=10000 +num_of_sub_program=0 +no_fence=1 +no_data_page=1
+    +no_branch_jump=1 +boot_mode=m
+  rtl_test: core_ibex_s5_fast_dmem_test
+
+- test: s5_illegal_long_delayed_confirmation
+  description: >
+    Bounded S5-only follow-up for the S4-WB-009 pipe_cross
+    illegal-instruction cluster (doc/s5_worklist.md). Same generator as
+    s5_illegal_delayed_confirmation, but core_ibex_s5_long_delayed_dmem_test
+    raises valid_delay_min from 4 to 15, giving the IF-side prefetch buffer
+    time to fully drain to IFStageEmptyAndIdle during the stall -- targets
+    the IFStageEmptyAndIdle bins the shorter delay left uncovered.
+  iterations: 30
+  gen_test: riscv_rand_instr_test
+  gen_opts: >
+    +illegal_instr_ratio=25
+  rtl_test: core_ibex_s5_long_delayed_dmem_test
+
+- test: s5_mem_error_long_delayed_confirmation
+  description: >
+    Bounded S5-only follow-up for the S4-WB-009 pipe_cross FetchError subset
+    (doc/s5_worklist.md), same rationale as
+    s5_illegal_long_delayed_confirmation.
+  iterations: 20
+  gen_test: riscv_rand_instr_test
+  gen_opts: >
+    +require_signature_addr=1 +instr_cnt=10000 +randomize_csr=1
+    +gen_all_csrs_by_default=1
+    +add_csr_write=MSTATUS,MEPC,MCAUSE,MTVAL,0x7c0,0x7c1
+    +enable_unaligned_load_store=1 +suppress_pmp_setup=1
+    +disable_pmp_exception_handler=1
+  rtl_test: core_ibex_s5_long_delayed_mem_error_test
+  sim_opts: >
+    +enable_mem_intg_err=0 +enable_double_fault_detector=0
+    +require_signature_addr=1 +enable_bad_intg_on_uninit_access=0
+  compare_opts:
+    compare_final_value_only: 1
+
+- test: s5_debug_long_delayed_confirmation
+  description: >
+    Bounded S5-only follow-up for the S4-WB-009 pipe_cross debug/exception
+    cluster (doc/s5_worklist.md), same rationale as
+    s5_illegal_long_delayed_confirmation.
+  iterations: 30
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +require_signature_addr=1 +gen_debug_section=1 +no_dret=0 +no_ebreak=0
+    +no_ecall=0 +no_branch_jump=0 +instr_cnt=10000 +no_csr_instr=0
+    +randomize_csr=1 +gen_all_csrs_by_default=1
+    +add_csr_write=MSTATUS,MEPC,MCAUSE,MTVAL,0x7c0,0x7c1 +no_fence=0
+    +no_wfi=0 +num_of_sub_program=1 +enable_debug_single_step=1
+    +illegal_instr_ratio=5 +hint_instr_ratio=1
+  rtl_test: core_ibex_s5_long_delayed_debug_test
+  sim_opts: >
+    +require_signature_addr=1 +max_interval=1500 +enable_debug_seq=1
+    +enable_bad_intg_on_uninit_access=0
+
 - test: riscv_debug_triggers_test
   description: >
     Test stimulus includes directed routine which set the breakpoint addr forwards a few instructions.

@@ -1,0 +1,37 @@
+# Copyright lowRISC contributors.
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+
+# S6 validation round 2 (doc/s6_coverage_plan.md): closing the remaining
+# icache_cg gaps from round 1 (results/s6/maxperf-icache/validate_v1) --
+# icache-enable toggling (round 1 never disabled the cache) and way
+# allocation pressure (round 1 never exhausted all-valid ways into
+# round-robin eviction). Entries are verbatim copies of the same-named
+# testlist_c_ladder.yaml entries.
+
+- test: riscv_debug_basic_test
+  description: >
+    Debug/traps test whose generator includes
+    +directed_instr_0=ibex_rand_cpuctrlsts_stream,4, the only stream in this
+    project that toggles ICache enable via CPUCTRLSTS.
+  iterations: 10
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +require_signature_addr=1 +gen_debug_section=1 +no_ebreak=1
+    +no_branch_jump=1 +instr_cnt=6000 +no_csr_instr=1 +no_fence=1
+    +num_of_sub_program=0 +randomize_csr=1
+    +directed_instr_0=ibex_rand_cpuctrlsts_stream,4 +toggle_dit=1
+    +toggle_dummy_instr=1
+  rtl_test: core_ibex_assorted_traps_interrupts_debug_test
+  sim_opts: >
+    +require_signature_addr=1 +max_interval=500 +enable_debug_seq=1
+
+- test: riscv_loop_test
+  description: >
+    Loop-heavy generator -- repeated fetches of the same small region are
+    likely to exhaust all-valid ways and force round-robin eviction.
+  iterations: 10
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=10000 +num_of_sub_program=5 +directed_instr_1=riscv_loop_instr,20
+  rtl_test: core_ibex_base_test

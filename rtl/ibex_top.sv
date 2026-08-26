@@ -792,8 +792,17 @@ module ibex_top import ibex_pkg::*; #(
           .cfg_o       (ram_cfg_icache_data_o[way])
         );
 
-        assign icache_tag_alert  = '{default:'b0};
-        assign icache_data_alert = '{default:'b0};
+        // Indexed by [way]: this assign sits inside the `for (genvar way ...)`
+        // loop above, so an unindexed assign of the whole vector here drove
+        // IC_NUM_WAYS separate structural copies of the same net -- illegal
+        // (VCS Error-[ICSD], multiple drivers) once IC_NUM_WAYS > 1, and only
+        // ever latent because every ICache-enabled config in
+        // ibex_configs.yaml before this project's `maxperf-icache` also had
+        // ICacheScramble=1, so this specific (ICache=1, ICacheScramble=0)
+        // branch had apparently never been compiled here. See
+        // doc/bringup_log.md, Stage S3, 2026-08-16.
+        assign icache_tag_alert[way]  = 1'b0;
+        assign icache_data_alert[way] = 1'b0;
       end
     end
 

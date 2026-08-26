@@ -26,6 +26,18 @@
     PMPEnable: 1
   timeout_s: 300
 
+- config: s4-coverage
+  ld_script: link.ld
+  includes: .
+  gcc_opts: -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles
+            -I../../../vendor/riscv-test-env/
+            -I../../../vendor/riscv-test-env/p/
+            -I../../../vendor/riscv-tests/isa/macros/scalar/
+  rtl_test: core_ibex_s4_delayed_dmem_test
+  rtl_params:
+    WritebackStage: 1
+  timeout_s: 300
+
 - config: riscv-arch-tests
   ld_script: link.ld
   includes: .
@@ -52,6 +64,21 @@
   timeout_s: 300
 
 # Custom directed tests
+
+- test: s4_stall_confirmation
+  desc: >
+    Confirm the S4 MUL/Div memory-stall and load-to-JALR coverage candidates.
+  iterations: 1
+  test_srcs: s4_stall_confirmation/s4_stall_confirmation.S
+  config: s4-coverage
+
+- test: s4_icache_reset_confirmation
+  desc: >
+    Confirm reset from the ICache AWAIT_SCRAMBLE_KEY state in C2.
+  iterations: 1
+  test_srcs: s4_stall_confirmation/s4_stall_confirmation.S
+  config: s4-coverage
+  rtl_test: core_ibex_s4_icache_reset_test
 
 - test: empty
   desc: >

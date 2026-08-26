@@ -2066,3 +2066,163 @@ class core_ibex_mcounteren_lock_test extends core_ibex_base_test;
   endtask
 
 endclass
+
+// S4-only deterministic delayed-memory confirmation test.
+class core_ibex_s4_delayed_dmem_test extends core_ibex_base_test;
+  `uvm_component_utils(core_ibex_s4_delayed_dmem_test)
+  `uvm_component_new
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    dmem_cfg.zero_delay_pct = 0;
+    dmem_cfg.valid_delay_min = 4;
+  endfunction
+endclass
+
+// Same delay guarantee while retaining the standard randomized debug stimulus.
+class core_ibex_s4_dret_mem_test extends core_ibex_debug_intr_basic_test;
+  `uvm_component_utils(core_ibex_s4_dret_mem_test)
+  `uvm_component_new
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    dmem_cfg.zero_delay_pct = 0;
+    dmem_cfg.valid_delay_min = 4;
+  endfunction
+endclass
+
+// Assert reset in the one-cycle AWAIT_SCRAMBLE_KEY window.  This test is used
+// only with maxperf-icache; the first pulse establishes OUT_OF_RESET and the
+// second pulse produces AWAIT_SCRAMBLE_KEY -> OUT_OF_RESET.
+class core_ibex_s4_icache_reset_test extends core_ibex_base_test;
+  `uvm_component_utils(core_ibex_s4_icache_reset_test)
+  `uvm_component_new
+
+  virtual task send_stimulus();
+    fork
+      vseq.start(env.vseqr);
+    join_none
+    dut_vif.dut_cb.fetch_enable <= ibex_pkg::IbexMuBiOff;
+    clk_vif.apply_reset(.reset_width_clks(2));
+    // One edge updates the RTL state to AWAIT; the second lets the VCS FSM
+    // sampler observe AWAIT before the following asynchronous reset.
+    clk_vif.wait_clks(2);
+    clk_vif.apply_reset(.reset_width_clks(2));
+    dut_vif.dut_cb.fetch_enable <= ibex_pkg::IbexMuBiOn;
+  endtask
+endclass
+
+// S5-only deterministic *never-delayed* memory confirmation test -- the
+// mirror image of core_ibex_s4_delayed_dmem_test above. Forcing
+// zero_delay_pct=100 guarantees every D-side response completes in the
+// same cycle it is requested, so the pipeline never sees stall_mem/
+// outstanding_memory_access: WB retires every cycle it is occupied and IF
+// is never held idle behind a pending data response. Generator-agnostic,
+// same as core_ibex_s4_delayed_dmem_test -- applied as an rtl_test
+// override on top of an existing gen_test to raise the odds that whatever
+// rare instruction category that generator produces (illegal encodings,
+// ECALL/EBREAK/MRET/DRET/WFI, ...) is sampled back-to-back with an
+// actively-fetching IF stage and an unstalled WB stage, per the
+// S4-WB-009 pipe_cross "legal_state_tuple_missing_instruction_stimulus"
+// family (doc/s4_pipe_cross_families.csv, doc/s5_worklist.md).
+class core_ibex_s5_fast_dmem_test extends core_ibex_base_test;
+  `uvm_component_utils(core_ibex_s5_fast_dmem_test)
+  `uvm_component_new
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    // zero_delay_pct only forces rvalid_delay == 0
+    // (ibex_mem_intf_response_seq_lib.sv); it does not touch the
+    // request-to-grant delay (gnt_delay_min/max, default 0-10 cycles per
+    // ibex_mem_intf_response_agent_cfg.sv), which can still hold
+    // outstanding_memory_access (and therefore stall_mem) high for several
+    // cycles on its own. Zero both so a preceding memory op truly never
+    // holds WB up -- confirmed necessary empirically: with gnt_delay left
+    // at its default, illegal-instruction pipe_cross bins never sampled
+    // id_state=PipeStageFullAndUnstalled at all (doc/s5_worklist.md pilot).
+    dmem_cfg.zero_delay_pct = 100;
+    dmem_cfg.gnt_delay_min  = 0;
+    dmem_cfg.gnt_delay_max  = 0;
+  endfunction
+endclass
+
+// S5-only: core_ibex_debug_single_step_test's generator already mixes DRET,
+// EBREAK (both debug-entry and exception forms depending on dcsr.ebreakm),
+// ECALL, WFI, illegal instructions and debug single-stepping in one program
+// -- the richest existing generator for the S4-WB-009 pipe_cross
+// debug/exception cluster (doc/s5_worklist.md). Layer the same always-delayed
+// D-side memory profile validated for the illegal-instruction cluster
+// (core_ibex_s4_delayed_dmem_test) on top, to raise the odds of sampling one
+// of these categories while WB is stalled behind an outstanding memory
+// access (IFStage*AndIdle / PipeStageFullAndStalled shape) rather than
+// spreading the same idea across one subclass per base test class.
+class core_ibex_s5_debug_delayed_test extends core_ibex_debug_single_step_test;
+  `uvm_component_utils(core_ibex_s5_debug_delayed_test)
+  `uvm_component_new
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    dmem_cfg.zero_delay_pct = 0;
+    dmem_cfg.valid_delay_min = 4;
+  endfunction
+endclass
+
+// S5-only: same delayed-memory idea applied to core_ibex_mem_error_test,
+// whose memory_error_seq is the only existing generator that can produce
+// InstrCategoryFetchError (via IsideErr/PickErr bus-error injection on the
+// instruction interface, tests/core_ibex_new_seq_lib.sv) -- targets the
+// FetchError subset of the S4-WB-009 pipe_cross illegal-instruction
+// cluster.
+class core_ibex_s5_mem_error_delayed_test extends core_ibex_mem_error_test;
+  `uvm_component_utils(core_ibex_s5_mem_error_delayed_test)
+  `uvm_component_new
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    dmem_cfg.zero_delay_pct = 0;
+    dmem_cfg.valid_delay_min = 4;
+  endfunction
+endclass
+
+// S5-only: the delayed-dmem pilot closed most of the S4-WB-009 "stalled
+// shape" target bins, but left almost all of the IFStageEmptyAndIdle
+// variants open (doc/s5_worklist.md). With valid_delay_min=4 (default
+// valid_delay_max=20), the response-delay distribution places 50% weight on
+// exactly 4 cycles (ibex_mem_intf_response_seq_lib.sv:113-115) -- usually
+// too short for the IF-side prefetch buffer to fully drain from
+// IFStageFullAndIdle down to IFStageEmptyAndIdle before the stall clears.
+// Raising valid_delay_min to 15 shifts most of that same distribution's
+// weight into a much longer stall, giving IF time to empty out while ID
+// stays retained.
+class core_ibex_s5_long_delayed_dmem_test extends core_ibex_base_test;
+  `uvm_component_utils(core_ibex_s5_long_delayed_dmem_test)
+  `uvm_component_new
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    dmem_cfg.zero_delay_pct = 0;
+    dmem_cfg.valid_delay_min = 15;
+  endfunction
+endclass
+
+class core_ibex_s5_long_delayed_debug_test extends core_ibex_debug_single_step_test;
+  `uvm_component_utils(core_ibex_s5_long_delayed_debug_test)
+  `uvm_component_new
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    dmem_cfg.zero_delay_pct = 0;
+    dmem_cfg.valid_delay_min = 15;
+  endfunction
+endclass
+
+class core_ibex_s5_long_delayed_mem_error_test extends core_ibex_mem_error_test;
+  `uvm_component_utils(core_ibex_s5_long_delayed_mem_error_test)
+  `uvm_component_new
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    dmem_cfg.zero_delay_pct = 0;
+    dmem_cfg.valid_delay_min = 15;
+  endfunction
+endclass

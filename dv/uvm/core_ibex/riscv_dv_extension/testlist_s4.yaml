@@ -1,0 +1,23 @@
+# Copyright lowRISC contributors.
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+
+# Bounded Stage-S4-only confirmation.  This is intentionally separate from
+# the production regression list.
+- test: riscv_s4_dret_mem_confirmation
+  description: >
+    Put a side-effect-free load directly before DRET and guarantee a delayed
+    D-side response, confirming DRet x IdStallTypeMem without RTL changes.
+  iterations: 1
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +require_signature_addr=1 +gen_debug_section=1 +no_ebreak=1
+    +no_branch_jump=1 +instr_cnt=1000 +no_csr_instr=1 +no_fence=1
+    +num_of_sub_program=0 +randomize_csr=1
+    +uvm_set_type_override=riscv_debug_rom_gen,ibex_s4_dret_mem_debug_rom_gen
+  rtl_test: core_ibex_s4_dret_mem_test
+  sim_opts: >
+    +require_signature_addr=1 +max_interval=100 +enable_debug_seq=1
+  compare_opts:
+    compare_final_value_only: 1
+    verbose: 1

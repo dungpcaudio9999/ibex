@@ -1,0 +1,29 @@
+# Copyright lowRISC contributors is NOT the author of this file — internal
+# scratch testlist used only to smoke-test run_regression.sh (Stage S2).
+# Not part of the upstream testlist; safe to delete once S2's automation is
+# validated against the real riscv_dv_extension/testlist.yaml in S3.
+
+- test: riscv_arithmetic_basic_test
+  description: >
+    Arithmetic instruction test, no load/store/branch instructions
+  gen_opts: >
+    +instr_cnt=10000
+    +num_of_sub_program=0
+    +no_fence=1
+    +no_data_page=1
+    +no_branch_jump=1
+    +boot_mode=m
+  iterations: 10
+  gen_test: riscv_instr_base_test
+  rtl_test: core_ibex_base_test
+
+- test: riscv_jump_stress_test
+  description: >
+    Stress back to back jump instruction
+  iterations: 10
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=5000
+    +num_of_sub_program=5
+    +directed_instr_1=riscv_jal_instr,20
+  rtl_test: core_ibex_base_test

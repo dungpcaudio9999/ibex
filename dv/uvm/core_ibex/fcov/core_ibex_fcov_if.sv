@@ -603,6 +603,40 @@ interface core_ibex_fcov_if import ibex_pkg::*; (
       bins out_of_flush3 = (FLUSH => DBG_TAKEN_IF);
       bins out_of_wait_sleep = (WAIT_SLEEP => SLEEP);
       bins out_of_sleep = (SLEEP => FIRST_FETCH);
+      // Every state above can legitimately hold for more than one cycle: the
+      // default next-state assignment in ibex_controller.sv is
+      // `ctrl_fsm_ns = ctrl_fsm_cs` (i.e. "stay put unless a transition
+      // condition below fires this cycle"), so e.g. DECODE=>DECODE happens on
+      // every normal back-to-back instruction and RESET=>RESET happens for
+      // the whole reset period. These self-loops are legal and must be
+      // listed explicitly. (Historically this covergroup relied on VCS not
+      // implementing `illegal_bins = default sequence` at all, per the
+      // now-stale comment below -- VCS X-2025.06 does implement it, which
+      // made every legitimate stall in any state a fatal "illegal bin hit"
+      // and aborted every coverage-enabled simulation almost immediately.
+      // See doc/bringup_log.md entry for 2026-08-16 for the failure this
+      // fixes.)
+      bins self_loop[] = (RESET => RESET), (BOOT_SET => BOOT_SET),
+                          (FIRST_FETCH => FIRST_FETCH), (DECODE => DECODE),
+                          (IRQ_TAKEN => IRQ_TAKEN), (DBG_TAKEN_IF => DBG_TAKEN_IF),
+                          (DBG_TAKEN_ID => DBG_TAKEN_ID), (FLUSH => FLUSH),
+                          (WAIT_SLEEP => WAIT_SLEEP), (SLEEP => SLEEP);
+      // Found running Stage S3's C0 ladder: riscv_reset_test (which
+      // deliberately pulses reset mid-execution) hit the same class of
+      // false-positive illegal-bin error, this time on DECODE=>RESET.
+      // ibex_controller.sv:880-882 is `always_ff @(posedge clk_i or negedge
+      // rst_ni) if (!rst_ni) ctrl_fsm_cs <= RESET; else ...` -- an
+      // asynchronous reset forces the FSM to RESET from *any* current
+      // state, completely bypassing the ctrl_fsm_ns combinational next-
+      // state logic (and so bypassing every "out_of_*" bin above too).
+      // Every non-RESET state can therefore legally transition straight to
+      // RESET at any time; list them all rather than special-casing just
+      // the one transition this run happened to hit.
+      bins reset_from[] = (BOOT_SET => RESET), (FIRST_FETCH => RESET),
+                           (DECODE => RESET), (IRQ_TAKEN => RESET),
+                           (DBG_TAKEN_IF => RESET), (DBG_TAKEN_ID => RESET),
+                           (FLUSH => RESET), (WAIT_SLEEP => RESET),
+                           (SLEEP => RESET);
       // TODO: VCS does not implement default sequence so illegal_bins will be empty
       illegal_bins illegal_transitions = default sequence;
     }
@@ -610,8 +644,18 @@ interface core_ibex_fcov_if import ibex_pkg::*; (
     cp_controller_fsm_sleep: coverpoint id_stage_i.controller_i.ctrl_fsm_cs {
       bins out_of_sleep = (SLEEP => FIRST_FETCH);
       bins enter_sleep = (WAIT_SLEEP => SLEEP);
-      // TODO: VCS does not implement default sequence so illegal_bins will be empty
-      illegal_bins illegal_transitions = default sequence;
+      // Unlike cp_controller_fsm above, this coverpoint only names two
+      // transitions it actually cares about -- it was never meant to police
+      // FSM legality (that's cp_controller_fsm's job); it just needs a
+      // catch-all bucket for everything else, including every self-loop and
+      // every normal (RESET=>BOOT_SET, BOOT_SET=>FIRST_FETCH, ...)
+      // transition cp_controller_fsm already names. Making that bucket
+      // `illegal_bins` relied on the same stale "VCS doesn't implement
+      // default sequence" assumption as cp_controller_fsm and, once that
+      // stopped holding under VCS X-2025.06, flagged every single normal
+      // FSM transition as a fatal error. A plain catch-all bin is what was
+      // actually intended here. See doc/bringup_log.md, 2026-08-16.
+      bins others = default sequence;
     }
 
     // This will only be seen when specific interrupt is disabled by MIE CSR

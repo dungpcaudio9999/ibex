@@ -1,0 +1,113 @@
+# Copyright lowRISC contributors.
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+
+# Bounded Stage-S5-only confirmation list. This is intentionally separate
+# from the production regression list (testlist.yaml /
+# testlist_c_ladder.yaml) -- entries here exist only to confirm that a
+# specific mechanism closes a specific S4 register hole before that
+# mechanism is folded into the standing regression. See doc/s5_worklist.md.
+#
+# Every test named here must ALSO be defined in testlist.yaml with the exact
+# same name -- riscvdv_interface.get_run_cmd() hardcodes testlist.yaml for
+# the actual per-test generator invocation regardless of this file
+# (doc/bringup_log.md #19); this file only controls which subset gets
+# enumerated for TEST=all.
+
+- test: s5_illegal_delayed_confirmation
+  description: >
+    S4-WB-009 pipe_cross illegal-instruction cluster, stalled shape.
+  iterations: 40
+  gen_test: riscv_rand_instr_test
+  gen_opts: >
+    +illegal_instr_ratio=25
+  rtl_test: core_ibex_s4_delayed_dmem_test
+
+- test: s5_mem_error_delayed_confirmation
+  description: >
+    S4-WB-009 pipe_cross illegal-instruction cluster, FetchError subset.
+  iterations: 15
+  gen_test: riscv_rand_instr_test
+  gen_opts: >
+    +require_signature_addr=1 +instr_cnt=10000 +randomize_csr=1
+    +gen_all_csrs_by_default=1
+    +add_csr_write=MSTATUS,MEPC,MCAUSE,MTVAL,0x7c0,0x7c1
+    +enable_unaligned_load_store=1 +suppress_pmp_setup=1
+    +disable_pmp_exception_handler=1
+  rtl_test: core_ibex_s5_mem_error_delayed_test
+  sim_opts: >
+    +enable_mem_intg_err=0 +enable_double_fault_detector=0
+    +require_signature_addr=1 +enable_bad_intg_on_uninit_access=0
+  compare_opts:
+    compare_final_value_only: 1
+
+- test: s5_debug_delayed_confirmation
+  description: >
+    S4-WB-009 pipe_cross debug/exception cluster, stalled shape.
+  iterations: 40
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +require_signature_addr=1 +gen_debug_section=1 +no_dret=0 +no_ebreak=0
+    +no_ecall=0 +no_branch_jump=0 +instr_cnt=10000 +no_csr_instr=0
+    +randomize_csr=1 +gen_all_csrs_by_default=1
+    +add_csr_write=MSTATUS,MEPC,MCAUSE,MTVAL,0x7c0,0x7c1 +no_fence=0
+    +no_wfi=0 +num_of_sub_program=1 +enable_debug_single_step=1
+    +illegal_instr_ratio=5 +hint_instr_ratio=1
+  rtl_test: core_ibex_s5_debug_delayed_test
+  sim_opts: >
+    +require_signature_addr=1 +max_interval=1500 +enable_debug_seq=1
+    +enable_bad_intg_on_uninit_access=0
+
+- test: s5_div_fast_confirmation
+  description: >
+    S4-WB-009 pipe_cross Div cluster, fast shape.
+  iterations: 15
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +instr_cnt=10000 +num_of_sub_program=0 +no_fence=1 +no_data_page=1
+    +no_branch_jump=1 +boot_mode=m
+  rtl_test: core_ibex_s5_fast_dmem_test
+
+- test: s5_illegal_long_delayed_confirmation
+  description: >
+    S4-WB-009 illegal-instruction cluster, longer stall for IFStageEmptyAndIdle.
+  iterations: 30
+  gen_test: riscv_rand_instr_test
+  gen_opts: >
+    +illegal_instr_ratio=25
+  rtl_test: core_ibex_s5_long_delayed_dmem_test
+
+- test: s5_mem_error_long_delayed_confirmation
+  description: >
+    S4-WB-009 FetchError subset, longer stall for IFStageEmptyAndIdle.
+  iterations: 20
+  gen_test: riscv_rand_instr_test
+  gen_opts: >
+    +require_signature_addr=1 +instr_cnt=10000 +randomize_csr=1
+    +gen_all_csrs_by_default=1
+    +add_csr_write=MSTATUS,MEPC,MCAUSE,MTVAL,0x7c0,0x7c1
+    +enable_unaligned_load_store=1 +suppress_pmp_setup=1
+    +disable_pmp_exception_handler=1
+  rtl_test: core_ibex_s5_long_delayed_mem_error_test
+  sim_opts: >
+    +enable_mem_intg_err=0 +enable_double_fault_detector=0
+    +require_signature_addr=1 +enable_bad_intg_on_uninit_access=0
+  compare_opts:
+    compare_final_value_only: 1
+
+- test: s5_debug_long_delayed_confirmation
+  description: >
+    S4-WB-009 debug/exception cluster, longer stall for IFStageEmptyAndIdle.
+  iterations: 30
+  gen_test: riscv_instr_base_test
+  gen_opts: >
+    +require_signature_addr=1 +gen_debug_section=1 +no_dret=0 +no_ebreak=0
+    +no_ecall=0 +no_branch_jump=0 +instr_cnt=10000 +no_csr_instr=0
+    +randomize_csr=1 +gen_all_csrs_by_default=1
+    +add_csr_write=MSTATUS,MEPC,MCAUSE,MTVAL,0x7c0,0x7c1 +no_fence=0
+    +no_wfi=0 +num_of_sub_program=1 +enable_debug_single_step=1
+    +illegal_instr_ratio=5 +hint_instr_ratio=1
+  rtl_test: core_ibex_s5_long_delayed_debug_test
+  sim_opts: >
+    +require_signature_addr=1 +max_interval=1500 +enable_debug_seq=1
+    +enable_bad_intg_on_uninit_access=0

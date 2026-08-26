@@ -84,6 +84,33 @@ maxperf:
   MHPMCounterNum           : 0
   MHPMCounterWidth         : 40
 
+# maxperf config above with the instruction cache enabled, ECC and scrambling
+# left off. Added for the C0(small)/C1(maxperf)/C2(this) configuration ladder
+# in doc/ibex_uvm_vcs_internship_execution_plan.md (Stage S3) -- every other
+# existing ICache-enabled preset below also turns on PMP and/or bitmanip,
+# which that plan explicitly keeps out of scope, so none of them isolate the
+# ICache's effect on its own the way this one does.
+maxperf-icache:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32I"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MSingleCycle"
+  RV32B                    : "ibex_pkg::RV32BNone"
+  RV32ZC                   : "ibex_pkg::RV32ZcaZcbZcmp"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 1
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 0
+  SecureIbex               : 0
+  PMPEnable                : 0
+  PMPGranularity           : 0
+  PMPNumRegions            : 4
+  MHPMCounterNum           : 0
+  MHPMCounterWidth         : 40
+
 # maxperf config above with balanced bitmanip extension and PMP
 maxperf-pmp-bmbalanced:
   BaseIsa                  : "ibex_pkg::BaseIsaRV32I"
