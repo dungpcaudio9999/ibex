@@ -1,0 +1,6 @@
+{
+  "command": "fusesoc --cores-root=. run --target=sim --setup --build-root=doc/dungpc/evidence/build/simple_system lowrisc:ibex:ibex_simple_system",
+  "exit_status": null,
+  "launch_status": "TOOL-NOT-FOUND",
+  "output": "[Errno 2] No such file or directory: 'fusesoc'"
+}

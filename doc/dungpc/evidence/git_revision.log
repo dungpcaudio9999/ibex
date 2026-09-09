@@ -1,0 +1,5 @@
+{
+  "command": "git log -1 --format=fuller",
+  "exit_status": 0,
+  "output": "commit 8031c7dde749bb9d62391e5befbe55f1c014a171\nAuthor:     ftel-pc <dungchibk02@gmail.com>\nAuthorDate: Tue Sep 8 09:37:29 2026 +0700\nCommit:     ftel-pc <dungchibk02@gmail.com>\nCommitDate: Tue Sep 8 09:37:29 2026 +0700\n\n    Add analysis file\n"
+}

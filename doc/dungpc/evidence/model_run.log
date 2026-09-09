@@ -1,0 +1,16 @@
+{
+  "evidence_id": "EVD-06",
+  "command_argv": [
+    "python3",
+    "doc/dungpc/evidence/model_experiments.py"
+  ],
+  "cwd": "/home/dungpc9/ndmoney4porche/projects/ibex",
+  "run_utc": "2026-09-08T04:49:50.753675+00:00",
+  "exit_status": 0,
+  "expected_exit_status": 0,
+  "expected_exit_matched": true,
+  "output": "{\"result\": \"PREDICTIONS-MATCH-MODEL\", \"timer_edges\": 10, \"address_cases\": 12, \"covered_heap_bytes\": 131072, \"RTL_SIMULATION\": \"NOT-RUN\"}\n",
+  "expected_marker": "PREDICTIONS-MATCH-MODEL",
+  "expected_marker_present": true,
+  "RTL_simulation_performed": false
+}

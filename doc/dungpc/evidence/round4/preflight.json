@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-09-09T10:18:44.557837+00:00",
+  "git_head": "8031c7dde749bb9d62391e5befbe55f1c014a171",
+  "tools": {
+    "make": "/usr/bin/make",
+    "python3": "/usr/bin/python3",
+    "vcs": null,
+    "xrun": null,
+    "vsim": "/home/dungpc9/ndmoney4porche/questasim/bin/vsim",
+    "vlog": "/home/dungpc9/ndmoney4porche/questasim/bin/vlog",
+    "vmap": "/home/dungpc9/ndmoney4porche/questasim/bin/vmap",
+    "verilator": null,
+    "fusesoc": null,
+    "spike": null,
+    "riscv32-unknown-elf-gcc": null,
+    "riscv64-unknown-elf-gcc": null,
+    "nix": null,
+    "yosys": null,
+    "jg": null,
+    "rIC3": null
+  },
+  "python_modules": {
+    "yaml": true,
+    "hjson": false,
+    "jinja2": true,
+    "tabulate": false,
+    "pydantic": false,
+    "packaging": true,
+    "fusesoc": false
+  },
+  "runs": [
+    {
+      "name": "questa_version",
+      "argv": [
+        "vsim",
+        "-version"
+      ],
+      "cwd": "/home/dungpc9/ndmoney4porche/projects/ibex",
+      "exit_code": 0,
+      "elapsed_s": 0.097,
+      "log": "questa_version.log"
+    },
+    {
+      "name": "spike_setup_check",
+      "argv": [
+        "sh",
+        "dv/verilator/simple_system_cosim/util/ibex_cosim_setup_check.sh"
+      ],
+      "cwd": "/home/dungpc9/ndmoney4porche/projects/ibex",
+      "exit_code": 1,
+      "elapsed_s": 0.002,
+      "log": "spike_setup_check.log"
+    },
+    {
+      "name": "uvm_smoke_attempt",
+      "argv": [
+        "make",
+        "IBEX_CONFIG=small",
+        "SIMULATOR=xlm",
+        "ISS=spike",
+        "TEST=riscv_arithmetic_basic_test",
+        "ITERATIONS=1",
+        "SEED=1",
+        "WAVES=0",
+        "COV=0",
+        "OUT=/tmp/ibex-round4-uvm-smoke"
+      ],
+      "cwd": "/home/dungpc9/ndmoney4porche/projects/ibex/dv/uvm/core_ibex",
+      "exit_code": 2,
+      "elapsed_s": 0.211,
+      "log": "uvm_smoke_attempt.log"
+    }
+  ]
+}

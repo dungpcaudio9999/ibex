@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from scripts.setup_imports import get_pythonpath; get_pythonpath()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dungpc9/ndmoney4porche/projects/ibex/dv/uvm/core_ibex/scripts/setup_imports.py", line 7, in <module>
+    import pathlib3x as pathlib
+ModuleNotFoundError: No module named 'pathlib3x'
+Traceback (most recent call last):
+  File "/home/dungpc9/ndmoney4porche/projects/ibex/dv/uvm/core_ibex/./scripts/metadata.py", line 11, in <module>
+    import pathlib3x as pathlib
+ModuleNotFoundError: No module named 'pathlib3x'
+make: *** [Makefile:71: run] Error 1

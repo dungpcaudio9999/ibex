@@ -1,0 +1,5 @@
+{
+  "command": "git submodule status --recursive",
+  "exit_status": 0,
+  "output": ""
+}

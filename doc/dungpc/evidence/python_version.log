@@ -1,0 +1,5 @@
+{
+  "command": "python3 --version",
+  "exit_status": 0,
+  "output": "Python 3.14.4\n"
+}

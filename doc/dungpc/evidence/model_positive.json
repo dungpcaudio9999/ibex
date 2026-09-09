@@ -1,0 +1,266 @@
+{
+  "model_only": true,
+  "randomization": null,
+  "result": "PREDICTIONS-MATCH-MODEL",
+  "timer_trace": [
+    {
+      "edge": 1,
+      "before": [
+        0,
+        0,
+        0
+      ],
+      "write_offset_data_be": null,
+      "after": [
+        1,
+        0,
+        1
+      ],
+      "observed_irq": 1,
+      "expected_irq": 1
+    },
+    {
+      "edge": 2,
+      "before": [
+        1,
+        0,
+        1
+      ],
+      "write_offset_data_be": [
+        8,
+        100,
+        15
+      ],
+      "after": [
+        2,
+        100,
+        0
+      ],
+      "observed_irq": 0,
+      "expected_irq": 0
+    },
+    {
+      "edge": 3,
+      "before": [
+        2,
+        100,
+        0
+      ],
+      "write_offset_data_be": [
+        0,
+        150,
+        15
+      ],
+      "after": [
+        150,
+        100,
+        0
+      ],
+      "observed_irq": 0,
+      "expected_irq": 0
+    },
+    {
+      "edge": 4,
+      "before": [
+        150,
+        100,
+        0
+      ],
+      "write_offset_data_be": null,
+      "after": [
+        151,
+        100,
+        1
+      ],
+      "observed_irq": 1,
+      "expected_irq": 1
+    },
+    {
+      "edge": 5,
+      "before": [
+        151,
+        100,
+        1
+      ],
+      "write_offset_data_be": [
+        0,
+        0,
+        15
+      ],
+      "after": [
+        0,
+        100,
+        1
+      ],
+      "observed_irq": 1,
+      "expected_irq": 1
+    },
+    {
+      "edge": 6,
+      "before": [
+        0,
+        100,
+        1
+      ],
+      "write_offset_data_be": null,
+      "after": [
+        1,
+        100,
+        1
+      ],
+      "observed_irq": 1,
+      "expected_irq": 1
+    },
+    {
+      "edge": 7,
+      "before": [
+        1,
+        100,
+        1
+      ],
+      "write_offset_data_be": [
+        8,
+        1,
+        15
+      ],
+      "after": [
+        2,
+        1,
+        0
+      ],
+      "observed_irq": 0,
+      "expected_irq": 0
+    },
+    {
+      "edge": 8,
+      "before": [
+        2,
+        1,
+        0
+      ],
+      "write_offset_data_be": null,
+      "after": [
+        3,
+        1,
+        1
+      ],
+      "observed_irq": 1,
+      "expected_irq": 1
+    },
+    {
+      "edge": 9,
+      "before": [
+        3,
+        1,
+        1
+      ],
+      "write_offset_data_be": [
+        8,
+        0,
+        0
+      ],
+      "after": [
+        4,
+        1,
+        0
+      ],
+      "observed_irq": 0,
+      "expected_irq": 0
+    },
+    {
+      "edge": 10,
+      "before": [
+        4,
+        1,
+        0
+      ],
+      "write_offset_data_be": null,
+      "after": [
+        5,
+        1,
+        1
+      ],
+      "observed_irq": 1,
+      "expected_irq": 1
+    }
+  ],
+  "address_decode": [
+    {
+      "address": "0x100000",
+      "instruction_ram_word_index": 0,
+      "data_targets": [
+        "ram"
+      ]
+    },
+    {
+      "address": "0x1fffff",
+      "instruction_ram_word_index": 262143,
+      "data_targets": [
+        "ram"
+      ]
+    },
+    {
+      "address": "0x200000",
+      "instruction_ram_word_index": 0,
+      "data_targets": []
+    },
+    {
+      "address": "0x80",
+      "instruction_ram_word_index": 32,
+      "data_targets": []
+    },
+    {
+      "address": "0x100080",
+      "instruction_ram_word_index": 32,
+      "data_targets": [
+        "ram"
+      ]
+    },
+    {
+      "address": "0x200080",
+      "instruction_ram_word_index": 32,
+      "data_targets": []
+    },
+    {
+      "address": "0x20000",
+      "instruction_ram_word_index": 32768,
+      "data_targets": [
+        "simctrl"
+      ]
+    },
+    {
+      "address": "0x203ff",
+      "instruction_ram_word_index": 33023,
+      "data_targets": [
+        "simctrl"
+      ]
+    },
+    {
+      "address": "0x20400",
+      "instruction_ram_word_index": 33024,
+      "data_targets": []
+    },
+    {
+      "address": "0x30000",
+      "instruction_ram_word_index": 49152,
+      "data_targets": [
+        "timer"
+      ]
+    },
+    {
+      "address": "0x303ff",
+      "instruction_ram_word_index": 49407,
+      "data_targets": [
+        "timer"
+      ]
+    },
+    {
+      "address": "0x30400",
+      "instruction_ram_word_index": 49408,
+      "data_targets": []
+    }
+  ],
+  "bitmap_bytes": 2048,
+  "bitmap_bits": 16384,
+  "covered_heap_bytes": 131072
+}

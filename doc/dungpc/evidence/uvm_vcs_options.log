@@ -1,0 +1,22 @@
+{
+  "evidence_id": "EVD-09",
+  "command_argv": [
+    "python3",
+    "util/ibex_config.py",
+    "small",
+    "vcs_opts",
+    "--ins_hier_path",
+    "core_ibex_tb_top",
+    "--string_define_prefix",
+    "IBEX_CFG_"
+  ],
+  "cwd": "/home/dungpc9/ndmoney4porche/projects/ibex",
+  "run_utc": "2026-09-08T04:49:50.840137+00:00",
+  "exit_status": 0,
+  "expected_exit_status": 0,
+  "expected_exit_matched": true,
+  "output": "+define+IBEX_CFG_BaseIsa=ibex_pkg::BaseIsaRV32I -pvalue+core_ibex_tb_top.RV32E=0 +define+IBEX_CFG_RV32M=ibex_pkg::RV32MFast +define+IBEX_CFG_RV32B=ibex_pkg::RV32BNone +define+IBEX_CFG_RV32ZC=ibex_pkg::RV32Zca +define+IBEX_CFG_RegFile=ibex_pkg::RegFileFF -pvalue+core_ibex_tb_top.BranchTargetALU=0 -pvalue+core_ibex_tb_top.WritebackStage=0 -pvalue+core_ibex_tb_top.ICache=0 -pvalue+core_ibex_tb_top.ICacheECC=0 -pvalue+core_ibex_tb_top.ICacheScramble=0 -pvalue+core_ibex_tb_top.BranchPredictor=0 -pvalue+core_ibex_tb_top.DbgTriggerEn=0 -pvalue+core_ibex_tb_top.SecureIbex=0 -pvalue+core_ibex_tb_top.PMPEnable=0 -pvalue+core_ibex_tb_top.PMPGranularity=0 -pvalue+core_ibex_tb_top.PMPNumRegions=4 -pvalue+core_ibex_tb_top.MHPMCounterNum=0 -pvalue+core_ibex_tb_top.MHPMCounterWidth=40\n",
+  "expected_marker": "+define+IBEX_CFG_BaseIsa=ibex_pkg::BaseIsaRV32I",
+  "expected_marker_present": true,
+  "RTL_simulation_performed": false
+}

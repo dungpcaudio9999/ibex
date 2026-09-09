@@ -1,0 +1,40 @@
+{
+  "scope": "Actual Python filter function, decorator omitted; no RTL run",
+  "source": "dv/uvm/core_ibex/scripts/ibex_cmd.py",
+  "config": {
+    "PMPEnable": 0,
+    "ICache": 0
+  },
+  "cases": [
+    {
+      "test": "first_matches_second_fails",
+      "rtl_params": {
+        "PMPEnable": 0,
+        "ICache": 1
+      }
+    },
+    {
+      "test": "both_match",
+      "rtl_params": {
+        "PMPEnable": 0,
+        "ICache": 0
+      }
+    }
+  ],
+  "expected": [
+    [],
+    [
+      "both_match"
+    ]
+  ],
+  "actual": [
+    [
+      "first_matches_second_fails"
+    ],
+    [
+      "both_match",
+      "both_match"
+    ]
+  ],
+  "matches_intended_filter_contract": false
+}

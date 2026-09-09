@@ -1,0 +1,2 @@
+dv/verilator/simple_system_cosim/util/ibex_cosim_setup_check.sh: 9: pkg-config: not found
+Failed to find Spike pkg-config packages. Did you add lib/pkgconfig from your spike install to PKG_CONFIG_PATH?

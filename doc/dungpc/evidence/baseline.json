@@ -1,0 +1,39 @@
+{
+  "baseline": "BASE-01",
+  "captured_utc": "2026-09-08T02:40:08.962878+00:00",
+  "revision": "8031c7dde749bb9d62391e5befbe55f1c014a171",
+  "host": "Linux-7.0.0-30-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]",
+  "tools": {
+    "fusesoc": null,
+    "verilator": null,
+    "iverilog": null,
+    "vvp": null,
+    "yosys": null,
+    "sby": null,
+    "slang": null,
+    "verible-verilog-lint": null,
+    "riscv32-unknown-elf-gcc": null,
+    "riscv64-unknown-elf-gcc": null,
+    "gcc": "/usr/bin/gcc",
+    "make": "/usr/bin/make",
+    "python3": "/usr/bin/python3"
+  },
+  "python_packages": {
+    "PyYAML": "6.0.3",
+    "fusesoc": null,
+    "edalize": null,
+    "pyslang": null,
+    "hjson": null
+  },
+  "relevant_environment": {
+    "IBEX_CONFIG_FILE": null,
+    "RISCV": null,
+    "RV32_TOOLCHAIN": null
+  },
+  "source_manifest_sha256": "b20bcb9c387812c51f3a04ae1ae55c2fd25a111b5142edbac6c8b029a8d628ca",
+  "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "tracked_files_hashed": 3694,
+  "firmware_image": null,
+  "execution_baseline": "NOT-ESTABLISHED"
+}

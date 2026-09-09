@@ -1,0 +1,748 @@
+EVD-08 — source excerpts, revision 8031c7dde749bb9d62391e5befbe55f1c014a171
+Source-only; no elaboration or runtime assertion evidence.
+
+
+FILE examples/simple_system/rtl/ibex_simple_system.sv
+25: `ifndef INSTR_CYCLE_DELAY
+26:   `define INSTR_CYCLE_DELAY 0
+27: `endif
+28: 
+29: `ifndef BASE_ISA
+30:   `define BASE_ISA ibex_pkg::BaseIsaRV32IorCHERIoT
+31: `endif
+55:   parameter int unsigned        PMPNumRegions            = 4;
+56:   parameter int unsigned        MHPMCounterNum           = 0;
+57:   parameter int unsigned        MHPMCounterWidth         = 40;
+58:   parameter bit                 RV32E                    = 1'b0;
+59:   parameter ibex_pkg::rv32m_e   RV32M                    = `RV32M;
+60:   parameter ibex_pkg::rv32b_e   RV32B                    = `RV32B;
+61:   parameter ibex_pkg::rv32zc_e  RV32ZC                   = `RV32ZC;
+62:   parameter ibex_pkg::regfile_e RegFile                  = `RegFile;
+63:   parameter ibex_pkg::base_isa_e BaseIsa                 = `BASE_ISA;
+64:   parameter bit                 BranchTargetALU          = 1'b0;
+65:   parameter bit                 WritebackStage           = 1'b0;
+116:   logic [31:0] cfg_device_addr_base [NrDevices];
+117:   logic [31:0] cfg_device_addr_mask [NrDevices];
+118:   assign cfg_device_addr_base[Ram] = 32'h100000;
+119:   assign cfg_device_addr_mask[Ram] = ~32'hFFFFF; // 1 MB
+120:   assign cfg_device_addr_base[SimCtrl] = 32'h20000;
+121:   assign cfg_device_addr_mask[SimCtrl] = ~32'h3FF; // 1 kB
+122:   assign cfg_device_addr_base[Timer] = 32'h30000;
+123:   assign cfg_device_addr_mask[Timer] = ~32'h3FF; // 1 kB
+124: 
+125:   // Instruction fetch signals
+126:   logic instr_req;
+127:   logic instr_gnt;
+128:   logic instr_rvalid;
+129:   logic [31:0] instr_addr;
+130:   logic [31:0] instr_rdata;
+131:   logic instr_err;
+132: 
+133:   assign instr_gnt = instr_req;
+134:   assign instr_err = '0;
+135: 
+136:   `ifdef VERILATOR
+137:     assign clk_sys = IO_CLK;
+138:     assign rst_sys_n = IO_RST_N;
+245:       .hart_id_i                 (32'b0),
+246:       // First instruction executed is at 0x0 + 0x80
+247:       .boot_addr_i               (32'h00100000),
+248: 
+249:       .trvk_heap_base_addr_i     (32'h00000000),
+250: 
+251:       .instr_req_o               (instr_req),
+252:       .instr_gnt_i               (instr_gnt),
+253:       .instr_rvalid_i            (instr_rvalid),
+254:       .instr_addr_o              (instr_addr),
+255:       .instr_rdata_i             (instr_rdata),
+256:       .instr_rdata_intg_i        (instr_rdata_intg),
+257:       .instr_err_i               (instr_err),
+258: 
+259:       .data_req_o                (host_req[CoreD]),
+260:       .data_gnt_i                (host_gnt[CoreD]),
+261:       .data_rvalid_i             (host_rvalid[CoreD]),
+262:       .data_we_o                 (host_we[CoreD]),
+263:       .data_be_o                 (host_be[CoreD]),
+264:       .data_addr_o               (host_addr[CoreD]),
+265:       .data_wdata_o              (host_wdata[CoreD]),
+266:       .data_wdata_intg_o         (),
+267:       .data_tag_o                (),
+268:       .data_rdata_i              (host_rdata[CoreD]),
+269:       .data_rdata_intg_i         (data_rdata_intg),
+270:       .data_tag_i                (1'b0),
+271:       .data_err_i                (host_err[CoreD]),
+272: 
+273:       .trvk_revbm_req_o          (),
+274:       .trvk_revbm_gnt_i          (1'b0),
+275:       .trvk_revbm_rvalid_i       (1'b0),
+276:       .trvk_revbm_addr_o         (),
+277:       .trvk_revbm_rdata_i        ('0),
+278:       .trvk_revbm_rdata_intg_i   ('0),
+279:       .trvk_revbm_err_i          (1'b0),
+280: 
+281:       .irq_software_i            (1'b0),
+282:       .irq_timer_i               (timer_irq),
+283:       .irq_external_i            (1'b0),
+284:       .irq_fast_i                (15'b0),
+285:       .irq_nm_i                  (1'b0),
+286: 
+287:       .scramble_key_valid_i      ('0),
+288:       .scramble_key_i            ('0),
+289:       .scramble_nonce_i          ('0),
+290:       .scramble_req_o            (),
+291: 
+292:       .debug_req_i               (1'b0),
+293:       .crash_dump_o              (),
+294:       .double_fault_seen_o       (),
+295: 
+296:       .fetch_enable_i            (ibex_pkg::IbexMuBiOn),
+297:       .mcounteren_writable_i     (ibex_pkg::IbexMuBiOn),
+298:       .alert_minor_o             (),
+299:       .alert_major_internal_o    (),
+300:       .alert_major_bus_o         (),
+301:       .core_sleep_o              (),
+302: 
+303:       .lockstep_cmp_en_o         (),
+304: 
+305:       .data_req_shadow_o         (),
+306:       .data_we_shadow_o          (),
+307:       .data_be_shadow_o          (),
+308:       .data_addr_shadow_o        (),
+309:       .data_wdata_shadow_o       (),
+310:       .data_wdata_intg_shadow_o  (),
+311: 
+312:       .instr_req_shadow_o        (),
+313:       .instr_addr_shadow_o       (),
+314: 
+315:       .cheriot_enable_i          (ibex_pkg::IbexMuBiOff)
+
+FILE rtl/ibex_if_stage.sv
+219:     end
+220: 
+221:     unique case (exc_pc_mux_i)
+222:       EXC_PC_EXC:     exc_pc = ((BaseIsa == BaseIsaRV32IorCHERIoT)
+223:                                 & (cheriot_enable_i == IbexMuBiOn)) ?
+224:                                {csr_mtvec_i[31:2], 2'b00} : {csr_mtvec_i[31:8], 8'h00};
+225:       EXC_PC_IRQ:     exc_pc = ((BaseIsa == BaseIsaRV32IorCHERIoT)
+226:                                 & (cheriot_enable_i == IbexMuBiOn)) ?
+227:                                {csr_mtvec_i[31:2], 2'b00} :
+228:                                {csr_mtvec_i[31:8], 1'b0, irq_vec, 2'b00};
+229:       EXC_PC_DBD:     exc_pc = DmHaltAddr;
+230:       EXC_PC_DBG_EXC: exc_pc = DmExceptionAddr;
+231:       default:        exc_pc = { csr_mtvec_i[31:8], 8'h00                };
+232:     endcase
+233:   end
+234: 
+235:   // The Branch predictor can provide a new PC which is internal to if_stage. Only override the mux
+236:   // select to choose this if the core isn't already trying to set a PC.
+237:   assign pc_mux_internal =
+238:     (BranchPredictor && predict_branch_taken && !pc_set_i) ? PC_BP : pc_mux_i;
+239: 
+240:   // fetch address selection mux
+241:   always_comb begin : fetch_addr_mux
+242:     unique case (pc_mux_internal)
+243:       PC_BOOT: fetch_addr_n = { boot_addr_i[31:8], 8'h80 };
+244:       PC_JUMP: fetch_addr_n = branch_target_ex_i;
+245:       PC_EXC:  fetch_addr_n = exc_pc;                       // set PC to exception handler
+246:       PC_ERET: fetch_addr_n = csr_mepc_i;                   // restore PC when returning from EXC
+247:       PC_DRET: fetch_addr_n = csr_depc_i;
+248:       // Without branch predictor will never get pc_mux_internal == PC_BP. We still handle no branch
+249:       // predictor case here to ensure redundant mux logic isn't synthesised.
+250:       PC_BP:   fetch_addr_n = BranchPredictor ? predict_branch_pc : { boot_addr_i[31:8], 8'h80 };
+251:       default: fetch_addr_n = { boot_addr_i[31:8], 8'h80 };
+252:     endcase
+253:   end
+254: 
+255:   // tell CS register file to initialize mtvec on boot
+256:   assign csr_mtvec_init_o = (pc_mux_i == PC_BOOT) & pc_set_i;
+
+FILE rtl/ibex_top.sv
+207:   // Shadow core instruction interface outputs
+208:   output logic                                                        instr_req_shadow_o,
+209:   output logic [31:0]                                                 instr_addr_shadow_o
+210: );
+211: 
+212:   localparam bit          Lockstep              = SecureIbex;
+213:   localparam bit          ResetAll              = Lockstep;
+214:   localparam bit          DummyInstructions     = SecureIbex;
+215:   localparam bit          RegFileECC            = 1'b0;
+216:   localparam bit          RegFileLockstepECC    = Lockstep;
+217:   localparam int unsigned RegFileDataWidth      = 32;
+218:   localparam int unsigned RegFileDataEccWidth   = 32 + 7;
+219:   localparam int unsigned RegFileCapEccWidth    = REGCAP_W + 7;
+220:   // Icache parameters
+221:   localparam int unsigned BusSizeECC        = ICacheECC ? (BUS_SIZE + IC_DATA_ECC_SIZE) :
+222:                                                            BUS_SIZE;
+223:   localparam int unsigned LineSizeECC       = BusSizeECC * IC_LINE_BEATS;
+224:   localparam int unsigned TagSizeECC        = ICacheECC ? (IC_TAG_SIZE + IC_TAG_ECC_SIZE) :
+225:                                                            IC_TAG_SIZE;
+226:   // Scrambling Parameter
+227:   localparam int unsigned NumAddrScrRounds  = ICacheScramble ? 2 : 0;
+228: 
+229:   // Ibex can have a maximum of 2 accesses outstanding on the DSide. This is because it does not
+230:   // speculative data accesses so the only requests that can be in flight must relate to a single
+231:   // ongoing load or store instruction. Due to unaligned access support a single load or store can
+232:   // generate 2 accesses.
+233:   localparam int unsigned MaxOutstandingDSideAccesses = 2;
+234: 
+235:   // Clock signals
+304:     // For secure Ibex core_busy_q must be a specific multi-bit pattern to enable the clock.
+305:     prim_flop #(
+306:       .Width($bits(ibex_mubi_t)),
+307:       .ResetValue(IbexMuBiOff)
+308:     ) u_prim_core_busy_flop (
+309:       .clk_i (clk_i),
+310:       .rst_ni(rst_ni),
+311:       .d_i   (core_busy_d),
+312:       .q_o   (core_busy_q)
+313:     );
+314:     assign clock_en = (core_busy_q != IbexMuBiOff) | debug_req_i | irq_pending | irq_nm_i;
+315:   end else begin : g_clock_en_non_secure
+316:     // For non secure Ibex only the bottom bit of core_busy_q is considered. Other FFs can be
+317:     // optimized away during synthesis.
+318:     always_ff @(posedge clk_i or negedge rst_ni) begin
+319:       if (!rst_ni) begin
+320:         core_busy_q <= IbexMuBiOff;
+321:       end else begin
+322:         core_busy_q <= core_busy_d;
+323:       end
+324:     end
+325:     assign clock_en = core_busy_q[0] | debug_req_i | irq_pending | irq_nm_i;
+326: 
+327:     logic unused_core_busy;
+328:     assign unused_core_busy = ^core_busy_q[$bits(ibex_mubi_t)-1:1];
+329:   end
+330: 
+331:   assign core_sleep_o = ~clock_en;
+332: 
+333:   prim_clock_gating core_clock_gate_i (
+334:     .clk_i    (clk_i),
+335:     .en_i     (clock_en),
+336:     .test_en_i(test_en_i),
+337:     .clk_o    (clk)
+338:   );
+339: 
+623:   if (ICacheScramble) begin : gen_scramble
+624: 
+625:     // SEC_CM: ICACHE.MEM.SCRAMBLE
+626:     // Scramble key valid starts with OTP returning new valid key and stays high
+627:     // until we request a new valid key.
+628:     assign scramble_key_valid_d = scramble_req_q ? scramble_key_valid_i :
+629:                                   ic_scr_key_req ? 1'b0                 :
+630:                                                    scramble_key_valid_q;
+631: 
+632:     always_ff @(posedge clk_i or negedge rst_ni) begin
+633:       if (!rst_ni) begin
+634:         scramble_key_q       <= RndCnstIbexKey;
+635:         scramble_nonce_q     <= RndCnstIbexNonce;
+636:       end else if (scramble_key_valid_i) begin
+637:         scramble_key_q       <= scramble_key_i;
+638:         scramble_nonce_q     <= scramble_nonce_i;
+639:       end
+640:     end
+641: 
+642:     always_ff @(posedge clk_i or negedge rst_ni) begin
+643:       if (!rst_ni) begin
+644:         scramble_key_valid_q <= 1'b1;
+645:         scramble_req_q       <= '0;
+646:       end else begin
+647:         scramble_key_valid_q <= scramble_key_valid_d;
+648:         scramble_req_q       <= scramble_req_d;
+649:       end
+650:     end
+651: 
+652:   // Scramble key request starts with invalidate signal from ICache and stays high
+653:   // until we got a valid key.
+654:     assign scramble_req_d = scramble_req_q ? ~scramble_key_valid_i : ic_scr_key_req;
+655:     assign scramble_req_o = scramble_req_q;
+656: 
+657:   end else begin : gen_noscramble
+658: 
+1275:   if (BaseIsa == BaseIsaRV32IorCHERIoT) begin : gen_cheriot_trvk
+1276:     ibex_trvk #(
+1277:       .NumOutstanding(MaxOutstandingDSideAccesses),
+1278:       .MemECC(MemECC),
+1279:       .RevBitmapAddrWidth(CheriotRevBitmapAddrWidth),
+1280:       .RevBitmapBaseAddr(CheriotRevBitmapBaseAddr)
+1281:     ) i_ibex_trvk (
+1282:       .clk_i                  (clk),
+1283:       .rst_ni                 (rst_ni),
+1284:       .heap_base_addr_i       (trvk_heap_base_addr_i),
+1361: 
+1362:   assign alert_major_internal_o = core_alert_major_internal     |
+1363:                                   lockstep_alert_major_internal |
+1364:                                   icache_alert_major_internal;
+1365:   assign alert_major_bus_o      = core_alert_major_bus       |
+1366:                                   lockstep_alert_major_bus   |
+1367:                                   trvk_revbm_data_intg_error |
+1368:                                   trvk_revbm_device_error;
+1369:   assign alert_minor_o          = core_alert_minor | lockstep_alert_minor;
+1370: 
+1371:   // X checks for top-level outputs
+
+FILE rtl/ibex_trvk.sv
+313:   // top-related inputs are set to zero, top-related outputs ignored
+314:   assign cap_correction = cheriot_compute_corrections('0, cap_meta.base, addr_mid);
+315: 
+316:   // Calculate the base address of the capability as a 33-bit value
+317:   assign cap_base_33 = cheriot_expand_bound33(cap_meta.base,
+318:                                               cheriot_get_base_correction(cap_correction),
+319:                                               cap_meta.exponent, ptr_storage_q);
+320: 
+321:   // We don't need the correction bits corresponding to the top address
+322:   assign unused_cap_correction = ^cap_correction;
+323: 
+324:   // The MSB is unused in our case
+325:   assign {unused_cap_base_33, cap_base} = cap_base_33;
+326: 
+327:   // Address in the revocation bitmap
+328:   assign revbm_cap_addr = cap_base - heap_base_addr_i;
+329: 
+330:   // Bit address in the revocation bitmap (every bit corresponds to one 64-bit capability)
+331:   assign revbm_bit_addr = revbm_cap_addr >> $clog2(64/8);
+332: 
+333:   // Word address of the revocation bitmap
+334:   assign revbm_addr = revbm_bit_addr[RevBitmapWordAddrWidth+$clog2(32)-1:$clog2(32)];
+335: 
+336:   // Bit select
+337:   assign revbm_bit_select = revbm_bit_addr[$clog2(32)-1:0];
+338: 
+339:   // Capability base is outside of the bitmap range
+340:   assign revbm_out_of_range = |(revbm_bit_addr[31:RevBitmapWordAddrWidth+$clog2(32)]);
+341: 
+342: 
+343:   //////////////////////
+344:   // Bitmap Interface //
+345:   //////////////////////
+346: 
+347:   // We have loaded valid capability pointer, now we see valid metadata, not a sealing cap,
+348:   // and are pointing into the revocation bitmap
+349:   assign revbm_req_required = !is_sealing_cap          && // Not sealing cap
+350:                               ptr_storage_valid_q      && // The pointer stored is valid
+351:                               downstream_rsp_out.tag   && // We are looking at a capability
+352:                               downstream_rsp_out_valid && // The stored response is valid
+353:                               misalign_flag_out        && // We are on the second word of the cap
+354:                               misalign_flag_out_valid  && // The latched alignment bits are valid
+355:                               !revbm_out_of_range;        // We hit the heap range
+356: 
+357:   // Assemble read-only request
+358:   assign revbm_req_o  = revbm_req_required && !revbm_outstanding_q;
+359:   assign revbm_addr_o = RevBitmapBaseAddr +
+360:                          {{32 - RevBitmapWordAddrWidth - 2{1'b0}}, revbm_addr, 2'b00};
+361: 
+362:   // Is the current capability marked as revoked?
+363:   assign revbm_revoked = revbm_rdata_i[revbm_bit_select] || revbm_err_i ||
+364:                          (|revbm_rsp_data_intg_error);
+365: 
+366:   // Did we receive a device error?
+367:   assign revbm_device_error_o = revbm_rvalid_i && revbm_err_i;
+368: 
+369:   // Check the bitmap response data integrity
+370:   if (MemECC) begin : gen_revbm_intg_check
+371:     prim_secded_inv_39_32_dec u_prim_secded_inv_39_32_dec_bm_rsp_data (
+372:       .data_i    ({revbm_rdata_intg_i, revbm_rdata_i}),
+373:       .data_o    (),
+374:       .syndrome_o(),
+375:       .err_o     (revbm_rsp_data_intg_error)
+376:     );
+377: 
+378:     // Mask response integrity error if response is not being handshaked
+379:     assign revbm_data_intg_error_o = revbm_rvalid_i && (|revbm_rsp_data_intg_error);
+396:         revbm_outstanding_q <= 1'b1;
+397:       end
+398:     end
+399:   end
+400: 
+401:   // downstream_rsp_wready is only used for the assertion
+402:   assign unused_downstream_rsp_wready = downstream_rsp_wready;
+403: 
+404:   ////////////////
+405:   // Assertions //
+406:   ////////////////
+407: 
+408:   // Every delivered response has its alignment information available.
+409:   `ASSERT(AlignValidOnRsp_A, upstream_rvalid_o |-> misalign_flag_out_valid)
+410:   // The downstream response store never overflows.
+411:   `ASSERT(DsRspFifoNoOverflow_A, downstream_rvalid_i |-> downstream_rsp_wready)
+412:   // No unsolicited bitmap response; this is what keeps `upstream_tag_o` safe.
+413:   `ASSERT(RevbmRspOnlyWhenOutstanding_A, revbm_rvalid_i |-> revbm_outstanding_q)
+414:   // OBI request stability on the bitmap port.
+415:   `ASSERT(RevbmReqStable_A, revbm_req_o && !revbm_gnt_i |=> revbm_req_o && $stable(revbm_addr_o))
+416:   `ASSERT_INIT(RevBitmapWordAddrWidthRange_A, RevBitmapWordAddrWidth inside {[1:26]})
+417:   `ASSERT_INIT(RevBitmapBaseAddrAligned_A, RevBitmapBaseAddr[1:0] == 2'b00)
+418:   `ASSERT(HeapBaseAligned_A, heap_base_addr_i[2:0] == 3'b0)
+419: 
+420: endmodule
+
+FILE rtl/ibex_core.sv
+1620:       .pmp_req_type_i   (pmp_req_type),
+1621:       .pmp_req_err_o    (pmp_req_err_raw)
+1622:     );
+1623: 
+1624:     // Gate PMP errors to zero in CHERIoT mode; CHERIoT capability checks replace ePMP.
+1625:     if (BaseIsa == BaseIsaRV32IorCHERIoT) begin : g_pmp_cheriot_gate
+1626:       assign pmp_req_err[PMP_I]  = (cheriot_enable_i == IbexMuBiOn) ? 1'b0 : pmp_req_err_raw[PMP_I];
+1627:       assign pmp_req_err[PMP_I2] = (cheriot_enable_i == IbexMuBiOn)
+1628:                                  ? 1'b0 : pmp_req_err_raw[PMP_I2];
+1629:       assign pmp_req_err[PMP_D]  = (cheriot_enable_i == IbexMuBiOn) ? 1'b0 : pmp_req_err_raw[PMP_D];
+1630:     end else begin : g_pmp_no_cheriot_gate
+1631:       assign pmp_req_err[PMP_I]  = pmp_req_err_raw[PMP_I];
+1632:       assign pmp_req_err[PMP_I2] = pmp_req_err_raw[PMP_I2];
+1633:       assign pmp_req_err[PMP_D]  = pmp_req_err_raw[PMP_D];
+1634:     end
+1635:   end else begin : g_no_pmp
+1636:     // Unused signal tieoff
+1637:     priv_lvl_e             unused_priv_lvl_ls;
+1638:     logic [PMP_ADDR_MSB:0] unused_csr_pmp_addr [PMPNumRegions];
+
+FILE shared/rtl/timer.sv
+72:   assign mtime_we     = timer_we & (timer_addr_i[ADDR_OFFSET-1:0] == MTIME_LOW);
+73:   assign mtimeh_we    = timer_we & (timer_addr_i[ADDR_OFFSET-1:0] == MTIME_HIGH);
+74:   assign mtimecmp_we  = timer_we & (timer_addr_i[ADDR_OFFSET-1:0] == MTIMECMP_LOW);
+75:   assign mtimecmph_we = timer_we & (timer_addr_i[ADDR_OFFSET-1:0] == MTIMECMP_HIGH);
+76: 
+77:   // Generate next data
+78:   assign mtime_d    = {(mtimeh_we    ? mtimeh_wdata    : mtime_inc[63:32]),
+79:                        (mtime_we     ? mtime_wdata     : mtime_inc[31:0])};
+80:   assign mtimecmp_d = {(mtimecmph_we ? mtimecmph_wdata : mtimecmp_q[63:32]),
+81:                        (mtimecmp_we  ? mtimecmp_wdata  : mtimecmp_q[31:0])};
+82: 
+83:   // Generate registers
+84:   always_ff @(posedge clk_i or negedge rst_ni) begin
+85:     if (~rst_ni) begin
+86:       mtime_q <= 'b0;
+87:     end else begin
+88:       mtime_q <= mtime_d;
+89:     end
+90:   end
+91: 
+92:   always_ff @(posedge clk_i or negedge rst_ni) begin
+93:     if (~rst_ni) begin
+94:       mtimecmp_q <= 'b0;
+95:     end else if (mtimecmp_we | mtimecmph_we) begin
+96:       mtimecmp_q <= mtimecmp_d;
+97:     end
+98:   end
+99: 
+100:   // interrupt remains set until mtimecmp is written
+101:   assign interrupt_d  = ((mtime_q >= mtimecmp_q) | interrupt_q) & ~(mtimecmp_we | mtimecmph_we);
+102: 
+103:   always_ff @(posedge clk_i or negedge rst_ni) begin
+104:     if (~rst_ni) begin
+105:       interrupt_q <= 'b0;
+106:     end else begin
+107:       interrupt_q <= interrupt_d;
+108:     end
+109:   end
+110: 
+111:   assign timer_intr_o = interrupt_q;
+112: 
+113:   // Read data
+114:   always_comb begin
+
+FILE shared/rtl/ram_2p.sv
+41: 
+42:   logic [Aw-1:0] a_addr_idx;
+43:   assign a_addr_idx = a_addr_i[Aw-1+2:2];
+44:   logic [31-Aw:0] unused_a_addr_parts;
+45:   assign unused_a_addr_parts = {a_addr_i[31:Aw+2], a_addr_i[1:0]};
+46: 
+47:   logic [Aw-1:0] b_addr_idx;
+48:   assign b_addr_idx = b_addr_i[Aw-1+2:2];
+49:   logic [31-Aw:0] unused_b_addr_parts;
+50:   assign unused_b_addr_parts = {b_addr_i[31:Aw+2], b_addr_i[1:0]};
+51: 
+52:   // Convert byte mask to SRAM bit mask.
+53:   logic [31:0] a_wmask;
+
+FILE shared/rtl/bus.sv
+96:         device_sel_resp <= device_sel_req;
+97:         host_sel_resp <= host_sel_req;
+98:         // Decode failed; no device matched?
+99:         decode_err_resp <= host_sel_valid & !device_sel_valid;
+100:      end
+101:   end
+102: 
+103:   always_comb begin
+104:     for (integer device = 0; device < NrDevices; device = device + 1) begin
+105:       if (device_sel_valid && NumBitsDeviceSel'(device) == device_sel_req) begin
+106:         device_req_o[device]   = host_req_i[host_sel_req];
+107:         device_we_o[device]    = host_we_i[host_sel_req];
+108:         device_addr_o[device]  = host_addr_i[host_sel_req];
+109:         device_wdata_o[device] = host_wdata_i[host_sel_req];
+110:         device_be_o[device]    = host_be_i[host_sel_req];
+111:       end else begin
+112:         device_req_o[device]   = 1'b0;
+113:         device_we_o[device]    = 1'b0;
+114:         device_addr_o[device]  = 'b0;
+115:         device_wdata_o[device] = 'b0;
+116:         device_be_o[device]    = 'b0;
+
+FILE vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv
+102: `ifdef VERILATOR
+103:  `include "prim_assert_dummy_macros.svh"
+104: `elsif SYNTHESIS
+105:  `include "prim_assert_dummy_macros.svh"
+106: `elsif YOSYS
+107:  `include "prim_assert_yosys_macros.svh"
+108:  `define INC_ASSERT
+109: `else
+110:  `include "prim_assert_standard_macros.svh"
+111:  `define INC_ASSERT
+112: `endif
+113: 
+
+FILE vendor/lowrisc_ip/ip/prim/rtl/prim_assert_dummy_macros.svh
+1: // Copyright lowRISC contributors (OpenTitan project).
+2: // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+3: // SPDX-License-Identifier: Apache-2.0
+4: 
+5: // Macro bodies included by prim_assert.sv for tools that don't support assertions. See
+6: // prim_assert.sv for documentation for each of the macros.
+7: 
+8: `define ASSERT_I(__name, __prop)
+9: `define ASSERT_INIT(__name, __prop)
+10: `define ASSERT_INIT_NET(__name, __prop)
+11: `define ASSERT_FINAL(__name, __prop)
+12: `define ASSERT_AT_RESET(__name, __prop, __rst = `ASSERT_DEFAULT_RST)
+13: `define ASSERT_AT_RESET_AND_FINAL(__name, __prop, __rst = `ASSERT_DEFAULT_RST)
+14: `define ASSERT(__name, __prop, __clk = `ASSERT_DEFAULT_CLK, __rst = `ASSERT_DEFAULT_RST)
+15: `define ASSERT_NEVER(__name, __prop, __clk = `ASSERT_DEFAULT_CLK, __rst = `ASSERT_DEFAULT_RST)
+16: `define ASSERT_KNOWN(__name, __sig, __clk = `ASSERT_DEFAULT_CLK, __rst = `ASSERT_DEFAULT_RST)
+17: `define COVER(__name, __prop, __clk = `ASSERT_DEFAULT_CLK, __rst = `ASSERT_DEFAULT_RST)
+18: `define ASSUME(__name, __prop, __clk = `ASSERT_DEFAULT_CLK, __rst = `ASSERT_DEFAULT_RST)
+19: `define ASSUME_I(__name, __prop)
+
+FILE dv/formal/check/protocol/mem.sv
+14: `define TIME_LIMIT 5
+15: 
+16: interface mem_assume_t(
+17:     input logic clk_i,
+18:     input logic rst_ni,
+19: 
+20:     input logic req_o,
+21:     input logic gnt_i,
+22:     input logic rvalid_i,
+23:     input logic err_i
+24: );
+25:     logic [7:0] outstanding_reqs_q;
+26:     logic [7:0] outstanding_reqs;
+27:     assign outstanding_reqs = outstanding_reqs_q + gnt_i - rvalid_i;
+28: 
+29:     always @(posedge clk_i or negedge rst_ni) begin
+30:         if (~rst_ni) begin
+31:             outstanding_reqs_q <= 0;
+32:         end else begin
+33:             outstanding_reqs_q <= outstanding_reqs;
+34:         end
+35:     end
+36: 
+37:     // Sail does not specify what happens on bus errors.
+38:     NoErr: assume property (@(posedge clk_i) ~err_i);
+39: 
+40:     // 1. Only send an rvalid if there is an outstanding request, but not in this cycle
+41:     MemValidBounded: assume property (@(posedge clk_i) outstanding_reqs_q == 8'b0 |-> ~rvalid_i);
+42:     // 2. Grants can only be sent when they are requested
+43:     MemGntOnRequest: assume property (@(posedge clk_i) ~req_o |-> ~gnt_i);
+44: 
+45:     `ifdef YOSYS
+46:     // Give yosys stronger bounds for now.
+47:     // FIXME: Would be nice to relax this, but I'm not sure how long proofs would take.
+48:     //        It might not be too long based on the alt lsus and whatnot, hard to say.
+49:     StrictGnt: assume property (@(posedge clk_i) req_o |-> gnt_i);
+50:     StrictRValid: assume property (@(posedge clk_i) outstanding_reqs_q != 8'b0 |-> rvalid_i);
+51:     `else
+52:     // Grants must respond within TIME_LIMIT cycles
+53:     GntBound: assume property (@(posedge clk_i) req_o |-> ##[0:`TIME_LIMIT] gnt_i);
+54:     // RValid takes no more than TIME_LIMIT cycles
+55:     MemValidTimer: assume property (
+56:       @(posedge clk_i)
+57:       outstanding_reqs != 0 |-> ##[0:`TIME_LIMIT] rvalid_i
+58:     );
+59:     `endif
+60: 
+61:     // Responses have to come eventually, implied by the above bounds so removed
+62:     // MemGntEventually: assume property (@(posedge clk_i) req_o |-> s_eventually gnt_i);
+63:     // MemRespEventually: assume property (always (s_eventually (outstanding_reqs == 8'b0)));
+
+FILE dv/formal/check/top.sv
+162: assign cheriot_enable_i        = IbexMuBiOff;
+163: assign trvk_heap_base_addr_i   = 32'b0;
+164: assign data_tag_i              = 1'b0;
+165: assign trvk_revbm_gnt_i        = 1'b0;
+166: assign trvk_revbm_rvalid_i     = 1'b0;
+167: assign trvk_revbm_rdata_i      = 32'b0;
+168: assign trvk_revbm_rdata_intg_i = 7'b0;
+169: assign trvk_revbm_err_i        = 1'b0;
+170: 
+171: ibex_top #(
+172:     .BaseIsa(ibex_pkg::BaseIsaRV32I),
+173:     .DmHaltAddr(DmHaltAddr),
+174:     .DmExceptionAddr(DmExceptionAddr),
+175:     .SecureIbex(SecureIbex),
+176:     .WritebackStage(WritebackStage),
+177:     .RV32E(RV32E),
+178:     .RV32ZC(RV32ZC),
+179:     .BranchTargetALU(1'b1),
+180:     .PMPEnable(1'b1),
+181:     .PMPNumRegions(PMPNumRegions),
+182:     .CsrMvendorId (CSR_MVENDORID_VALUE),
+183:     .CsrMimpId (CSR_MIMPID_VALUE)
+184: ) ibex_top_i(.*);
+185: 
+186: // Core constraints
+187: // 1. We do not allow going into debug mode
+188: NotDebug: assume property (!ibex_top_i.u_ibex_core.debug_mode & !debug_req_i);
+189: // 2. The boot address is constant
+190: ConstantBoot: assume property (boot_addr_i == $past(boot_addr_i));
+191: // 3. Always fetch enable
+192: FetchEnable: assume property (fetch_enable_i == IbexMuBiOn);
+193: // 4. Always have mcounteren writable
+194: McounterenWritable: assume property (mcounteren_writable_i == IbexMuBiOn);
+195: // 5. Never try to sleep if we couldn't ever wake up
+196: WFIStart: assume property (`IDC.ctrl_fsm_cs == SLEEP |-> (
+197:                                                           `CSR.mie_q.irq_software |
+
+FILE dv/formal/thm/riscv.proof
+134: 
+135:   # Uncomment this for liveness proofs, see ibex.proof for a description of when this can be done.
+136:   # Liveness: lemma live
+137: 
+138:   Top: in (wbexc_finishing & (`IS_CSR -> wbexc_is_checkable_csr))
+167:   # Prove these with engine D (apart from Live which needs Oh)
+168:   Wrap: in (spec_en)
+169:     each X Priv:(priv) Mstatus:(mstatus) Mie:(mie) Mcause:(mcause) Mtval:(mtval) Mtvec:(mtvec) \
+170:          Mscratch:(mscratch) Mepc:(mepc) Mcounteren:(mcounteren) \
+171:          Pmp_cfg:(pmp_cfg) Pmp_addr:(pmp_addr) Mseccfg:(mseccfg) \
+172:          Pc:(pc)
+173:       have (has_spec_past |-> pre_``X == spec_past_``X)
+174: 
+175:     RegA: have (reg_driven[`CR.rf_raddr_a] && spec_past_has_reg[`CR.rf_raddr_a] |-> spec_past_regs[`CR.rf_raddr_a] == pre_regs_cut[`CR.rf_raddr_a])
+176:     RegB: have (reg_driven[`CR.rf_raddr_b] && spec_past_has_reg[`CR.rf_raddr_b] |-> spec_past_regs[`CR.rf_raddr_b] == pre_regs_cut[`CR.rf_raddr_b])
+177: 
+178:   # Live: have (always (##[1:157 + 2*`WFI_BOUND + 17*`TIME_LIMIT] spec_en))
+179: 
+180:   Mem:
+
+FILE dv/uvm/core_ibex/tb/core_ibex_tb_top.sv
+43:   `ifndef IBEX_CFG_BASE_ISA
+44:     `define IBEX_CFG_BASE_ISA ibex_pkg::BaseIsaRV32IorCHERIoT
+45:   `endif
+46: 
+47:   `ifndef IBEX_CFG_RV32M
+48:     `define IBEX_CFG_RV32M ibex_pkg::RV32MFast
+49:   `endif
+50: 
+51:   `ifndef IBEX_CFG_RV32B
+52:     `define IBEX_CFG_RV32B ibex_pkg::RV32BNone
+53:   `endif
+54: 
+55:   `ifndef IBEX_CFG_REG_FILE
+56:     `define IBEX_CFG_REG_FILE ibex_pkg::RegFileFF
+57:   `endif
+58: 
+59:   // Ibex Parameters
+60:   parameter ibex_pkg::base_isa_e BaseIsa  = `IBEX_CFG_BASE_ISA;
+61:   parameter bit          PMPEnable        = 1'b0;
+62:   parameter int unsigned PMPGranularity   = 0;
+63:   parameter int unsigned PMPNumRegions    = 4;
+64:   parameter int unsigned MHPMCounterNum   = 0;
+65:   parameter int unsigned MHPMCounterWidth = 40;
+66:   parameter bit RV32E                     = 1'b0;
+67:   parameter ibex_pkg::rv32m_e RV32M       = `IBEX_CFG_RV32M;
+68:   parameter ibex_pkg::rv32b_e RV32B       = `IBEX_CFG_RV32B;
+69:   parameter ibex_pkg::regfile_e RegFile   = `IBEX_CFG_REG_FILE;
+70:   parameter bit BranchTargetALU           = 1'b0;
+71:   parameter bit WritebackStage            = 1'b0;
+72:   parameter bit ICache                    = 1'b0;
+73:   parameter bit ICacheECC                 = 1'b0;
+74:   parameter bit ICacheTweakInfection      = 1'b0;
+75:   parameter bit BranchPredictor           = 1'b0;
+76:   parameter bit SecureIbex                = 1'b0;
+77:   parameter int unsigned LockstepOffset   = 1;
+78:   parameter bit ICacheScramble            = 1'b0;
+79:   parameter bit DbgTriggerEn              = 1'b0;
+80:   parameter int unsigned DmBaseAddr       = 32'h`DM_ADDR;
+101: 
+102:   ibex_top_tracing #(
+103:     .BaseIsa              (BaseIsa             ),
+104:     .PMPEnable            (PMPEnable           ),
+105:     .PMPGranularity       (PMPGranularity      ),
+106:     .PMPNumRegions        (PMPNumRegions       ),
+107:     .MHPMCounterNum       (MHPMCounterNum      ),
+108:     .MHPMCounterWidth     (MHPMCounterWidth    ),
+109:     .RV32E                (RV32E               ),
+110:     .RV32M                (RV32M               ),
+111:     .RV32B                (RV32B               ),
+112:     .RegFile              (RegFile             ),
+113:     .BranchTargetALU      (BranchTargetALU     ),
+114:     .WritebackStage       (WritebackStage      ),
+115:     .ICache               (ICache              ),
+116:     .ICacheECC            (ICacheECC           ),
+117:     .ICacheTweakInfection (ICacheTweakInfection),
+182:     .scramble_req_o            (scrambling_key_if.req      ),
+183: 
+184:     .debug_req_i               (dut_if.debug_req           ),
+185:     .crash_dump_o              (                           ),
+186:     .double_fault_seen_o       (dut_if.double_fault_seen   ),
+187: 
+188:     .cheriot_enable_i          (ibex_pkg::IbexMuBiOff      ),
+189: 
+208: 
+209:   `define IBEX_RF_PATH core_ibex_tb_top.dut.u_ibex_top.gen_regfile_ff.register_file_i
+210: 
+211:   // We should never see any alerts triggered in normal testing
+212:   `ASSERT(NoAlertsTriggered,
+213:     !dut_if.alert_minor && !dut_if.alert_major_internal && !dut_if.alert_major_bus, clk, !rst_n)
+214:   `DV_ASSERT_CTRL("tb_no_alerts_triggered", core_ibex_tb_top.NoAlertsTriggered)
+215: 
+216:   `DV_ASSERT_CTRL("tb_no_spurious_response",
+217:     core_ibex_tb_top.dut.u_ibex_top.u_ibex_core.NoMemResponseWithoutPendingAccess)
+218:   `DV_ASSERT_CTRL("tb_no_spurious_response",
+219:     core_ibex_tb_top.dut.u_ibex_top.MaxOutstandingDSideAccessesCorrect)
+220:   `DV_ASSERT_CTRL("tb_no_spurious_response",
+221:     core_ibex_tb_top.dut.u_ibex_top.PendingAccessTrackingCorrect)
+222: 
+223:   if (SecureIbex) begin : g_lockstep_assert_ctrl
+224:     `define IBEX_LOCKSTEP_PATH core_ibex_tb_top.dut.u_ibex_top.gen_lockstep.u_ibex_lockstep
+225:     `DV_ASSERT_CTRL("tb_no_spurious_response",
+226:       `IBEX_LOCKSTEP_PATH.u_shadow_core.NoMemResponseWithoutPendingAccess)
+227:   end
+228: 
+229:   if (BaseIsa == ibex_pkg::BaseIsaRV32IorCHERIoT) begin : g_trvk_assert_ctrl
+230:     // Disable TRVK's alignment FIFO assertion alongside the other spurious response checks.
+231:     `DV_ASSERT_CTRL("tb_no_spurious_response",
+232:       core_ibex_tb_top.dut.u_ibex_top.gen_cheriot_trvk.i_ibex_trvk.AlignValidOnRsp_A)
+233:   end
+234: 
+235: `ifndef DV_FCOV_DISABLE
+
+FILE dv/uvm/core_ibex/scripts/ibex_cmd.py
+33: def _run_ibex_config(config_name: str, output_type: str) -> str:
+34:     script_path = _IBEX_ROOT/'util'/'ibex_config.py'
+35:     yaml_path = _IBEX_ROOT/'ibex_configs.yaml'
+36: 
+37:     ibex_config_cmd = [
+38:         str(script_path),
+39:         '--config_filename', str(yaml_path),
+40:         config_name,
+41:         output_type,
+42:         '--ins_hier_path', 'core_ibex_tb_top',
+43:         '--string_define_prefix', 'IBEX_CFG_'
+44:     ]
+45:     proc = subprocess.run(ibex_config_cmd,
+46:                           stdout=subprocess.PIPE,
+47:                           stderr=subprocess.PIPE,
+48:                           universal_newlines=True)
+49: 
+50:     if proc.returncode != 0:
+51:         raise GenError("Error running {0} got:\n{1}\n{2}"
+52:                        .format(script_path, proc.stdout, proc.stderr))
+53: 
+54:     return proc.stdout.strip()
+55: 
+56: 
+57: def _get_x_opts(config_name: str, simulator: str, stage: str) -> str:
+58:     try:
+59:         needs_compile_opts, needs_sim_opts = SIM_CFGS[simulator]
+60:     except KeyError:

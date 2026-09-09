@@ -1,0 +1,17 @@
+{
+  "evidence_id": "EVD-07",
+  "command_argv": [
+    "python3",
+    "doc/dungpc/evidence/model_experiments.py",
+    "--corrupt-check"
+  ],
+  "cwd": "/home/dungpc9/ndmoney4porche/projects/ibex",
+  "run_utc": "2026-09-08T04:49:50.776863+00:00",
+  "exit_status": 1,
+  "expected_exit_status": 1,
+  "expected_exit_matched": true,
+  "output": "{\"model_only\": true, \"result\": \"EXPECTED-NEGATIVE-DETECTED\", \"edge\": 5, \"trace\": [{\"edge\": 1, \"before\": [0, 0, 0], \"write_offset_data_be\": null, \"after\": [1, 0, 1], \"observed_irq\": 1, \"expected_irq\": 1}, {\"edge\": 2, \"before\": [1, 0, 1], \"write_offset_data_be\": [8, 100, 15], \"after\": [2, 100, 0], \"observed_irq\": 0, \"expected_irq\": 0}, {\"edge\": 3, \"before\": [2, 100, 0], \"write_offset_data_be\": [0, 150, 15], \"after\": [150, 100, 0], \"observed_irq\": 0, \"expected_irq\": 0}, {\"edge\": 4, \"before\": [150, 100, 0], \"write_offset_data_be\": null, \"after\": [151, 100, 1], \"observed_irq\": 1, \"expected_irq\": 1}, {\"edge\": 5, \"before\": [151, 100, 1], \"write_offset_data_be\": [0, 0, 15], \"after\": [0, 100, 1], \"observed_irq\": 0, \"expected_irq\": 1}]}\n",
+  "expected_marker": "EXPECTED-NEGATIVE-DETECTED",
+  "expected_marker_present": true,
+  "RTL_simulation_performed": false
+}

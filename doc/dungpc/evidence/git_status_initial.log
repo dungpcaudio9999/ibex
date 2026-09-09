@@ -1,0 +1,5 @@
+{
+  "command": "git status --short --untracked-files=all",
+  "exit_status": 0,
+  "output": "?? doc/dungpc/evidence/collect_evidence.py\n?? doc/dungpc/evidence/git_revision.log\n?? doc/dungpc/evidence/source_manifest.json\n"
+}

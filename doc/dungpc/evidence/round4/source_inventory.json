@@ -1,0 +1,47 @@
+{
+  "method": "Static YAML and assertion macro invocation inventory; not elaborated counts or execution coverage. Iteration sums are unfiltered and count only explicit fields.",
+  "testlists": [
+    {
+      "path": "dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml",
+      "test_entries": 57,
+      "explicit_iterations_sum": 1540,
+      "entries_without_explicit_iterations": 0,
+      "imports": [],
+      "cosim_disabled_tests": [
+        "riscv_csr_test"
+      ]
+    },
+    {
+      "path": "dv/uvm/core_ibex/directed_tests/directed_testlist.yaml",
+      "test_entries": 944,
+      "explicit_iterations_sum": 944,
+      "entries_without_explicit_iterations": 0,
+      "imports": [],
+      "cosim_disabled_tests": []
+    }
+  ],
+  "rtl_assert_macro_invocations": 168,
+  "rtl_files_with_assert_macro_invocations": 20,
+  "assert_macro_invocations_by_file": {
+    "rtl/ibex_branch_predict.sv": 1,
+    "rtl/ibex_compressed_decoder.sv": 8,
+    "rtl/ibex_controller.sv": 6,
+    "rtl/ibex_core.sv": 9,
+    "rtl/ibex_cs_registers.sv": 4,
+    "rtl/ibex_csr.sv": 1,
+    "rtl/ibex_decoder.sv": 1,
+    "rtl/ibex_fetch_fifo.sv": 2,
+    "rtl/ibex_icache.sv": 5,
+    "rtl/ibex_id_stage.sv": 30,
+    "rtl/ibex_if_stage.sv": 12,
+    "rtl/ibex_load_store_unit.sv": 9,
+    "rtl/ibex_multdiv_fast.sv": 6,
+    "rtl/ibex_multdiv_slow.sv": 1,
+    "rtl/ibex_register_file_ff.sv": 6,
+    "rtl/ibex_register_file_fpga.sv": 4,
+    "rtl/ibex_register_file_latch.sv": 6,
+    "rtl/ibex_top.sv": 49,
+    "rtl/ibex_trvk.sv": 7,
+    "rtl/ibex_wb_stage.sv": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "evidence_id": "EVD-03",
+  "command_argv": [
+    "python3",
+    "doc/dungpc/evidence/source_audit.py"
+  ],
+  "cwd": "/home/dungpc9/ndmoney4porche/projects/ibex",
+  "run_utc": "2026-09-08T04:49:50.730234+00:00",
+  "exit_status": 0,
+  "expected_exit_status": 0,
+  "expected_exit_matched": true,
+  "output": "{\n  \"named_config_count\": 8,\n  \"rtl_sv_files\": 33,\n  \"rtl_lines\": 25816,\n  \"missing_src_files_yml_paths\": [\n    {\n      \"group\": \"ibex\",\n      \"path\": \"rtl/ibex_counters.sv\"\n    },\n    {\n      \"group\": \"ibex\",\n      \"path\": \"shared/rtl/prim_assert.sv\"\n    },\n    {\n      \"group\": \"ibex_vip_rtl\",\n      \"path\": \"rtl/ibex_core_tracing.sv\"\n    }\n  ],\n  \"configuration_fields_not_declared_in_simple_system\": [\n    \"BaseIsa\"\n  ],\n  \"result\": \"Inventory completed; findings require contextual review, not a lint pass\"\n}\n",
+  "expected_marker": "Inventory completed",
+  "expected_marker_present": true,
+  "RTL_simulation_performed": false
+}

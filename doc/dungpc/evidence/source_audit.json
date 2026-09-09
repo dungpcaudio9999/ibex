@@ -1,0 +1,1032 @@
+{
+  "method": "PyYAML and regular expressions; intended declarations only; no elaboration",
+  "configurations": {
+    "small": {
+      "BaseIsa": "ibex_pkg::BaseIsaRV32I",
+      "RV32E": 0,
+      "RV32M": "ibex_pkg::RV32MFast",
+      "RV32B": "ibex_pkg::RV32BNone",
+      "RV32ZC": "ibex_pkg::RV32Zca",
+      "RegFile": "ibex_pkg::RegFileFF",
+      "BranchTargetALU": 0,
+      "WritebackStage": 0,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "BranchPredictor": 0,
+      "DbgTriggerEn": 0,
+      "SecureIbex": 0,
+      "PMPEnable": 0,
+      "PMPGranularity": 0,
+      "PMPNumRegions": 4,
+      "MHPMCounterNum": 0,
+      "MHPMCounterWidth": 40
+    },
+    "opentitan": {
+      "BaseIsa": "ibex_pkg::BaseIsaRV32IorCHERIoT",
+      "RV32E": 0,
+      "RV32M": "ibex_pkg::RV32MSingleCycle",
+      "RV32B": "ibex_pkg::RV32BOTEarlGrey",
+      "RV32ZC": "ibex_pkg::RV32ZcaZcbZcmp",
+      "RegFile": "ibex_pkg::RegFileFF",
+      "BranchTargetALU": 1,
+      "WritebackStage": 1,
+      "ICache": 1,
+      "ICacheECC": 1,
+      "ICacheScramble": 1,
+      "BranchPredictor": 0,
+      "DbgTriggerEn": 1,
+      "SecureIbex": 1,
+      "PMPEnable": 1,
+      "PMPGranularity": 0,
+      "PMPNumRegions": 16,
+      "MHPMCounterNum": 10,
+      "MHPMCounterWidth": 32
+    },
+    "maxperf": {
+      "BaseIsa": "ibex_pkg::BaseIsaRV32I",
+      "RV32E": 0,
+      "RV32M": "ibex_pkg::RV32MSingleCycle",
+      "RV32B": "ibex_pkg::RV32BNone",
+      "RV32ZC": "ibex_pkg::RV32ZcaZcbZcmp",
+      "RegFile": "ibex_pkg::RegFileFF",
+      "BranchTargetALU": 1,
+      "WritebackStage": 1,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "BranchPredictor": 0,
+      "DbgTriggerEn": 0,
+      "SecureIbex": 0,
+      "PMPEnable": 0,
+      "PMPGranularity": 0,
+      "PMPNumRegions": 4,
+      "MHPMCounterNum": 0,
+      "MHPMCounterWidth": 40
+    },
+    "maxperf-pmp-bmbalanced": {
+      "BaseIsa": "ibex_pkg::BaseIsaRV32I",
+      "RV32E": 0,
+      "RV32M": "ibex_pkg::RV32MSingleCycle",
+      "RV32B": "ibex_pkg::RV32BBalanced",
+      "RV32ZC": "ibex_pkg::RV32ZcaZcbZcmp",
+      "RegFile": "ibex_pkg::RegFileFF",
+      "BranchTargetALU": 1,
+      "WritebackStage": 1,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "BranchPredictor": 0,
+      "DbgTriggerEn": 0,
+      "SecureIbex": 0,
+      "PMPEnable": 1,
+      "PMPGranularity": 0,
+      "PMPNumRegions": 16,
+      "MHPMCounterNum": 0,
+      "MHPMCounterWidth": 40
+    },
+    "maxperf-pmp": {
+      "BaseIsa": "ibex_pkg::BaseIsaRV32I",
+      "RV32E": 0,
+      "RV32M": "ibex_pkg::RV32MSingleCycle",
+      "RV32B": "ibex_pkg::RV32BNone",
+      "RV32ZC": "ibex_pkg::RV32ZcaZcbZcmp",
+      "RegFile": "ibex_pkg::RegFileFF",
+      "BranchTargetALU": 1,
+      "WritebackStage": 1,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "BranchPredictor": 0,
+      "DbgTriggerEn": 0,
+      "SecureIbex": 0,
+      "PMPEnable": 1,
+      "PMPGranularity": 0,
+      "PMPNumRegions": 16,
+      "MHPMCounterNum": 0,
+      "MHPMCounterWidth": 40
+    },
+    "maxperf-pmp-bmfull": {
+      "BaseIsa": "ibex_pkg::BaseIsaRV32I",
+      "RV32E": 0,
+      "RV32M": "ibex_pkg::RV32MSingleCycle",
+      "RV32B": "ibex_pkg::RV32BFull",
+      "RV32ZC": "ibex_pkg::RV32ZcaZcbZcmp",
+      "RegFile": "ibex_pkg::RegFileFF",
+      "BranchTargetALU": 1,
+      "WritebackStage": 1,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "BranchPredictor": 0,
+      "DbgTriggerEn": 0,
+      "SecureIbex": 0,
+      "PMPEnable": 1,
+      "PMPGranularity": 0,
+      "PMPNumRegions": 16,
+      "MHPMCounterNum": 0,
+      "MHPMCounterWidth": 40
+    },
+    "maxperf-pmp-bmfull-icache": {
+      "BaseIsa": "ibex_pkg::BaseIsaRV32I",
+      "RV32E": 0,
+      "RV32M": "ibex_pkg::RV32MSingleCycle",
+      "RV32B": "ibex_pkg::RV32BFull",
+      "RV32ZC": "ibex_pkg::RV32ZcaZcbZcmp",
+      "RegFile": "ibex_pkg::RegFileFF",
+      "BranchTargetALU": 1,
+      "WritebackStage": 1,
+      "ICache": 1,
+      "ICacheECC": 1,
+      "ICacheScramble": 0,
+      "BranchPredictor": 0,
+      "DbgTriggerEn": 0,
+      "SecureIbex": 0,
+      "PMPEnable": 1,
+      "PMPGranularity": 0,
+      "PMPNumRegions": 16,
+      "MHPMCounterNum": 0,
+      "MHPMCounterWidth": 40
+    },
+    "experimental-branch-predictor": {
+      "BaseIsa": "ibex_pkg::BaseIsaRV32I",
+      "RV32E": 0,
+      "RV32M": "ibex_pkg::RV32MSingleCycle",
+      "RV32B": "ibex_pkg::RV32BNone",
+      "RV32ZC": "ibex_pkg::RV32ZcaZcbZcmp",
+      "RegFile": "ibex_pkg::RegFileFF",
+      "BranchTargetALU": 1,
+      "WritebackStage": 1,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "BranchPredictor": 1,
+      "DbgTriggerEn": 0,
+      "SecureIbex": 0,
+      "PMPEnable": 0,
+      "PMPGranularity": 0,
+      "PMPNumRegions": 4,
+      "MHPMCounterNum": 0,
+      "MHPMCounterWidth": 40
+    }
+  },
+  "core_manifests": {
+    "ibex_core.core": {
+      "name": "lowrisc:ibex:ibex_core:0.1",
+      "parameters": [
+        "RVFI",
+        "SYNTHESIS",
+        "FPGA_XILINX",
+        "RV32E",
+        "RV32M",
+        "RV32B",
+        "RV32ZC",
+        "RegFile",
+        "ICache",
+        "ICacheECC",
+        "BranchTargetALU",
+        "WritebackStage",
+        "BranchPredictor",
+        "DbgTriggerEn",
+        "SecureIbex",
+        "ICacheScramble",
+        "PMPEnable",
+        "PMPGranularity",
+        "PMPNumRegions",
+        "MHPMCounterNum",
+        "MHPMCounterWidth"
+      ],
+      "targets": {
+        "default": {
+          "filesets": [
+            "tool_verilator ? (files_lint_verilator)",
+            "files_rtl",
+            "files_check_tool_requirements"
+          ],
+          "toplevel": "ibex_core",
+          "parameters": [
+            "tool_vivado ? (FPGA_XILINX=true)"
+          ]
+        },
+        "lint": {
+          "filesets": [
+            "tool_verilator ? (files_lint_verilator)",
+            "files_rtl",
+            "files_check_tool_requirements"
+          ],
+          "toplevel": "ibex_core",
+          "parameters": [
+            "SYNTHESIS=true",
+            "RVFI=true"
+          ],
+          "default_tool": "verilator",
+          "tools": {
+            "verilator": {
+              "mode": "lint-only",
+              "verilator_options": [
+                "-Wall",
+                "--unroll-count 72"
+              ]
+            }
+          }
+        },
+        "format": {
+          "filesets": [
+            "files_rtl"
+          ],
+          "parameters": [
+            "SYNTHESIS=true",
+            "RVFI=true"
+          ],
+          "default_tool": "veribleformat",
+          "toplevel": "ibex_core",
+          "tools": {
+            "veribleformat": {
+              "verible_format_args": [
+                "--inplace"
+              ]
+            }
+          }
+        }
+      },
+      "config_fields_not_declared": [
+        "BaseIsa"
+      ]
+    },
+    "ibex_top.core": {
+      "name": "lowrisc:ibex:ibex_top:0.1",
+      "parameters": [
+        "RVFI",
+        "SYNTHESIS",
+        "FPGA_XILINX",
+        "BaseIsa",
+        "RV32E",
+        "RV32M",
+        "RV32B",
+        "RV32ZC",
+        "RegFile",
+        "ICache",
+        "ICacheECC",
+        "BranchTargetALU",
+        "WritebackStage",
+        "BranchPredictor",
+        "DbgTriggerEn",
+        "SecureIbex",
+        "ICacheScramble",
+        "PMPEnable",
+        "PMPGranularity",
+        "PMPNumRegions",
+        "MHPMCounterNum",
+        "MHPMCounterWidth"
+      ],
+      "targets": {
+        "default": {
+          "filesets": [
+            "tool_verilator ? (files_lint_verilator)",
+            "tool_verilator ? (files_map_prim_generic)",
+            "files_rtl",
+            "files_check_tool_requirements"
+          ],
+          "toplevel": "ibex_top",
+          "parameters": [
+            "tool_vivado ? (FPGA_XILINX=true)"
+          ]
+        },
+        "lint": {
+          "filesets": [
+            "files_map_prim_generic"
+          ],
+          "toplevel": "ibex_top",
+          "parameters": [
+            "SYNTHESIS=true",
+            "RVFI=true"
+          ],
+          "default_tool": "verilator",
+          "tools": {
+            "verilator": {
+              "mode": "lint-only",
+              "verilator_options": [
+                "-Wall",
+                "--unroll-count 72"
+              ]
+            }
+          }
+        },
+        "format": {
+          "filesets": [
+            "files_rtl"
+          ],
+          "parameters": [
+            "SYNTHESIS=true",
+            "RVFI=true"
+          ],
+          "default_tool": "veribleformat",
+          "toplevel": "ibex_top",
+          "tools": {
+            "veribleformat": {
+              "verible_format_args": [
+                "--inplace",
+                "--formal_parameters_indentation=indent",
+                "--named_parameter_indentation=indent",
+                "--named_port_indentation=indent",
+                "--port_declarations_indentation=indent"
+              ]
+            }
+          }
+        }
+      },
+      "config_fields_not_declared": []
+    },
+    "ibex_top_tracing.core": {
+      "name": "lowrisc:ibex:ibex_top_tracing:0.1",
+      "parameters": [
+        "RVFI",
+        "SYNTHESIS",
+        "BaseIsa",
+        "RV32E",
+        "RV32M",
+        "RV32B",
+        "RV32ZC",
+        "RegFile",
+        "ICache",
+        "ICacheECC",
+        "BranchTargetALU",
+        "WritebackStage",
+        "BranchPredictor",
+        "DbgTriggerEn",
+        "SecureIbex",
+        "ICacheScramble",
+        "PMPEnable",
+        "PMPGranularity",
+        "PMPNumRegions",
+        "MHPMCounterNum",
+        "MHPMCounterWidth"
+      ],
+      "targets": {
+        "default": {
+          "filesets": [
+            "files_rtl"
+          ],
+          "parameters": [
+            "RVFI=true"
+          ],
+          "toplevel": "ibex_top_tracing"
+        },
+        "lint": {
+          "filesets": [
+            "files_rtl"
+          ],
+          "parameters": [
+            "RVFI=true",
+            "SYNTHESIS=true",
+            "BaseIsa",
+            "RV32E",
+            "RV32M",
+            "RV32B",
+            "RV32ZC",
+            "RegFile",
+            "ICache",
+            "ICacheECC",
+            "BranchTargetALU",
+            "WritebackStage",
+            "BranchPredictor",
+            "DbgTriggerEn",
+            "SecureIbex",
+            "ICacheScramble",
+            "PMPEnable",
+            "PMPGranularity",
+            "PMPNumRegions",
+            "MHPMCounterNum",
+            "MHPMCounterWidth"
+          ],
+          "toplevel": "ibex_top_tracing",
+          "default_tool": "verilator",
+          "tools": {
+            "verilator": {
+              "mode": "lint-only",
+              "verilator_options": [
+                "-Wall",
+                "--unroll-count 72"
+              ]
+            }
+          }
+        },
+        "format": {
+          "filesets": [
+            "files_rtl"
+          ],
+          "parameters": [
+            "SYNTHESIS=true",
+            "RVFI=true"
+          ],
+          "default_tool": "veribleformat",
+          "toplevel": "ibex_top_tracing",
+          "tools": {
+            "veribleformat": {
+              "verible_format_args": [
+                "--inplace",
+                "--formal_parameters_indentation=indent",
+                "--named_parameter_indentation=indent",
+                "--named_port_indentation=indent",
+                "--port_declarations_indentation=indent"
+              ]
+            }
+          }
+        }
+      },
+      "config_fields_not_declared": []
+    },
+    "examples/simple_system/ibex_simple_system.core": {
+      "name": "lowrisc:ibex:ibex_simple_system",
+      "parameters": [
+        "RV32E",
+        "RV32M",
+        "RV32B",
+        "RV32ZC",
+        "RegFile",
+        "INSTR_CYCLE_DELAY",
+        "ICache",
+        "ICacheECC",
+        "SRAMInitFile",
+        "BranchTargetALU",
+        "WritebackStage",
+        "SecureIbex",
+        "ICacheScramble",
+        "BranchPredictor",
+        "DbgTriggerEn",
+        "PMPEnable",
+        "PMPGranularity",
+        "PMPNumRegions",
+        "MHPMCounterNum",
+        "MHPMCounterWidth"
+      ],
+      "targets": {
+        "default": {
+          "filesets": [
+            "files_simple_system"
+          ],
+          "toplevel": "ibex_simple_system",
+          "parameters": [
+            "RV32E",
+            "RV32M",
+            "RV32B",
+            "RV32ZC",
+            "RegFile",
+            "INSTR_CYCLE_DELAY",
+            "ICache",
+            "ICacheScramble",
+            "ICacheECC",
+            "BranchTargetALU",
+            "WritebackStage",
+            "SecureIbex",
+            "BranchPredictor",
+            "DbgTriggerEn",
+            "PMPEnable",
+            "PMPGranularity",
+            "PMPNumRegions",
+            "MHPMCounterNum",
+            "MHPMCounterWidth",
+            "SRAMInitFile"
+          ]
+        },
+        "lint": {
+          "filesets": [
+            "files_simple_system"
+          ],
+          "toplevel": "ibex_simple_system",
+          "parameters": [
+            "RV32E",
+            "RV32M",
+            "RV32B",
+            "RV32ZC",
+            "RegFile",
+            "INSTR_CYCLE_DELAY",
+            "ICache",
+            "ICacheScramble",
+            "ICacheECC",
+            "BranchTargetALU",
+            "WritebackStage",
+            "SecureIbex",
+            "BranchPredictor",
+            "DbgTriggerEn",
+            "PMPEnable",
+            "PMPGranularity",
+            "PMPNumRegions",
+            "MHPMCounterNum",
+            "MHPMCounterWidth",
+            "SRAMInitFile"
+          ],
+          "default_tool": "verilator",
+          "tools": {
+            "verilator": {
+              "mode": "lint-only",
+              "verilator_options": [
+                "-Wall",
+                "--unroll-count 72"
+              ]
+            }
+          }
+        },
+        "sim": {
+          "filesets": [
+            "files_simple_system"
+          ],
+          "toplevel": "ibex_simple_system",
+          "parameters": [
+            "RV32E",
+            "RV32M",
+            "RV32B",
+            "RV32ZC",
+            "RegFile",
+            "INSTR_CYCLE_DELAY",
+            "ICache",
+            "ICacheScramble",
+            "ICacheECC",
+            "BranchTargetALU",
+            "WritebackStage",
+            "SecureIbex",
+            "BranchPredictor",
+            "DbgTriggerEn",
+            "PMPEnable",
+            "PMPGranularity",
+            "PMPNumRegions",
+            "MHPMCounterNum",
+            "MHPMCounterWidth",
+            "SRAMInitFile"
+          ],
+          "default_tool": "verilator",
+          "tools": {
+            "vcs": {
+              "vcs_options": [
+                "-xlrm uniq_prior_final",
+                "-debug_access+r"
+              ]
+            },
+            "verilator": {
+              "mode": "cc",
+              "verilator_options": [
+                "--trace",
+                "--trace-fst",
+                "--trace-structs",
+                "--trace-params",
+                "--trace-max-array 1024",
+                "-CFLAGS \"-std=c++17 -Wall -DVM_TRACE_FMT_FST -DTOPLEVEL_NAME=ibex_simple_system -g\"",
+                "-LDFLAGS \"-pthread -lutil -lelf\"",
+                "-Wall",
+                "--unroll-count 72"
+              ]
+            }
+          }
+        }
+      },
+      "config_fields_not_declared": [
+        "BaseIsa"
+      ]
+    }
+  },
+  "missing_src_files_yml_paths": [
+    {
+      "group": "ibex",
+      "path": "rtl/ibex_counters.sv"
+    },
+    {
+      "group": "ibex",
+      "path": "shared/rtl/prim_assert.sv"
+    },
+    {
+      "group": "ibex_vip_rtl",
+      "path": "rtl/ibex_core_tracing.sv"
+    }
+  ],
+  "rtl_inventory": [
+    {
+      "path": "rtl/ibex_alu.sv",
+      "lines": 1400,
+      "declarations_text_only": [
+        "ibex_alu"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_branch_predict.sv",
+      "lines": 100,
+      "declarations_text_only": [
+        "ibex_branch_predict"
+      ],
+      "assert_macro_occurrences_text_only": 1,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_cheriot_ex.sv",
+      "lines": 1031,
+      "declarations_text_only": [
+        "ibex_cheriot_ex"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_cheriot_pkg.sv",
+      "lines": 965,
+      "declarations_text_only": [
+        "ibex_cheriot_pkg"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": [
+        "CHERIOT_PKG_DEBUG"
+      ]
+    },
+    {
+      "path": "rtl/ibex_compressed_decoder.sv",
+      "lines": 939,
+      "declarations_text_only": [
+        "ibex_compressed_decoder"
+      ],
+      "assert_macro_occurrences_text_only": 8,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_controller.sv",
+      "lines": 1133,
+      "declarations_text_only": [
+        "ibex_controller"
+      ],
+      "assert_macro_occurrences_text_only": 6,
+      "ifdefs": [
+        "SYNTHESIS",
+        "DII_SIM",
+        "RVFI"
+      ]
+    },
+    {
+      "path": "rtl/ibex_core.sv",
+      "lines": 2513,
+      "declarations_text_only": [
+        "ibex_core"
+      ],
+      "assert_macro_occurrences_text_only": 10,
+      "ifdefs": [
+        "RISCV_FORMAL",
+        "RVFI",
+        "INC_ASSERT",
+        "RVFI",
+        "SYNTHESIS"
+      ]
+    },
+    {
+      "path": "rtl/ibex_counter.sv",
+      "lines": 111,
+      "declarations_text_only": [
+        "ibex_counter"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": [
+        "FPGA_XILINX"
+      ]
+    },
+    {
+      "path": "rtl/ibex_cs_registers.sv",
+      "lines": 2261,
+      "declarations_text_only": [
+        "ibex_cs_registers"
+      ],
+      "assert_macro_occurrences_text_only": 4,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_csr.sv",
+      "lines": 57,
+      "declarations_text_only": [
+        "ibex_csr"
+      ],
+      "assert_macro_occurrences_text_only": 1,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_decoder.sv",
+      "lines": 1490,
+      "declarations_text_only": [
+        "ibex_decoder"
+      ],
+      "assert_macro_occurrences_text_only": 1,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_dummy_instr.sv",
+      "lines": 150,
+      "declarations_text_only": [
+        "ibex_dummy_instr"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_ex_block.sv",
+      "lines": 217,
+      "declarations_text_only": [
+        "ibex_ex_block"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": [
+        "INC_ASSERT"
+      ]
+    },
+    {
+      "path": "rtl/ibex_fetch_fifo.sv",
+      "lines": 300,
+      "declarations_text_only": [
+        "ibex_fetch_fifo"
+      ],
+      "assert_macro_occurrences_text_only": 2,
+      "ifdefs": [
+        "DII_SIM",
+        "DII_SIM",
+        "DII_SIM"
+      ]
+    },
+    {
+      "path": "rtl/ibex_icache.sv",
+      "lines": 1337,
+      "declarations_text_only": [
+        "ibex_icache"
+      ],
+      "assert_macro_occurrences_text_only": 5,
+      "ifdefs": [
+        "FORMAL",
+        "YOSYS"
+      ]
+    },
+    {
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": 1302,
+      "declarations_text_only": [
+        "ibex_id_stage"
+      ],
+      "assert_macro_occurrences_text_only": 30,
+      "ifdefs": [
+        "RISCV_FORMAL",
+        "CHECK_MISALIGNED"
+      ]
+    },
+    {
+      "path": "rtl/ibex_if_stage.sv",
+      "lines": 940,
+      "declarations_text_only": [
+        "ibex_if_stage"
+      ],
+      "assert_macro_occurrences_text_only": 12,
+      "ifdefs": [
+        "SYNTHESIS",
+        "SYNTHESIS",
+        "INC_ASSERT"
+      ]
+    },
+    {
+      "path": "rtl/ibex_load_store_unit.sv",
+      "lines": 836,
+      "declarations_text_only": [
+        "ibex_load_store_unit"
+      ],
+      "assert_macro_occurrences_text_only": 9,
+      "ifdefs": [
+        "DV_FCOV_DISABLE"
+      ]
+    },
+    {
+      "path": "rtl/ibex_lockstep.sv",
+      "lines": 750,
+      "declarations_text_only": [
+        "ibex_lockstep"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": [
+        "RVFI"
+      ]
+    },
+    {
+      "path": "rtl/ibex_multdiv_fast.sv",
+      "lines": 556,
+      "declarations_text_only": [
+        "ibex_multdiv_fast"
+      ],
+      "assert_macro_occurrences_text_only": 6,
+      "ifdefs": [
+        "INC_ASSERT",
+        "FORMAL",
+        "YOSYS"
+      ]
+    },
+    {
+      "path": "rtl/ibex_multdiv_slow.sv",
+      "lines": 390,
+      "declarations_text_only": [
+        "ibex_multdiv_slow"
+      ],
+      "assert_macro_occurrences_text_only": 1,
+      "ifdefs": [
+        "INC_ASSERT",
+        "FORMAL",
+        "YOSYS"
+      ]
+    },
+    {
+      "path": "rtl/ibex_pkg.sv",
+      "lines": 824,
+      "declarations_text_only": [
+        "ibex_pkg"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_pmp.sv",
+      "lines": 263,
+      "declarations_text_only": [
+        "ibex_pmp"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_prefetch_buffer.sv",
+      "lines": 267,
+      "declarations_text_only": [
+        "ibex_prefetch_buffer"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_register_file_ff.sv",
+      "lines": 329,
+      "declarations_text_only": [
+        "ibex_register_file_ff"
+      ],
+      "assert_macro_occurrences_text_only": 6,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_register_file_fpga.sv",
+      "lines": 212,
+      "declarations_text_only": [
+        "ibex_register_file_fpga"
+      ],
+      "assert_macro_occurrences_text_only": 4,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_register_file_latch.sv",
+      "lines": 429,
+      "declarations_text_only": [
+        "ibex_register_file_latch"
+      ],
+      "assert_macro_occurrences_text_only": 6,
+      "ifdefs": [
+        "VERILATOR"
+      ]
+    },
+    {
+      "path": "rtl/ibex_top.sv",
+      "lines": 1621,
+      "declarations_text_only": [
+        "ibex_top"
+      ],
+      "assert_macro_occurrences_text_only": 49,
+      "ifdefs": [
+        "RISCV_FORMAL",
+        "RVFI",
+        "RVFI",
+        "INC_ASSERT",
+        "INC_ASSERT",
+        "RVFI",
+        "INC_ASSERT"
+      ]
+    },
+    {
+      "path": "rtl/ibex_top_tracing.sv",
+      "lines": 427,
+      "declarations_text_only": [
+        "ibex_top_tracing"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": [
+        "RVFI",
+        "RVFI",
+        "RVFI"
+      ]
+    },
+    {
+      "path": "rtl/ibex_tracer.sv",
+      "lines": 1539,
+      "declarations_text_only": [
+        "ibex_tracer"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_tracer_pkg.sv",
+      "lines": 396,
+      "declarations_text_only": [
+        "ibex_tracer_pkg"
+      ],
+      "assert_macro_occurrences_text_only": 0,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_trvk.sv",
+      "lines": 420,
+      "declarations_text_only": [
+        "ibex_trvk"
+      ],
+      "assert_macro_occurrences_text_only": 7,
+      "ifdefs": []
+    },
+    {
+      "path": "rtl/ibex_wb_stage.sv",
+      "lines": 311,
+      "declarations_text_only": [
+        "ibex_wb_stage"
+      ],
+      "assert_macro_occurrences_text_only": 1,
+      "ifdefs": []
+    }
+  ],
+  "vendor_lock_declarations": {
+    "vendor/eembc_coremark.lock.hjson": {
+      "url": "https://github.com/eembc/coremark",
+      "rev": "0c91314d1a4fdfc157d623ad5cb6ac5aef746db1"
+    },
+    "vendor/google_riscv-dv.lock.hjson": {
+      "url": "https://github.com/chipsalliance/riscv-dv",
+      "rev": "71666ebacd69266b1abb7cdbad5e1897ce5884e6"
+    },
+    "vendor/lowrisc_ip.lock.hjson": {
+      "url": "https://github.com/lowRISC/opentitan",
+      "rev": "3424e7fb4bc3ac92eb640d6af070055d293bc710"
+    },
+    "vendor/pulp_common_cells.lock.hjson": {
+      "url": "https://github.com/pulp-platform/common_cells.git",
+      "rev": "63e1b679a70eca3a1d60d686bc1fa170ec08e1ab"
+    },
+    "vendor/riscv_arch_tests.lock.hjson": {
+      "url": "https://github.com/riscv-non-isa/riscv-arch-test",
+      "rev": "a3b7f0c2cf89652b8a0cba3146890c512ff8ba44"
+    },
+    "vendor/riscv_isa_sim.lock.hjson": {
+      "url": "https://github.com/lowrisc/riscv-isa-sim",
+      "rev": "a4b823a1c7a260b532e1aa41b4d929e9634a7222"
+    },
+    "vendor/riscv_test_env.lock.hjson": {
+      "url": "https://github.com/riscv/riscv-test-env",
+      "rev": "982f93f5c55f6e7931c01afb082f5ca42cffddab"
+    },
+    "vendor/riscv_tests.lock.hjson": {
+      "url": "https://github.com/riscv-software-src/riscv-tests",
+      "rev": "f163ddfc9b0bf78fb8180012ffcfc93427f780f0"
+    }
+  },
+  "tracked_files_by_root": {
+    ".clang-format": 1,
+    ".gitattributes": 1,
+    ".github": 8,
+    ".gitignore": 1,
+    ".readthedocs.yml": 1,
+    ".svlint.toml": 1,
+    "CLA.md": 1,
+    "CONTRIBUTING.md": 1,
+    "CREDITS.md": 1,
+    "LICENSE": 1,
+    "Makefile": 1,
+    "NOTICE": 1,
+    "README.md": 1,
+    "SECURITY.md": 1,
+    "__init__.py": 1,
+    "check_tool_requirements.core": 1,
+    "ci": 5,
+    "doc": 51,
+    "dv": 313,
+    "examples": 33,
+    "flake.lock": 1,
+    "flake.nix": 1,
+    "formal": 25,
+    "ibex_configs.yaml": 1,
+    "ibex_core.core": 1,
+    "ibex_icache.core": 1,
+    "ibex_multdiv.core": 1,
+    "ibex_pkg.core": 1,
+    "ibex_top.core": 1,
+    "ibex_top_tracing.core": 1,
+    "ibex_tracer.core": 1,
+    "lint": 2,
+    "nix": 7,
+    "python-requirements.txt": 1,
+    "rtl": 34,
+    "shared": 8,
+    "src_files.yml": 1,
+    "syn": 25,
+    "util": 8,
+    "vendor": 3148
+  }
+}

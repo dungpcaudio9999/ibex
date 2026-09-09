@@ -1,0 +1,6 @@
+{
+  "command": "verilator --version",
+  "exit_status": null,
+  "launch_status": "TOOL-NOT-FOUND",
+  "output": "[Errno 2] No such file or directory: 'verilator'"
+}
