@@ -1,0 +1,192 @@
+[
+  {
+    "config": "small",
+    "memory": "d1",
+    "N": 8,
+    "cycles": 11,
+    "ipc_interval": 0.6363636363636364,
+    "branch_gaps": [
+      1,
+      3,
+      1,
+      1
+    ],
+    "id_control_penalties": [
+      0,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "config": "small",
+    "memory": "d4",
+    "N": 8,
+    "cycles": 33,
+    "ipc_interval": 0.21212121212121213,
+    "branch_gaps": [
+      3,
+      9,
+      5,
+      5
+    ],
+    "id_control_penalties": [
+      2,
+      8,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "wb",
+    "memory": "d1",
+    "N": 8,
+    "cycles": 11,
+    "ipc_interval": 0.6363636363636364,
+    "branch_gaps": [
+      1,
+      3,
+      1,
+      1
+    ],
+    "id_control_penalties": [
+      0,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "config": "wb",
+    "memory": "d4",
+    "N": 8,
+    "cycles": 33,
+    "ipc_interval": 0.21212121212121213,
+    "branch_gaps": [
+      3,
+      9,
+      5,
+      5
+    ],
+    "id_control_penalties": [
+      2,
+      8,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "bt",
+    "memory": "d1",
+    "N": 8,
+    "cycles": 10,
+    "ipc_interval": 0.7,
+    "branch_gaps": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "id_control_penalties": [
+      0,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "config": "bt",
+    "memory": "d4",
+    "N": 8,
+    "cycles": 30,
+    "ipc_interval": 0.23333333333333334,
+    "branch_gaps": [
+      3,
+      6,
+      6,
+      6
+    ],
+    "id_control_penalties": [
+      2,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "single",
+    "memory": "d1",
+    "N": 8,
+    "cycles": 10,
+    "ipc_interval": 0.7,
+    "branch_gaps": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "id_control_penalties": [
+      0,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "config": "single",
+    "memory": "d4",
+    "N": 8,
+    "cycles": 30,
+    "ipc_interval": 0.23333333333333334,
+    "branch_gaps": [
+      3,
+      6,
+      6,
+      6
+    ],
+    "id_control_penalties": [
+      2,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "slow",
+    "memory": "d1",
+    "N": 8,
+    "cycles": 11,
+    "ipc_interval": 0.6363636363636364,
+    "branch_gaps": [
+      1,
+      3,
+      1,
+      1
+    ],
+    "id_control_penalties": [
+      0,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "config": "slow",
+    "memory": "d4",
+    "N": 8,
+    "cycles": 33,
+    "ipc_interval": 0.21212121212121213,
+    "branch_gaps": [
+      3,
+      9,
+      5,
+      5
+    ],
+    "id_control_penalties": [
+      2,
+      8,
+      5,
+      5
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "dret",
+    "status": "PASS",
+    "invariant": "older load retires before event entry; return/priority PC ordering"
+  },
+  {
+    "id": "debug_irq",
+    "status": "PASS",
+    "invariant": "older load retires before event entry; return/priority PC ordering"
+  },
+  {
+    "id": "nmi",
+    "status": "PASS",
+    "invariant": "older load retires before event entry; return/priority PC ordering"
+  },
+  {
+    "id": "nmi_return",
+    "status": "PASS",
+    "invariant": "older load retires before event entry; return/priority PC ordering"
+  },
+  {
+    "id": "cap",
+    "status": "PASS",
+    "invariant": "two cap words, one bitmap, tag at RF after bitmap request"
+  },
+  {
+    "id": "cap_revoked",
+    "status": "PASS",
+    "invariant": "two cap words, one bitmap, tag at RF after bitmap request"
+  }
+]

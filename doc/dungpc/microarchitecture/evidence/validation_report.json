@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "local_links_checked": 112,
+  "source_dependencies_checked": 59,
+  "artifact_files_hashed": 382,
+  "result_counts": {
+    "core_results.json": 160,
+    "trace_checks.json": 160,
+    "unit_results.json": 3,
+    "extended/results.json": 21,
+    "extended/ordering_checks.json": 6
+  },
+  "unit_checks": 20,
+  "active_core_parameters": {
+    "small": {
+      "BaseIsa": 0,
+      "WritebackStage": 0,
+      "BranchTargetALU": 0,
+      "RV32M": 2,
+      "RV32ZC": 0,
+      "ICache": 0,
+      "SecureIbex": 0
+    },
+    "wb": {
+      "BaseIsa": 0,
+      "WritebackStage": 1,
+      "BranchTargetALU": 0,
+      "RV32M": 2,
+      "RV32ZC": 0,
+      "ICache": 0,
+      "SecureIbex": 0
+    },
+    "bt": {
+      "BaseIsa": 0,
+      "WritebackStage": 0,
+      "BranchTargetALU": 1,
+      "RV32M": 2,
+      "RV32ZC": 0,
+      "ICache": 0,
+      "SecureIbex": 0
+    },
+    "single": {
+      "BaseIsa": 0,
+      "WritebackStage": 1,
+      "BranchTargetALU": 1,
+      "RV32M": 3,
+      "RV32ZC": 0,
+      "ICache": 0,
+      "SecureIbex": 0
+    },
+    "slow": {
+      "BaseIsa": 0,
+      "WritebackStage": 0,
+      "BranchTargetALU": 0,
+      "RV32M": 1,
+      "RV32ZC": 0,
+      "ICache": 0,
+      "SecureIbex": 0
+    }
+  },
+  "scope": "Mechanical consistency and reported directed tests; not an independent technical review."
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "id": "dit_off_zero",
+    "status": "PASS",
+    "check": "ID residence matches source-derived timing expectation"
+  },
+  {
+    "id": "dit_off_nonzero",
+    "status": "PASS",
+    "check": "ID residence matches source-derived timing expectation"
+  },
+  {
+    "id": "dit_on_zero",
+    "status": "PASS",
+    "check": "ID residence matches source-derived timing expectation"
+  },
+  {
+    "id": "dit_on_nonzero",
+    "status": "PASS",
+    "check": "ID residence matches source-derived timing expectation"
+  },
+  {
+    "id": "ditbranch_off_taken",
+    "status": "PASS",
+    "check": "ID residence matches source-derived timing expectation"
+  },
+  {
+    "id": "ditbranch_off_nt",
+    "status": "PASS",
+    "check": "ID residence matches source-derived timing expectation"
+  },
+  {
+    "id": "ditbranch_on_taken",
+    "status": "PASS",
+    "check": "ID residence matches source-derived timing expectation"
+  },
+  {
+    "id": "ditbranch_on_nt",
+    "status": "PASS",
+    "check": "ID residence matches source-derived timing expectation"
+  },
+  {
+    "id": "secure.fault1",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure.fault2",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure.fault3",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure.fault4",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure.fault6",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure_dual.fault5",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure_dual.fault8",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure_dual.fault9",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure_offset2.fault3",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "secure_offset2.fault4",
+    "status": "PASS",
+    "check": "detector identity and first-sample consistency for this preserved stimulus"
+  },
+  {
+    "id": "bad_load_containment",
+    "status": "PASS",
+    "check": "no destination write, internal ECC NMI cause/address"
+  },
+  {
+    "id": "unsolicited_response",
+    "status": "PASS",
+    "check": "one legitimate load write, no foreign destination/alert"
+  },
+  {
+    "id": "dummy_isolation",
+    "status": "PASS",
+    "check": "no architectural writes outside real program destinations; no alerts"
+  },
+  {
+    "id": "dret_ordering",
+    "status": "PASS",
+    "check": "older load retirement, event entry and return/priority order"
+  },
+  {
+    "id": "debug_irq_ordering",
+    "status": "PASS",
+    "check": "older load retirement, event entry and return/priority order"
+  },
+  {
+    "id": "nmi_return_ordering",
+    "status": "PASS",
+    "check": "older load retirement, event entry and return/priority order"
+  },
+  {
+    "id": "secure_dual.cap_tag",
+    "status": "PASS",
+    "check": "two data words, one bitmap, resulting RF tag"
+  },
+  {
+    "id": "secure_dual.cap_revoked_tag",
+    "status": "PASS",
+    "check": "two data words, one bitmap, resulting RF tag"
+  },
+  {
+    "id": "secure_combo.cap_tag",
+    "status": "PASS",
+    "check": "two data words, one bitmap, resulting RF tag"
+  },
+  {
+    "id": "secure_combo.cap_revoked_tag",
+    "status": "PASS",
+    "check": "two data words, one bitmap, resulting RF tag"
+  },
+  {
+    "id": "secure_cache.cache_cache",
+    "status": "PASS",
+    "check": "key response, hits, correct alert class and final result"
+  },
+  {
+    "id": "secure_cache.fault10_cache",
+    "status": "PASS",
+    "check": "key response, hits, correct alert class and final result"
+  },
+  {
+    "id": "secure_combo_cache",
+    "status": "PASS",
+    "check": "combined cap/bitmap/cache activity with no alerts"
+  }
+]

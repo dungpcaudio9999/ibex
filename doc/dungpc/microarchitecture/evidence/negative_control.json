@@ -1,0 +1,8 @@
+{
+  "mutation": "first RVFI instruction -> ffffffff",
+  "expected": "checker rejects",
+  "observed": [
+    "PC/instruction mismatch at 80"
+  ],
+  "status": "PASS"
+}

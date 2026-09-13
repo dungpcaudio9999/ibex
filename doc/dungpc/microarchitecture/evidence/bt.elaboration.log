@@ -1,0 +1,229 @@
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:17:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | package prim_cipher_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+                       ... For warning description see https://verilator.org/warn/TIMESCALEMOD?v=5.020
+                       ... Use "/* verilator lint_off TIMESCALEMOD */" and lint_on around source to disable this message.
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv:9:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | package prim_util_pkg;
+      |         ^~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_pkg.sv:10:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | package ibex_pkg;
+      |         ^~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_cheriot_pkg.sv:8:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | package ibex_cheriot_pkg;
+      |         ^~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_alu.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module ibex_alu #(
+      |        ^~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_branch_predict.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module ibex_branch_predict (
+      |        ^~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_cheriot_ex.sv:5:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | module ibex_cheriot_ex import ibex_cheriot_pkg::*; import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_compressed_decoder.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module ibex_compressed_decoder import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_controller.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module ibex_controller import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_core.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module ibex_core import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
+      |        ^~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_counter.sv:5:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | module ibex_counter #(
+      |        ^~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_cs_registers.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module ibex_cs_registers import ibex_pkg::*, ibex_cheriot_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_csr.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   11 | module ibex_csr #(
+      |        ^~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_decoder.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module ibex_decoder import ibex_cheriot_pkg::*; #(
+      |        ^~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_dummy_instr.sv:12:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   12 | module ibex_dummy_instr import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_ex_block.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   11 | module ibex_ex_block #(
+      |        ^~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_fetch_fifo.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module ibex_fetch_fifo #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_icache.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module ibex_icache import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_id_stage.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module ibex_id_stage import ibex_cheriot_pkg::*; #(
+      |        ^~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_if_stage.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module ibex_if_stage import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
+      |        ^~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_load_store_unit.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module ibex_load_store_unit import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_multdiv_fast.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module ibex_multdiv_fast #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_multdiv_slow.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module ibex_multdiv_slow
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_pmp.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module ibex_pmp import ibex_pkg::*; #(
+      |        ^~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_prefetch_buffer.sv:12:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   12 | module ibex_prefetch_buffer #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_register_file_ff.sv:51:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   51 | module ibex_register_file_ff import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_register_file_fpga.sv:36:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   36 | module ibex_register_file_fpga import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_register_file_latch.sv:36:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   36 | module ibex_register_file_latch import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_wb_stage.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module ibex_wb_stage import ibex_cheriot_pkg::*; #(
+      |        ^~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_39_32_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_39_32_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_core.sv:1223:1: ... note: In file included from 'ibex_core.sv'
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_39_32_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_39_32_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_core.sv:1229:1: ... note: In file included from 'ibex_core.sv'
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_64_57_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_64_57_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_core.sv:1254:1: ... note: In file included from 'ibex_core.sv'
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_64_57_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_64_57_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_core.sv:1265:1: ... note: In file included from 'ibex_core.sv'
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lfsr.sv:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   29 | module prim_lfsr #(
+      |        ^~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_dummy_instr.sv:84:1: ... note: In file included from 'ibex_dummy_instr.sv'
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_28_22_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_28_22_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_icache.sv:299:1: ... note: In file included from 'ibex_icache.sv'
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-TIMESCALEMOD: /home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_28_22_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_28_22_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_icache.sv:557:1: ... note: In file included from 'ibex_icache.sv'
+                       /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:2:8: ... Location of module with timescale
+    2 | module core_tb;
+      |        ^~~~~~~
+%Warning-WIDTHTRUNC: /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv:6:17: Operator VAR 'BT' expects 1 bits on the Initial value, but Initial value's CONST '32'h1' generates 32 bits.
+                                                                                                                   : ... note: In instance 'core_tb'
+    6 |   parameter bit BT = 0;
+      |                 ^~

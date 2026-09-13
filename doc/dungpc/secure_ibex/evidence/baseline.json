@@ -1,0 +1,5 @@
+{
+  "revision": "fc3b3dd6492d6be6f66220541500eaa0fca5deec",
+  "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)",
+  "scope": "five actual ibex_top configurations; archived harness, generic primitives; no production RTL edits"
+}

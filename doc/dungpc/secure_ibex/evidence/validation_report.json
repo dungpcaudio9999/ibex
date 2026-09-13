@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "directed_runs": 40,
+  "analysis_checks": 31,
+  "links_checked": 75,
+  "dependencies_hashed": 85,
+  "artifacts_hashed": 183,
+  "active_parameters": {
+    "secure": {
+      "SecureIbex": 1,
+      "LockstepOffset": 1,
+      "MemECC": 1,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "ICacheTweakInfection": 1,
+      "BaseIsa": 0,
+      "PMPEnable": 0
+    },
+    "secure_offset2": {
+      "SecureIbex": 1,
+      "LockstepOffset": 2,
+      "MemECC": 1,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "ICacheTweakInfection": 1,
+      "BaseIsa": 0,
+      "PMPEnable": 0
+    },
+    "secure_dual": {
+      "SecureIbex": 1,
+      "LockstepOffset": 1,
+      "MemECC": 1,
+      "ICache": 0,
+      "ICacheECC": 0,
+      "ICacheScramble": 0,
+      "ICacheTweakInfection": 1,
+      "BaseIsa": 1,
+      "PMPEnable": 0
+    },
+    "secure_cache": {
+      "SecureIbex": 1,
+      "LockstepOffset": 1,
+      "MemECC": 1,
+      "ICache": 1,
+      "ICacheECC": 1,
+      "ICacheScramble": 1,
+      "ICacheTweakInfection": 1,
+      "BaseIsa": 0,
+      "PMPEnable": 0
+    },
+    "secure_combo": {
+      "SecureIbex": 1,
+      "LockstepOffset": 1,
+      "MemECC": 1,
+      "ICache": 1,
+      "ICacheECC": 1,
+      "ICacheScramble": 1,
+      "ICacheTweakInfection": 1,
+      "BaseIsa": 1,
+      "PMPEnable": 1
+    }
+  },
+  "scope": "mechanical checks plus directed simulation oracles; not formal/security certification"
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "mutation": "remove RF detector high samples from an in-memory copy of secure.fault3",
+  "expected": "required detector evidence absent; reject",
+  "observed": "rejected"
+}

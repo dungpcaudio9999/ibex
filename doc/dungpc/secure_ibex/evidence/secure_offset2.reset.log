@@ -1,0 +1,765 @@
+CONFIG SEC=1 CACHE=0 PRED=0 DUAL=0 MODE=0 ZC=0 SCR=0 ICECC=0 OFFSET=2 PMP=0
+SAMPLE 3 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 3 pc=0 rf=0 intg=0
+C 3 00000000 0 0 0 1 0 0
+LOCK 4 rst=0 cmp=a mismatch=0 rf=0 cap=0
+SAMPLE 4 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 4 pc=0 rf=0 intg=0
+C 4 00000000 0 0 0 1 1 0
+LOCK 5 rst=0 cmp=a mismatch=0 rf=0 cap=0
+SAMPLE 5 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 5 pc=0 rf=0 intg=0
+C 5 00000000 0 0 0 0 4 0
+LOCK 6 rst=1 cmp=a mismatch=0 rf=0 cap=0
+SAMPLE 6 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 6 pc=0 rf=0 intg=0
+C 6 00000000 0 0 0 0 5 0
+LOCK 7 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+RESET 7 pending requests cancelled by memory epoch contract
+SAMPLE 9 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SAMPLE 10 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 10 pc=0 rf=0 intg=0
+C 10 00000000 0 0 0 1 0 0
+LOCK 11 rst=0 cmp=a mismatch=0 rf=0 cap=0
+SAMPLE 11 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 11 pc=0 rf=0 intg=0
+C 11 00000000 0 0 0 1 1 0
+LOCK 12 rst=0 cmp=a mismatch=0 rf=0 cap=0
+SAMPLE 12 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 12 pc=0 rf=0 intg=0
+C 12 00000000 0 0 0 0 4 0
+LOCK 13 rst=1 cmp=a mismatch=0 rf=0 cap=0
+SAMPLE 13 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 13 pc=0 rf=0 intg=0
+C 13 00000000 0 0 0 0 5 0
+LOCK 14 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 14 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 14 pc=0 rf=0 intg=0
+C 14 00000000 0 0 0 0 5 0
+LOCK 15 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 15 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 15 pc=0 rf=0 intg=0
+C 15 00000000 0 0 0 0 5 0
+LOCK 16 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 16 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 16 pc=0 rf=0 intg=0
+C 16 00000000 0 0 0 0 5 0
+LOCK 17 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 17 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 17 addr=007 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 17 pc=0 rf=0 intg=0
+C 17 00000080 1 0 0 0 5 0
+LOCK 18 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 18 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+W 18 1 00000007 000000000
+SECDET 18 pc=0 rf=0 intg=0
+C 18 00000080 0 0 0 0 5 0
+LOCK 19 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 19 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 19 pc=0 rf=0 intg=0
+R 19 1 00000080 00700093
+C 19 00000080 0 0 0 0 5 0
+LOCK 20 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 20 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 20 addr=07b priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 20 pc=0 rf=0 intg=0
+C 20 00000084 1 0 0 0 5 0
+LOCK 21 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 21 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+W 21 15 0000007b 000000000
+SECDET 21 pc=0 rf=0 intg=0
+C 21 00000084 0 0 0 0 5 0
+LOCK 22 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 22 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 22 pc=0 rf=0 intg=0
+R 22 2 00000084 07b00793
+C 22 00000084 0 0 0 0 5 0
+LOCK 23 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 23 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 23 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 23 pc=0 rf=0 intg=0
+C 23 00000088 1 0 0 1 5 0
+LOCK 24 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 24 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 24 pc=0 rf=0 intg=0
+C 24 00000088 0 0 0 0 5 0
+LOCK 25 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 25 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 25 pc=0 rf=0 intg=0
+R 25 3 00000088 0000006f
+C 25 00000088 0 0 0 0 5 0
+LOCK 26 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 26 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 26 pc=0 rf=0 intg=0
+C 26 00000088 0 0 0 0 5 0
+LOCK 27 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 27 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 27 pc=0 rf=0 intg=0
+C 27 00000088 0 0 0 0 5 0
+LOCK 28 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 28 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 28 pc=0 rf=0 intg=0
+C 28 00000088 0 0 0 0 5 0
+LOCK 29 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 29 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 29 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 29 pc=0 rf=0 intg=0
+C 29 00000088 1 0 0 1 5 0
+LOCK 30 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 30 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 30 pc=0 rf=0 intg=0
+C 30 00000088 0 0 0 0 5 0
+LOCK 31 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 31 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 31 pc=0 rf=0 intg=0
+R 31 4 00000088 0000006f
+C 31 00000088 0 0 0 0 5 0
+LOCK 32 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 32 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 32 pc=0 rf=0 intg=0
+C 32 00000088 0 0 0 0 5 0
+LOCK 33 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 33 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 33 pc=0 rf=0 intg=0
+C 33 00000088 0 0 0 0 5 0
+LOCK 34 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 34 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 34 pc=0 rf=0 intg=0
+C 34 00000088 0 0 0 0 5 0
+LOCK 35 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 35 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 35 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 35 pc=0 rf=0 intg=0
+C 35 00000088 1 0 0 1 5 0
+LOCK 36 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 36 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 36 pc=0 rf=0 intg=0
+C 36 00000088 0 0 0 0 5 0
+LOCK 37 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 37 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 37 pc=0 rf=0 intg=0
+R 37 5 00000088 0000006f
+C 37 00000088 0 0 0 0 5 0
+LOCK 38 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 38 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 38 pc=0 rf=0 intg=0
+C 38 00000088 0 0 0 0 5 0
+LOCK 39 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 39 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 39 pc=0 rf=0 intg=0
+C 39 00000088 0 0 0 0 5 0
+LOCK 40 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 40 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 40 pc=0 rf=0 intg=0
+C 40 00000088 0 0 0 0 5 0
+LOCK 41 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 41 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 41 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 41 pc=0 rf=0 intg=0
+C 41 00000088 1 0 0 1 5 0
+LOCK 42 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 42 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 42 pc=0 rf=0 intg=0
+C 42 00000088 0 0 0 0 5 0
+LOCK 43 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 43 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 43 pc=0 rf=0 intg=0
+R 43 6 00000088 0000006f
+C 43 00000088 0 0 0 0 5 0
+LOCK 44 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 44 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 44 pc=0 rf=0 intg=0
+C 44 00000088 0 0 0 0 5 0
+LOCK 45 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 45 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 45 pc=0 rf=0 intg=0
+C 45 00000088 0 0 0 0 5 0
+LOCK 46 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 46 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 46 pc=0 rf=0 intg=0
+C 46 00000088 0 0 0 0 5 0
+LOCK 47 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 47 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 47 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 47 pc=0 rf=0 intg=0
+C 47 00000088 1 0 0 1 5 0
+LOCK 48 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 48 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 48 pc=0 rf=0 intg=0
+C 48 00000088 0 0 0 0 5 0
+LOCK 49 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 49 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 49 pc=0 rf=0 intg=0
+R 49 7 00000088 0000006f
+C 49 00000088 0 0 0 0 5 0
+LOCK 50 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 50 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 50 pc=0 rf=0 intg=0
+C 50 00000088 0 0 0 0 5 0
+LOCK 51 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 51 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 51 pc=0 rf=0 intg=0
+C 51 00000088 0 0 0 0 5 0
+LOCK 52 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 52 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 52 pc=0 rf=0 intg=0
+C 52 00000088 0 0 0 0 5 0
+LOCK 53 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 53 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 53 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 53 pc=0 rf=0 intg=0
+C 53 00000088 1 0 0 1 5 0
+LOCK 54 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 54 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 54 pc=0 rf=0 intg=0
+C 54 00000088 0 0 0 0 5 0
+LOCK 55 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 55 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 55 pc=0 rf=0 intg=0
+R 55 8 00000088 0000006f
+C 55 00000088 0 0 0 0 5 0
+LOCK 56 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 56 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 56 pc=0 rf=0 intg=0
+C 56 00000088 0 0 0 0 5 0
+LOCK 57 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 57 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 57 pc=0 rf=0 intg=0
+C 57 00000088 0 0 0 0 5 0
+LOCK 58 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 58 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 58 pc=0 rf=0 intg=0
+C 58 00000088 0 0 0 0 5 0
+LOCK 59 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 59 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 59 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 59 pc=0 rf=0 intg=0
+C 59 00000088 1 0 0 1 5 0
+LOCK 60 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 60 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 60 pc=0 rf=0 intg=0
+C 60 00000088 0 0 0 0 5 0
+LOCK 61 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 61 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 61 pc=0 rf=0 intg=0
+R 61 9 00000088 0000006f
+C 61 00000088 0 0 0 0 5 0
+LOCK 62 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 62 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 62 pc=0 rf=0 intg=0
+C 62 00000088 0 0 0 0 5 0
+LOCK 63 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 63 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 63 pc=0 rf=0 intg=0
+C 63 00000088 0 0 0 0 5 0
+LOCK 64 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 64 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 64 pc=0 rf=0 intg=0
+C 64 00000088 0 0 0 0 5 0
+LOCK 65 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 65 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 65 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 65 pc=0 rf=0 intg=0
+C 65 00000088 1 0 0 1 5 0
+LOCK 66 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 66 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 66 pc=0 rf=0 intg=0
+C 66 00000088 0 0 0 0 5 0
+LOCK 67 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 67 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 67 pc=0 rf=0 intg=0
+R 67 10 00000088 0000006f
+C 67 00000088 0 0 0 0 5 0
+LOCK 68 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 68 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 68 pc=0 rf=0 intg=0
+C 68 00000088 0 0 0 0 5 0
+LOCK 69 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 69 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 69 pc=0 rf=0 intg=0
+C 69 00000088 0 0 0 0 5 0
+LOCK 70 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 70 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 70 pc=0 rf=0 intg=0
+C 70 00000088 0 0 0 0 5 0
+LOCK 71 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 71 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 71 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 71 pc=0 rf=0 intg=0
+C 71 00000088 1 0 0 1 5 0
+LOCK 72 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 72 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 72 pc=0 rf=0 intg=0
+C 72 00000088 0 0 0 0 5 0
+LOCK 73 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 73 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 73 pc=0 rf=0 intg=0
+R 73 11 00000088 0000006f
+C 73 00000088 0 0 0 0 5 0
+LOCK 74 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 74 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 74 pc=0 rf=0 intg=0
+C 74 00000088 0 0 0 0 5 0
+LOCK 75 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 75 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 75 pc=0 rf=0 intg=0
+C 75 00000088 0 0 0 0 5 0
+LOCK 76 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 76 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 76 pc=0 rf=0 intg=0
+C 76 00000088 0 0 0 0 5 0
+LOCK 77 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 77 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+CSRDBG 77 addr=000 priv=3 dec=0 csr=0 raw=1 pw=0 dbg=0 op=0
+SECDET 77 pc=0 rf=0 intg=0
+C 77 00000088 1 0 0 1 5 0
+LOCK 78 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 78 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 78 pc=0 rf=0 intg=0
+C 78 00000088 0 0 0 0 5 0
+LOCK 79 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 79 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 79 pc=0 rf=0 intg=0
+R 79 12 00000088 0000006f
+C 79 00000088 0 0 0 0 5 0
+LOCK 80 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 80 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 80 pc=0 rf=0 intg=0
+C 80 00000088 0 0 0 0 5 0
+LOCK 81 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 81 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 81 pc=0 rf=0 intg=0
+C 81 00000088 0 0 0 0 5 0
+LOCK 82 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 82 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 82 pc=0 rf=0 intg=0
+C 82 00000088 0 0 0 0 5 0
+LOCK 83 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 83 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 83 pc=0 rf=0 intg=0
+C 83 00000088 1 0 0 1 5 0
+LOCK 84 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 84 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 84 pc=0 rf=0 intg=0
+C 84 00000088 0 0 0 0 5 0
+LOCK 85 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 85 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 85 pc=0 rf=0 intg=0
+R 85 13 00000088 0000006f
+C 85 00000088 0 0 0 0 5 0
+LOCK 86 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 86 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 86 pc=0 rf=0 intg=0
+C 86 00000088 0 0 0 0 5 0
+LOCK 87 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 87 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 87 pc=0 rf=0 intg=0
+C 87 00000088 0 0 0 0 5 0
+LOCK 88 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 88 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 88 pc=0 rf=0 intg=0
+C 88 00000088 0 0 0 0 5 0
+LOCK 89 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 89 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 89 pc=0 rf=0 intg=0
+C 89 00000088 1 0 0 1 5 0
+LOCK 90 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 90 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 90 pc=0 rf=0 intg=0
+C 90 00000088 0 0 0 0 5 0
+LOCK 91 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 91 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 91 pc=0 rf=0 intg=0
+R 91 14 00000088 0000006f
+C 91 00000088 0 0 0 0 5 0
+LOCK 92 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 92 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 92 pc=0 rf=0 intg=0
+C 92 00000088 0 0 0 0 5 0
+LOCK 93 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 93 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 93 pc=0 rf=0 intg=0
+C 93 00000088 0 0 0 0 5 0
+LOCK 94 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 94 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 94 pc=0 rf=0 intg=0
+C 94 00000088 0 0 0 0 5 0
+LOCK 95 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 95 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 95 pc=0 rf=0 intg=0
+C 95 00000088 1 0 0 1 5 0
+LOCK 96 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 96 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 96 pc=0 rf=0 intg=0
+C 96 00000088 0 0 0 0 5 0
+LOCK 97 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 97 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 97 pc=0 rf=0 intg=0
+R 97 15 00000088 0000006f
+C 97 00000088 0 0 0 0 5 0
+LOCK 98 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 98 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 98 pc=0 rf=0 intg=0
+C 98 00000088 0 0 0 0 5 0
+LOCK 99 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 99 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 99 pc=0 rf=0 intg=0
+C 99 00000088 0 0 0 0 5 0
+LOCK 100 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 100 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 100 pc=0 rf=0 intg=0
+C 100 00000088 0 0 0 0 5 0
+LOCK 101 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 101 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 101 pc=0 rf=0 intg=0
+C 101 00000088 1 0 0 1 5 0
+LOCK 102 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 102 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 102 pc=0 rf=0 intg=0
+C 102 00000088 0 0 0 0 5 0
+LOCK 103 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 103 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 103 pc=0 rf=0 intg=0
+R 103 16 00000088 0000006f
+C 103 00000088 0 0 0 0 5 0
+LOCK 104 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 104 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 104 pc=0 rf=0 intg=0
+C 104 00000088 0 0 0 0 5 0
+LOCK 105 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 105 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 105 pc=0 rf=0 intg=0
+C 105 00000088 0 0 0 0 5 0
+LOCK 106 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 106 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 106 pc=0 rf=0 intg=0
+C 106 00000088 0 0 0 0 5 0
+LOCK 107 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 107 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 107 pc=0 rf=0 intg=0
+C 107 00000088 1 0 0 1 5 0
+LOCK 108 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 108 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 108 pc=0 rf=0 intg=0
+C 108 00000088 0 0 0 0 5 0
+LOCK 109 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 109 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 109 pc=0 rf=0 intg=0
+R 109 17 00000088 0000006f
+C 109 00000088 0 0 0 0 5 0
+LOCK 110 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 110 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 110 pc=0 rf=0 intg=0
+C 110 00000088 0 0 0 0 5 0
+LOCK 111 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 111 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 111 pc=0 rf=0 intg=0
+C 111 00000088 0 0 0 0 5 0
+LOCK 112 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 112 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 112 pc=0 rf=0 intg=0
+C 112 00000088 0 0 0 0 5 0
+LOCK 113 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 113 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 113 pc=0 rf=0 intg=0
+C 113 00000088 1 0 0 1 5 0
+LOCK 114 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 114 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 114 pc=0 rf=0 intg=0
+C 114 00000088 0 0 0 0 5 0
+LOCK 115 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 115 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 115 pc=0 rf=0 intg=0
+R 115 18 00000088 0000006f
+C 115 00000088 0 0 0 0 5 0
+LOCK 116 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 116 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 116 pc=0 rf=0 intg=0
+C 116 00000088 0 0 0 0 5 0
+LOCK 117 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 117 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 117 pc=0 rf=0 intg=0
+C 117 00000088 0 0 0 0 5 0
+LOCK 118 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 118 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 118 pc=0 rf=0 intg=0
+C 118 00000088 0 0 0 0 5 0
+LOCK 119 rst=1 cmp=5 mismatch=0 rf=0 cap=0
+SAMPLE 119 ai=0 ab=0 am=0 pc=0 mismatch=0 rf=0 mode=0
+SECDET 119 pc=0 rf=0 intg=0
+C 119 00000088 1 0 0 1 5 0
+C 120 00000088 0 0 0 0 5 0
+R 121 19 00000088 0000006f
+C 121 00000088 0 0 0 0 5 0
+C 122 00000088 0 0 0 0 5 0
+C 123 00000088 0 0 0 0 5 0
+C 124 00000088 0 0 0 0 5 0
+C 125 00000088 1 0 0 1 5 0
+C 126 00000088 0 0 0 0 5 0
+R 127 20 00000088 0000006f
+C 127 00000088 0 0 0 0 5 0
+C 128 00000088 0 0 0 0 5 0
+C 129 00000088 0 0 0 0 5 0
+C 130 00000088 0 0 0 0 5 0
+C 131 00000088 1 0 0 1 5 0
+C 132 00000088 0 0 0 0 5 0
+R 133 21 00000088 0000006f
+C 133 00000088 0 0 0 0 5 0
+C 134 00000088 0 0 0 0 5 0
+C 135 00000088 0 0 0 0 5 0
+C 136 00000088 0 0 0 0 5 0
+C 137 00000088 1 0 0 1 5 0
+C 138 00000088 0 0 0 0 5 0
+R 139 22 00000088 0000006f
+C 139 00000088 0 0 0 0 5 0
+C 140 00000088 0 0 0 0 5 0
+C 141 00000088 0 0 0 0 5 0
+C 142 00000088 0 0 0 0 5 0
+C 143 00000088 1 0 0 1 5 0
+C 144 00000088 0 0 0 0 5 0
+R 145 23 00000088 0000006f
+C 145 00000088 0 0 0 0 5 0
+C 146 00000088 0 0 0 0 5 0
+C 147 00000088 0 0 0 0 5 0
+C 148 00000088 0 0 0 0 5 0
+C 149 00000088 1 0 0 1 5 0
+C 150 00000088 0 0 0 0 5 0
+R 151 24 00000088 0000006f
+C 151 00000088 0 0 0 0 5 0
+C 152 00000088 0 0 0 0 5 0
+C 153 00000088 0 0 0 0 5 0
+C 154 00000088 0 0 0 0 5 0
+C 155 00000088 1 0 0 1 5 0
+C 156 00000088 0 0 0 0 5 0
+R 157 25 00000088 0000006f
+C 157 00000088 0 0 0 0 5 0
+C 158 00000088 0 0 0 0 5 0
+C 159 00000088 0 0 0 0 5 0
+C 160 00000088 0 0 0 0 5 0
+C 161 00000088 1 0 0 1 5 0
+C 162 00000088 0 0 0 0 5 0
+R 163 26 00000088 0000006f
+C 163 00000088 0 0 0 0 5 0
+C 164 00000088 0 0 0 0 5 0
+C 165 00000088 0 0 0 0 5 0
+C 166 00000088 0 0 0 0 5 0
+C 167 00000088 1 0 0 1 5 0
+C 168 00000088 0 0 0 0 5 0
+R 169 27 00000088 0000006f
+C 169 00000088 0 0 0 0 5 0
+C 170 00000088 0 0 0 0 5 0
+C 171 00000088 0 0 0 0 5 0
+C 172 00000088 0 0 0 0 5 0
+C 173 00000088 1 0 0 1 5 0
+C 174 00000088 0 0 0 0 5 0
+R 175 28 00000088 0000006f
+C 175 00000088 0 0 0 0 5 0
+C 176 00000088 0 0 0 0 5 0
+C 177 00000088 0 0 0 0 5 0
+C 178 00000088 0 0 0 0 5 0
+C 179 00000088 1 0 0 1 5 0
+R 181 29 00000088 0000006f
+R 187 30 00000088 0000006f
+R 193 31 00000088 0000006f
+R 199 32 00000088 0000006f
+R 205 33 00000088 0000006f
+R 211 34 00000088 0000006f
+R 217 35 00000088 0000006f
+R 223 36 00000088 0000006f
+R 229 37 00000088 0000006f
+R 235 38 00000088 0000006f
+R 241 39 00000088 0000006f
+R 247 40 00000088 0000006f
+R 253 41 00000088 0000006f
+R 259 42 00000088 0000006f
+R 265 43 00000088 0000006f
+R 271 44 00000088 0000006f
+R 277 45 00000088 0000006f
+R 283 46 00000088 0000006f
+R 289 47 00000088 0000006f
+R 295 48 00000088 0000006f
+R 301 49 00000088 0000006f
+R 307 50 00000088 0000006f
+R 313 51 00000088 0000006f
+R 319 52 00000088 0000006f
+R 325 53 00000088 0000006f
+R 331 54 00000088 0000006f
+R 337 55 00000088 0000006f
+R 343 56 00000088 0000006f
+R 349 57 00000088 0000006f
+R 355 58 00000088 0000006f
+R 361 59 00000088 0000006f
+R 367 60 00000088 0000006f
+R 373 61 00000088 0000006f
+R 379 62 00000088 0000006f
+R 385 63 00000088 0000006f
+R 391 64 00000088 0000006f
+R 397 65 00000088 0000006f
+R 403 66 00000088 0000006f
+R 409 67 00000088 0000006f
+R 415 68 00000088 0000006f
+R 421 69 00000088 0000006f
+R 427 70 00000088 0000006f
+R 433 71 00000088 0000006f
+R 439 72 00000088 0000006f
+R 445 73 00000088 0000006f
+R 451 74 00000088 0000006f
+R 457 75 00000088 0000006f
+R 463 76 00000088 0000006f
+R 469 77 00000088 0000006f
+R 475 78 00000088 0000006f
+R 481 79 00000088 0000006f
+R 487 80 00000088 0000006f
+R 493 81 00000088 0000006f
+R 499 82 00000088 0000006f
+R 505 83 00000088 0000006f
+R 511 84 00000088 0000006f
+R 517 85 00000088 0000006f
+R 523 86 00000088 0000006f
+R 529 87 00000088 0000006f
+R 535 88 00000088 0000006f
+R 541 89 00000088 0000006f
+R 547 90 00000088 0000006f
+R 553 91 00000088 0000006f
+R 559 92 00000088 0000006f
+R 565 93 00000088 0000006f
+R 571 94 00000088 0000006f
+R 577 95 00000088 0000006f
+R 583 96 00000088 0000006f
+R 589 97 00000088 0000006f
+R 595 98 00000088 0000006f
+R 601 99 00000088 0000006f
+R 607 100 00000088 0000006f
+R 613 101 00000088 0000006f
+R 619 102 00000088 0000006f
+R 625 103 00000088 0000006f
+R 631 104 00000088 0000006f
+R 637 105 00000088 0000006f
+R 643 106 00000088 0000006f
+R 649 107 00000088 0000006f
+R 655 108 00000088 0000006f
+R 661 109 00000088 0000006f
+R 667 110 00000088 0000006f
+R 673 111 00000088 0000006f
+R 679 112 00000088 0000006f
+R 685 113 00000088 0000006f
+R 691 114 00000088 0000006f
+R 697 115 00000088 0000006f
+R 703 116 00000088 0000006f
+R 709 117 00000088 0000006f
+R 715 118 00000088 0000006f
+R 721 119 00000088 0000006f
+R 727 120 00000088 0000006f
+R 733 121 00000088 0000006f
+R 739 122 00000088 0000006f
+R 745 123 00000088 0000006f
+R 751 124 00000088 0000006f
+R 757 125 00000088 0000006f
+R 763 126 00000088 0000006f
+R 769 127 00000088 0000006f
+R 775 128 00000088 0000006f
+R 781 129 00000088 0000006f
+R 787 130 00000088 0000006f
+R 793 131 00000088 0000006f
+R 799 132 00000088 0000006f
+R 805 133 00000088 0000006f
+R 811 134 00000088 0000006f
+R 817 135 00000088 0000006f
+R 823 136 00000088 0000006f
+R 829 137 00000088 0000006f
+R 835 138 00000088 0000006f
+R 841 139 00000088 0000006f
+R 847 140 00000088 0000006f
+R 853 141 00000088 0000006f
+R 859 142 00000088 0000006f
+R 865 143 00000088 0000006f
+R 871 144 00000088 0000006f
+R 877 145 00000088 0000006f
+R 883 146 00000088 0000006f
+R 889 147 00000088 0000006f
+R 895 148 00000088 0000006f
+R 901 149 00000088 0000006f
+R 907 150 00000088 0000006f
+R 913 151 00000088 0000006f
+R 919 152 00000088 0000006f
+R 925 153 00000088 0000006f
+R 931 154 00000088 0000006f
+R 937 155 00000088 0000006f
+R 943 156 00000088 0000006f
+R 949 157 00000088 0000006f
+R 955 158 00000088 0000006f
+R 961 159 00000088 0000006f
+R 967 160 00000088 0000006f
+R 973 161 00000088 0000006f
+R 979 162 00000088 0000006f
+R 985 163 00000088 0000006f
+R 991 164 00000088 0000006f
+R 997 165 00000088 0000006f
+R 1003 166 00000088 0000006f
+R 1009 167 00000088 0000006f
+R 1015 168 00000088 0000006f
+R 1021 169 00000088 0000006f
+R 1027 170 00000088 0000006f
+R 1033 171 00000088 0000006f
+R 1039 172 00000088 0000006f
+R 1045 173 00000088 0000006f
+R 1051 174 00000088 0000006f
+R 1057 175 00000088 0000006f
+R 1063 176 00000088 0000006f
+R 1069 177 00000088 0000006f
+R 1075 178 00000088 0000006f
+R 1081 179 00000088 0000006f
+R 1087 180 00000088 0000006f
+R 1093 181 00000088 0000006f
+R 1099 182 00000088 0000006f
+R 1105 183 00000088 0000006f
+R 1111 184 00000088 0000006f
+R 1117 185 00000088 0000006f
+R 1123 186 00000088 0000006f
+R 1129 187 00000088 0000006f
+R 1135 188 00000088 0000006f
+R 1141 189 00000088 0000006f
+R 1147 190 00000088 0000006f
+R 1153 191 00000088 0000006f
+R 1159 192 00000088 0000006f
+R 1165 193 00000088 0000006f
+R 1171 194 00000088 0000006f
+R 1177 195 00000088 0000006f
+R 1183 196 00000088 0000006f
+R 1189 197 00000088 0000006f
+R 1195 198 00000088 0000006f
+REG 0 00000000
+REG 1 00000007
+REG 2 00000000
+REG 3 00000000
+REG 4 00000000
+REG 5 00000000
+REG 6 00000000
+REG 7 00000000
+REG 8 00000000
+REG 9 00000000
+REG 10 00000000
+REG 11 00000000
+REG 12 00000000
+REG 13 00000000
+REG 14 00000000
+REG 15 0000007b
+REG 16 00000000
+REG 17 00000000
+REG 18 00000000
+REG 19 00000000
+REG 20 00000000
+REG 21 00000000
+REG 22 00000000
+REG 23 00000000
+REG 24 00000000
+REG 25 00000000
+REG 26 00000000
+REG 27 00000000
+REG 28 00000000
+REG 29 00000000
+REG 30 00000000
+REG 31 00000000
+COUNTS sleep=2 clocks=1194 ai=0 ab=0 am=0 ifetch=397 data=0 bitmap=0 hit=0 miss=0 dummy=0 expanded=0 predict=0 mispredict=0 keys=0
+FINISH
+- /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/secure_ibex/evidence/secure_offset2.harness.sv:217: Verilog $finish

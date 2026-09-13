@@ -1,0 +1,20 @@
+RESPONSE 45000 data=00001000 tag=1
+RESPONSE 155000 data=7e020000 tag=1
+PASS live
+RESPONSE 205000 data=00001000 tag=1
+RESPONSE 315000 data=7e020000 tag=0
+PASS revoked
+RESPONSE 365000 data=00001000 tag=1
+RESPONSE 475000 data=7e020000 tag=0
+PASS bitmap_device_error
+RESPONSE 525000 data=00001000 tag=0
+RESPONSE 555000 data=7e020000 tag=1
+PASS untagged_pointer
+RESPONSE 625000 data=00001000 tag=1
+RESPONSE 655000 data=4e020000 tag=1
+PASS sealing_cap
+RESPONSE 725000 data=00090000 tag=1
+RESPONSE 755000 data=7e020000 tag=1
+PASS outside_heap
+FINISH trvk 6 checks
+- /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/trvk_tb.sv:78: Verilog $finish

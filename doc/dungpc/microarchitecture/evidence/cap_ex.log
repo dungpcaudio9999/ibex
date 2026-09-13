@@ -1,0 +1,10 @@
+PASS root_word_load err=0
+PASS untagged_word_load err=1
+PASS no_load_permission err=1
+PASS last_in_bounds_word err=0
+PASS word_crosses_top err=1
+PASS aligned_capability_load err=0
+PASS misaligned_capability_load err=1
+PASS capability_at_top err=1
+FINISH cap_ex 8 checks
+- /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/cap_ex_tb.sv:82: Verilog $finish

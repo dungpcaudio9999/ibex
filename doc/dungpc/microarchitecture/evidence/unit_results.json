@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cap_ex",
+    "command": [
+      "/tmp/ibex-microarchitecture/cap_ex/Vcap_ex_tb"
+    ],
+    "status": "PASS",
+    "checks": 8
+  },
+  {
+    "id": "cap_lsu",
+    "command": [
+      "/tmp/ibex-microarchitecture/cap_lsu/Vcap_lsu_tb"
+    ],
+    "status": "PASS",
+    "checks": 6
+  },
+  {
+    "id": "trvk",
+    "command": [
+      "/tmp/ibex-microarchitecture/trvk/Vtrvk_tb"
+    ],
+    "status": "PASS",
+    "checks": 6
+  }
+]

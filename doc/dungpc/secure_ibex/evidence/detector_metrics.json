@@ -1,0 +1,52 @@
+[
+  {
+    "id": "secure.fault1",
+    "detector": "ab",
+    "first_stable_sample": 5
+  },
+  {
+    "id": "secure.fault2",
+    "detector": "ab",
+    "first_stable_sample": 8
+  },
+  {
+    "id": "secure.fault3",
+    "detector": "rf",
+    "first_stable_sample": 103
+  },
+  {
+    "id": "secure.fault4",
+    "detector": "mismatch",
+    "first_stable_sample": 105
+  },
+  {
+    "id": "secure.fault6",
+    "detector": "pc",
+    "first_stable_sample": 100
+  },
+  {
+    "id": "secure_dual.fault5",
+    "detector": "mode",
+    "first_stable_sample": 100
+  },
+  {
+    "id": "secure_dual.fault8",
+    "detector": "rf",
+    "first_stable_sample": 102
+  },
+  {
+    "id": "secure_dual.fault9",
+    "detector": "ab",
+    "first_stable_sample": 16
+  },
+  {
+    "id": "secure_offset2.fault3",
+    "detector": "rf",
+    "first_stable_sample": 104
+  },
+  {
+    "id": "secure_offset2.fault4",
+    "detector": "mismatch",
+    "first_stable_sample": 106
+  }
+]

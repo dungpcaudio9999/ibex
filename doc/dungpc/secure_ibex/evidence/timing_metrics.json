@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dit_off_zero",
+    "id_cycles": 2,
+    "multdiv_stall_cycles": 1
+  },
+  {
+    "id": "dit_off_nonzero",
+    "id_cycles": 37,
+    "multdiv_stall_cycles": 36
+  },
+  {
+    "id": "dit_on_zero",
+    "id_cycles": 37,
+    "multdiv_stall_cycles": 36
+  },
+  {
+    "id": "dit_on_nonzero",
+    "id_cycles": 37,
+    "multdiv_stall_cycles": 36
+  },
+  {
+    "id": "ditbranch_off_taken",
+    "id_cycles": 1,
+    "multdiv_stall_cycles": 0
+  },
+  {
+    "id": "ditbranch_off_nt",
+    "id_cycles": 1,
+    "multdiv_stall_cycles": 0
+  },
+  {
+    "id": "ditbranch_on_taken",
+    "id_cycles": 2,
+    "multdiv_stall_cycles": 0
+  },
+  {
+    "id": "ditbranch_on_nt",
+    "id_cycles": 2,
+    "multdiv_stall_cycles": 0
+  }
+]

@@ -1,0 +1,640 @@
+[
+  {
+    "id": "small.arithmetic.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/arithmetic.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1"
+    ],
+    "expected_registers": {
+      "1": 7,
+      "2": 12,
+      "3": 19,
+      "4": 84,
+      "5": 12,
+      "6": 0,
+      "8": 4294967295,
+      "9": 4294967295,
+      "10": 7,
+      "13": 2147483648,
+      "14": 0,
+      "31": 123
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.arithmetic.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/arithmetic.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3"
+    ],
+    "expected_registers": {
+      "1": 7,
+      "2": 12,
+      "3": 19,
+      "4": 84,
+      "5": 12,
+      "6": 0,
+      "8": 4294967295,
+      "9": 4294967295,
+      "10": 7,
+      "13": 2147483648,
+      "14": 0,
+      "31": 123
+    },
+    "failures": [
+      "x1: expected 00000007, got 0",
+      "x2: expected 0000000c, got 5",
+      "x3: expected 00000013, got 0",
+      "x4: expected 00000054, got 0",
+      "x5: expected 0000000c, got 0",
+      "x8: expected ffffffff, got 0",
+      "x9: expected ffffffff, got 0",
+      "x10: expected 00000007, got 0",
+      "x13: expected 80000000, got 0",
+      "x31: expected 0000007b, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.memory.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/memory.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.memory.d1.vcd"
+    ],
+    "expected_registers": {
+      "3": 85,
+      "4": 86,
+      "5": 86,
+      "6": 0,
+      "31": 123
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.memory.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/memory.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.memory.d4.vcd"
+    ],
+    "expected_registers": {
+      "3": 85,
+      "4": 86,
+      "5": 86,
+      "6": 0,
+      "31": 123
+    },
+    "failures": [
+      "x3: expected 00000055, got 0",
+      "x4: expected 00000056, got 0",
+      "x5: expected 00000056, got 0",
+      "x31: expected 0000007b, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.control.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/control.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.control.d1.vcd"
+    ],
+    "expected_registers": {
+      "2": 2,
+      "3": 152,
+      "5": 164,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "31": 123
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.control.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/control.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.control.d4.vcd"
+    ],
+    "expected_registers": {
+      "2": 2,
+      "3": 152,
+      "5": 164,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "31": 123
+    },
+    "failures": [
+      "x2: expected 00000002, got 0",
+      "x3: expected 00000098, got 0",
+      "x5: expected 000000a4, got 0",
+      "x31: expected 0000007b, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.compressed.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/compressed.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.compressed.d1.vcd"
+    ],
+    "expected_registers": {
+      "1": 8,
+      "31": 123
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.compressed.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/compressed.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.compressed.d4.vcd"
+    ],
+    "expected_registers": {
+      "1": 8,
+      "31": 123
+    },
+    "failures": [
+      "x1: expected 00000008, got 1",
+      "x31: expected 0000007b, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.error_load.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_load.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+err_addr=512"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 5,
+      "26": 136,
+      "27": 512,
+      "31": 119
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.error_load.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_load.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+err_addr=512"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 5,
+      "26": 136,
+      "27": 512,
+      "31": 119
+    },
+    "failures": [
+      "x25: expected 00000005, got 0",
+      "x26: expected 00000088, got 0",
+      "x27: expected 00000200, got 0",
+      "x31: expected 00000077, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.error_store.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_store.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+err_addr=512"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 7,
+      "26": 136,
+      "27": 512,
+      "31": 119
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.error_store.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_store.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+err_addr=512"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 7,
+      "26": 136,
+      "27": 512,
+      "31": 119
+    },
+    "failures": [
+      "x25: expected 00000007, got 0",
+      "x26: expected 00000088, got 0",
+      "x27: expected 00000200, got 0",
+      "x31: expected 00000077, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.error_split_load_first.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_split_load_first.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+err_addr=512"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 5,
+      "26": 136,
+      "27": 512,
+      "31": 119
+    },
+    "failures": [
+      "x27: expected 00000200, got 515"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.error_split_load_first.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_split_load_first.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+err_addr=512"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 5,
+      "26": 136,
+      "27": 512,
+      "31": 119
+    },
+    "failures": [
+      "x25: expected 00000005, got 0",
+      "x26: expected 00000088, got 0",
+      "x27: expected 00000200, got 0",
+      "x31: expected 00000077, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.error_split_load_second.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_split_load_second.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+err_addr=516",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.error_split_load_second.d1.vcd"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 5,
+      "26": 136,
+      "27": 516,
+      "31": 119
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.error_split_load_second.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_split_load_second.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+err_addr=516",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.error_split_load_second.d4.vcd"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 5,
+      "26": 136,
+      "27": 516,
+      "31": 119
+    },
+    "failures": [
+      "x25: expected 00000005, got 0",
+      "x26: expected 00000088, got 0",
+      "x27: expected 00000204, got 0",
+      "x31: expected 00000077, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.error_split_store_first.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_split_store_first.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+err_addr=512"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 7,
+      "26": 136,
+      "27": 512,
+      "31": 119
+    },
+    "failures": [
+      "x27: expected 00000200, got 515"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.error_split_store_first.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_split_store_first.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+err_addr=512"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 7,
+      "26": 136,
+      "27": 512,
+      "31": 119
+    },
+    "failures": [
+      "x25: expected 00000007, got 0",
+      "x26: expected 00000088, got 0",
+      "x27: expected 00000200, got 0",
+      "x31: expected 00000077, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.error_split_store_second.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_split_store_second.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+err_addr=516"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 7,
+      "26": 136,
+      "27": 516,
+      "31": 119
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.error_split_store_second.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/error_split_store_second.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+err_addr=516"
+    ],
+    "expected_registers": {
+      "3": 0,
+      "20": 0,
+      "25": 7,
+      "26": 136,
+      "27": 516,
+      "31": 119
+    },
+    "failures": [
+      "x25: expected 00000007, got 0",
+      "x26: expected 00000088, got 0",
+      "x27: expected 00000204, got 0",
+      "x31: expected 00000077, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.event1.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/event1.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+event=1",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.event1.d1.vcd"
+    ],
+    "expected_registers": {
+      "3": 1144201745,
+      "31": 119,
+      "25": 2147483655
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.event1.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/event1.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+event=1",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/small.event1.d4.vcd"
+    ],
+    "expected_registers": {
+      "3": 1144201745,
+      "31": 119,
+      "25": 2147483655
+    },
+    "failures": [
+      "x3: expected 44332211, got 0",
+      "x31: expected 00000077, got 0",
+      "x25: expected 80000007, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.event2.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/event2.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+event=2"
+    ],
+    "expected_registers": {
+      "3": 1144201745,
+      "31": 118
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.event2.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/event2.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+event=2"
+    ],
+    "expected_registers": {
+      "3": 1144201745,
+      "31": 118
+    },
+    "failures": [
+      "x3: expected 44332211, got 0",
+      "x31: expected 00000076, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.event3.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/event3.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+event=3"
+    ],
+    "expected_registers": {
+      "3": 64,
+      "31": 119,
+      "25": 2147483655
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.event3.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/event3.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+event=3"
+    ],
+    "expected_registers": {
+      "3": 64,
+      "31": 119,
+      "25": 2147483655
+    },
+    "failures": [
+      "x3: expected 00000040, got 0",
+      "x31: expected 00000077, got 0",
+      "x25: expected 80000007, got 0"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "id": "small.event4.d1",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/event4.hex",
+      "+latency=1",
+      "+ilatency=1",
+      "+grant_period=1",
+      "+event=4"
+    ],
+    "expected_registers": {
+      "3": 64,
+      "31": 118
+    },
+    "failures": [],
+    "status": "PASS"
+  },
+  {
+    "id": "small.event4.d4",
+    "command": [
+      "/tmp/ibex-microarchitecture/small/Vcore_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/event4.hex",
+      "+latency=4",
+      "+ilatency=4",
+      "+grant_period=3",
+      "+event=4"
+    ],
+    "expected_registers": {
+      "3": 64,
+      "31": 118
+    },
+    "failures": [
+      "x3: expected 00000040, got 0",
+      "x31: expected 00000076, got 0"
+    ],
+    "status": "FAIL"
+  }
+]

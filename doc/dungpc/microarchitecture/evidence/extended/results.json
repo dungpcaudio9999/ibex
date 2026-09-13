@@ -1,0 +1,750 @@
+[
+  {
+    "id": "top.arithmetic",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/arithmetic.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.arithmetic.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "1": 7,
+      "2": 12,
+      "3": 19,
+      "4": 84,
+      "5": 12,
+      "6": 0,
+      "8": 4294967295,
+      "9": 4294967295,
+      "10": 7,
+      "13": 2147483648,
+      "14": 0,
+      "31": 123
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1050,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.control",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/control.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.control.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "2": 2,
+      "3": 152,
+      "5": 164,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "31": 123
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.compressed",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/compressed.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.compressed.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "1": 8,
+      "31": 123
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.iferror",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/iferror.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.iferror.vcd",
+      "+latency=1",
+      "+iferr=132"
+    ],
+    "expected": {
+      "1": 7,
+      "2": 0,
+      "10": 1,
+      "11": 132,
+      "12": 132,
+      "15": 119
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.iferror_second",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/iferror_second.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.iferror_second.vcd",
+      "+latency=1",
+      "+iferr=132"
+    ],
+    "expected": {
+      "1": 0,
+      "10": 1,
+      "11": 130,
+      "12": 132,
+      "15": 119
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.reset",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/reset.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.reset.vcd",
+      "+latency=4",
+      "+reset_at=7"
+    ],
+    "expected": {
+      "1": 7,
+      "15": 123
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 2,
+      "clocks": 1194,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 397,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.sleep",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/sleep.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.sleep.vcd",
+      "+latency=4",
+      "+event=1"
+    ],
+    "expected": {
+      "15": 123
+    },
+    "activity_minimum": {
+      "sleep": 20
+    },
+    "counts": {
+      "sleep": 58,
+      "clocks": 1140,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 377,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.dret",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/dret.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.dret.vcd",
+      "+latency=4",
+      "+event=2"
+    ],
+    "expected": {
+      "3": 1144201745,
+      "13": 118,
+      "15": 123
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 398,
+      "data": 1,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.debug_irq",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/debug_irq.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.debug_irq.vcd",
+      "+latency=4",
+      "+event=4"
+    ],
+    "expected": {
+      "3": 1144201745,
+      "13": 118,
+      "10": 2147483655,
+      "15": 119
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 398,
+      "data": 1,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.nmi",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/nmi.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.nmi.vcd",
+      "+latency=4",
+      "+event=3"
+    ],
+    "expected": {
+      "3": 1144201745,
+      "10": 2147483679,
+      "15": 119
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 398,
+      "data": 1,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "predict.loop",
+    "command": [
+      "/tmp/ibex-extended/predict/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/loop.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/predict.loop.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "1": 0,
+      "15": 123
+    },
+    "activity_minimum": {
+      "predict": 1,
+      "mispredict": 1
+    },
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 1189,
+      "mispredict": 1
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "predict.control",
+    "command": [
+      "/tmp/ibex-extended/predict/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/control.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/predict.control.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "2": 2,
+      "3": 152,
+      "5": 164,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "31": 123
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 1186,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "zc.zc",
+    "command": [
+      "/tmp/ibex-extended/zc/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/zc.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/zc.zc.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "2": 768,
+      "1": 55,
+      "8": 255,
+      "15": 123
+    },
+    "activity_minimum": {
+      "expanded": 1,
+      "data": 2
+    },
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1193,
+      "data": 2,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 4,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "cache.cache",
+    "command": [
+      "/tmp/ibex-extended/cache/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cache.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cache.cache.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "2": 0,
+      "15": 123
+    },
+    "activity_minimum": {
+      "hit": 1,
+      "miss": 1
+    },
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 573,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 656,
+      "miss": 12,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "cache.iferror",
+    "command": [
+      "/tmp/ibex-extended/cache/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/iferror.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cache.iferror.vcd",
+      "+latency=1",
+      "+iferr=132"
+    ],
+    "expected": {
+      "1": 7,
+      "2": 0,
+      "10": 1,
+      "11": 132,
+      "12": 132,
+      "15": 119
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "cache.control",
+    "command": [
+      "/tmp/ibex-extended/cache/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/control.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cache.control.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "2": 2,
+      "3": 152,
+      "5": 164,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "31": 123
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "cheriot.cap",
+    "command": [
+      "/tmp/ibex-extended/cheriot/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cap.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cheriot.cap.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "2": 4096,
+      "3": 1,
+      "15": 123
+    },
+    "activity_minimum": {
+      "bitmap": 1,
+      "data": 2
+    },
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1189,
+      "data": 2,
+      "bitmap": 1,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "cheriot.cap_revoked",
+    "command": [
+      "/tmp/ibex-extended/cheriot/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cap_revoked.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cheriot.cap_revoked.vcd",
+      "+latency=1",
+      "+revoked=1"
+    ],
+    "expected": {
+      "2": 4096,
+      "3": 0,
+      "15": 123
+    },
+    "activity_minimum": {
+      "bitmap": 1,
+      "data": 2
+    },
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1189,
+      "data": 2,
+      "bitmap": 1,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "pmp.pmp_deny",
+    "command": [
+      "/tmp/ibex-extended/pmp/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/pmp_deny.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/pmp.pmp_deny.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "3": 0,
+      "10": 5,
+      "11": 148,
+      "12": 512,
+      "15": 119
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1192,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "cheriot.cap_fault",
+    "command": [
+      "/tmp/ibex-extended/cheriot/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cap_fault.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/cheriot.cap_fault.vcd",
+      "+latency=1"
+    ],
+    "expected": {
+      "2": 0,
+      "10": 28,
+      "11": 132,
+      "15": 119
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 1196,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "id": "top.nmi_return",
+    "command": [
+      "/tmp/ibex-extended/top/Vtop_tb",
+      "+program=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/nmi_return.hex",
+      "+wave=/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/evidence/extended/top.nmi_return.vcd",
+      "+latency=4",
+      "+event=3"
+    ],
+    "expected": {
+      "3": 1144201745,
+      "10": 2147483679,
+      "15": 123
+    },
+    "activity_minimum": {},
+    "counts": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 398,
+      "data": 1,
+      "bitmap": 0,
+      "hit": 0,
+      "miss": 0,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0
+    },
+    "errors": [],
+    "status": "PASS"
+  }
+]

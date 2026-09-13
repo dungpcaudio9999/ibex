@@ -1,0 +1,1921 @@
+{
+  "cells": [
+    {
+      "loc": "bs,2,8,2,14",
+      "name": "top_tb",
+      "submodname": "top_tb",
+      "hier": "top_tb"
+    },
+    {
+      "loc": "bs,17,29,17,33",
+      "name": "iecc",
+      "submodname": "prim_secded_inv_39_32_enc",
+      "hier": "top_tb.iecc"
+    },
+    {
+      "loc": "bs,18,29,18,33",
+      "name": "decc",
+      "submodname": "prim_secded_inv_39_32_enc",
+      "hier": "top_tb.decc"
+    },
+    {
+      "loc": "bs,19,29,19,33",
+      "name": "becc",
+      "submodname": "prim_secded_inv_39_32_enc",
+      "hier": "top_tb.becc"
+    },
+    {
+      "loc": "bs,43,51,43,54",
+      "name": "dut",
+      "submodname": "ibex_top__pi1",
+      "hier": "top_tb.dut"
+    },
+    {
+      "loc": "bp,308,7,308,28",
+      "name": "u_prim_core_busy_flop",
+      "submodname": "prim_flop__W4_Rz3",
+      "hier": "top_tb.dut.g_clock_en_secure.u_prim_core_busy_flop"
+    },
+    {
+      "loc": "bp,333,21,333,38",
+      "name": "core_clock_gate_i",
+      "submodname": "prim_clock_gating",
+      "hier": "top_tb.dut.core_clock_gate_i"
+    },
+    {
+      "loc": "bp,345,42,345,60",
+      "name": "u_fetch_enable_buf",
+      "submodname": "prim_buf__W4",
+      "hier": "top_tb.dut.u_fetch_enable_buf"
+    },
+    {
+      "loc": "bp,350,42,350,67",
+      "name": "u_mcounteren_writable_buf",
+      "submodname": "prim_buf__W4",
+      "hier": "top_tb.dut.u_mcounteren_writable_buf"
+    },
+    {
+      "loc": "bp,410,5,410,16",
+      "name": "u_ibex_core",
+      "submodname": "ibex_core__pi2",
+      "hier": "top_tb.dut.u_ibex_core"
+    },
+    {
+      "loc": "v,506,7,506,25",
+      "name": "u_fetch_enable_buf",
+      "submodname": "prim_buf__Wc",
+      "hier": "top_tb.dut.u_ibex_core.g_core_busy_secure.u_fetch_enable_buf"
+    },
+    {
+      "loc": "v,547,5,547,15",
+      "name": "if_stage_i",
+      "submodname": "ibex_if_stage__pi7",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i"
+    },
+    {
+      "loc": "bf,263,38,263,60",
+      "name": "u_prim_buf_instr_rdata",
+      "submodname": "prim_buf__W27",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i.g_mem_ecc.u_prim_buf_instr_rdata"
+    },
+    {
+      "loc": "bf,268,31,268,47",
+      "name": "u_instr_intg_dec",
+      "submodname": "prim_secded_inv_39_32_dec",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i.g_mem_ecc.u_instr_intg_dec"
+    },
+    {
+      "loc": "bf,352,7,352,24",
+      "name": "prefetch_buffer_i",
+      "submodname": "ibex_prefetch_buffer__Rz1",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i.gen_prefetch_buffer.prefetch_buffer_i"
+    },
+    {
+      "loc": "bl,93,5,93,11",
+      "name": "fifo_i",
+      "submodname": "ibex_fetch_fifo__N2_Rz1",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i.gen_prefetch_buffer.prefetch_buffer_i.fifo_i"
+    },
+    {
+      "loc": "bf,489,5,489,25",
+      "name": "compressed_decoder_i",
+      "submodname": "ibex_compressed_decoder__pi11",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i.compressed_decoder_i"
+    },
+    {
+      "loc": "bf,512,7,512,20",
+      "name": "dummy_instr_i",
+      "submodname": "ibex_dummy_instr__pi12",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i.gen_dummy_instr.dummy_instr_i"
+    },
+    {
+      "loc": "ba,82,5,82,11",
+      "name": "lfsr_i",
+      "submodname": "prim_lfsr__pi15",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i.gen_dummy_instr.dummy_instr_i.lfsr_i"
+    },
+    {
+      "loc": "bf,682,28,682,54",
+      "name": "u_prev_instr_addr_incr_buf",
+      "submodname": "prim_buf__W20",
+      "hier": "top_tb.dut.u_ibex_core.if_stage_i.g_secure_pc.u_prev_instr_addr_incr_buf"
+    },
+    {
+      "loc": "v,673,5,673,15",
+      "name": "id_stage_i",
+      "submodname": "ibex_id_stage__pi8",
+      "hier": "top_tb.dut.u_ibex_core.id_stage_i"
+    },
+    {
+      "loc": "be,484,5,484,14",
+      "name": "decoder_i",
+      "submodname": "ibex_decoder__pi13",
+      "hier": "top_tb.dut.u_ibex_core.id_stage_i.decoder_i"
+    },
+    {
+      "loc": "be,620,5,620,17",
+      "name": "controller_i",
+      "submodname": "ibex_controller__pi14",
+      "hier": "top_tb.dut.u_ibex_core.id_stage_i.controller_i"
+    },
+    {
+      "loc": "v,867,5,867,15",
+      "name": "ex_block_i",
+      "submodname": "ibex_ex_block__R3_RB3_Bz1",
+      "hier": "top_tb.dut.u_ibex_core.ex_block_i"
+    },
+    {
+      "loc": "bb,118,5,118,10",
+      "name": "alu_i",
+      "submodname": "ibex_alu__R3",
+      "hier": "top_tb.dut.u_ibex_core.ex_block_i.alu_i"
+    },
+    {
+      "loc": "bb,168,7,168,16",
+      "name": "multdiv_i",
+      "submodname": "ibex_multdiv_fast__R3",
+      "hier": "top_tb.dut.u_ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i"
+    },
+    {
+      "loc": "v,1070,5,1070,22",
+      "name": "load_store_unit_i",
+      "submodname": "ibex_load_store_unit__pi9",
+      "hier": "top_tb.dut.u_ibex_core.load_store_unit_i"
+    },
+    {
+      "loc": "bg,380,38,380,60",
+      "name": "u_prim_buf_instr_rdata",
+      "submodname": "prim_buf__W27",
+      "hier": "top_tb.dut.u_ibex_core.load_store_unit_i.g_mem_rdata_ecc.u_prim_buf_instr_rdata"
+    },
+    {
+      "loc": "bg,385,31,385,46",
+      "name": "u_data_intg_dec",
+      "submodname": "prim_secded_inv_39_32_dec",
+      "hier": "top_tb.dut.u_ibex_core.load_store_unit_i.g_mem_rdata_ecc.u_data_intg_dec"
+    },
+    {
+      "loc": "bg,732,31,732,41",
+      "name": "u_data_gen",
+      "submodname": "prim_secded_inv_39_32_enc",
+      "hier": "top_tb.dut.u_ibex_core.load_store_unit_i.g_mem_wdata_ecc.u_data_gen"
+    },
+    {
+      "loc": "v,1129,5,1129,15",
+      "name": "wb_stage_i",
+      "submodname": "ibex_wb_stage__Rz1_Wz1_Dz1",
+      "hier": "top_tb.dut.u_ibex_core.wb_stage_i"
+    },
+    {
+      "loc": "v,1451,5,1451,19",
+      "name": "cs_registers_i",
+      "submodname": "ibex_cs_registers__pi10",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i"
+    },
+    {
+      "loc": "x,1075,5,1075,18",
+      "name": "u_mstatus_csr",
+      "submodname": "ibex_csr__W6_Sz2_Rz10",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mstatus_csr"
+    },
+    {
+      "loc": "x,1092,5,1092,15",
+      "name": "u_mepc_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mepc_csr"
+    },
+    {
+      "loc": "x,1110,5,1110,14",
+      "name": "u_mie_csr",
+      "submodname": "ibex_csr__W12",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mie_csr"
+    },
+    {
+      "loc": "x,1124,5,1124,19",
+      "name": "u_mscratch_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mscratch_csr"
+    },
+    {
+      "loc": "x,1138,5,1138,17",
+      "name": "u_mcause_csr",
+      "submodname": "ibex_csr__W7",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mcause_csr"
+    },
+    {
+      "loc": "x,1152,5,1152,16",
+      "name": "u_mtval_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mtval_csr"
+    },
+    {
+      "loc": "x,1173,5,1173,16",
+      "name": "u_mtvec_csr",
+      "submodname": "ibex_csr__Sz2_R1",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mtvec_csr"
+    },
+    {
+      "loc": "x,1193,5,1193,15",
+      "name": "u_dcsr_csr",
+      "submodname": "ibex_csr__R40000003",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_dcsr_csr"
+    },
+    {
+      "loc": "x,1210,5,1210,15",
+      "name": "u_depc_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_depc_csr"
+    },
+    {
+      "loc": "x,1228,5,1228,20",
+      "name": "u_dscratch0_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_dscratch0_csr"
+    },
+    {
+      "loc": "x,1246,5,1246,20",
+      "name": "u_dscratch1_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_dscratch1_csr"
+    },
+    {
+      "loc": "x,1261,5,1261,17",
+      "name": "u_mstack_csr",
+      "submodname": "ibex_csr__W3_Rz11",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mstack_csr"
+    },
+    {
+      "loc": "x,1275,5,1275,21",
+      "name": "u_mstack_epc_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mstack_epc_csr"
+    },
+    {
+      "loc": "x,1289,5,1289,23",
+      "name": "u_mstack_cause_csr",
+      "submodname": "ibex_csr__W7",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mstack_cause_csr"
+    },
+    {
+      "loc": "x,1623,5,1623,21",
+      "name": "mcycle_counter_i",
+      "submodname": "ibex_counter__C40",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.mcycle_counter_i"
+    },
+    {
+      "loc": "x,1639,5,1639,23",
+      "name": "minstret_counter_i",
+      "submodname": "ibex_counter__C40_P1",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.minstret_counter_i"
+    },
+    {
+      "loc": "x,1740,5,1740,21",
+      "name": "u_mcounteren_csr",
+      "submodname": "ibex_csr__W3",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_mcounteren_csr"
+    },
+    {
+      "loc": "x,1976,5,1976,26",
+      "name": "u_cpuctrlsts_part_csr",
+      "submodname": "ibex_csr__W8_Sz2",
+      "hier": "top_tb.dut.u_ibex_core.cs_registers_i.u_cpuctrlsts_part_csr"
+    },
+    {
+      "loc": "bp,540,7,540,22",
+      "name": "register_file_i",
+      "submodname": "ibex_register_file_ff__pi3",
+      "hier": "top_tb.dut.gen_regfile_ff.register_file_i"
+    },
+    {
+      "loc": "bp,864,27,864,53",
+      "name": "u_prim_buf_data_wdata_intg",
+      "submodname": "prim_buf__W7",
+      "hier": "top_tb.dut.gen_mem_wdata_ecc.u_prim_buf_data_wdata_intg"
+    },
+    {
+      "loc": "bp,1094,39,1094,57",
+      "name": "u_signals_prim_buf",
+      "submodname": "prim_buf__W2da",
+      "hier": "top_tb.dut.gen_lockstep.u_signals_prim_buf"
+    },
+    {
+      "loc": "bp,1102,38,1102,52",
+      "name": "u_tag_prim_buf",
+      "submodname": "prim_buf__W16",
+      "hier": "top_tb.dut.gen_lockstep.gen_ways__BRA__0__KET__.u_tag_prim_buf"
+    },
+    {
+      "loc": "bp,1106,39,1106,54",
+      "name": "u_data_prim_buf",
+      "submodname": "prim_buf__W40",
+      "hier": "top_tb.dut.gen_lockstep.gen_ways__BRA__0__KET__.u_data_prim_buf"
+    },
+    {
+      "loc": "bp,1102,38,1102,52",
+      "name": "u_tag_prim_buf",
+      "submodname": "prim_buf__W16",
+      "hier": "top_tb.dut.gen_lockstep.gen_ways__BRA__1__KET__.u_tag_prim_buf"
+    },
+    {
+      "loc": "bp,1106,39,1106,54",
+      "name": "u_data_prim_buf",
+      "submodname": "prim_buf__W40",
+      "hier": "top_tb.dut.gen_lockstep.gen_ways__BRA__1__KET__.u_data_prim_buf"
+    },
+    {
+      "loc": "bp,1158,7,1158,22",
+      "name": "u_ibex_lockstep",
+      "submodname": "ibex_lockstep__pi4",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep"
+    },
+    {
+      "loc": "bh,213,5,213,31",
+      "name": "u_prim_rst_shadow_set_flop",
+      "submodname": "prim_flop__W4_Rz3",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_prim_rst_shadow_set_flop"
+    },
+    {
+      "loc": "bh,223,5,223,27",
+      "name": "u_prim_enable_cmp_flop",
+      "submodname": "prim_flop__W4_Rz3",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_prim_enable_cmp_flop"
+    },
+    {
+      "loc": "bh,232,5,232,29",
+      "name": "u_prim_rst_shadow_n_mux2",
+      "submodname": "prim_clock_mux2__Nz8",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_prim_rst_shadow_n_mux2"
+    },
+    {
+      "loc": "bh,488,5,488,18",
+      "name": "u_shadow_core",
+      "submodname": "ibex_core__pi5",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core"
+    },
+    {
+      "loc": "v,506,7,506,25",
+      "name": "u_fetch_enable_buf",
+      "submodname": "prim_buf__Wc",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.g_core_busy_secure.u_fetch_enable_buf"
+    },
+    {
+      "loc": "v,547,5,547,15",
+      "name": "if_stage_i",
+      "submodname": "ibex_if_stage__pi7",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i"
+    },
+    {
+      "loc": "bf,263,38,263,60",
+      "name": "u_prim_buf_instr_rdata",
+      "submodname": "prim_buf__W27",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i.g_mem_ecc.u_prim_buf_instr_rdata"
+    },
+    {
+      "loc": "bf,268,31,268,47",
+      "name": "u_instr_intg_dec",
+      "submodname": "prim_secded_inv_39_32_dec",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i.g_mem_ecc.u_instr_intg_dec"
+    },
+    {
+      "loc": "bf,352,7,352,24",
+      "name": "prefetch_buffer_i",
+      "submodname": "ibex_prefetch_buffer__Rz1",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i.gen_prefetch_buffer.prefetch_buffer_i"
+    },
+    {
+      "loc": "bl,93,5,93,11",
+      "name": "fifo_i",
+      "submodname": "ibex_fetch_fifo__N2_Rz1",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i.gen_prefetch_buffer.prefetch_buffer_i.fifo_i"
+    },
+    {
+      "loc": "bf,489,5,489,25",
+      "name": "compressed_decoder_i",
+      "submodname": "ibex_compressed_decoder__pi11",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i.compressed_decoder_i"
+    },
+    {
+      "loc": "bf,512,7,512,20",
+      "name": "dummy_instr_i",
+      "submodname": "ibex_dummy_instr__pi12",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i.gen_dummy_instr.dummy_instr_i"
+    },
+    {
+      "loc": "ba,82,5,82,11",
+      "name": "lfsr_i",
+      "submodname": "prim_lfsr__pi15",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i.gen_dummy_instr.dummy_instr_i.lfsr_i"
+    },
+    {
+      "loc": "bf,682,28,682,54",
+      "name": "u_prev_instr_addr_incr_buf",
+      "submodname": "prim_buf__W20",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.if_stage_i.g_secure_pc.u_prev_instr_addr_incr_buf"
+    },
+    {
+      "loc": "v,673,5,673,15",
+      "name": "id_stage_i",
+      "submodname": "ibex_id_stage__pi8",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.id_stage_i"
+    },
+    {
+      "loc": "be,484,5,484,14",
+      "name": "decoder_i",
+      "submodname": "ibex_decoder__pi13",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.id_stage_i.decoder_i"
+    },
+    {
+      "loc": "be,620,5,620,17",
+      "name": "controller_i",
+      "submodname": "ibex_controller__pi14",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.id_stage_i.controller_i"
+    },
+    {
+      "loc": "v,867,5,867,15",
+      "name": "ex_block_i",
+      "submodname": "ibex_ex_block__R3_RB3_Bz1",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.ex_block_i"
+    },
+    {
+      "loc": "bb,118,5,118,10",
+      "name": "alu_i",
+      "submodname": "ibex_alu__R3",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.ex_block_i.alu_i"
+    },
+    {
+      "loc": "bb,168,7,168,16",
+      "name": "multdiv_i",
+      "submodname": "ibex_multdiv_fast__R3",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.ex_block_i.gen_multdiv_fast.multdiv_i"
+    },
+    {
+      "loc": "v,1070,5,1070,22",
+      "name": "load_store_unit_i",
+      "submodname": "ibex_load_store_unit__pi9",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.load_store_unit_i"
+    },
+    {
+      "loc": "bg,380,38,380,60",
+      "name": "u_prim_buf_instr_rdata",
+      "submodname": "prim_buf__W27",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.load_store_unit_i.g_mem_rdata_ecc.u_prim_buf_instr_rdata"
+    },
+    {
+      "loc": "bg,385,31,385,46",
+      "name": "u_data_intg_dec",
+      "submodname": "prim_secded_inv_39_32_dec",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.load_store_unit_i.g_mem_rdata_ecc.u_data_intg_dec"
+    },
+    {
+      "loc": "bg,732,31,732,41",
+      "name": "u_data_gen",
+      "submodname": "prim_secded_inv_39_32_enc",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.load_store_unit_i.g_mem_wdata_ecc.u_data_gen"
+    },
+    {
+      "loc": "v,1129,5,1129,15",
+      "name": "wb_stage_i",
+      "submodname": "ibex_wb_stage__Rz1_Wz1_Dz1",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.wb_stage_i"
+    },
+    {
+      "loc": "v,1221,31,1221,46",
+      "name": "regfile_ecc_enc",
+      "submodname": "prim_secded_inv_39_32_enc",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.gen_regfile_ecc.regfile_ecc_enc"
+    },
+    {
+      "loc": "v,1227,31,1227,48",
+      "name": "regfile_ecc_dec_a",
+      "submodname": "prim_secded_inv_39_32_dec",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.gen_regfile_ecc.regfile_ecc_dec_a"
+    },
+    {
+      "loc": "v,1233,31,1233,48",
+      "name": "regfile_ecc_dec_b",
+      "submodname": "prim_secded_inv_39_32_dec",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.gen_regfile_ecc.regfile_ecc_dec_b"
+    },
+    {
+      "loc": "v,1451,5,1451,19",
+      "name": "cs_registers_i",
+      "submodname": "ibex_cs_registers__pi10",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i"
+    },
+    {
+      "loc": "x,1075,5,1075,18",
+      "name": "u_mstatus_csr",
+      "submodname": "ibex_csr__W6_Sz2_Rz10",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mstatus_csr"
+    },
+    {
+      "loc": "x,1092,5,1092,15",
+      "name": "u_mepc_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mepc_csr"
+    },
+    {
+      "loc": "x,1110,5,1110,14",
+      "name": "u_mie_csr",
+      "submodname": "ibex_csr__W12",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mie_csr"
+    },
+    {
+      "loc": "x,1124,5,1124,19",
+      "name": "u_mscratch_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mscratch_csr"
+    },
+    {
+      "loc": "x,1138,5,1138,17",
+      "name": "u_mcause_csr",
+      "submodname": "ibex_csr__W7",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mcause_csr"
+    },
+    {
+      "loc": "x,1152,5,1152,16",
+      "name": "u_mtval_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mtval_csr"
+    },
+    {
+      "loc": "x,1173,5,1173,16",
+      "name": "u_mtvec_csr",
+      "submodname": "ibex_csr__Sz2_R1",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mtvec_csr"
+    },
+    {
+      "loc": "x,1193,5,1193,15",
+      "name": "u_dcsr_csr",
+      "submodname": "ibex_csr__R40000003",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_dcsr_csr"
+    },
+    {
+      "loc": "x,1210,5,1210,15",
+      "name": "u_depc_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_depc_csr"
+    },
+    {
+      "loc": "x,1228,5,1228,20",
+      "name": "u_dscratch0_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_dscratch0_csr"
+    },
+    {
+      "loc": "x,1246,5,1246,20",
+      "name": "u_dscratch1_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_dscratch1_csr"
+    },
+    {
+      "loc": "x,1261,5,1261,17",
+      "name": "u_mstack_csr",
+      "submodname": "ibex_csr__W3_Rz11",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mstack_csr"
+    },
+    {
+      "loc": "x,1275,5,1275,21",
+      "name": "u_mstack_epc_csr",
+      "submodname": "ibex_csr",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mstack_epc_csr"
+    },
+    {
+      "loc": "x,1289,5,1289,23",
+      "name": "u_mstack_cause_csr",
+      "submodname": "ibex_csr__W7",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mstack_cause_csr"
+    },
+    {
+      "loc": "x,1623,5,1623,21",
+      "name": "mcycle_counter_i",
+      "submodname": "ibex_counter__C40",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.mcycle_counter_i"
+    },
+    {
+      "loc": "x,1639,5,1639,23",
+      "name": "minstret_counter_i",
+      "submodname": "ibex_counter__C40_P1",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.minstret_counter_i"
+    },
+    {
+      "loc": "x,1740,5,1740,21",
+      "name": "u_mcounteren_csr",
+      "submodname": "ibex_csr__W3",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_mcounteren_csr"
+    },
+    {
+      "loc": "x,1976,5,1976,26",
+      "name": "u_cpuctrlsts_part_csr",
+      "submodname": "ibex_csr__W8_Sz2",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.u_shadow_core.cs_registers_i.u_cpuctrlsts_part_csr"
+    },
+    {
+      "loc": "bh,645,7,645,29",
+      "name": "register_file_shadow_i",
+      "submodname": "ibex_register_file_ff__pi6",
+      "hier": "top_tb.dut.gen_lockstep.u_ibex_lockstep.gen_shadow_regfile_ff.register_file_shadow_i"
+    },
+    {
+      "loc": "bp,1236,14,1236,36",
+      "name": "u_prim_buf_alert_minor",
+      "submodname": "prim_buf",
+      "hier": "top_tb.dut.gen_lockstep.u_prim_buf_alert_minor"
+    },
+    {
+      "loc": "bp,1241,14,1241,45",
+      "name": "u_prim_buf_alert_major_internal",
+      "submodname": "prim_buf",
+      "hier": "top_tb.dut.gen_lockstep.u_prim_buf_alert_major_internal"
+    },
+    {
+      "loc": "bp,1246,14,1246,40",
+      "name": "u_prim_buf_alert_major_bus",
+      "submodname": "prim_buf",
+      "hier": "top_tb.dut.gen_lockstep.u_prim_buf_alert_major_bus"
+    }
+  ],
+  "parameters": [
+    {
+      "module": "top_tb",
+      "original": "top_tb",
+      "parameters": {
+        "SEC": [
+          {
+            "loc": "bs,5,17,5,20",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "CACHE": [
+          {
+            "loc": "bs,5,30,5,31",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "PRED": [
+          {
+            "loc": "bs,5,38,5,39",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "DUAL": [
+          {
+            "loc": "bs,5,46,5,47",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "MODE": [
+          {
+            "loc": "bs,5,54,5,55",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "SCR": [
+          {
+            "loc": "bs,5,61,5,62",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICECC": [
+          {
+            "loc": "bs,5,70,5,71",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "PMP": [
+          {
+            "loc": "bs,5,77,5,78",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ZC": [
+          {
+            "loc": "bs,6,20,6,21",
+            "name": "32'sh0",
+            "dtype_id": "3"
+          }
+        ],
+        "OFFSET": [
+          {
+            "loc": "bs,6,30,6,31",
+            "name": "32'sh1",
+            "dtype_id": "3"
+          }
+        ],
+        "TWEAK": [
+          {
+            "loc": "bs,7,23,7,26",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_top__pi1",
+      "original": "ibex_top",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "bs,40,45,40,57",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "PMPEnable": [
+          {
+            "loc": "bs,42,113,42,116",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RV32M": [
+          {
+            "loc": "bs,41,12,41,28",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32B": [
+          {
+            "loc": "bs,41,37,41,46",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32ZC": [
+          {
+            "loc": "bs,40,67,40,75",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "bs,39,67,39,68",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "bs,39,47,39,48",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "bs,41,56,41,61",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheECC": [
+          {
+            "loc": "bs,41,74,41,79",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "SecureIbex": [
+          {
+            "loc": "bs,39,26,39,29",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "LockstepOffset": [
+          {
+            "loc": "bs,42,94,42,100",
+            "name": "32'sh1",
+            "dtype_id": "3"
+          }
+        ],
+        "MemECC": [
+          {
+            "loc": "bp,41,68,41,78",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemDataWidth": [
+          {
+            "loc": "bp,42,80,42,81",
+            "name": "32'h27",
+            "dtype_id": "3"
+          }
+        ],
+        "ICacheScramble": [
+          {
+            "loc": "bs,42,21,42,24",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheTweakInfection": [
+          {
+            "loc": "bs,42,48,42,53",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "Lockstep": [
+          {
+            "loc": "bp,212,51,212,61",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ResetAll": [
+          {
+            "loc": "bp,213,51,213,59",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "bp,214,51,214,61",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "RegFileECC": [
+          {
+            "loc": "bp,215,51,215,55",
+            "name": "1'h0",
+            "dtype_id": "4"
+          }
+        ],
+        "RegFileLockstepECC": [
+          {
+            "loc": "bp,216,51,216,59",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "RegFileDataWidth": [
+          {
+            "loc": "bp,217,51,217,53",
+            "name": "32'sh20",
+            "dtype_id": "3"
+          }
+        ],
+        "RegFileDataEccWidth": [
+          {
+            "loc": "bp,218,54,218,55",
+            "name": "32'h27",
+            "dtype_id": "3"
+          }
+        ],
+        "RegFileCapEccWidth": [
+          {
+            "loc": "bp,219,60,219,61",
+            "name": "32'h2a",
+            "dtype_id": "63"
+          }
+        ],
+        "LineSizeECC": [
+          {
+            "loc": "bp,223,58,223,59",
+            "name": "32'h40",
+            "dtype_id": "63"
+          }
+        ],
+        "TagSizeECC": [
+          {
+            "loc": "bp,225,60,225,71",
+            "name": "32'h16",
+            "dtype_id": "63"
+          }
+        ],
+        "NumAddrScrRounds": [
+          {
+            "loc": "bp,227,68,227,69",
+            "name": "32'sh0",
+            "dtype_id": "3"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_lockstep__pi4",
+      "original": "ibex_lockstep",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "bp,1157,30,1157,37",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "LockstepOffset": [
+          {
+            "loc": "bp,1143,30,1143,44",
+            "name": "32'h1",
+            "dtype_id": "6"
+          }
+        ],
+        "PMPEnable": [
+          {
+            "loc": "bp,1116,30,1116,39",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RV32M": [
+          {
+            "loc": "bp,1125,30,1125,35",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32B": [
+          {
+            "loc": "bp,1126,30,1126,35",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32ZC": [
+          {
+            "loc": "bp,1127,30,1127,36",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "bp,1128,30,1128,45",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "bp,1138,30,1138,44",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "bp,1129,30,1129,36",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheECC": [
+          {
+            "loc": "bp,1130,30,1130,39",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheTweakInfection": [
+          {
+            "loc": "bp,1131,30,1131,50",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "TagSizeECC": [
+          {
+            "loc": "bp,1133,30,1133,40",
+            "name": "32'h16",
+            "dtype_id": "63"
+          }
+        ],
+        "LineSizeECC": [
+          {
+            "loc": "bp,1134,30,1134,41",
+            "name": "32'h40",
+            "dtype_id": "63"
+          }
+        ],
+        "ResetAll": [
+          {
+            "loc": "bp,1139,30,1139,38",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "SecureIbex": [
+          {
+            "loc": "bp,1142,30,1142,40",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "bp,1144,30,1144,47",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "RegFileECC": [
+          {
+            "loc": "bp,1145,30,1145,48",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "RegFileDataWidth": [
+          {
+            "loc": "bp,1146,30,1146,46",
+            "name": "32'h20",
+            "dtype_id": "6"
+          }
+        ],
+        "RegFileDataEccWidth": [
+          {
+            "loc": "bp,1147,30,1147,49",
+            "name": "32'h27",
+            "dtype_id": "63"
+          }
+        ],
+        "RegFileCapEccWidth": [
+          {
+            "loc": "bp,1148,30,1148,48",
+            "name": "32'h2a",
+            "dtype_id": "63"
+          }
+        ],
+        "MemECC": [
+          {
+            "loc": "bp,1150,30,1150,36",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemDataWidth": [
+          {
+            "loc": "bh,48,79,48,80",
+            "name": "32'h27",
+            "dtype_id": "3"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_core__pi2",
+      "original": "ibex_core",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "bp,409,28,409,35",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "PMPEnable": [
+          {
+            "loc": "bp,370,28,370,37",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RV32M": [
+          {
+            "loc": "bp,379,28,379,33",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32B": [
+          {
+            "loc": "bp,380,28,380,33",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32ZC": [
+          {
+            "loc": "bp,381,28,381,34",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "bp,382,28,382,43",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "bp,392,28,392,42",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "bp,383,28,383,34",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheECC": [
+          {
+            "loc": "bp,384,28,384,37",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheTweakInfection": [
+          {
+            "loc": "bp,385,28,385,48",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "TagSizeECC": [
+          {
+            "loc": "bp,387,28,387,38",
+            "name": "32'h16",
+            "dtype_id": "63"
+          }
+        ],
+        "LineSizeECC": [
+          {
+            "loc": "bp,388,28,388,39",
+            "name": "32'h40",
+            "dtype_id": "63"
+          }
+        ],
+        "ResetAll": [
+          {
+            "loc": "bp,393,28,393,36",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "SecureIbex": [
+          {
+            "loc": "bp,396,28,396,38",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "bp,397,28,397,45",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "RegFileECC": [
+          {
+            "loc": "bp,398,28,398,38",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RegFileDataWidth": [
+          {
+            "loc": "bp,399,28,399,44",
+            "name": "32'h20",
+            "dtype_id": "6"
+          }
+        ],
+        "RegFileCapEccWidth": [
+          {
+            "loc": "bp,400,28,400,36",
+            "name": "32'h23",
+            "dtype_id": "6"
+          }
+        ],
+        "MemECC": [
+          {
+            "loc": "bp,401,28,401,34",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemDataWidth": [
+          {
+            "loc": "bp,402,28,402,40",
+            "name": "32'h27",
+            "dtype_id": "63"
+          }
+        ],
+        "DataIndTiming": [
+          {
+            "loc": "v,195,43,195,53",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "PCIncrCheck": [
+          {
+            "loc": "v,196,43,196,53",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ShadowCSR": [
+          {
+            "loc": "v,197,43,197,47",
+            "name": "1'h0",
+            "dtype_id": "4"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_register_file_ff__pi3",
+      "original": "ibex_register_file_ff",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "bp,535,26,535,33",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "DataWidth": [
+          {
+            "loc": "bp,537,26,537,42",
+            "name": "32'h20",
+            "dtype_id": "6"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "bp,538,26,538,43",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "CapWidth": [
+          {
+            "loc": "bm,58,73,58,81",
+            "name": "32'h23",
+            "dtype_id": "6"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_core__pi5",
+      "original": "ibex_core",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "bh,487,29,487,36",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "PMPEnable": [
+          {
+            "loc": "bh,448,29,448,38",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RV32M": [
+          {
+            "loc": "bh,457,29,457,34",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32B": [
+          {
+            "loc": "bh,458,29,458,34",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32ZC": [
+          {
+            "loc": "bh,459,29,459,35",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "bh,460,29,460,44",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "bh,470,29,470,43",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "bh,461,29,461,35",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheECC": [
+          {
+            "loc": "bh,462,29,462,38",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheTweakInfection": [
+          {
+            "loc": "bh,463,29,463,49",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "TagSizeECC": [
+          {
+            "loc": "bh,465,29,465,39",
+            "name": "32'h16",
+            "dtype_id": "63"
+          }
+        ],
+        "LineSizeECC": [
+          {
+            "loc": "bh,466,29,466,40",
+            "name": "32'h40",
+            "dtype_id": "63"
+          }
+        ],
+        "ResetAll": [
+          {
+            "loc": "bh,471,29,471,37",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "SecureIbex": [
+          {
+            "loc": "bh,474,29,474,39",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "bh,475,29,475,46",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "RegFileECC": [
+          {
+            "loc": "bh,476,29,476,39",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "RegFileDataWidth": [
+          {
+            "loc": "bh,477,29,477,48",
+            "name": "32'h27",
+            "dtype_id": "63"
+          }
+        ],
+        "RegFileCapEccWidth": [
+          {
+            "loc": "bh,478,29,478,47",
+            "name": "32'h2a",
+            "dtype_id": "63"
+          }
+        ],
+        "MemECC": [
+          {
+            "loc": "bh,479,29,479,35",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemDataWidth": [
+          {
+            "loc": "bh,480,29,480,41",
+            "name": "32'h27",
+            "dtype_id": "63"
+          }
+        ],
+        "DataIndTiming": [
+          {
+            "loc": "v,195,43,195,53",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "PCIncrCheck": [
+          {
+            "loc": "v,196,43,196,53",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ShadowCSR": [
+          {
+            "loc": "v,197,43,197,47",
+            "name": "1'h0",
+            "dtype_id": "4"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_register_file_ff__pi6",
+      "original": "ibex_register_file_ff",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "bh,638,26,638,33",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "DataWidth": [
+          {
+            "loc": "bh,640,46,640,47",
+            "name": "32'h7",
+            "dtype_id": "6"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "bh,641,26,641,43",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "CapWidth": [
+          {
+            "loc": "bh,643,26,643,27",
+            "name": "32'sh7",
+            "dtype_id": "3"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_if_stage__pi7",
+      "original": "ibex_if_stage",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "v,546,28,546,35",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "v,531,28,531,45",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "v,532,28,532,34",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RV32ZC": [
+          {
+            "loc": "v,533,28,533,34",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "ICacheECC": [
+          {
+            "loc": "v,534,28,534,37",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICacheTweakInfection": [
+          {
+            "loc": "v,535,28,535,48",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "TagSizeECC": [
+          {
+            "loc": "v,537,28,537,38",
+            "name": "32'h16",
+            "dtype_id": "63"
+          }
+        ],
+        "LineSizeECC": [
+          {
+            "loc": "v,538,28,538,39",
+            "name": "32'h40",
+            "dtype_id": "63"
+          }
+        ],
+        "PCIncrCheck": [
+          {
+            "loc": "v,539,28,539,39",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ResetAll": [
+          {
+            "loc": "v,540,28,540,36",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemECC": [
+          {
+            "loc": "v,544,28,544,34",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemDataWidth": [
+          {
+            "loc": "v,545,28,545,40",
+            "name": "32'h27",
+            "dtype_id": "63"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_id_stage__pi8",
+      "original": "ibex_id_stage",
+      "parameters": {
+        "RV32M": [
+          {
+            "loc": "v,665,22,665,27",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32B": [
+          {
+            "loc": "v,666,22,666,27",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "DataIndTiming": [
+          {
+            "loc": "v,668,22,668,35",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "v,667,22,667,37",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "v,669,22,669,36",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemECC": [
+          {
+            "loc": "v,671,22,671,28",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "BaseIsa": [
+          {
+            "loc": "v,672,22,672,29",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_ex_block__R3_RB3_Bz1",
+      "original": "ibex_ex_block",
+      "parameters": {
+        "RV32M": [
+          {
+            "loc": "v,864,22,864,27",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32B": [
+          {
+            "loc": "v,865,22,865,27",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "v,866,22,866,37",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_load_store_unit__pi9",
+      "original": "ibex_load_store_unit",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "v,1069,14,1069,21",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "MemECC": [
+          {
+            "loc": "v,1067,13,1067,19",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemDataWidth": [
+          {
+            "loc": "v,1068,19,1068,31",
+            "name": "32'h27",
+            "dtype_id": "63"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_wb_stage__Rz1_Wz1_Dz1",
+      "original": "ibex_wb_stage",
+      "parameters": {
+        "ResetAll": [
+          {
+            "loc": "v,1126,24,1126,32",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "v,1127,24,1127,38",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "v,1128,24,1128,41",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_cs_registers__pi10",
+      "original": "ibex_cs_registers",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "v,1450,24,1450,31",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "DataIndTiming": [
+          {
+            "loc": "v,1433,24,1433,37",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "DummyInstructions": [
+          {
+            "loc": "v,1434,24,1434,41",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "ShadowCSR": [
+          {
+            "loc": "v,1435,24,1435,33",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "v,1436,24,1436,30",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "PMPEnable": [
+          {
+            "loc": "v,1439,24,1439,33",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RV32M": [
+          {
+            "loc": "v,1446,24,1446,29",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32B": [
+          {
+            "loc": "v,1447,24,1447,29",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_prefetch_buffer__Rz1",
+      "original": "ibex_prefetch_buffer",
+      "parameters": {
+        "ResetAll": [
+          {
+            "loc": "bf,351,25,351,33",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_compressed_decoder__pi11",
+      "original": "ibex_compressed_decoder",
+      "parameters": {
+        "RV32ZC": [
+          {
+            "loc": "bf,486,16,486,22",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "ResetAll": [
+          {
+            "loc": "bf,487,16,487,24",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "BaseIsa": [
+          {
+            "loc": "bf,488,16,488,23",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_decoder__pi13",
+      "original": "ibex_decoder",
+      "parameters": {
+        "RV32M": [
+          {
+            "loc": "be,480,22,480,27",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "RV32B": [
+          {
+            "loc": "be,481,22,481,27",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "be,482,22,482,37",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "BaseIsa": [
+          {
+            "loc": "be,483,22,483,29",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_controller__pi14",
+      "original": "ibex_controller",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "be,616,22,616,29",
+            "name": "32'h0",
+            "dtype_id": "22"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "be,617,22,617,36",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ],
+        "MemECC": [
+          {
+            "loc": "be,619,13,619,19",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_alu__R3",
+      "original": "ibex_alu",
+      "parameters": {
+        "RV32B": [
+          {
+            "loc": "bb,117,12,117,17",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_multdiv_fast__R3",
+      "original": "ibex_multdiv_fast",
+      "parameters": {
+        "RV32M": [
+          {
+            "loc": "bb,167,14,167,19",
+            "name": "32'h3",
+            "dtype_id": "22"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_fetch_fifo__N2_Rz1",
+      "original": "ibex_fetch_fifo",
+      "parameters": {
+        "ResetAll": [
+          {
+            "loc": "bl,92,16,92,24",
+            "name": "1'h1",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    }
+  ]
+}

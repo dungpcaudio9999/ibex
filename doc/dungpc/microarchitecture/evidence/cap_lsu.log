@@ -1,0 +1,8 @@
+PASS tagged grants=2 result=00001000 tag=1 error=0
+PASS low_tag_zero grants=2 result=00001000 tag=0 error=0
+PASS high_tag_zero grants=2 result=00001000 tag=0 error=0
+PASS CTAG grants=2 result=00001000 tag=0 error=0
+PASS first_error grants=2 result=00001000 tag=0 error=1
+PASS second_error grants=2 result=00001000 tag=0 error=1
+FINISH cap_lsu 6 checks
+- /home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/cap_lsu_tb.sv:53: Verilog $finish

@@ -1,0 +1,558 @@
+{
+  "command": [
+    "verilator",
+    "--xml-only",
+    "--timing",
+    "--trace",
+    "--assert",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "-Wno-PINMISSING",
+    "-DDV_FCOV_DISABLE",
+    "-DRVFI",
+    "-I/home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl",
+    "-I/home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/dv/sv/dv_utils",
+    "--top-module",
+    "core_tb",
+    "--Mdir",
+    "/tmp/ibex-microarchitecture/slow",
+    "-GWB=0",
+    "-GBT=0",
+    "-GM=1",
+    "/home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_pkg.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_cheriot_pkg.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_alu.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_branch_predict.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_cheriot_ex.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_compressed_decoder.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_controller.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_core.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_counter.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_cs_registers.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_csr.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_decoder.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_dummy_instr.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_ex_block.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_fetch_fifo.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_icache.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_id_stage.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_if_stage.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_load_store_unit.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_multdiv_fast.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_multdiv_slow.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_pmp.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_prefetch_buffer.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_register_file_ff.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_register_file_fpga.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_register_file_latch.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/rtl/ibex_wb_stage.sv",
+    "/home/dungpc/ndmoney4porche/projects/ibex/doc/dungpc/microarchitecture/scripts/core_tb.sv"
+  ],
+  "cells": [
+    {
+      "loc": "bl,2,8,2,15",
+      "name": "core_tb",
+      "submodname": "core_tb",
+      "hier": "core_tb"
+    },
+    {
+      "loc": "bl,32,52,32,55",
+      "name": "dut",
+      "submodname": "ibex_core__pi1",
+      "hier": "core_tb.dut"
+    },
+    {
+      "loc": "r,547,5,547,15",
+      "name": "if_stage_i",
+      "submodname": "ibex_if_stage__pi2",
+      "hier": "core_tb.dut.if_stage_i"
+    },
+    {
+      "loc": "bb,352,7,352,24",
+      "name": "prefetch_buffer_i",
+      "submodname": "ibex_prefetch_buffer__Rz1",
+      "hier": "core_tb.dut.if_stage_i.gen_prefetch_buffer.prefetch_buffer_i"
+    },
+    {
+      "loc": "bg,93,5,93,11",
+      "name": "fifo_i",
+      "submodname": "ibex_fetch_fifo__N2_Rz1",
+      "hier": "core_tb.dut.if_stage_i.gen_prefetch_buffer.prefetch_buffer_i.fifo_i"
+    },
+    {
+      "loc": "bb,489,5,489,25",
+      "name": "compressed_decoder_i",
+      "submodname": "ibex_compressed_decoder__pi6",
+      "hier": "core_tb.dut.if_stage_i.compressed_decoder_i"
+    },
+    {
+      "loc": "r,673,5,673,15",
+      "name": "id_stage_i",
+      "submodname": "ibex_id_stage__pi3",
+      "hier": "core_tb.dut.id_stage_i"
+    },
+    {
+      "loc": "ba,484,5,484,14",
+      "name": "decoder_i",
+      "submodname": "ibex_decoder__pi7",
+      "hier": "core_tb.dut.id_stage_i.decoder_i"
+    },
+    {
+      "loc": "ba,620,5,620,17",
+      "name": "controller_i",
+      "submodname": "ibex_controller__pi8",
+      "hier": "core_tb.dut.id_stage_i.controller_i"
+    },
+    {
+      "loc": "r,867,5,867,15",
+      "name": "ex_block_i",
+      "submodname": "ibex_ex_block__R1_RB0_Bz1",
+      "hier": "core_tb.dut.ex_block_i"
+    },
+    {
+      "loc": "x,118,5,118,10",
+      "name": "alu_i",
+      "submodname": "ibex_alu__R0",
+      "hier": "core_tb.dut.ex_block_i.alu_i"
+    },
+    {
+      "loc": "x,141,23,141,32",
+      "name": "multdiv_i",
+      "submodname": "ibex_multdiv_slow",
+      "hier": "core_tb.dut.ex_block_i.gen_multdiv_slow.multdiv_i"
+    },
+    {
+      "loc": "r,1070,5,1070,22",
+      "name": "load_store_unit_i",
+      "submodname": "ibex_load_store_unit__pi4",
+      "hier": "core_tb.dut.load_store_unit_i"
+    },
+    {
+      "loc": "r,1129,5,1129,15",
+      "name": "wb_stage_i",
+      "submodname": "ibex_wb_stage__Rz1_Wz1_Dz1",
+      "hier": "core_tb.dut.wb_stage_i"
+    },
+    {
+      "loc": "r,1451,5,1451,19",
+      "name": "cs_registers_i",
+      "submodname": "ibex_cs_registers__pi5",
+      "hier": "core_tb.dut.cs_registers_i"
+    },
+    {
+      "loc": "t,1075,5,1075,18",
+      "name": "u_mstatus_csr",
+      "submodname": "ibex_csr__W6_Sz1_Rz6",
+      "hier": "core_tb.dut.cs_registers_i.u_mstatus_csr"
+    },
+    {
+      "loc": "t,1092,5,1092,15",
+      "name": "u_mepc_csr",
+      "submodname": "ibex_csr",
+      "hier": "core_tb.dut.cs_registers_i.u_mepc_csr"
+    },
+    {
+      "loc": "t,1110,5,1110,14",
+      "name": "u_mie_csr",
+      "submodname": "ibex_csr__W12",
+      "hier": "core_tb.dut.cs_registers_i.u_mie_csr"
+    },
+    {
+      "loc": "t,1124,5,1124,19",
+      "name": "u_mscratch_csr",
+      "submodname": "ibex_csr",
+      "hier": "core_tb.dut.cs_registers_i.u_mscratch_csr"
+    },
+    {
+      "loc": "t,1138,5,1138,17",
+      "name": "u_mcause_csr",
+      "submodname": "ibex_csr__W7",
+      "hier": "core_tb.dut.cs_registers_i.u_mcause_csr"
+    },
+    {
+      "loc": "t,1152,5,1152,16",
+      "name": "u_mtval_csr",
+      "submodname": "ibex_csr",
+      "hier": "core_tb.dut.cs_registers_i.u_mtval_csr"
+    },
+    {
+      "loc": "t,1173,5,1173,16",
+      "name": "u_mtvec_csr",
+      "submodname": "ibex_csr__Sz1_R1",
+      "hier": "core_tb.dut.cs_registers_i.u_mtvec_csr"
+    },
+    {
+      "loc": "t,1193,5,1193,15",
+      "name": "u_dcsr_csr",
+      "submodname": "ibex_csr__R40000003",
+      "hier": "core_tb.dut.cs_registers_i.u_dcsr_csr"
+    },
+    {
+      "loc": "t,1210,5,1210,15",
+      "name": "u_depc_csr",
+      "submodname": "ibex_csr",
+      "hier": "core_tb.dut.cs_registers_i.u_depc_csr"
+    },
+    {
+      "loc": "t,1228,5,1228,20",
+      "name": "u_dscratch0_csr",
+      "submodname": "ibex_csr",
+      "hier": "core_tb.dut.cs_registers_i.u_dscratch0_csr"
+    },
+    {
+      "loc": "t,1246,5,1246,20",
+      "name": "u_dscratch1_csr",
+      "submodname": "ibex_csr",
+      "hier": "core_tb.dut.cs_registers_i.u_dscratch1_csr"
+    },
+    {
+      "loc": "t,1261,5,1261,17",
+      "name": "u_mstack_csr",
+      "submodname": "ibex_csr__W3_Rz7",
+      "hier": "core_tb.dut.cs_registers_i.u_mstack_csr"
+    },
+    {
+      "loc": "t,1275,5,1275,21",
+      "name": "u_mstack_epc_csr",
+      "submodname": "ibex_csr",
+      "hier": "core_tb.dut.cs_registers_i.u_mstack_epc_csr"
+    },
+    {
+      "loc": "t,1289,5,1289,23",
+      "name": "u_mstack_cause_csr",
+      "submodname": "ibex_csr__W7",
+      "hier": "core_tb.dut.cs_registers_i.u_mstack_cause_csr"
+    },
+    {
+      "loc": "t,1623,5,1623,21",
+      "name": "mcycle_counter_i",
+      "submodname": "ibex_counter__C40",
+      "hier": "core_tb.dut.cs_registers_i.mcycle_counter_i"
+    },
+    {
+      "loc": "t,1639,5,1639,23",
+      "name": "minstret_counter_i",
+      "submodname": "ibex_counter__C40_P1",
+      "hier": "core_tb.dut.cs_registers_i.minstret_counter_i"
+    },
+    {
+      "loc": "t,1740,5,1740,21",
+      "name": "u_mcounteren_csr",
+      "submodname": "ibex_csr__W3",
+      "hier": "core_tb.dut.cs_registers_i.u_mcounteren_csr"
+    },
+    {
+      "loc": "t,1976,5,1976,26",
+      "name": "u_cpuctrlsts_part_csr",
+      "submodname": "ibex_csr__W8_Sz1",
+      "hier": "core_tb.dut.cs_registers_i.u_cpuctrlsts_part_csr"
+    },
+    {
+      "loc": "bl,51,25,51,27",
+      "name": "rf",
+      "submodname": "ibex_register_file_ff",
+      "hier": "core_tb.rf"
+    }
+  ],
+  "parameters": [
+    {
+      "module": "core_tb",
+      "original": "core_tb",
+      "parameters": {
+        "WB": [
+          {
+            "loc": "bl,5,17,5,19",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "BT": [
+          {
+            "loc": "bl,6,17,6,19",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "M": [
+          {
+            "loc": "bl,7,17,7,18",
+            "name": "32'h1",
+            "dtype_id": "3"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_register_file_ff",
+      "original": "ibex_register_file_ff",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "bh,52,55,52,67",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_core__pi1",
+      "original": "ibex_core",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "bl,30,24,30,36",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ],
+        "RV32M": [
+          {
+            "loc": "bl,31,55,31,62",
+            "name": "32'h1",
+            "dtype_id": "13"
+          }
+        ],
+        "RV32ZC": [
+          {
+            "loc": "bl,30,47,30,54",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "bl,31,43,31,45",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "bl,31,21,31,23",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "r,33,67,33,71",
+            "name": "1'h0",
+            "dtype_id": "4"
+          }
+        ],
+        "SecureIbex": [
+          {
+            "loc": "r,45,67,45,71",
+            "name": "1'h0",
+            "dtype_id": "4"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_if_stage__pi2",
+      "original": "ibex_if_stage",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "r,546,28,546,35",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "r,532,28,532,34",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RV32ZC": [
+          {
+            "loc": "r,533,28,533,34",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_id_stage__pi3",
+      "original": "ibex_id_stage",
+      "parameters": {
+        "RV32M": [
+          {
+            "loc": "r,665,22,665,27",
+            "name": "32'h1",
+            "dtype_id": "13"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "r,667,22,667,37",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "r,669,22,669,36",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "BaseIsa": [
+          {
+            "loc": "r,672,22,672,29",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_ex_block__R1_RB0_Bz1",
+      "original": "ibex_ex_block",
+      "parameters": {
+        "RV32M": [
+          {
+            "loc": "r,864,22,864,27",
+            "name": "32'h1",
+            "dtype_id": "13"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "r,866,22,866,37",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_load_store_unit__pi4",
+      "original": "ibex_load_store_unit",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "r,1069,14,1069,21",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_wb_stage__Rz1_Wz1_Dz1",
+      "original": "ibex_wb_stage",
+      "parameters": {
+        "WritebackStage": [
+          {
+            "loc": "r,1127,24,1127,38",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_cs_registers__pi5",
+      "original": "ibex_cs_registers",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "r,1450,24,1450,31",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ],
+        "ICache": [
+          {
+            "loc": "r,1436,24,1436,30",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "RV32M": [
+          {
+            "loc": "r,1446,24,1446,29",
+            "name": "32'h1",
+            "dtype_id": "13"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_compressed_decoder__pi6",
+      "original": "ibex_compressed_decoder",
+      "parameters": {
+        "RV32ZC": [
+          {
+            "loc": "bb,486,16,486,22",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ],
+        "BaseIsa": [
+          {
+            "loc": "bb,488,16,488,23",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_decoder__pi7",
+      "original": "ibex_decoder",
+      "parameters": {
+        "RV32M": [
+          {
+            "loc": "ba,480,22,480,27",
+            "name": "32'h1",
+            "dtype_id": "13"
+          }
+        ],
+        "BranchTargetALU": [
+          {
+            "loc": "ba,482,22,482,37",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ],
+        "BaseIsa": [
+          {
+            "loc": "ba,483,22,483,29",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ]
+      }
+    },
+    {
+      "module": "ibex_controller__pi8",
+      "original": "ibex_controller",
+      "parameters": {
+        "BaseIsa": [
+          {
+            "loc": "ba,616,22,616,29",
+            "name": "32'h0",
+            "dtype_id": "13"
+          }
+        ],
+        "WritebackStage": [
+          {
+            "loc": "ba,617,22,617,36",
+            "name": "1'h0",
+            "dtype_id": "1"
+          }
+        ]
+      }
+    }
+  ]
+}
