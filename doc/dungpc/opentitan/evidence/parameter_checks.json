@@ -1,0 +1,116 @@
+[
+  {
+    "parameter": "BaseIsa",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "RV32E",
+    "expected": 0,
+    "actual": 0,
+    "status": "PASS"
+  },
+  {
+    "parameter": "RV32M",
+    "expected": 3,
+    "actual": 3,
+    "status": "PASS"
+  },
+  {
+    "parameter": "RV32B",
+    "expected": 2,
+    "actual": 2,
+    "status": "PASS"
+  },
+  {
+    "parameter": "RV32ZC",
+    "expected": 3,
+    "actual": 3,
+    "status": "PASS"
+  },
+  {
+    "parameter": "RegFile",
+    "expected": 0,
+    "actual": 0,
+    "status": "PASS"
+  },
+  {
+    "parameter": "BranchTargetALU",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "WritebackStage",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "ICache",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "ICacheECC",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "ICacheScramble",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "BranchPredictor",
+    "expected": 0,
+    "actual": 0,
+    "status": "PASS"
+  },
+  {
+    "parameter": "DbgTriggerEn",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "SecureIbex",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "PMPEnable",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS"
+  },
+  {
+    "parameter": "PMPGranularity",
+    "expected": 0,
+    "actual": 0,
+    "status": "PASS"
+  },
+  {
+    "parameter": "PMPNumRegions",
+    "expected": 16,
+    "actual": 16,
+    "status": "PASS"
+  },
+  {
+    "parameter": "MHPMCounterNum",
+    "expected": 10,
+    "actual": 10,
+    "status": "PASS"
+  },
+  {
+    "parameter": "MHPMCounterWidth",
+    "expected": 32,
+    "actual": 32,
+    "status": "PASS"
+  }
+]

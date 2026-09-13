@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "directed_runs": 54,
+  "preset_parameter_checks": 19,
+  "trace_checks_including_run_oracles": 90,
+  "negative_controls": 1,
+  "waveforms": 23,
+  "links_checked": 132,
+  "source_dependencies_hashed": 83,
+  "artifacts_hashed": 220,
+  "scope": "exact-preset directed CPU analysis; not full SVA/formal/physical/security sign-off"
+}

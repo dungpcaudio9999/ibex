@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "mutation": "insert forbidden younger x3 write into failed-load trace",
+  "checker": "younger_blocked",
+  "original_accepted": true,
+  "mutation_rejected": true
+}

@@ -1,0 +1,1465 @@
+[
+  {
+    "id": "complete_matrix",
+    "status": "PASS",
+    "evidence": {
+      "count": 54,
+      "expected": 54
+    }
+  },
+  {
+    "id": "oracle.rv.arithmetic",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "1": 7,
+        "2": 12,
+        "3": 19,
+        "4": 84,
+        "5": 12,
+        "6": 0,
+        "8": 4294967295,
+        "9": 4294967295,
+        "10": 7,
+        "13": 2147483648,
+        "14": 0,
+        "31": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.control",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 2,
+        "3": 152,
+        "5": 164,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "31": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.compressed",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "1": 8,
+        "31": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.memory_d1",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 85,
+        "4": 86,
+        "5": 86,
+        "6": 0,
+        "31": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.memory_d4",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 85,
+        "4": 86,
+        "5": 86,
+        "6": 0,
+        "31": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.independent_d1",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 1144201745,
+        "3": 9,
+        "4": 1144201746,
+        "15": 123
+      },
+      "minimum_activity": {
+        "data": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.independent_d4",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 1144201745,
+        "3": 9,
+        "4": 1144201746,
+        "15": 123
+      },
+      "minimum_activity": {
+        "data": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.error_young",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "10": 5,
+        "11": 132,
+        "12": 520,
+        "15": 119
+      },
+      "minimum_activity": {
+        "data": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.error_split_load_first",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 0,
+        "20": 0,
+        "25": 5,
+        "26": 136,
+        "27": 515,
+        "31": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.error_split_load_second",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 0,
+        "20": 0,
+        "25": 5,
+        "26": 136,
+        "27": 516,
+        "31": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.pmp_deny",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 0,
+        "10": 5,
+        "11": 148,
+        "12": 512,
+        "15": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.pmp_region15",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 0,
+        "10": 5,
+        "11": 148,
+        "12": 512,
+        "15": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.bitmanip",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 4294967294,
+        "4": 32,
+        "5": 31,
+        "6": 2,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.counters",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "7": 163457392,
+        "8": 36,
+        "9": 0,
+        "14": 512,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.zcmp",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 768,
+        "1": 55,
+        "8": 255,
+        "15": 123
+      },
+      "minimum_activity": {
+        "expanded": 1,
+        "data": 2
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.zcmp_debug",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 768,
+        "1": 55,
+        "8": 255,
+        "15": 123,
+        "13": 118
+      },
+      "minimum_activity": {
+        "expanded": 1,
+        "data": 2
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.zcmp_irq",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "1": 55,
+        "2": 752,
+        "10": 2147483655,
+        "11": 154,
+        "15": 119
+      },
+      "minimum_activity": {
+        "expanded": 1,
+        "data": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.zcmp_irq_multi",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "1": 55,
+        "2": 768,
+        "10": 2147483655,
+        "11": 152,
+        "15": 119
+      },
+      "minimum_activity": {
+        "expanded": 1,
+        "data": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.sleep",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "15": 123
+      },
+      "minimum_activity": {
+        "sleep": 20
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.dret",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 1144201745,
+        "13": 118,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.debug_irq",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 1144201745,
+        "13": 118,
+        "10": 2147483655,
+        "15": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.nmi_return",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 1144201745,
+        "10": 2147483679,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.div_debug",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "4": 65,
+        "13": 118,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.debug_trigger",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 1144201745,
+        "13": 118,
+        "15": 123,
+        "14": 2
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.cache",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 0,
+        "15": 123
+      },
+      "minimum_activity": {
+        "hit": 1,
+        "miss": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.cache_debug_key",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 0,
+        "15": 123,
+        "13": 118
+      },
+      "minimum_activity": {
+        "hit": 1,
+        "miss": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.reset",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "1": 7,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1195"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.iferror_second",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "1": 0,
+        "10": 1,
+        "11": 130,
+        "12": 132,
+        "15": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.dit_off_zero",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "4": 4294967295,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.dit_off_nonzero",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "4": 17,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.dit_on_zero",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "4": 4294967295,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.dit_on_nonzero",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "4": 17,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.dit_branch_taken",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 0,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.dit_branch_nt",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 33,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.dummy_dit_cache",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 0,
+        "15": 123
+      },
+      "minimum_activity": {
+        "dummy": 1,
+        "hit": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.fault1",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {},
+      "minimum_activity": {
+        "ab": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.fault2",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 0,
+        "10": 4294967264,
+        "12": 520,
+        "15": 119
+      },
+      "minimum_activity": {
+        "ab": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.fault3",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {},
+      "minimum_activity": {
+        "ai": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.fault4",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {},
+      "minimum_activity": {
+        "ai": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.fault6",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {},
+      "minimum_activity": {
+        "ai": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.fault7",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 1144201745,
+        "3": 0,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.rv.fault10",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 0,
+        "15": 123
+      },
+      "minimum_activity": {
+        "am": 1,
+        "hit": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.live",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 4096,
+        "3": 1,
+        "15": 123
+      },
+      "minimum_activity": {
+        "bitmap": 1,
+        "data": 2
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.revoked",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 4096,
+        "3": 0,
+        "15": 123
+      },
+      "minimum_activity": {
+        "bitmap": 1,
+        "data": 2
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.cache",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 4096,
+        "3": 1,
+        "15": 123
+      },
+      "minimum_activity": {
+        "bitmap": 1,
+        "data": 2,
+        "hit": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.fault",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 0,
+        "10": 28,
+        "11": 132,
+        "15": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.bound",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 0,
+        "10": 28,
+        "11": 140,
+        "15": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.roundtrip",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 4096,
+        "4": 4096,
+        "5": 1,
+        "15": 123
+      },
+      "minimum_activity": {
+        "data": 6,
+        "bitmap": 2
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.debug",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 4096,
+        "3": 1,
+        "15": 123,
+        "13": 118
+      },
+      "minimum_activity": {
+        "bitmap": 1,
+        "data": 2
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.arithmetic",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "3": 19,
+        "4": 84,
+        "5": 12,
+        "15": 123
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.zcmp_illegal",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "10": 2,
+        "11": 128,
+        "15": 119
+      },
+      "minimum_activity": {},
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.invalid_mode",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {},
+      "minimum_activity": {
+        "ai": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.rf_ecc",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {},
+      "minimum_activity": {
+        "ai": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "oracle.cap.bitmap_ecc",
+    "status": "PASS",
+    "evidence": {
+      "expected_registers": {
+        "2": 4096,
+        "3": 0,
+        "15": 123
+      },
+      "minimum_activity": {
+        "ab": 1
+      },
+      "protocol_cycles": [
+        [
+          "PROTOCOL_CHECKS",
+          "1197"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "load_before_independent.rv.independent_d1",
+    "status": "PASS",
+    "evidence": [
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "load_before_independent.rv.independent_d4",
+    "status": "PASS",
+    "evidence": [
+      19,
+      20,
+      21
+    ]
+  },
+  {
+    "id": "failed_load_no_younger_write",
+    "status": "PASS",
+    "evidence": {
+      "log": "rv.error_young.log",
+      "forbidden_destinations": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "load_integrity_no_destination_write",
+    "status": "PASS",
+    "evidence": {
+      "log": "rv.fault2.log"
+    }
+  },
+  {
+    "id": "reject_before_bus.rv.pmp_deny",
+    "status": "PASS",
+    "evidence": {
+      "data": 0,
+      "bitmap": 0
+    }
+  },
+  {
+    "id": "reject_before_bus.rv.pmp_region15",
+    "status": "PASS",
+    "evidence": {
+      "data": 0,
+      "bitmap": 0
+    }
+  },
+  {
+    "id": "reject_before_bus.cap.bound",
+    "status": "PASS",
+    "evidence": {
+      "data": 0,
+      "bitmap": 0
+    }
+  },
+  {
+    "id": "reject_before_bus.cap.fault",
+    "status": "PASS",
+    "evidence": {
+      "data": 0,
+      "bitmap": 0
+    }
+  },
+  {
+    "id": "reject_before_bus.cap.zcmp_illegal",
+    "status": "PASS",
+    "evidence": {
+      "data": 0,
+      "bitmap": 0
+    }
+  },
+  {
+    "id": "drain_before_debug.rv.div_debug",
+    "status": "PASS",
+    "evidence": {
+      "request_write_debug": [
+        26,
+        63,
+        73
+      ]
+    }
+  },
+  {
+    "id": "drain_before_debug.rv.dret",
+    "status": "PASS",
+    "evidence": {
+      "request_write_debug": [
+        28,
+        31,
+        43
+      ]
+    }
+  },
+  {
+    "id": "drain_before_debug.cap.debug",
+    "status": "PASS",
+    "evidence": {
+      "request_write_debug": [
+        26,
+        31,
+        43
+      ]
+    }
+  },
+  {
+    "id": "zcmp_debug_at_sequence_boundary",
+    "status": "PASS",
+    "evidence": [
+      19,
+      23,
+      34,
+      50
+    ]
+  },
+  {
+    "id": "zcmp_irq_single_completed",
+    "status": "PASS",
+    "evidence": {
+      "mepc": 154,
+      "sp": 752
+    }
+  },
+  {
+    "id": "zcmp_irq_multi_restartable",
+    "status": "PASS",
+    "evidence": {
+      "mepc": 152,
+      "sp": 768,
+      "accepted_stores": 2
+    }
+  },
+  {
+    "id": "hardware_execute_trigger_reentry",
+    "status": "PASS",
+    "evidence": {
+      "debug_entries": [
+        43,
+        79
+      ]
+    }
+  },
+  {
+    "id": "capability_store_load_tag_roundtrip",
+    "status": "PASS",
+    "evidence": {
+      "data_transfers": [
+        [
+          "D",
+          "18",
+          "0",
+          "00000200",
+          "f",
+          "00000000",
+          "tag=1"
+        ],
+        [
+          "D",
+          "21",
+          "0",
+          "00000204",
+          "f",
+          "00000000",
+          "tag=1"
+        ],
+        [
+          "D",
+          "33",
+          "1",
+          "00000208",
+          "f",
+          "00001000",
+          "tag=1"
+        ],
+        [
+          "D",
+          "36",
+          "1",
+          "0000020c",
+          "f",
+          "7e020000",
+          "tag=1"
+        ],
+        [
+          "D",
+          "42",
+          "0",
+          "00000208",
+          "f",
+          "00000000",
+          "tag=1"
+        ],
+        [
+          "D",
+          "45",
+          "0",
+          "0000020c",
+          "f",
+          "00000000",
+          "tag=1"
+        ]
+      ],
+      "bitmap_requests": [
+        [
+          "B",
+          "25",
+          "00000000"
+        ],
+        [
+          "B",
+          "49",
+          "00000000"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "revocation_changes_tag",
+    "status": "PASS",
+    "evidence": {
+      "live": 1,
+      "revoked": 0,
+      "bitmap_ecc": 0
+    }
+  },
+  {
+    "id": "debug_beats_regular_irq",
+    "status": "PASS",
+    "evidence": {
+      "debug_marker": 42,
+      "irq_cause": 57
+    }
+  },
+  {
+    "id": "fence_key_debug_progress",
+    "status": "PASS",
+    "evidence": {
+      "event": 655,
+      "keys": [
+        [
+          "KEY",
+          "659",
+          "response"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "wfi_sleep_and_wake",
+    "status": "PASS",
+    "evidence": {
+      "sleep_cycles": 20,
+      "wake": 281,
+      "write_marker": 284
+    }
+  },
+  {
+    "id": "timing.rv.dit_off_zero",
+    "status": "PASS",
+    "evidence": {
+      "valid_id_cycles": 2,
+      "expected": 2,
+      "cpu_ctrl_setup": "0x93"
+    }
+  },
+  {
+    "id": "timing.rv.dit_off_nonzero",
+    "status": "PASS",
+    "evidence": {
+      "valid_id_cycles": 37,
+      "expected": 37,
+      "cpu_ctrl_setup": "0x93"
+    }
+  },
+  {
+    "id": "timing.rv.dit_on_zero",
+    "status": "PASS",
+    "evidence": {
+      "valid_id_cycles": 37,
+      "expected": 37,
+      "cpu_ctrl_setup": "0x200093"
+    }
+  },
+  {
+    "id": "timing.rv.dit_on_nonzero",
+    "status": "PASS",
+    "evidence": {
+      "valid_id_cycles": 37,
+      "expected": 37,
+      "cpu_ctrl_setup": "0x200093"
+    }
+  },
+  {
+    "id": "timing.rv.dit_branch_taken",
+    "status": "PASS",
+    "evidence": {
+      "valid_id_cycles": 2,
+      "expected": 2,
+      "cpu_ctrl_setup": "0x200093"
+    }
+  },
+  {
+    "id": "timing.rv.dit_branch_nt",
+    "status": "PASS",
+    "evidence": {
+      "valid_id_cycles": 2,
+      "expected": 2,
+      "cpu_ctrl_setup": "0x200093"
+    }
+  },
+  {
+    "id": "dit_dummy_cache_coexist",
+    "status": "PASS",
+    "evidence": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 0,
+      "ifetch": 250,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 262,
+      "miss": 5,
+      "dummy": 80,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0,
+      "keys": 0
+    }
+  },
+  {
+    "id": "detector.rv.fault3",
+    "status": "PASS",
+    "evidence": {
+      "sample_field": "rf"
+    }
+  },
+  {
+    "id": "detector.rv.fault4",
+    "status": "PASS",
+    "evidence": {
+      "sample_field": "mismatch"
+    }
+  },
+  {
+    "id": "detector.rv.fault6",
+    "status": "PASS",
+    "evidence": {
+      "sample_field": "pc"
+    }
+  },
+  {
+    "id": "detector.cap.invalid_mode",
+    "status": "PASS",
+    "evidence": {
+      "sample_field": "mode"
+    }
+  },
+  {
+    "id": "detector.cap.rf_ecc",
+    "status": "PASS",
+    "evidence": {
+      "sample_field": "rf"
+    }
+  },
+  {
+    "id": "cache_ecc_minor_and_progress",
+    "status": "PASS",
+    "evidence": {
+      "sleep": 1,
+      "clocks": 1197,
+      "ai": 0,
+      "ab": 0,
+      "am": 5,
+      "ifetch": 575,
+      "data": 0,
+      "bitmap": 0,
+      "hit": 646,
+      "miss": 12,
+      "dummy": 0,
+      "expanded": 0,
+      "predict": 0,
+      "mispredict": 0,
+      "keys": 1
+    }
+  },
+  {
+    "id": "unsolicited_response_characterization",
+    "status": "PASS",
+    "evidence": {
+      "scope": "one unsolicited response point; not proof all malformed responses are benign"
+    }
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "case": "rv.dit_off_zero",
+    "pc": "0x90",
+    "first_id_cycle": 12,
+    "last_id_cycle": 13,
+    "valid_id_cycles": 2
+  },
+  {
+    "case": "rv.dit_off_nonzero",
+    "pc": "0x90",
+    "first_id_cycle": 12,
+    "last_id_cycle": 48,
+    "valid_id_cycles": 37
+  },
+  {
+    "case": "rv.dit_on_zero",
+    "pc": "0x90",
+    "first_id_cycle": 12,
+    "last_id_cycle": 48,
+    "valid_id_cycles": 37
+  },
+  {
+    "case": "rv.dit_on_nonzero",
+    "pc": "0x90",
+    "first_id_cycle": 12,
+    "last_id_cycle": 48,
+    "valid_id_cycles": 37
+  },
+  {
+    "case": "rv.dit_branch_taken",
+    "pc": "0x8c",
+    "first_id_cycle": 11,
+    "last_id_cycle": 12,
+    "valid_id_cycles": 2
+  },
+  {
+    "case": "rv.dit_branch_nt",
+    "pc": "0x8c",
+    "first_id_cycle": 11,
+    "last_id_cycle": 12,
+    "valid_id_cycles": 2
+  },
+  {
+    "case": "rv.arithmetic",
+    "instruction": "ADD",
+    "pc": "0x88",
+    "first_id_cycle": 8,
+    "last_id_cycle": 8,
+    "valid_id_cycles": 1
+  },
+  {
+    "case": "rv.arithmetic",
+    "instruction": "MUL",
+    "pc": "0x8c",
+    "first_id_cycle": 9,
+    "last_id_cycle": 9,
+    "valid_id_cycles": 1
+  },
+  {
+    "case": "rv.arithmetic",
+    "instruction": "DIV",
+    "pc": "0x90",
+    "first_id_cycle": 10,
+    "last_id_cycle": 46,
+    "valid_id_cycles": 37
+  },
+  {
+    "case": "rv.arithmetic",
+    "instruction": "MULH",
+    "pc": "0x9c",
+    "first_id_cycle": 85,
+    "last_id_cycle": 86,
+    "valid_id_cycles": 2
+  },
+  {
+    "case": "rv.independent_d1",
+    "load_grant": 7,
+    "load_write": 8,
+    "independent_write": 9,
+    "dependent_write": 10
+  },
+  {
+    "case": "rv.independent_d4",
+    "load_grant": 15,
+    "load_write": 19,
+    "independent_write": 20,
+    "dependent_write": 21
+  },
+  {
+    "case": "rv.cache",
+    "window": "cache_initial_invalidation",
+    "start": 80,
+    "end": 240,
+    "iterations": 31,
+    "cycle_intervals": [
+      5
+    ],
+    "median": 5
+  },
+  {
+    "case": "rv.cache",
+    "window": "cache_warm",
+    "start": 300,
+    "end": 600,
+    "iterations": 99,
+    "cycle_intervals": [
+      3
+    ],
+    "median": 3
+  }
+]

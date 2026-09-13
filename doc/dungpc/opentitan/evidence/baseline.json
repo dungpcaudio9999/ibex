@@ -1,0 +1,6 @@
+{
+  "revision": "ec501f4ce5a7e492e1becb48b31200019ec5200b",
+  "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)",
+  "scope": "exact repository opentitan preset, top defaults, generic primitives; runtime ISA selection; no production RTL edits",
+  "previous_source_delta": ""
+}
