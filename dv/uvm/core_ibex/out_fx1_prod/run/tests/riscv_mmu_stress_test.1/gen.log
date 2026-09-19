@@ -1,0 +1,784 @@
+Command: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_prod/build/instr_gen/vcs_simv +vcs+lic+wait +uvm_set_inst_override=riscv_asm_program_gen,ibex_asm_program_gen,uvm_test_top.asm_gen +require_signature_addr=1 +signature_addr=8ffffffc +pmp_num_regions=16 +pmp_granularity=0 +tvec_alignment=8 +ntb_random_seed=1 +UVM_TESTNAME=riscv_instr_base_test +num_of_tests=1 +start_idx=0 +asm_file_name=/tmp/tmp73sn92n8/test -l /tmp/tmp73sn92n8/gen.log +instr_cnt=10000 +num_of_sub_program=5 +directed_instr_0=riscv_load_store_rand_instr_stream,40 +directed_instr_1=riscv_load_store_hazard_instr_stream,40 +directed_instr_2=riscv_multi_page_load_store_instr_stream,40 +directed_instr_3=riscv_load_store_rand_addr_instr_stream,40
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06_Full64; Runtime version X-2025.06_Full64;  Sep 19 14:20 2026
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LR_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SC_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOSWAP_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOADD_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOAND_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOOR_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOXOR_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOMIN_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOMAX_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOMINU_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOMAXU_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_LW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_LWSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SWSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_ADDI4SPN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_ADDI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_ADDI16SP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_LI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_LUI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_ADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_NOP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_MV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_ANDI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_XOR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_OR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_AND
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_BEQZ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_BNEZ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SRLI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SRAI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SLLI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_J
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_JAL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_JR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_JALR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_EBREAK
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_FLD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_FSD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_FLDSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_FSDSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FLD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMADD_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMSUB_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FNMSUB_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FNMADD_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FADD_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSUB_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMUL_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FDIV_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSQRT_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSGNJ_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSGNJN_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSGNJX_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMIN_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMAX_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_S_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_D_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FEQ_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FLT_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FLE_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCLASS_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_W_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_WU_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_D_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_D_WU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_FLW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_FSW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_FLWSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_FSWSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FLW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMADD_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMSUB_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FNMSUB_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FNMADD_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FADD_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSUB_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMUL_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FDIV_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSQRT_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSGNJ_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSGNJN_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSGNJX_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMIN_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMAX_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_W_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_WU_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMV_X_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FEQ_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FLT_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FLE_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCLASS_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_S_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_S_WU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMV_W_X
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LH
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LBU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LHU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SH
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLLI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRLI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRA
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRAI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ADDI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering NOP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LUI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AUIPC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering XOR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering XORI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering OR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ORI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AND
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ANDI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLT
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLTI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLTU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLTIU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BEQ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BNE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BLT
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BGE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BLTU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BGEU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering JAL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering JALR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FENCE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FENCE_I
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SFENCE_VMA
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ECALL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering EBREAK
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering URET
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRET
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MRET
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering DRET
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering WFI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CSRRW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CSRRS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CSRRC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CSRRWI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CSRRSI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CSRRCI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering GORC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering GORCI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CMIX
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CMOV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering PACK
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering PACKU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering PACKH
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering XPERM_N
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering XPERM_B
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering XPERM_H
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLO
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRO
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLOI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SROI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering GREV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering GREVI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSRI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CRC32_B
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CRC32_H
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CRC32_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CRC32C_B
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CRC32C_H
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CRC32C_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SHFL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering UNSHFL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SHFLI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering UNSHFLI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BCOMPRESS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BDECOMPRESS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BFP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SH1ADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SH2ADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SH3ADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ANDN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CLZ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CPOP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CTZ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MAX
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MAXU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MIN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MINU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ORC_B
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ORN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering REV8
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ROL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ROR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering RORI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SEXT_B
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SEXT_H
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering XNOR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ZEXT_H
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CLMUL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CLMULH
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CLMULR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BCLR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BCLRI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BEXT
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BEXTI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BINV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BINVI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BSET
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BSETI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MUL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MULH
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MULHSU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MULHU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering DIV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering DIVU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering REM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering REMU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LR_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SC_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOSWAP_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOADD_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOAND_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOOR_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOXOR_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOMIN_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOMAX_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOMINU_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering AMOMAXU_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BMATOR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BMATXOR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BMATFLIP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CRC32_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CRC32C_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SHFLW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering UNSHFLW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BCOMPRESSW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BDECOMPRESSW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering BFPW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLOW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SROW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLOIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SROIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering GREVW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering GREVIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSLW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSRW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FSRIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering GORCW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering GORCIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering PACKW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering PACKUW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering XPERM_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ADD_UW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SH1ADD_UW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SH2ADD_UW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SH3ADD_UW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLLI_UW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CLZW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CPOPW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CTZW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ROLW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering RORW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering RORIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_ADDIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SUBW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_ADDW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_LD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_LDSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SDSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMV_X_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FMV_D_X
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_L_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_LU_D
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_D_L
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_D_LU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_L_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_LU_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_S_L
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering FCVT_S_LU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LWU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering LD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLLW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SLLIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRLW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRLIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRAW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SRAIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ADDW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering ADDIW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering SUBW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering MULW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering DIVW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering DIVUW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering REMW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering REMUW
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SRLI64
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SRAI64
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SLLI64
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_LQ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SQ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_LQSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering C_SQSP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSETVLI
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSETVL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VRSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWADDU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWSUBU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VADC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMADC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSBC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSBC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAND
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VOR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VXOR
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSLL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSRL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSRA
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VNSRL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VNSRA
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSEQ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSNE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSLTU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSLT
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSLEU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSLE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSGTU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSGT
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMINU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMIN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMAXU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMAX
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMUL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMULH
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMULHU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMULHSU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VDIVU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VDIV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREMU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWMUL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWMULU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWMULSU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMACC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VNMSAC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VNMSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWMACCU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWMACC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWMACCSU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWMACCUS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMERGE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSADDU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSSUBU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAADDU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VASUBU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VASUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSSRL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSSRA
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VNCLIPU
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VNCLIP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFRSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMUL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFDIV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFRDIV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWMUL
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMACC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNMACC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMSAC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNMSAC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNMADD
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNMSUB
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWMACC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWNMACC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWMSAC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWNMSAC
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFSQRT_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMIN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMAX
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFSGNJ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFSGNJN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFSGNJX
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMFEQ
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMFNE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMFLT
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMFLE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMFGT
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMFGE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFCLASS_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMERGE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMV
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFCVT_XU_F_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFCVT_X_F_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFCVT_F_XU_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFCVT_F_X_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWCVT_XU_F_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWCVT_X_F_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWCVT_F_XU_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWCVT_F_X_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWCVT_F_F_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNCVT_XU_F_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNCVT_X_F_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNCVT_F_XU_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNCVT_F_X_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNCVT_F_F_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFNCVT_ROD_F_F_W
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREDSUM_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREDMAXU_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREDMAX_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREDMINU_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREDMIN_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREDAND_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREDOR_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VREDXOR_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWREDSUMU_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VWREDSUM_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFREDOSUM_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFREDSUM_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFREDMAX_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWREDOSUM_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFWREDSUM_VS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMAND_MM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMNAND_MM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMANDNOT_MM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMXOR_MM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMOR_MM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMNOR_MM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMORNOT_MM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMXNOR_MM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VPOPC_M
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFIRST_M
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSBF_M
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSIF_M
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMSOF_M
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VIOTA_M
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VID_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMV_X_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMV_S_X
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMV_F_S
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VFMV_S_F
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSLIDEUP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSLIDEDOWN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSLIDE1UP
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSLIDE1DOWN
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VRGATHER
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VCOMPRESS
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMV1R_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMV2R_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMV4R_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VMV8R_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VLE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VLSE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSSE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VLXEI_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSXEI_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSUXEI_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VLEFF_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VLSEGE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSSEGE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VLSEGEFF_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VLSSEGE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSSSEGE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VLXSEGEI_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSXSEGEI_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VSUXSEGEI_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOSWAPE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOADDE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOXORE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOANDE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOORE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOMINE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOMAXE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOMINUE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering VAMOMAXUE_V
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv(88) @ 0: reporter [riscv_instr] Registering CUSTOM_1
+UVM_INFO @ 0: reporter [RNTST] Running test riscv_instr_base_test...
+UVM_INFO @ 0: reporter [INSTOVR] Applying instance override from the command line: +uvm_set_inst_override=riscv_asm_program_gen,ibex_asm_program_gen,uvm_test_top.asm_gen
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/test/riscv_instr_base_test.sv(42) @ 0: uvm_test_top [uvm_test_top] Create configuration instance
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_gen_config.sv(629) @ 0: reporter [cfg] riscv_instr_pkg::supported_privileged_mode = 2
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(213) @ 0: reporter [pmp_cfg] pmp max offset: 0xffffffff
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(237) @ 0: reporter [pmp_cfg] MAX OFFSET: 0xffffffff
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/test/riscv_instr_base_test.sv(44) @ 0: uvm_test_top [uvm_test_top] Create configuration instance...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_vector_cfg.sv(152) @ 0: reporter [vector_cfg] Checking emul: 0.12
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_vector_cfg.sv(152) @ 0: reporter [vector_cfg] Checking emul: 0.25
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_vector_cfg.sv(152) @ 0: reporter [vector_cfg] Checking emul: 0.50
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_vector_cfg.sv(152) @ 0: reporter [vector_cfg] Checking emul: 1.00
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_vector_cfg.sv(152) @ 0: reporter [vector_cfg] Checking emul: 2.00
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_vector_cfg.sv(152) @ 0: reporter [vector_cfg] Checking emul: 4.00
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_vector_cfg.sv(152) @ 0: reporter [vector_cfg] Checking emul: 8.00
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/test/riscv_instr_base_test.sv(101) @ 0: uvm_test_top [uvm_test_top] riscv_instr_gen_config is randomized:
+------------------------------------------------------------------------------
+Name                               Type                     Size  Value       
+------------------------------------------------------------------------------
+cfg                                riscv_instr_gen_config   -     @1346       
+  main_program_instr_cnt           integral                 32    'h94        
+  sub_program_instr_cnt            sa(integral)             5     -           
+    [0]                            integral                 32    'h18e3      
+    [1]                            integral                 32    'hce        
+    [2]                            integral                 32    'h3c6       
+    [3]                            integral                 32    'h876       
+    [4]                            integral                 32    'h8f        
+  debug_program_instr_cnt          integral                 32    'hcb        
+  data_page_pattern                data_pattern_t           2     ALL_ZERO    
+  init_privileged_mode             privileged_mode_t        2     MACHINE_MODE
+  reserved_regs                    array(riscv_reg_t)       3     -           
+    [0]                            riscv_reg_t              5     A2          
+    [1]                            riscv_reg_t              5     S10         
+    [2]                            riscv_reg_t              5     SP          
+  ra                               riscv_reg_t              5     RA          
+  sp                               riscv_reg_t              5     S10         
+  tp                               riscv_reg_t              5     A2          
+  tvec_alignment                   integral                 32    'h8         
+  no_data_page                     integral                 1     'h0         
+  no_branch_jump                   integral                 1     'h0         
+  no_load_store                    integral                 1     'h0         
+  no_csr_instr                     integral                 1     'h0         
+  no_ebreak                        integral                 1     'h1         
+  no_ecall                         integral                 1     'h1         
+  no_dret                          integral                 1     'h1         
+  no_fence                         integral                 1     'h0         
+  no_wfi                           integral                 1     'h1         
+  fix_sp                           integral                 1     'h0         
+  enable_unaligned_load_store      integral                 1     'h0         
+  illegal_instr_ratio              integral                 32    'h0         
+  hint_instr_ratio                 integral                 32    'h0         
+  gen_all_csrs_by_default          integral                 1     'h0         
+  gen_csr_ro_write                 integral                 1     'h0         
+  add_csr_write                    array(privileged_reg_t)  0     -           
+  remove_csr_write                 array(privileged_reg_t)  0     -           
+  boot_mode_opts                   string                   0     ""          
+  enable_page_table_exception      integral                 32    'h0         
+  no_directed_instr                integral                 1     'h0         
+  enable_interrupt                 integral                 1     'h0         
+  enable_timer_irq                 integral                 1     'h0         
+  bare_program_mode                integral                 1     'h0         
+  enable_illegal_csr_instruction   integral                 1     'h0         
+  enable_access_invalid_csr_level  integral                 1     'h0         
+  enable_misaligned_instr          integral                 1     'h0         
+  enable_dummy_csr_write           integral                 1     'h0         
+  randomize_csr                    integral                 1     'h0         
+  allow_sfence_exception           integral                 1     'h0         
+  no_delegation                    integral                 1     'h1         
+  force_m_delegation               integral                 1     'h0         
+  force_s_delegation               integral                 1     'h0         
+  support_supervisor_mode          integral                 1     'h0         
+  disable_compressed_instr         integral                 1     'h0         
+  signature_addr                   integral                 32    'h8ffffffc  
+  num_of_harts                     integral                 32    'h1         
+  require_signature_addr           integral                 1     'h1         
+  gen_debug_section                integral                 1     'h0         
+  enable_ebreak_in_debug_rom       integral                 1     'h0         
+  set_dcsr_ebreak                  integral                 1     'h0         
+  num_debug_sub_program            integral                 32    'h0         
+  enable_debug_single_step         integral                 1     'h0         
+  single_step_iterations           integral                 32    'hc95df764  
+  set_mstatus_tw                   integral                 1     'h0         
+  set_mstatus_mprv                 integral                 1     'h0         
+  max_branch_step                  integral                 32    'h14        
+  max_directed_instr_stream_seq    integral                 32    'h14        
+  enable_floating_point            integral                 1     'h0         
+  enable_vector_extension          integral                 1     'h0         
+  vector_instr_only                integral                 1     'h0         
+  enable_b_extension               integral                 1     'h0         
+  enable_bitmanip_groups           array(b_ext_group_t)     10    -           
+    [0]                            b_ext_group_t            32    ZBB         
+    [1]                            b_ext_group_t            32    ZBS         
+    [2]                            b_ext_group_t            32    ZBP         
+    [3]                            b_ext_group_t            32    ZBE         
+    [4]                            b_ext_group_t            32    ZBF         
+    [5]                            b_ext_group_t            32    ZBC         
+    [6]                            b_ext_group_t            32    ZBR         
+    [7]                            b_ext_group_t            32    ZBM         
+    [8]                            b_ext_group_t            32    ZBT         
+    [9]                            b_ext_group_t            32    ZB_TMP      
+  enable_zba_extension             integral                 1     'h0         
+  enable_zbb_extension             integral                 1     'h0         
+  enable_zbc_extension             integral                 1     'h0         
+  enable_zbs_extension             integral                 1     'h0         
+  use_push_data_section            integral                 1     'h0         
+------------------------------------------------------------------------------
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1527) @ 0: reporter [asm_gen] Adding directed instruction stream:riscv_load_store_rand_instr_stream ratio:40/1000
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1527) @ 0: reporter [asm_gen] Adding directed instruction stream:riscv_load_store_hazard_instr_stream ratio:40/1000
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1527) @ 0: reporter [asm_gen] Adding directed instruction stream:riscv_multi_page_load_store_instr_stream ratio:40/1000
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1527) @ 0: reporter [asm_gen] Adding directed instruction stream:riscv_load_store_rand_addr_instr_stream ratio:40/1000
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/test/riscv_instr_base_test.sv(93) @ 0: uvm_test_top [uvm_test_top] All directed instruction is applied
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(573) @ 0: reporter [pmp_cfg] MSECCFG: MML 0, MMWP 0, RLB 1
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          0 from main: 0x00000000
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          1 from main: 0x11111111
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          2 from main: 0x22222222
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          3 from main: 0x33333333
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          4 from main: 0x44444444
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          5 from main: 0x55555555
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          6 from main: 0x66666666
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          7 from main: 0x77777777
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          8 from main: 0x88888888
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_          9 from main: 0x99999999
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_         10 from main: 0xaaaaaaaa
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_         11 from main: 0xbbbbbbbb
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_         12 from main: 0xcccccccc
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_         13 from main: 0xdddddddd
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_         14 from main: 0xeeeeeeee
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(583) @ 0: reporter [pmp_cfg] cfg_byte: 0x0f
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv(617) @ 0: reporter [pmp_cfg] Offset of pmp_addr_         15 from main: 0xffffffff
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(774) @ 0: reporter [asm_gen] Generating privileged mode routing for MACHINE_MODE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_privileged_common_seq.sv(104) @ 0: reporter@@privil_seq [privil_seq] mstatus_val: 0x1800
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(797) @ 0: reporter [asm_gen] Unsupported privileged_mode MACHINE_MODE
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(256) @ 0: reporter [asm_gen] sub program name: sub_1
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_hazard_instr_stream 254/6371 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_addr_instr_stream 254/6371 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_instr_stream 254/6371 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_multi_page_load_store_instr_stream 254/6371 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(77) @ 0: reporter@@sub_1 [sub_1] Start generating 6371 instruction
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(87) @ 0: reporter@@sub_1 [sub_1] Finishing instruction generation
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(256) @ 0: reporter [asm_gen] sub program name: sub_2
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_hazard_instr_stream 8/206 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_addr_instr_stream 8/206 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_instr_stream 8/206 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_multi_page_load_store_instr_stream 8/206 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(77) @ 0: reporter@@sub_2 [sub_2] Start generating 206 instruction
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(87) @ 0: reporter@@sub_2 [sub_2] Finishing instruction generation
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(256) @ 0: reporter [asm_gen] sub program name: sub_3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_hazard_instr_stream 38/966 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_addr_instr_stream 38/966 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_instr_stream 38/966 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_multi_page_load_store_instr_stream 38/966 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(77) @ 0: reporter@@sub_3 [sub_3] Start generating 966 instruction
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(87) @ 0: reporter@@sub_3 [sub_3] Finishing instruction generation
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(256) @ 0: reporter [asm_gen] sub program name: sub_4
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_hazard_instr_stream 86/2166 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_addr_instr_stream 86/2166 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_instr_stream 86/2166 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_multi_page_load_store_instr_stream 86/2166 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(77) @ 0: reporter@@sub_4 [sub_4] Start generating 2166 instruction
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(87) @ 0: reporter@@sub_4 [sub_4] Finishing instruction generation
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(256) @ 0: reporter [asm_gen] sub program name: sub_5
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_hazard_instr_stream 5/143 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_addr_instr_stream 5/143 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_instr_stream 5/143 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_multi_page_load_store_instr_stream 5/143 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(77) @ 0: reporter@@sub_5 [sub_5] Start generating 143 instruction
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(87) @ 0: reporter@@sub_5 [sub_5] Finishing instruction generation
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_hazard_instr_stream 5/148 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_addr_instr_stream 5/148 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_load_store_rand_instr_stream 5/148 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1583) @ 0: reporter [asm_gen] Insert directed instr stream riscv_multi_page_load_store_instr_stream 5/148 times
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(77) @ 0: reporter@@main [main] Start generating 148 instruction
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(87) @ 0: reporter@@main [main] Finishing instruction generation
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(284) @ 0: reporter [asm_gen] Randomizing call stack
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_callstack_gen.sv(170) @ 0: reporter [callstack_gen] 1 programs @Lv0-> 6 programs at next level
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_callstack_gen.sv(181) @ 0: reporter [callstack_gen] 6 sub programs are assigned to program[0]
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(293) @ 0: reporter [asm_gen] Gen jump instr 0 -> sub[0] 4
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(248) @ 0: reporter@@main [main] JALR -> sub_4...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(293) @ 0: reporter [asm_gen] Gen jump instr 0 -> sub[1] 5
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(248) @ 0: reporter@@main [main] JALR -> sub_5...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(293) @ 0: reporter [asm_gen] Gen jump instr 0 -> sub[2] 2
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(248) @ 0: reporter@@main [main] JALR -> sub_2...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(293) @ 0: reporter [asm_gen] Gen jump instr 0 -> sub[3] 3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(248) @ 0: reporter@@main [main] JALR -> sub_3...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(293) @ 0: reporter [asm_gen] Gen jump instr 0 -> sub[4] 5
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(248) @ 0: reporter@@main [main] JALR -> sub_5...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(293) @ 0: reporter [asm_gen] Gen jump instr 0 -> sub[5] 1
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(248) @ 0: reporter@@main [main] JALR -> sub_1...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(305) @ 0: reporter [asm_gen] Randomizing call stack..done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(119) @ 0: reporter [asm_gen] Generating callstack...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(121) @ 0: reporter [asm_gen] Post-processing main program...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(326) @ 0: reporter@@main [main] Injecting 0 illegal instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(339) @ 0: reporter@@main [main] Injecting 0 HINT instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(123) @ 0: reporter [asm_gen] Generating main program instruction stream...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(326) @ 0: reporter@@sub_5 [sub_5] Injecting 0 illegal instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(339) @ 0: reporter@@sub_5 [sub_5] Injecting 0 HINT instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(326) @ 0: reporter@@sub_1 [sub_1] Injecting 0 illegal instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(339) @ 0: reporter@@sub_1 [sub_1] Injecting 0 HINT instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(326) @ 0: reporter@@sub_4 [sub_4] Injecting 0 illegal instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(339) @ 0: reporter@@sub_4 [sub_4] Injecting 0 HINT instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(326) @ 0: reporter@@sub_3 [sub_3] Injecting 0 illegal instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(339) @ 0: reporter@@sub_3 [sub_3] Injecting 0 HINT instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(326) @ 0: reporter@@sub_2 [sub_2] Injecting 0 illegal instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv(339) @ 0: reporter@@sub_2 [sub_2] Injecting 0 HINT instructions, ratio 0/100
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(138) @ 0: reporter [asm_gen] Inserting sub-programs...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(139) @ 0: reporter [asm_gen] Main/sub program generation...done
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1612) @ 0: reporter [asm_gen] Creating debug ROM
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_data_page_gen.sv(70) @ 0: reporter [data_page_gen] Generate data section: region_0 size:0x1000  xwr:0x7]
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_data_page_gen.sv(70) @ 0: reporter [data_page_gen] Generate data section: region_1 size:0x10000  xwr:0x7]
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv(1444) @ 0: reporter [asm_gen] /tmp/tmp73sn92n8/test_0.S is generated
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/test/riscv_instr_base_test.sv(70) @ 0: uvm_test_top [] TEST PASSED
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/test/riscv_instr_base_test.sv(74) @ 0: uvm_test_top [] TEST GENERATION DONE
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  633
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[]     2
+[INSTOVR]     1
+[RNTST]     1
+[UVM/RELNOTES]     1
+[asm_gen]    50
+[callstack_gen]     2
+[cfg]     1
+[data_page_gen]     2
+[main]    10
+[pmp_cfg]    35
+[privil_seq]     1
+[riscv_instr]   496
+[sub_1]     4
+[sub_2]     4
+[sub_3]     4
+[sub_4]     4
+[sub_5]     4
+[uvm_test_top]     4
+[vector_cfg]     7
+
+$finish called from file "/opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                    0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 00 ps
+CPU Time:      2.730 seconds;       Data structure size:   0.4Mb
+Sat Sep 19 14:20:10 2026

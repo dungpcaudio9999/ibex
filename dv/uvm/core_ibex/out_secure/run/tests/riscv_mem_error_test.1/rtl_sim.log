@@ -1,0 +1,715 @@
+Command: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/build/tb/vcs_simv +vcs+lic+wait +ntb_random_seed=1 +UVM_TESTNAME=core_ibex_mem_error_test +UVM_VERBOSITY=UVM_LOW +bin=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_mem_error_test.1/test.bin +ibex_tracer_file_base=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_mem_error_test.1/trace_core +cosim_log_file=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_mem_error_test.1/spike_cosim_trace_core_00000000.log -l /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_mem_error_test.1/rtl_sim.log +signature_addr=8ffffffc +test_timeout_s=1800 +enable_mem_intg_err=0 +enable_double_fault_detector=0 +require_signature_addr=1 +enable_bad_intg_on_uninit_access=0
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06_Full64; Runtime version X-2025.06_Full64;  Sep 19 01:18 2026
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test core_ibex_mem_error_test...
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_base_test.sv(265) @ 202400: uvm_test_top [uvm_test_top] Loading single test binary into memory now.
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_base_test.sv(368) @ 202400: uvm_test_top [uvm_test_top] Test wall-clock timeout is set to : 1800s
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_mem_error_test.1/trace_core_00000000.log
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(1871) @ 1542400: uvm_test_top [uvm_test_top] Running core_ibex_mem_error_test
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 1542400: uvm_test_top.env.vseqr@@memory_error_seq_h [uvm_test_top.env.vseqr.memory_error_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 3330400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 33304350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 9758400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 97584350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+            13445400: Illegal instruction (hart 0) at PC 0x80006994: 0xf12e95f3
+            13447400: Illegal instruction (hart 0) at PC 0x80006994: 0xf12e95f3
+            16111400: Illegal instruction (hart 0) at PC 0x80006998: 0xf1323ef3
+            16113400: Illegal instruction (hart 0) at PC 0x80006998: 0xf1323ef3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 18380400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 183804350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 21770400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 217704350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 25706400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 257064350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 34646400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 346464350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+            43525400: Illegal instruction (hart 0) at PC 0x80007552: 0xf14c1cf3
+            43527400: Illegal instruction (hart 0) at PC 0x80007552: 0xf14c1cf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 44426400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 444264350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+            46927400: Illegal instruction (hart 0) at PC 0x8000756e: 0xf13faf73
+            46929400: Illegal instruction (hart 0) at PC 0x8000756e: 0xf13faf73
+            49345400: Illegal instruction (hart 0) at PC 0x800075fa: 0xf1175273
+            49347400: Illegal instruction (hart 0) at PC 0x800075fa: 0xf1175273
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 51888400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 518884350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 60076400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 600764350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 69658400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 696584350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 79060400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 790604350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 86612400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 866124350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+            90367400: Illegal instruction (hart 0) at PC 0x800084b6: 0xf1512ff3
+            90369400: Illegal instruction (hart 0) at PC 0x800084b6: 0xf1512ff3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 90640400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 906404350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 99202400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 992024350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           100459400: Illegal instruction (hart 0) at PC 0x800087ba: 0xf1183bf3
+           100461400: Illegal instruction (hart 0) at PC 0x800087ba: 0xf1183bf3
+           102795400: Illegal instruction (hart 0) at PC 0x800087cc: 0xf1256a73
+           102797400: Illegal instruction (hart 0) at PC 0x800087cc: 0xf1256a73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 104386400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1043864350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           105123400: Illegal instruction (hart 0) at PC 0x800087cc: 0xf1256a73
+           105125400: Illegal instruction (hart 0) at PC 0x800087cc: 0xf1256a73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 106424400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1064244350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           109413400: Illegal instruction (hart 0) at PC 0x80008984: 0xf13a5373
+           109415400: Illegal instruction (hart 0) at PC 0x80008984: 0xf13a5373
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 112568400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1125684350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           115767400: Illegal instruction (hart 0) at PC 0x80008a44: 0xf12b3e73
+           115769400: Illegal instruction (hart 0) at PC 0x80008a44: 0xf12b3e73
+           115769400: Illegal instruction (hart 0) at PC 0x80008a44: 0xf12b3e73
+           115771400: Illegal instruction (hart 0) at PC 0x80008a44: 0xf12b3e73
+           115771400: Illegal instruction (hart 0) at PC 0x80008a44: 0xf12b3e73
+           115773400: Illegal instruction (hart 0) at PC 0x80008a44: 0xf12b3e73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 121738400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1217384350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           129965400: Illegal instruction (hart 0) at PC 0x80009138: 0xf1442e73
+           129967400: Illegal instruction (hart 0) at PC 0x80009138: 0xf1442e73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 131210400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1312104350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           133237400: Illegal instruction (hart 0) at PC 0x80009138: 0xf1442e73
+           133239400: Illegal instruction (hart 0) at PC 0x80009138: 0xf1442e73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 136418400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1364184350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 144702400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1447024350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 152484400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1524844350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 161688400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1616884350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           162923400: Illegal instruction (hart 0) at PC 0x80009c84: 0xf147b273
+           162925400: Illegal instruction (hart 0) at PC 0x80009c84: 0xf147b273
+           165399400: Illegal instruction (hart 0) at PC 0x80009cf2: 0x7b107df3
+           165401400: Illegal instruction (hart 0) at PC 0x80009cf2: 0x7b107df3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 166610400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1666104350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           169237400: Illegal instruction (hart 0) at PC 0x80009e06: 0xf11e3a73
+           169239400: Illegal instruction (hart 0) at PC 0x80009e06: 0xf11e3a73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 175250400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1752504350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 178256400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1782564350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 182702400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1827024350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           187493400: Illegal instruction (hart 0) at PC 0x8000a4a2: 0xf1232b73
+           187495400: Illegal instruction (hart 0) at PC 0x8000a4a2: 0xf1232b73
+           189683400: Illegal instruction (hart 0) at PC 0x8000a506: 0xf1199f73
+           189685400: Illegal instruction (hart 0) at PC 0x8000a506: 0xf1199f73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 189726400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1897264350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 191354400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 1913544350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           193025400: Illegal instruction (hart 0) at PC 0x8000a620: 0xf140b2f3
+           193027400: Illegal instruction (hart 0) at PC 0x8000a620: 0xf140b2f3
+           194793400: Illegal instruction (hart 0) at PC 0x8000a648: 0xf11f99f3
+           194795400: Illegal instruction (hart 0) at PC 0x8000a648: 0xf11f99f3
+           196375400: Illegal instruction (hart 0) at PC 0x8000a66e: 0xf1385ff3
+           196377400: Illegal instruction (hart 0) at PC 0x8000a66e: 0xf1385ff3
+           200103400: Illegal instruction (hart 0) at PC 0x8000a7fa: 0xf1583873
+           200105400: Illegal instruction (hart 0) at PC 0x8000a7fa: 0xf1583873
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 201282400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2012824350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           203631400: Illegal instruction (hart 0) at PC 0x8000a86e: 0xf13d3f73
+           203633400: Illegal instruction (hart 0) at PC 0x8000a86e: 0xf13d3f73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 204236400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2042364350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           205483400: Illegal instruction (hart 0) at PC 0x8000a8c6: 0x7b306473
+           205485400: Illegal instruction (hart 0) at PC 0x8000a8c6: 0x7b306473
+           206967400: Illegal instruction (hart 0) at PC 0x8000a8e4: 0xf13692f3
+           206969400: Illegal instruction (hart 0) at PC 0x8000a8e4: 0xf13692f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 212226400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2122264350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           215149400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215151400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215151400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215153400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215153400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215155400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215155400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215157400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215157400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215159400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215159400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215161400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215161400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+           215163400: Illegal instruction (hart 0) at PC 0x800103ba: 0xf1469b73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 217506400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2175064350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 224366400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2243664350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 227926400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2279264350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 230976400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2309764350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           233095400: Illegal instruction (hart 0) at PC 0x800109ae: 0xf1559af3
+           233097400: Illegal instruction (hart 0) at PC 0x800109ae: 0xf1559af3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 236046400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2360464350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           242177400: Illegal instruction (hart 0) at PC 0x80010c50: 0xf13d5873
+           242179400: Illegal instruction (hart 0) at PC 0x80010c50: 0xf13d5873
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 242258400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2422584350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 244696400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2446964350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           246635400: Illegal instruction (hart 0) at PC 0x80010dea: 0x7b306cf3
+           246637400: Illegal instruction (hart 0) at PC 0x80010dea: 0x7b306cf3
+           248987400: Illegal instruction (hart 0) at PC 0x80010e3a: 0xf12cb273
+           248989400: Illegal instruction (hart 0) at PC 0x80010e3a: 0xf12cb273
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 250406400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2504064350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           255201400: Illegal instruction (hart 0) at PC 0x8001103e: 0xf1391073
+           255203400: Illegal instruction (hart 0) at PC 0x8001103e: 0xf1391073
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 259284400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2592844350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           259877400: Illegal instruction (hart 0) at PC 0x80011214: 0xf1461873
+           259879400: Illegal instruction (hart 0) at PC 0x80011214: 0xf1461873
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 263004400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2630044350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           264021400: Illegal instruction (hart 0) at PC 0x80011226: 0xf14c25f3
+           264023400: Illegal instruction (hart 0) at PC 0x80011226: 0xf14c25f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 266052400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2660524350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 273068400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2730684350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 275550400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2755504350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           278945400: Illegal instruction (hart 0) at PC 0x8000304c: 0xf1533c73
+           278947400: Illegal instruction (hart 0) at PC 0x8000304c: 0xf1533c73
+           283303400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283305400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283305400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283307400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283307400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283309400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283309400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283311400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283311400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283313400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283313400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283315400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283315400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283317400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283317400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283319400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283319400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283321400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283321400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283323400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283323400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283325400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283325400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283327400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283327400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283329400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283329400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283331400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283331400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283333400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283333400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283335400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283335400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283337400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283337400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283339400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283339400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283341400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283341400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283343400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283343400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+           283345400: Illegal instruction (hart 0) at PC 0x8000348a: 0xf139d2f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 283806400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2838064350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           285471400: Illegal instruction (hart 0) at PC 0x8000349e: 0xf11f3773
+           285473400: Illegal instruction (hart 0) at PC 0x8000349e: 0xf11f3773
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 286122400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2861224350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 292368400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 2923684350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           295571400: Illegal instruction (hart 0) at PC 0x8000372e: 0xf1585973
+           295573400: Illegal instruction (hart 0) at PC 0x8000372e: 0xf1585973
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 300806400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3008064350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 305570400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3055704350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 308366400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3083664350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           314945400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314947400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314947400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314949400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314949400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314951400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314951400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314953400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314953400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314955400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314955400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+           314957400: Illegal instruction (hart 0) at PC 0x80003c58: 0xf12297f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 316068400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3160684350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           317687400: Illegal instruction (hart 0) at PC 0x80003c5c: 0xf154bbf3
+           317689400: Illegal instruction (hart 0) at PC 0x80003c5c: 0xf154bbf3
+           320963400: Illegal instruction (hart 0) at PC 0x80003d6a: 0xf138b4f3
+           320965400: Illegal instruction (hart 0) at PC 0x80003d6a: 0xf138b4f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 325226400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3252264350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           327919400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327921400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327921400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327923400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327923400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327925400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327925400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327927400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327927400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327929400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327929400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327931400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327931400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327933400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327933400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327935400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327935400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327937400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327937400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327939400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327939400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327941400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327941400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327943400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327943400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327945400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327945400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327947400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327947400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+           327949400: Illegal instruction (hart 0) at PC 0x8000401c: 0xf1591a73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 328826400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3288264350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 333792400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3337924350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 337922400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3379224350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 340218400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3402184350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 346866400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3468664350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           350139400: Illegal instruction (hart 0) at PC 0x80004b44: 0xf11732f3
+           350141400: Illegal instruction (hart 0) at PC 0x80004b44: 0xf11732f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 350594400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3505944350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           354629400: Illegal instruction (hart 0) at PC 0x80004b52: 0x7b206773
+           354631400: Illegal instruction (hart 0) at PC 0x80004b52: 0x7b206773
+           356255400: Illegal instruction (hart 0) at PC 0x80004bde: 0xf13fa3f3
+           356257400: Illegal instruction (hart 0) at PC 0x80004bde: 0xf13fa3f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 358072400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3580724350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           360245400: Illegal instruction (hart 0) at PC 0x80004c68: 0xf125aa73
+           360247400: Illegal instruction (hart 0) at PC 0x80004c68: 0xf125aa73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 362622400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3626224350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           366577400: Illegal instruction (hart 0) at PC 0x80004e2a: 0xf14054f3
+           366579400: Illegal instruction (hart 0) at PC 0x80004e2a: 0xf14054f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 369020400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3690204350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           369399400: Illegal instruction (hart 0) at PC 0x80004e32: 0xf12117f3
+           369401400: Illegal instruction (hart 0) at PC 0x80004e32: 0xf12117f3
+           372401400: Illegal instruction (hart 0) at PC 0x80004e6a: 0xf1239a73
+           372403400: Illegal instruction (hart 0) at PC 0x80004e6a: 0xf1239a73
+           376965400: Illegal instruction (hart 0) at PC 0x80004eca: 0xf141e073
+           376967400: Illegal instruction (hart 0) at PC 0x80004eca: 0xf141e073
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 377408400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3774084350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 380132400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3801324350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           380977400: Illegal instruction (hart 0) at PC 0x80004fea: 0xf156acf3
+           380979400: Illegal instruction (hart 0) at PC 0x80004fea: 0xf156acf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 387872400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3878724350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           391297400: Illegal instruction (hart 0) at PC 0x800051fa: 0xf1562373
+           391299400: Illegal instruction (hart 0) at PC 0x800051fa: 0xf1562373
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 393912400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3939124350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 397208400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 3972084350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           400151400: Illegal instruction (hart 0) at PC 0x80005502: 0xf115d973
+           400153400: Illegal instruction (hart 0) at PC 0x80005502: 0xf115d973
+           403637400: Illegal instruction (hart 0) at PC 0x80005584: 0xf11b5e73
+           403639400: Illegal instruction (hart 0) at PC 0x80005584: 0xf11b5e73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 404716400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4047164350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 408942400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4089424350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           414477400: Illegal instruction (hart 0) at PC 0x80005a8e: 0xf14cfff3
+           414479400: Illegal instruction (hart 0) at PC 0x80005a8e: 0xf14cfff3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 415438400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4154384350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           418039400: Illegal instruction (hart 0) at PC 0x80005b96: 0xf1319873
+           418041400: Illegal instruction (hart 0) at PC 0x80005b96: 0xf1319873
+           421603400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421605400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421605400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421607400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421607400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421609400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421609400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421611400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421611400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421613400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421613400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421615400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421615400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421617400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421617400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421619400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421619400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+           421621400: Illegal instruction (hart 0) at PC 0x80005bee: 0xf1483f73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 422098400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4220984350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           424597400: Illegal instruction (hart 0) at PC 0x80005ce8: 0x7b007c73
+           424599400: Illegal instruction (hart 0) at PC 0x80005ce8: 0x7b007c73
+           428597400: Illegal instruction (hart 0) at PC 0x80005dbe: 0x7b3076f3
+           428599400: Illegal instruction (hart 0) at PC 0x80005dbe: 0x7b3076f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 430686400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4306864350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 437380400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4373804350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           441553400: Illegal instruction (hart 0) at PC 0x800062f6: 0xf1546af3
+           441555400: Illegal instruction (hart 0) at PC 0x800062f6: 0xf1546af3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 443036400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4430364350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           447039400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447041400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447041400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447043400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447043400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447045400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447045400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447047400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447047400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447049400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447049400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447051400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447051400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447053400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447053400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447055400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447055400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447057400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447057400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447059400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447059400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447061400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447061400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447063400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447063400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447065400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447065400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447067400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447067400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447069400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447069400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447071400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447071400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447073400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447073400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447075400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447075400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447077400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447077400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447079400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447079400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+           447081400: Illegal instruction (hart 0) at PC 0x8000652a: 0xf11fdaf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 451198400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4511984350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           451611400: Illegal instruction (hart 0) at PC 0x800117d4: 0xf13ba373
+           451613400: Illegal instruction (hart 0) at PC 0x800117d4: 0xf13ba373
+           455033400: Illegal instruction (hart 0) at PC 0x80011812: 0xf135b873
+           455035400: Illegal instruction (hart 0) at PC 0x80011812: 0xf135b873
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 455734400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4557344350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           458775400: Illegal instruction (hart 0) at PC 0x80011888: 0xf14faef3
+           458777400: Illegal instruction (hart 0) at PC 0x80011888: 0xf14faef3
+           461657400: Illegal instruction (hart 0) at PC 0x800118ac: 0xf133ebf3
+           461659400: Illegal instruction (hart 0) at PC 0x800118ac: 0xf133ebf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 462178400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4621784350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           465827400: Illegal instruction (hart 0) at PC 0x80011812: 0xf135b873
+           465829400: Illegal instruction (hart 0) at PC 0x80011812: 0xf135b873
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 469180400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4691804350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           469573400: Illegal instruction (hart 0) at PC 0x80011888: 0xf14faef3
+           469575400: Illegal instruction (hart 0) at PC 0x80011888: 0xf14faef3
+           473107400: Illegal instruction (hart 0) at PC 0x800118ac: 0xf133ebf3
+           473109400: Illegal instruction (hart 0) at PC 0x800118ac: 0xf133ebf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 476828400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4768284350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 478564400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4785644350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 488494400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4884944350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           490673400: Illegal instruction (hart 0) at PC 0x8000ae9a: 0x7b307bf3
+           490675400: Illegal instruction (hart 0) at PC 0x8000ae9a: 0x7b307bf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 492394400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 4923944350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           496251400: Illegal instruction (hart 0) at PC 0x8000b0fe: 0xf11827f3
+           496253400: Illegal instruction (hart 0) at PC 0x8000b0fe: 0xf11827f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 500112400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5001124350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           502947400: Illegal instruction (hart 0) at PC 0x8000b30e: 0xf132d0f3
+           502949400: Illegal instruction (hart 0) at PC 0x8000b30e: 0xf132d0f3
+           509867400: Illegal instruction (hart 0) at PC 0x8000b4cc: 0xf133aef3
+           509869400: Illegal instruction (hart 0) at PC 0x8000b4cc: 0xf133aef3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 510104400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5101044350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 514240400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5142404350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           518061400: Illegal instruction (hart 0) at PC 0x8000b776: 0xf11ca2f3
+           518063400: Illegal instruction (hart 0) at PC 0x8000b776: 0xf11ca2f3
+           523811400: Illegal instruction (hart 0) at PC 0x8000b8e2: 0xf1359cf3
+           523813400: Illegal instruction (hart 0) at PC 0x8000b8e2: 0xf1359cf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 523818400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5238184350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           528853400: Illegal instruction (hart 0) at PC 0x8000bb8e: 0xf15aac73
+           528855400: Illegal instruction (hart 0) at PC 0x8000bb8e: 0xf15aac73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 531878400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5318784350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           534555400: Illegal instruction (hart 0) at PC 0x8000bddc: 0xf126aaf3
+           534557400: Illegal instruction (hart 0) at PC 0x8000bddc: 0xf126aaf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 536150400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5361504350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 540910400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5409104350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           541085400: Illegal instruction (hart 0) at PC 0x8000be86: 0xf1165973
+           541087400: Illegal instruction (hart 0) at PC 0x8000be86: 0xf1165973
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 543400400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5434004350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           547007400: Illegal instruction (hart 0) at PC 0x8000bef6: 0xf1595273
+           547009400: Illegal instruction (hart 0) at PC 0x8000bef6: 0xf1595273
+           553159400: Illegal instruction (hart 0) at PC 0x8000c05c: 0x7b0066f3
+           553161400: Illegal instruction (hart 0) at PC 0x8000c05c: 0x7b0066f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 553372400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5533724350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           559257400: Illegal instruction (hart 0) at PC 0x8000c1d0: 0xf121a3f3
+           559259400: Illegal instruction (hart 0) at PC 0x8000c1d0: 0xf121a3f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 563368400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5633684350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           567399400: Illegal instruction (hart 0) at PC 0x8000c354: 0xf15f1f73
+           567401400: Illegal instruction (hart 0) at PC 0x8000c354: 0xf15f1f73
+           571925400: Illegal instruction (hart 0) at PC 0x8000c3ee: 0xf13096f3
+           571927400: Illegal instruction (hart 0) at PC 0x8000c3ee: 0xf13096f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 572408400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5724084350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 574390400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5743904350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 580744400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5807444350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 583196400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5831964350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           588493400: Illegal instruction (hart 0) at PC 0x8000c948: 0xf15cb2f3
+           588495400: Illegal instruction (hart 0) at PC 0x8000c948: 0xf15cb2f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 592556400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5925564350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           593149400: Illegal instruction (hart 0) at PC 0x8000c99c: 0xf1145473
+           593151400: Illegal instruction (hart 0) at PC 0x8000c99c: 0xf1145473
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 597608400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 5976084350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 603276400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6032764350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           608031400: Illegal instruction (hart 0) at PC 0x8000ccaa: 0xf1422973
+           608033400: Illegal instruction (hart 0) at PC 0x8000ccaa: 0xf1422973
+           612775400: Illegal instruction (hart 0) at PC 0x8000cee0: 0xf151bf73
+           612777400: Illegal instruction (hart 0) at PC 0x8000cee0: 0xf151bf73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 612850400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6128504350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           616927400: Illegal instruction (hart 0) at PC 0x8000d000: 0xf1415073
+           616929400: Illegal instruction (hart 0) at PC 0x8000d000: 0xf1415073
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 620286400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6202864350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           620335400: Illegal instruction (hart 0) at PC 0x8000d1be: 0xf11de7f3
+           620337400: Illegal instruction (hart 0) at PC 0x8000d1be: 0xf11de7f3
+           624999400: Illegal instruction (hart 0) at PC 0x8000d3d0: 0xf12a3c73
+           625001400: Illegal instruction (hart 0) at PC 0x8000d3d0: 0xf12a3c73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 625204400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6252044350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           628837400: Illegal instruction (hart 0) at PC 0x8000d57c: 0xf128be73
+           628839400: Illegal instruction (hart 0) at PC 0x8000d57c: 0xf128be73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 633914400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6339144350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           636939400: Illegal instruction (hart 0) at PC 0x8000d87e: 0xf1165973
+           636941400: Illegal instruction (hart 0) at PC 0x8000d87e: 0xf1165973
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 638234400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6382344350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           642521400: Illegal instruction (hart 0) at PC 0x8000db7e: 0xf1501773
+           642523400: Illegal instruction (hart 0) at PC 0x8000db7e: 0xf1501773
+           644827400: Illegal instruction (hart 0) at PC 0x8000dbe4: 0xf1573873
+           644829400: Illegal instruction (hart 0) at PC 0x8000dbe4: 0xf1573873
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 645890400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6458904350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 649196400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6491964350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 651264400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6512644350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           651571400: Illegal instruction (hart 0) at PC 0x8000dda6: 0xf1599ef3
+           651573400: Illegal instruction (hart 0) at PC 0x8000dda6: 0xf1599ef3
+           654071400: Illegal instruction (hart 0) at PC 0x8000de32: 0xf11a5bf3
+           654073400: Illegal instruction (hart 0) at PC 0x8000de32: 0xf11a5bf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 655018400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6550184350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 659176400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6591764350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 661194400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6611944350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 666902400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6669024350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           670337400: Illegal instruction (hart 0) at PC 0x8000ebfa: 0xf15e1af3
+           670339400: Illegal instruction (hart 0) at PC 0x8000ebfa: 0xf15e1af3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 670824400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6708244350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 673906400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6739064350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           674111400: Illegal instruction (hart 0) at PC 0x8000ec60: 0xf1513873
+           674113400: Illegal instruction (hart 0) at PC 0x8000ec60: 0xf1513873
+           678093400: Illegal instruction (hart 0) at PC 0x8000ee18: 0xf14ed1f3
+           678095400: Illegal instruction (hart 0) at PC 0x8000ee18: 0xf14ed1f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 680784400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6807844350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 682434400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6824344350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           684129400: Illegal instruction (hart 0) at PC 0x8000eed0: 0xf1435973
+           684131400: Illegal instruction (hart 0) at PC 0x8000eed0: 0xf1435973
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 688244400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6882444350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           689265400: Illegal instruction (hart 0) at PC 0x8000f09a: 0xf123a6f3
+           689267400: Illegal instruction (hart 0) at PC 0x8000f09a: 0xf123a6f3
+           691917400: Illegal instruction (hart 0) at PC 0x8000f116: 0xf123b8f3
+           691919400: Illegal instruction (hart 0) at PC 0x8000f116: 0xf123b8f3
+           695275400: Illegal instruction (hart 0) at PC 0x8000f240: 0x7b306df3
+           695277400: Illegal instruction (hart 0) at PC 0x8000f240: 0x7b306df3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 696226400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6962264350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 698118400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 6981184350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           701321400: Illegal instruction (hart 0) at PC 0x8000f438: 0xf13b90f3
+           701323400: Illegal instruction (hart 0) at PC 0x8000f438: 0xf13b90f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 702248400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7022484350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           704457400: Illegal instruction (hart 0) at PC 0x8000f5dc: 0xf1245e73
+           704459400: Illegal instruction (hart 0) at PC 0x8000f5dc: 0xf1245e73
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 704968400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7049684350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 708652400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7086524350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           709213400: Illegal instruction (hart 0) at PC 0x8000f88a: 0x7b107973
+           709215400: Illegal instruction (hart 0) at PC 0x8000f88a: 0x7b107973
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 710486400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7104864350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           711479400: Illegal instruction (hart 0) at PC 0x8000f8c4: 0xf15df473
+           711481400: Illegal instruction (hart 0) at PC 0x8000f8c4: 0xf15df473
+           715787400: Illegal instruction (hart 0) at PC 0x8000f97c: 0x7b0065f3
+           715789400: Illegal instruction (hart 0) at PC 0x8000f97c: 0x7b0065f3
+           718617400: Illegal instruction (hart 0) at PC 0x8000f9d8: 0x7b2069f3
+           718619400: Illegal instruction (hart 0) at PC 0x8000f9d8: 0x7b2069f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 720054400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7200544350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           721787400: Illegal instruction (hart 0) at PC 0x8000fa2e: 0xf13d9373
+           721789400: Illegal instruction (hart 0) at PC 0x8000fa2e: 0xf13d9373
+           724255400: Illegal instruction (hart 0) at PC 0x8000fa38: 0xf1211873
+           724257400: Illegal instruction (hart 0) at PC 0x8000fa38: 0xf1211873
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 728056400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7280564350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           733869400: Illegal instruction (hart 0) at PC 0x8000fdfa: 0xf12794f3
+           733871400: Illegal instruction (hart 0) at PC 0x8000fdfa: 0xf12794f3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 735742400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7357424350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           739259400: Illegal instruction (hart 0) at PC 0x80010100: 0xf1527773
+           739261400: Illegal instruction (hart 0) at PC 0x80010100: 0xf1527773
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 742976400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7429764350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           743173400: Illegal instruction (hart 0) at PC 0x80010114: 0xf1379373
+           743175400: Illegal instruction (hart 0) at PC 0x80010114: 0xf1379373
+           745235400: Illegal instruction (hart 0) at PC 0x800101c2: 0xf144abf3
+           745237400: Illegal instruction (hart 0) at PC 0x800101c2: 0xf144abf3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 745536400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7455364350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv(214) @ 747252400: reporter [core_ibex_tb_top.unnamed$$_0] Enabling assertions: core_ibex_tb_top.NoAlertsTriggered
+Starting assertion attempts at time 7472524350ps: level = 0 arg = NoAlertsTriggered (from inst core_ibex_tb_top (/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv:214))
+           749953400: Illegal instruction (hart 0) at PC 0x8001027c: 0xf1412ef3
+           749955400: Illegal instruction (hart 0) at PC 0x8001027c: 0xf1412ef3
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_base_test.sv(338) @ 753960400: uvm_test_top [uvm_test_top] Test done due to RISCV-DV handshake (payload=TEST_PASS)
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 759980400: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 760080400: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(346) @ 760080400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Co-simulation matched      32612 instructions
+
+--- RISC-V UVM TEST PASSED ---
+
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 760080400: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 760080400: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+Quit count :     0 of     1
+** Report counts by severity
+UVM_INFO :  142
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     2
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[core_ibex_tb_top.unnamed$$_0]   128
+[fetch_enable_seq_h]     1
+[uvm_test_top]     4
+[uvm_test_top.env.cosim_agent.scoreboard]     1
+[uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq]     1
+[uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq]     1
+[uvm_test_top.env.vseqr.memory_error_seq_h]     1
+
+$finish called from file "/opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time            760080435
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 7600804350 ps
+CPU Time:     22.700 seconds;       Data structure size:   1.7Mb
+Sat Sep 19 01:18:53 2026

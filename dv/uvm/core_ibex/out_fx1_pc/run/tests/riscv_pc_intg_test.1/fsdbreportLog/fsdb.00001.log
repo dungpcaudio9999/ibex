@@ -1,0 +1,34 @@
+#######################################################################################
+# fsdb.xxxxx.log : log primitive debug message of FSDB Reader
+# This is for R&D to analyze when there are issues happening when FSDB reading
+# The corresponding FSDB file is /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/waves.fsdb
+#######################################################################################
+[BASIC]Reader version : Chronologic Simulation VCS Release X-2025.06_Full64
+[BASIC]simulator version : Chronologic Simulation VCS Release X-2025.06_Full64
+[BASIC]dumper version : FSDB Dumper for VCS, Release Verdi_X-2025.06, Linux x86_64/64bit, 05/31/2025
+Async open disabled.
+[THREAD]The MTR thread count is 9
+[THREAD]Secondary thread count: 8
+[PERF]VC decompress count : 2
+[PERF]VCChain decompress count : 1
+[PERF]VC decompress count : 1
+[PERF]VCChain decompress count : 1
+[PERF]VC decompress count : 1
+[PERF]VCChain decompress count : 1
+[PERF]VC decompress count : 0
+[PERF]VCChain decompress count : 1
+[PERF]VC decompress count : 2
+[PERF]VCChain decompress count : 1
+[PERF]VC decompress count : 1
+[PERF]VCChain decompress count : 1
+[READSCOPE]ReadScopeTree calling time is 1
+[READSCOPE]ReadScope_PartialLoad calling time is 0
+[READSCOPE]Scope read by partial load count is 0
+[READSCOPE]Scope read count is 768
+[READSCOPE]Decompressed blk is 2
+[MAXCHAIN]Decompressed cnt 2
+[PERF]VC decompress count : 3
+[PERF]VCChain decompress count : 1
+[FSDBGate Info] start
+[FSDBGate Info] Total fhdb_compute_count = 481
+[FSDBGate Info] end

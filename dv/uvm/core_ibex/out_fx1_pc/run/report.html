@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head><title>Ibex Regression Results</title></head>
+  <body>
+    <h1>Ibex Regression Results</h1>
+    <h2>Date/Time run: Saturday 19 September 2026 05:07 UTC</h2>
+    <h2>Git Commit: <a href='https://www.github.com/lowRISC/ibex/tree/cdf80233237f33467784cf5737df9eb00f651425'>cdf8023</a></h2>
+    <table border=1>
+        <tr><th>Test Name</th><th>Passing</th><th>Total</th><th>Pass Rate</th></tr>
+          <tr>
+            <td>riscv_pc_intg_test</td>
+            <td>0</td>
+            <td>1</td>
+            <td style='background-color: rgb(255,0,0);'>0.0%</td>
+          </tr>
+      <tr>
+        <td><b>Total</b></td>
+        <td>0</td>
+        <td>1</td>
+        <td style='background-color: rgb(255,0,0);'>0.0%</td>
+      </tr>
+    </table>
+
+
+    <h2>Test Failure Details</h2>
+        <pre>
+riscv_pc_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    81: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+    82: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+    83: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+    84: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/trace_core_00000000.log
+    85: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(59) @ 1957400: uvm_test_top [uvm_test_top] Forcing core_ibex_tb_top.dut.u_ibex_top.u_ibex_core.if_stage_i.pc_if_o to value 'h82000248
+[E] 86: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(65) @ 1957400: reporter [uvm_test_top] Check failed (!$isunknown(exp_alert))
+    87: 
+    88: --- RISC-V UVM TEST FAILED ---
+    89: 
+    90: UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1957400: reporter [UVM/REPORT/CATCHER]
+--------------------------------------------
+
+</pre>
+  </body>
+</html>

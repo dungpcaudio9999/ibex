@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="1" tests="1" time="0.0">
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_pc_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pc_intg_test.1">
+			<failure type="failure">
+riscv_pc_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    81: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+    82: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+    83: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the &quot;InfiniteRuns&quot; schedule for stimulus generation
+    84: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/trace_core_00000000.log
+    85: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(59) @ 1957400: uvm_test_top [uvm_test_top] Forcing core_ibex_tb_top.dut.u_ibex_top.u_ibex_core.if_stage_i.pc_if_o to value 'h82000248
+[E] 86: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(65) @ 1957400: reporter [uvm_test_top] Check failed (!$isunknown(exp_alert))
+    87: 
+    88: --- RISC-V UVM TEST FAILED ---
+    89: 
+    90: UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1957400: reporter [UVM/REPORT/CATCHER]
+--------------------------------------------
+
+</failure>
+			<system-out>
+riscv_pc_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    81: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+    82: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+    83: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the &quot;InfiniteRuns&quot; schedule for stimulus generation
+    84: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/trace_core_00000000.log
+    85: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(59) @ 1957400: uvm_test_top [uvm_test_top] Forcing core_ibex_tb_top.dut.u_ibex_top.u_ibex_core.if_stage_i.pc_if_o to value 'h82000248
+[E] 86: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(65) @ 1957400: reporter [uvm_test_top] Check failed (!$isunknown(exp_alert))
+    87: 
+    88: --- RISC-V UVM TEST FAILED ---
+    89: 
+    90: UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1957400: reporter [UVM/REPORT/CATCHER]
+--------------------------------------------
+
+</system-out>
+		</testcase>
+	</testsuite>
+</testsuites>

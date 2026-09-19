@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+  <head><title>Ibex Regression Results</title></head>
+  <body>
+    <h1>Ibex Regression Results</h1>
+    <h2>Date/Time run: Saturday 19 September 2026 05:04 UTC</h2>
+    <h2>Git Commit: <a href='https://www.github.com/lowRISC/ibex/tree/cdf80233237f33467784cf5737df9eb00f651425'>cdf8023</a></h2>
+    <table border=1>
+        <tr><th>Test Name</th><th>Passing</th><th>Total</th><th>Pass Rate</th></tr>
+          <tr>
+            <td>riscv_arithmetic_basic_test</td>
+            <td>1</td>
+            <td>1</td>
+            <td style='background-color: rgb(0,255,0);'>100.0%</td>
+          </tr>
+          <tr>
+            <td>riscv_rand_instr_test</td>
+            <td>1</td>
+            <td>1</td>
+            <td style='background-color: rgb(0,255,0);'>100.0%</td>
+          </tr>
+          <tr>
+            <td>riscv_jump_stress_test</td>
+            <td>1</td>
+            <td>1</td>
+            <td style='background-color: rgb(0,255,0);'>100.0%</td>
+          </tr>
+          <tr>
+            <td>riscv_mmu_stress_test</td>
+            <td>1</td>
+            <td>1</td>
+            <td style='background-color: rgb(0,255,0);'>100.0%</td>
+          </tr>
+          <tr>
+            <td>riscv_debug_basic_test</td>
+            <td>1</td>
+            <td>1</td>
+            <td style='background-color: rgb(0,255,0);'>100.0%</td>
+          </tr>
+          <tr>
+            <td>riscv_csr_test</td>
+            <td>1</td>
+            <td>1</td>
+            <td style='background-color: rgb(0,255,0);'>100.0%</td>
+          </tr>
+          <tr>
+            <td>riscv_illegal_instr_test</td>
+            <td>0</td>
+            <td>1</td>
+            <td style='background-color: rgb(255,0,0);'>0.0%</td>
+          </tr>
+          <tr>
+            <td>riscv_debug_triggers_test</td>
+            <td>0</td>
+            <td>1</td>
+            <td style='background-color: rgb(255,0,0);'>0.0%</td>
+          </tr>
+      <tr>
+        <td><b>Total</b></td>
+        <td>6</td>
+        <td>8</td>
+        <td style='background-color: rgb(212,255,0);'>75.0%</td>
+      </tr>
+    </table>
+
+
+    <h2>Test Failure Details</h2>
+        <pre>
+riscv_illegal_instr_test.1
+--------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    336: 168541400: Illegal instruction (hart 0) at PC 0x80007ebc: 0x6e922c73
+    337: 172069400: Illegal instruction (hart 0) at PC 0x80007fac: 0x0000b538
+    338: 172071400: Illegal instruction (hart 0) at PC 0x80007fac: 0x0000b538
+    339: 174379400: Illegal instruction (hart 0) at PC 0x80007ffc: 0x00000000
+    340: 174381400: Illegal instruction (hart 0) at PC 0x80007ffc: 0x00000000
+[E] 341: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 174382400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 80007ffa
+    342: 
+    343: 
+    344: --- RISC-V UVM TEST FAILED ---
+    345: 
+--------------------------------------------
+
+</pre>
+        <pre>
+riscv_debug_triggers_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    118: 231101400: Illegal instruction (hart 0) at PC 0x800053b0: 0xe8699bf3
+    119: 234827400: Illegal instruction (hart 0) at PC 0x800054e4: 0x92e7b4e7
+    120: 234829400: Illegal instruction (hart 0) at PC 0x800054e4: 0x92e7b4e7
+    121: 237489400: Illegal instruction (hart 0) at PC 0x800055e2: 0x00000000
+    122: 237491400: Illegal instruction (hart 0) at PC 0x800055e2: 0x00000000
+[E] 123: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 237492400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 800055e0
+    124: 
+    125: 
+    126: --- RISC-V UVM TEST FAILED ---
+    127: 
+--------------------------------------------
+
+</pre>
+  </body>
+</html>

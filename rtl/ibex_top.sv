@@ -37,6 +37,9 @@ module ibex_top import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
   parameter bit                     DbgTriggerEn                 = 1'b0,
   parameter int unsigned            DbgHwBreakNum                = 1,
   parameter bit                     SecureIbex                   = 1'b0,
+  // Default to SecureIbex; can be overridden separately to evaluate other configurations.
+  parameter bit                     DummyInstructions            = SecureIbex,
+  parameter bit                     ResetAll                     = SecureIbex,
   parameter int unsigned            LockstepOffset               = 1,
   parameter bit                     MemECC                       = SecureIbex,
   parameter int unsigned            MemDataWidth                 = MemECC ? 32 + 7 : 32,
@@ -210,8 +213,6 @@ module ibex_top import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
 );
 
   localparam bit          Lockstep              = SecureIbex;
-  localparam bit          ResetAll              = Lockstep;
-  localparam bit          DummyInstructions     = SecureIbex;
   localparam bit          RegFileECC            = 1'b0;
   localparam bit          RegFileLockstepECC    = Lockstep;
   localparam int unsigned RegFileDataWidth      = 32;

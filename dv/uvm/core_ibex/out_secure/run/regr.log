@@ -1,0 +1,187 @@
+100.00% PASS 16 PASSED, 0 FAILED
+riscv_mem_error_test.1:               PASS
+riscv_mem_intg_error_test.1:          PASS
+riscv_pc_intg_test.1:                 PASS
+riscv_rf_intg_test.1:                 PASS
+riscv_rf_addr_intg_test.1:            PASS
+riscv_ram_intg_test.1:                PASS
+riscv_icache_intg_test.1:             PASS
+riscv_pmp_disable_all_regions_test.1: PASS
+riscv_pmp_out_of_bounds_test.1:       PASS
+riscv_pmp_full_random_test.1:         PASS
+riscv_pmp_region_exec_test.1:         PASS
+riscv_epmp_mml_test.1:                PASS
+riscv_epmp_mml_execute_only_test.1:   PASS
+riscv_epmp_mml_read_only_test.1:      PASS
+riscv_epmp_mmwp_test.1:               PASS
+riscv_epmp_rlb_test.1:                PASS
+
+
+################################################################################
+# Details of failing tests
+################################################################################
+No failing tests. Nice job!
+
+################################################################################
+# Details of passing tests
+################################################################################
+
+riscv_mem_error_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_mem_intg_error_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pc_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_rf_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_rf_addr_intg_test.1
+-------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_ram_intg_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_icache_intg_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_disable_all_regions_test.1
+------------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_out_of_bounds_test.1
+------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_full_random_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_region_exec_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_mml_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_mml_execute_only_test.1
+----------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_mml_read_only_test.1
+-------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_mmwp_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_rlb_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+

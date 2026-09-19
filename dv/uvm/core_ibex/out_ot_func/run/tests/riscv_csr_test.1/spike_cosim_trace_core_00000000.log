@@ -1,0 +1,1764 @@
+core   0: 0x80000080 (0xa5a5a4b7) lui     s1, 0xa5a5a
+core   0: 3 0x80000080 (0xa5a5a4b7) x9  0xa5a5a000
+core   0: 0x80000084 (0x5a548493) addi    s1, s1, 1445
+core   0: 3 0x80000084 (0x5a548493) x9  0xa5a5a5a5
+core   0: 0x80000088 (0x30049273) csrrw   tp, mstatus, s1
+core   0: 3 0x80000088 (0x30049273) x4  0x00000000 c768_mstatus 0x00200080
+core   0: 0x8000008c (0x08000493) li      s1, 128
+core   0: 3 0x8000008c (0x08000493) x9  0x00000080
+core   0: 0x80000090 (0x2c4494e3) bne     s1, tp, pc + 2760
+core   0: 3 0x80000090 (0x2c4494e3)
+core   0: 0x80000b58 (0x00100093) li      ra, 1
+core   0: 3 0x80000b58 (0x00100093) x1  0x00000001
+core   0: 0x80000b5c (0x00809093) slli    ra, ra, 8
+core   0: 3 0x80000b5c (0x00809093) x1  0x00000100
+core   0: 0x80000b60 (0x00108093) addi    ra, ra, 1
+core   0: 3 0x80000b60 (0x00108093) x1  0x00000101
+core   0: 0x80000b64 (0x90000137) lui     sp, 0x90000
+core   0: 3 0x80000b64 (0x90000137) x2  0x90000000
+core   0: 0x80000b68 (0xff810113) addi    sp, sp, -8
+core   0: 3 0x80000b68 (0xff810113) x2  0x8ffffff8
+core   0: 0x80000b6c (0x00112023) sw      ra, 0(sp)
+core   0: exception trap_store_access_fault, epc 0x80000b6c
+core   0:           tval 0x8ffffff8
+core   0: 0x80000000 (0x00000000) c.unimp
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000
+core   0: exception trap_illegal_instruction, epc 0x80000000
+core   0:           tval 0x00000000

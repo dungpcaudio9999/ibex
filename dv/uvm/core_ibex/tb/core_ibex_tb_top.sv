@@ -56,6 +56,10 @@ module core_ibex_tb_top;
     `define IBEX_CFG_REG_FILE ibex_pkg::RegFileFF
   `endif
 
+  `ifndef IBEX_CFG_RV32ZC
+    `define IBEX_CFG_RV32ZC ibex_pkg::RV32ZcaZcbZcmp
+  `endif
+
   // Ibex Parameters
   parameter ibex_pkg::base_isa_e BaseIsa  = `IBEX_CFG_BASE_ISA;
   parameter bit          PMPEnable        = 1'b0;
@@ -74,6 +78,12 @@ module core_ibex_tb_top;
   parameter bit ICacheTweakInfection      = 1'b0;
   parameter bit BranchPredictor           = 1'b0;
   parameter bit SecureIbex                = 1'b0;
+  // Optional config fields (ibex_config.py): default to the ibex_top defaults.
+  parameter ibex_pkg::rv32zc_e RV32ZC     = `IBEX_CFG_RV32ZC;
+  parameter bit MemECC                    = SecureIbex;
+  parameter bit DummyInstructions         = SecureIbex;
+  parameter bit ResetAll                  = SecureIbex;
+  parameter int unsigned DbgHwBreakNum    = 1;
   parameter int unsigned LockstepOffset   = 1;
   parameter bit ICacheScramble            = 1'b0;
   parameter bit DbgTriggerEn              = 1'b0;
@@ -109,6 +119,7 @@ module core_ibex_tb_top;
     .RV32E                (RV32E               ),
     .RV32M                (RV32M               ),
     .RV32B                (RV32B               ),
+    .RV32ZC               (RV32ZC              ),
     .RegFile              (RegFile             ),
     .BranchTargetALU      (BranchTargetALU     ),
     .WritebackStage       (WritebackStage      ),
@@ -116,6 +127,10 @@ module core_ibex_tb_top;
     .ICacheECC            (ICacheECC           ),
     .ICacheTweakInfection (ICacheTweakInfection),
     .SecureIbex           (SecureIbex          ),
+    .MemECC               (MemECC              ),
+    .DummyInstructions    (DummyInstructions   ),
+    .ResetAll             (ResetAll            ),
+    .DbgHwBreakNum        (DbgHwBreakNum       ),
     .LockstepOffset       (LockstepOffset      ),
     .ICacheScramble       (ICacheScramble      ),
     .BranchPredictor      (BranchPredictor     ),

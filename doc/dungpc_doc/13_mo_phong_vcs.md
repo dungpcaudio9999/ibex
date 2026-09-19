@@ -139,23 +139,129 @@ make --keep-going IBEX_CONFIG=opentitan SIMULATOR=vcs ISS=spike TEST=all
 
 ### 3.4 Dump waveform
 
+Option đã có sẵn, không cần thêm gì: **`WAVES=1`**.
+
 ```bash
 make IBEX_CONFIG=opentitan SIMULATOR=vcs ISS=spike \
      TEST=riscv_arithmetic_basic_test SEED=1 WAVES=1
 ```
 
-Cơ chế (`dv/uvm/core_ibex/vcs.tcl`):
-* Có `VERDI_HOME` (máy này có) → dump **FSDB**: `out/run/tests/<test>.<seed>/waves.fsdb`,
-  gồm `fsdbDumpvars 0 core_ibex_tb_top +all` và `fsdbDumpSVA 0 core_ibex_tb_top.dut`.
-* Không có Verdi → dump **VPD**: `waves.vpd`.
+#### Cơ chế
 
-Mở bằng Verdi:
+`WAVES=1` tác động ở **hai chỗ** (`yaml/rtl_simulation.yaml`, mục `- tool: vcs`):
+
+| Giai đoạn | `wave_opts` được thêm |
+|---|---|
+| compile | `-debug_access+all -ucli` |
+| sim | `-ucli -do <core_ibex>/vcs.tcl` |
+
+`vcs.tcl` quyết định định dạng và phạm vi dump:
+
+```tcl
+set sim_dir $::env(SIM_DIR)            # run_rtl.py truyền SIM_DIR=<test_dir>
+
+if { [info exists ::env(VERDI_HOME)] } {
+    fsdbDumpfile "${sim_dir}/waves.fsdb"
+    fsdbDumpvars 0 core_ibex_tb_top +all     # depth 0 = TẤT CẢ tầng, TOÀN BỘ TB
+    fsdbDumpSVA  0 core_ibex_tb_top.dut      # dump cả assertion
+} else {
+    dump -file "${sim_dir}/waves.vpd"
+    dump -add { core_ibex_tb_top } -depth 0 -aggregates -scope "."
+}
+run
+quit
+```
+
+* Máy này **có** `VERDI_HOME` → ra **FSDB**: `out/run/tests/<test>.<seed>/waves.fsdb`
+* Không có Verdi → ra **VPD**: `waves.vpd`
+
+Mở sóng:
 ```bash
 verdi -ssf out/run/tests/riscv_arithmetic_basic_test.1/waves.fsdb &
 ```
 
-> `WAVES=1` thêm `-debug_access+all` lúc compile nên **bắt buộc build lại** TB
-> (stamp phụ thuộc `SIMULATOR COV WAVES` — `scripts/ibex_sim.mk:8`).
+#### ⚠️ `WAVES=1` buộc build lại testbench
+
+Stamp build phụ thuộc `SIMULATOR COV WAVES` (`scripts/ibex_sim.mk:9`):
+```make
+rtl-tb-compile-var-deps := SIMULATOR COV WAVES # Rebuild if these change
+```
+Đổi `WAVES` 0↔1 → compile lại toàn bộ (~10–15 phút).
+
+#### ✅ Cách lấy sóng KHÔNG cần build lại (đã kiểm chứng)
+
+Lệnh compile **mặc định** đã có `-debug_access+pp -lca -kdb -debug_access+f`, đủ để dump.
+Phần `-debug_access+all` mà `WAVES=1` thêm vào chỉ cần cho force/release. Việc dump thật sự
+do **runtime** `-ucli -do vcs.tcl` điều khiển — nên chỉ cần chạy `simv` tay:
+
+```bash
+cd /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex
+T=$PWD/out/run/tests/riscv_arithmetic_basic_test.1
+
+env SIM_DIR=$T ./out/build/tb/vcs_simv \
+    +vcs+lic+wait +ntb_random_seed=1 \
+    +UVM_TESTNAME=core_ibex_base_test +UVM_VERBOSITY=UVM_LOW \
+    +bin=$T/test.bin \
+    +ibex_tracer_file_base=$T/trace_core \
+    +cosim_log_file=$T/spike_cosim_trace_core_00000000.log \
+    +signature_addr=8ffffffc +test_timeout_s=1800 \
+    -l $T/rtl_sim.log \
+    -ucli -do $PWD/vcs.tcl
+```
+
+Kết quả thực tế trên máy này: TB build với `WAVES=0`, chạy lệnh trên vẫn ra
+`waves.fsdb` **22 MB**, `UVM_ERROR: 0`, CPU time 8.8 s — **không phải build lại**.
+
+> `simv` chạy với `-ucli` thoát với **exit code 2** dù test pass. Đây là hành vi bình
+> thường của `quit` trong UCLI; luồng chính thống cũng bỏ qua exit code
+> (`run_rtl.py`: *"we don't capture the success or failure of the subprocess"*),
+> pass/fail được xác định bằng `check_logs.py` phân tích log.
+
+#### Tuỳ biến nội dung dump
+
+Sửa `dv/uvm/core_ibex/vcs.tcl` — **không cần build lại** vì file này chỉ đọc lúc chạy.
+
+Hierarchy: DUT là `core_ibex_tb_top.dut` (instance của `ibex_top_tracing`,
+`tb/core_ibex_tb_top.sv:128`).
+
+| Mục tiêu | Sửa thành |
+|---|---|
+| Chỉ dump DUT (bỏ UVM TB) → nhỏ hơn nhiều | `fsdbDumpvars 0 core_ibex_tb_top.dut +all` |
+| Chỉ dump lõi chính, bỏ lockstep | `fsdbDumpvars 0 core_ibex_tb_top.dut.u_ibex_top.u_ibex_core +all` |
+| Giới hạn độ sâu (3 tầng) | `fsdbDumpvars 3 core_ibex_tb_top.dut` |
+| Giới hạn dung lượng FSDB (MB) | `fsdbDumpfile "${sim_dir}/waves.fsdb" 500` |
+| Bỏ dump assertion (nhanh hơn) | xoá dòng `fsdbDumpSVA ...` |
+| Chỉ dump một cửa sổ thời gian | `run 1ms` → `fsdbDumpon` → `run 500us` → `fsdbDumpoff` → `run` |
+
+Ví dụ phiên bản gọn, chỉ dump DUT và giới hạn 500 MB:
+
+```tcl
+fsdbDumpfile "${sim_dir}/waves.fsdb" 500
+fsdbDumpvars 0 core_ibex_tb_top.dut +all
+run
+quit
+```
+
+#### Thêm option VCS mới cho waves
+
+Nếu muốn thêm cờ compile/sim (ví dụ `-kdb +fsdb+sva_success`), sửa khối
+`wave_opts` trong `yaml/rtl_simulation.yaml`:
+
+```yaml
+- tool: vcs
+  compile:
+    wave_opts: >-
+      -debug_access+all
+      -ucli
+      <thêm cờ compile ở đây>
+  sim:
+    wave_opts: >
+      -ucli
+      -do <core_ibex>/vcs.tcl
+      <thêm cờ runtime ở đây>
+```
+
+Sửa `compile.wave_opts` thì **phải** build lại; sửa `sim.wave_opts` thì không.
 
 ### 3.5 Coverage
 

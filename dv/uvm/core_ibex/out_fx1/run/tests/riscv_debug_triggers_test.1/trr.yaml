@@ -1,0 +1,65 @@
+passed:                   
+failure_mode:             LOG_ERROR(3)
+failure_message:          |-
+  
+  [FAILED]: error seen in 'rtl_sim_stdstreams.log'
+  ---------------*LOG-EXTRACT*----------------
+      34: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/trace_core_00000000.log
+      35: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_seq_lib.sv(46) @ 3314400: reporter@@debug_seq_single_h [debug_seq_single_h] Starting sequence...
+      36: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_seq_lib.sv(58) @ 3464400: reporter@@debug_seq_single_h [debug_seq_single_h] Exiting sequence
+      37: 12329400: Illegal instruction (hart 0) at PC 0x80003410: 0x00000000
+      38: 12331400: Illegal instruction (hart 0) at PC 0x80003410: 0x00000000
+  [E] 39: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 12332400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 8000340e
+      40: 
+      41: 
+      42: --- RISC-V UVM TEST FAILED ---
+      43: 
+  --------------------------------------------
+  
+timeout_s:                600
+testtype:                 TestType.RISCVDV
+testdotseed:              riscv_debug_triggers_test.1
+testname:                 riscv_debug_triggers_test
+seed:                     1
+binary:                   test.bin
+rtl_simulator:            vcs
+iss_cosim:                spike
+is_discrete_debug_module: 
+binary_main:              
+binary_dm:                
+vmem_main:                
+vmem_dm:                  
+ddm_sim_opts:             
+gen_test:                 riscv_instr_base_test
+gen_opts:                 +require_signature_addr=1 +gen_debug_section=1 +no_ebreak=1 +no_branch_jump=1 +instr_cnt=10000 +no_csr_instr=1 +illegal_instr_ratio=20 +no_fence=1 +num_of_sub_program=0 +randomize_csr=0 +directed_instr_0=ibex_breakpoint_stream,20 +uvm_set_type_override=ibex_asm_program_gen,ibex_hardware_triggers_asm_program_gen +uvm_set_type_override=riscv_debug_rom_gen,ibex_hardware_triggers_debug_rom_gen +uvm_set_type_override=riscv_illegal_instr,ibex_hardware_triggers_illegal_instr
+rtl_test:                 core_ibex_single_debug_pulse_test
+sim_opts:                 +require_signature_addr=1 +enable_debug_seq=1 +enable_bad_intg_on_uninit_access=0
+directed_data:            
+dir_test:                 .
+assembly:                 test.S
+objectfile:               test.o
+riscvdv_run_gen_log:      
+riscvdv_run_gen_stdout:   /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/build/instr_gen/riscvdv_cmds.log
+riscvdv_run_log:          
+riscvdv_run_stdout:       /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/build/instr_gen/riscvdv_run.log
+compile_asm_gen_log:      compile_gen.riscv-dv.log
+compile_asm_log:          compile.riscvdv.log
+rtl_log:                  rtl_sim_stdstreams.log
+rtl_stdout:               rtl_sim_stdstreams.log
+rtl_trace:                trace_core_00000000.log
+iss_cosim_log:            
+iss_cosim_trace:          spike_cosim_trace_core_00000000.log
+dir_fcov:                 
+riscvdv_run_gen_cmds:     |-
+  [['python3', '/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/run.py', '--testlist', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml', '--gcc_opts=-mno-strict-align', '--custom_target', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension', '--csr_yaml', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/csr_description.yaml', '--mabi=ilp32', '--so', '--steps=gen', '--output', '/tmp/tmpxfw_p4ep/@@PLACEHOLDER@@', '--simulator', 'vcs', '--isa', 'rv32imcb', '--test', 'riscv_debug_triggers_test', '--start_seed', '1', '--iterations', '1', '--end_signature_addr', '8ffffffc', '--debug', '/tmp/tmpxfw_p4ep/cmds.list', '--sim_opts', '+uvm_set_inst_override=riscv_asm_program_gen,ibex_asm_program_gen,uvm_test_top.asm_gen +require_signature_addr=1 +signature_addr=8ffffffc +pmp_num_regions=16 +pmp_granularity=0 +tvec_alignment=8']]
+riscvdv_run_cmds:         |-
+  [['/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/build/instr_gen/vcs_simv', '+vcs+lic+wait', '+uvm_set_inst_override=riscv_asm_program_gen,ibex_asm_program_gen,uvm_test_top.asm_gen', '+require_signature_addr=1', '+signature_addr=8ffffffc', '+pmp_num_regions=16', '+pmp_granularity=0', '+tvec_alignment=8', '+ntb_random_seed=1', '+UVM_TESTNAME=riscv_instr_base_test', '+num_of_tests=1', '+start_idx=0', '+asm_file_name=/tmp/tmpxfw_p4ep/test', '-l', '/tmp/tmpxfw_p4ep/gen.log', '+require_signature_addr=1', '+gen_debug_section=1', '+no_ebreak=1', '+no_branch_jump=1', '+instr_cnt=10000', '+no_csr_instr=1', '+illegal_instr_ratio=20', '+no_fence=1', '+num_of_sub_program=0', '+randomize_csr=0', '+directed_instr_0=ibex_breakpoint_stream,20', '+uvm_set_type_override=ibex_asm_program_gen,ibex_hardware_triggers_asm_program_gen', '+uvm_set_type_override=riscv_debug_rom_gen,ibex_hardware_triggers_debug_rom_gen', '+uvm_set_type_override=riscv_illegal_instr,ibex_hardware_triggers_illegal_instr']]
+compile_asm_gen_cmds:     |-
+  [['python3', '/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/run.py', '--testlist', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml', '--gcc_opts=-mno-strict-align', '--custom_target', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension', '--csr_yaml', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/csr_description.yaml', '--mabi=ilp32', '--verbose', '--output', '/tmp/tmp27b3fh7u/@@PLACEHOLDER@@', '--steps=gcc_compile', '--test', 'riscv_debug_triggers_test', '--start_seed', '1', '--iterations', '1', '--isa', 'rv32imcb', '--debug', '/tmp/tmp27b3fh7u/orig-cmds.list']]
+compile_asm_cmds:         |-
+  [['/home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-gcc', '-static', '-mcmodel=medany', '-fvisibility=hidden', '-nostdlib', '-nostartfiles', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/test.S', '-I/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/user_extension', '-T/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/scripts/link.ld', '-mno-strict-align', '-o', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/test.o', '-march=rv32imcb', '-mabi=ilp32'], ['/home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-objcopy', '-O', 'binary', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/test.o', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/test.bin']]
+rtl_cmds:                 |-
+  [['env', 'SIM_DIR=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/build/tb/vcs_simv', '+vcs+lic+wait', '+ntb_random_seed=1', '+UVM_TESTNAME=core_ibex_single_debug_pulse_test', '+UVM_VERBOSITY=UVM_LOW', '+bin=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/test.bin', '+ibex_tracer_file_base=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/trace_core', '+cosim_log_file=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/spike_cosim_trace_core_00000000.log', '-l', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/rtl_sim.log', '+signature_addr=8ffffffc', '+test_timeout_s=600', '+require_signature_addr=1', '+enable_debug_seq=1', '+enable_bad_intg_on_uninit_access=0']]
+metadata_pickle_file:     /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/metadata/metadata.pickle
+pickle_file:              /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/metadata/riscv_debug_triggers_test.1.pickle
+yaml_file:                trr.yaml

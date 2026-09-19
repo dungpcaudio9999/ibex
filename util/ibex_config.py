@@ -42,14 +42,24 @@ class Config:
         ('MHPMCounterWidth', int)
     ]
 
+    # Fields a configuration may leave out. They are only emitted when present,
+    # so existing configurations and the tops that consume them are unaffected.
+    optional_fields = [
+        ('MemECC', bool),
+        ('DummyInstructions', bool),
+        ('ResetAll', bool),
+        ('DbgHwBreakNum', int)
+    ]
+
     def __init__(self, yml):
         if not isinstance(yml, dict):
             raise ValueError('Configuration object is not a dict')
 
         yaml_keys = set(yml.keys())
         known_keys = {fld for (fld, typ) in Config.known_fields}
+        optional_keys = {fld for (fld, typ) in Config.optional_fields}
 
-        extra_keys = yaml_keys - known_keys
+        extra_keys = yaml_keys - known_keys - optional_keys
         if extra_keys:
             raise ValueError(f'Configuration object has '
                              f'unknown keys: {extra_keys}')
@@ -80,6 +90,11 @@ class Config:
         self.pmp_num_regions = Config.read_int('PMPNumRegions', yml)
         self.mhpm_counter_num = Config.read_int('MHPMCounterNum', yml)
         self.mhpm_counter_width = Config.read_int('MHPMCounterWidth', yml)
+
+        for fld, typ in Config.optional_fields:
+            if fld in yml:
+                reader = Config.read_bool if typ is bool else Config.read_int
+                reader(fld, yml)
 
     @staticmethod
     def read_bool(fld, yml):
@@ -131,7 +146,9 @@ class FusesocOpts:
 
     def output(self, config, args):
         fusesoc_cmd = []
-        for fld, typ in Config.known_fields:
+        fields = Config.known_fields + [(fld, typ) for (fld, typ) in Config.optional_fields
+                                        if fld in config.params]
+        for fld, typ in fields:
             val = config.params[fld]
             fusesoc_cmd.append(shlex.quote(f'--{fld}={val}'))
 
@@ -192,7 +209,9 @@ class SimOpts:
 
         sim_opts = []
 
-        for fld, typ in Config.known_fields:
+        fields = Config.known_fields + [(fld, typ) for (fld, typ) in Config.optional_fields
+                                        if fld in config.params]
+        for fld, typ in fields:
             val = config.params[fld]
 
             if typ is str:

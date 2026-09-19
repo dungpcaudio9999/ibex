@@ -1,0 +1,559 @@
+#######################################################################################
+# log primitive debug message of FSDB dumping                                         #
+# This is for R&D to analyze when there are issues happening when FSDB dump           #
+#######################################################################################
+ANF: vcsd_get_serial_mode_status('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_get_serial_mode_status')
+ANF: vcsd_enable_sva_success_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_enable_sva_success_callback')
+ANF: vcsd_disable_sva_success_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_disable_sva_success_callback')
+ANF: vcsd_generate_forced_signal_list('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_generate_forced_signal_list')
+ANF: vcsd_enable_forced_signal_track('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_enable_forced_signal_track')
+ANF: vcsd_get_power_scope_name('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_get_power_scope_name')
+ANF: vcsd_dump_var_vpdg('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_dump_var_vpdg')
+ANF: vcsd_begin_no_value_var_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_begin_no_value_var_info')
+ANF: vcsd_end_no_value_var_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_end_no_value_var_info')
+ANF: vcsd_remove_xprop_merge_mode_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vcsd_remove_xprop_merge_mode_callback')
+ANF: vhpi_get_cb_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhpi_get_cb_info')
+ANF: vhpi_free_handle('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhpi_free_handle')
+ANF: vhpi_fetch_vcsd_handle('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhpi_fetch_vcsd_handle')
+ANF: vhpi_fetch_vpi_handle('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhpi_fetch_vpi_handle')
+ANF: vhpi_has_verilog_parent('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhpi_has_verilog_parent')
+ANF: vhpi_is_verilog_scope('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhpi_is_verilog_scope')
+ANF: scsd_xprop_is_enabled('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_xprop_is_enabled')
+ANF: scsd_xprop_sig_is_promoted('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_xprop_sig_is_promoted')
+ANF: scsd_xprop_int_xvalue('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_xprop_int_xvalue')
+ANF: scsd_xprop_bool_xvalue('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_xprop_bool_xvalue')
+ANF: scsd_xprop_enum_xvalue('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_xprop_enum_xvalue')
+ANF: scsd_xprop_register_merge_mode_cb('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_xprop_register_merge_mode_cb')
+ANF: scsd_xprop_delete_merge_mode_cb('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_xprop_delete_merge_mode_cb')
+ANF: scsd_xprop_get_merge_mode('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_xprop_get_merge_mode')
+ANF: scsd_thread_get_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_thread_get_info')
+ANF: scsd_thread_vc_init('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_thread_vc_init')
+ANF: scsd_master_set_delta_sync_cbk('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_master_set_delta_sync_cbk')
+ANF: scsd_fgp_get_fsdb_cores('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_fgp_get_fsdb_cores')
+ANF: scsd_fgp_get_is_cpu_affinity_disabled('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: scsd_fgp_get_is_cpu_affinity_disabled')
+ANF: vdi_dbg_set_client_control('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vdi_dbg_set_client_control')
+ANF: vhdi_dt_get_type('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_dt_get_type')
+ANF: vhdi_dt_get_key('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_dt_get_key')
+ANF: vhdi_dt_get_vhdl_enum_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_dt_get_vhdl_enum_info')
+ANF: vhdi_dt_get_vhdl_physical_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_dt_get_vhdl_physical_info')
+ANF: vhdi_dt_get_vhdl_array_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_dt_get_vhdl_array_info')
+ANF: vhdi_dt_get_vhdl_record_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_dt_get_vhdl_record_info')
+ANF: vhdi_dt_get_vhdl_integer_range_info('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_dt_get_vhdl_integer_range_info')
+ANF: vhdi_def_traverse_module('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_def_traverse_module')
+ANF: vhdi_def_traverse_scope('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_def_traverse_scope')
+ANF: vhdi_def_traverse_variable('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_def_traverse_variable')
+ANF: vhdi_def_get_module_id_by_vhpi('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_def_get_module_id_by_vhpi')
+ANF: vhdi_def_get_handle_by_module_id('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_def_get_handle_by_module_id')
+ANF: vhdi_def_get_variable_info_by_vhpi('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_def_get_variable_info_by_vhpi')
+ANF: vhdi_def_free('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_def_free')
+ANF: vhdi_ist_traverse_scope('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_traverse_scope')
+ANF: vhdi_ist_traverse_variable('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_traverse_variable')
+ANF: vhdi_ist_convert_by_vhpi('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_convert_by_vhpi')
+ANF: vhdi_ist_clone('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_clone')
+ANF: vhdi_ist_free('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_free')
+ANF: vhdi_ist_hash_key('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_hash_key')
+ANF: vhdi_ist_compare('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_compare')
+ANF: vhdi_ist_get_value_addr('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_get_value_addr')
+ANF: vhdi_set_scsd_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_set_scsd_callback')
+ANF: vhdi_cbk_set_force_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_cbk_set_force_callback')
+ANF: vhdi_trigger_init_force('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_trigger_init_force')
+ANF: vhdi_ist_check_scsd_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_check_scsd_callback')
+ANF: vhdi_ist_add_scsd_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_add_scsd_callback')
+ANF: vhdi_ist_remove_scsd_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_remove_scsd_callback')
+ANF: vhdi_ist_get_scsd_user_data('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_get_scsd_user_data')
+ANF: vhdi_add_time_change_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_add_time_change_callback')
+ANF: vhdi_get_real_value_by_value_addr('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_get_real_value_by_value_addr')
+ANF: vhdi_get_64_value_by_value_addr('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_get_64_value_by_value_addr')
+ANF: vhdi_xprop_inst_is_promoted('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_xprop_inst_is_promoted')
+ANF: vdi_ist_convert_by_vhdi('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vdi_ist_convert_by_vhdi')
+ANF: vhdi_ist_get_module_id('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_ist_get_module_id')
+ANF: vhdi_refine_foreign_scope_type('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_refine_foreign_scope_type')
+ANF: vhdi_flush_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_flush_callback')
+ANF: vhdi_set_orig_name('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_set_orig_name')
+ANF: vhdi_set_dump_pt('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_set_dump_pt')
+ANF: vhdi_set_int_subtype('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_set_int_subtype')
+ANF: vhdi_set_fixed_point('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_set_fixed_point')
+ANF: vhdi_get_fsdb_option('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_get_fsdb_option')
+ANF: vhdi_fgp_get_mode('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_fgp_get_mode')
+ANF: vhdi_node_register_composite_var('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_node_register_composite_var')
+ANF: vhdi_node_analysis('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_node_analysis')
+ANF: vhdi_node_id('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_node_id')
+ANF: vhdi_node_ist_check_scsd_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_node_ist_check_scsd_callback')
+ANF: vhdi_node_ist_add_scsd_callback('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_node_ist_add_scsd_callback')
+ANF: vhdi_node_ist_get_value_addr('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_node_ist_get_value_addr')
+ANF: vhdi_enc_def_traverse_module('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_enc_def_traverse_module')
+ANF: vhdi_enc_def_traverse_scope('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_enc_def_traverse_scope')
+ANF: vhdi_enc_def_traverse_variable('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_enc_def_traverse_variable')
+ANF: vhdi_enc_ist_traverse_scope('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_enc_ist_traverse_scope')
+ANF: vhdi_enc_ist_traverse_variable('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_enc_ist_traverse_variable')
+ANF: vhdi_enc_ist_get_module_id('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_enc_ist_get_module_id')
+ANF: vhdi_enc_def_get_handle_by_module_id('/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
+VCS compile option:
+ option[0]: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv
+ option[1]: +vcs+lic+wait
+ option[2]: +ntb_random_seed=1
+ option[3]: +UVM_TESTNAME=core_ibex_pc_intg_test
+ option[4]: +UVM_VERBOSITY=UVM_LOW
+ option[5]: +bin=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/test.bin
+ option[6]: +ibex_tracer_file_base=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/trace_core
+ option[7]: +cosim_log_file=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/spike_cosim_trace_core_00000000.log
+ option[8]: -l
+ option[9]: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/rtl_sim.log
+ option[10]: +signature_addr=8ffffffc
+ option[11]: +test_timeout_s=1800
+ option[12]: -ucli
+ option[13]: -do
+ option[14]: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/vcs.tcl
+ option[15]: /opt/synopsys/vcs/X-2025.06/linux64/bin/vcs1fe
+ option[16]: -Mcc=gcc
+ option[17]: -Mcplusplus=g++
+ option[18]: -Masflags=
+ option[19]: -Mcfl= -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC --std=c99 -fno-extended-identifiers -I/home/dungpc/tools/spike-cosim/include -I/home/dungpc/tools/spike-cosim/include/softfloat -I/home/dungpc/projects/cpu_fx1/ibex/dv/cosim -O -I/opt/synopsys/vcs/X-2025.06/include 
+ option[20]: -Mxllcflags=
+ option[21]: -Mxcflags= -Wno-error=implicit-function-declaration -Wno-error=int-conversion -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -I/opt/synopsys/vcs/X-2025.06/include
+ option[22]: -Mldflags= -Wl,--no-as-needed -Wl,-rpath,/home/dungpc/tools/spike-cosim/lib -L/home/dungpc/tools/spike-cosim/lib -rdynamic 
+ option[23]: -Mout=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv
+ option[24]: -Mamsrun=
+ option[25]: -Mvcsaceobjs=
+ option[26]: -Mobjects= /opt/synopsys/vcs/X-2025.06/linux64/lib/libvirsim.so /opt/synopsys/vcs/X-2025.06/linux64/lib/liberrorinf.so /opt/synopsys/vcs/X-2025.06/linux64/lib/libsnpsmalloc.so /opt/synopsys/vcs/X-2025.06/linux64/lib/libvfs.so -lriscv -lsoftfloat -ldl -ldisasm -lfdt -lfesvr -lstdc++ 
+ option[27]: -Mexternalobj=
+ option[28]: -Msaverestoreobj=/opt/synopsys/vcs/X-2025.06/linux64/lib/vcs_save_restore_new.o
+ option[29]: -Mcrt0=
+ option[30]: -Mcrtn=
+ option[31]: -Mcsrc=/opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/dpi/uvm_dpi.cc /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/verdi/dpi/uvm_verdi_dpi.cpp 
+ option[32]: -Mdir=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv.csrc
+ option[33]: -Msyslibs=/opt/synopsys/verdi/X-2025.06/share/PLI/VCS/LINUX64/pli.a -ldl 
+ option[34]: -l
+ option[35]: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/compile_tb.log
+ option[36]: +define+UVM_VERDI_VIF_RECORD
+ option[37]: +define+UVM_VCS_RECORD
+ option[38]: +incdir+/opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/vcs
+ option[39]: /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/uvm_pkg.sv
+ option[40]: +incdir+/opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/verdi
+ option[41]: /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv
+ option[42]: -full64
+ option[43]: -ntb_opts
+ option[44]: uvm-1.2
+ option[45]: +incdir+/opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/
+ option[46]: +define+UVM
+ option[47]: +define+UVM_REGEX_NO_DPI
+ option[48]: -timescale=1ns/10ps
+ option[49]: +vcs+lic+wait
+ option[50]: -o
+ option[51]: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv
+ option[52]: -debug_access+pp
+ option[53]: +vpi
+ option[54]: +vcsd1
+ option[55]: +itf+/opt/synopsys/vcs/X-2025.06/linux64/lib/vcsdp_lite.tab
+ option[56]: -uniq_prior
+ option[57]: final
+ option[58]: -lca
+ option[59]: -kdb
+ option[60]: -Xufe=2steps
+ option[61]: -debug_access+f
+ option[62]: +define+IBEX_CFG_BaseIsa=ibex_pkg::BaseIsaRV32IorCHERIoT
+ option[63]: -pvalue+core_ibex_tb_top.RV32E=0
+ option[64]: +define+IBEX_CFG_RV32M=ibex_pkg::RV32MFast
+ option[65]: +define+IBEX_CFG_RV32B=ibex_pkg::RV32BOTEarlGrey
+ option[66]: +define+IBEX_CFG_RV32ZC=ibex_pkg::RV32Zca
+ option[67]: +define+IBEX_CFG_RegFile=ibex_pkg::RegFileFF
+ option[68]: -pvalue+core_ibex_tb_top.BranchTargetALU=1
+ option[69]: -pvalue+core_ibex_tb_top.WritebackStage=1
+ option[70]: -pvalue+core_ibex_tb_top.ICache=0
+ option[71]: -pvalue+core_ibex_tb_top.ICacheECC=0
+ option[72]: -pvalue+core_ibex_tb_top.ICacheScramble=0
+ option[73]: -pvalue+core_ibex_tb_top.BranchPredictor=0
+ option[74]: -pvalue+core_ibex_tb_top.DbgTriggerEn=1
+ option[75]: -pvalue+core_ibex_tb_top.SecureIbex=1
+ option[76]: -pvalue+core_ibex_tb_top.PMPEnable=1
+ option[77]: -pvalue+core_ibex_tb_top.PMPGranularity=0
+ option[78]: -pvalue+core_ibex_tb_top.PMPNumRegions=16
+ option[79]: -pvalue+core_ibex_tb_top.MHPMCounterNum=4
+ option[80]: -pvalue+core_ibex_tb_top.MHPMCounterWidth=32
+ option[81]: +define+DM_ADDR=1A11_0000
+ option[82]: +define+DM_ADDR_MASK=0000_0FFF
+ option[83]: +define+BOOT_ADDR=8000_0000
+ option[84]: +define+DEBUG_MODE_HALT_ADDR=8000_0000
+ option[85]: +define+DEBUG_MODE_EXCEPTION_ADDR=8000_0008
+ option[86]: -debug_access+all
+ option[87]: -ucli
+ option[88]: -Xhdlxmropt
+ option[89]: -picarchive
+ option[90]: -P
+ option[91]: /opt/synopsys/verdi/X-2025.06/share/PLI/VCS/LINUX64/verdi.tab
+ option[92]: -fsdb
+ option[93]: -sverilog
+ option[94]: -gen_obj
+ option[95]: -Xfile_begin_f=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/ibex_dv_defines.f
+ option[96]: +define+TRACE_EXECUTION
+ option[97]: +define+RVFI
+ option[98]: +define+UVM
+ option[99]: -Xfile_end
+ option[100]: -Xfile_begin_f=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/ibex_dv.f
+ option[101]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/ip/prim/rtl
+ option[102]: /home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_pkg.sv
+ option[103]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/rtl
+ option[104]: /home/dungpc/projects/cpu_fx1/ibex/rtl/ibex_pkg.sv
+ option[105]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common
+ option[106]: -Mcsrc=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/date.c
+ option[107]: /home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/src/riscv_signature_pkg.sv
+ option[108]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv/sv/dv_utils
+ option[109]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg
+ option[110]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv/sv/csr_utils
+ option[111]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv/sv/dv_lib
+ option[112]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv/sv/mem_model
+ option[113]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent
+ option[114]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/seq_lib
+ option[115]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv/sv/str_utils
+ option[116]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/env
+ option[117]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/fcov
+ option[118]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests
+ option[119]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent
+ option[120]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/irq_agent
+ option[121]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent
+ option[122]: +incdir+/home/dungpc/projects/cpu_fx1/ibex/dv/cosim
+ option[123]: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/bus_params_pkg/bus_params_pkg.sv
+ option[124]: -Xfile_end
+ option[125]: -Xfile_begin_f=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/ibex_dv_cosim_dpi.f
+ option[126]: -Mcsrc=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/spike_cosim_dpi.cc
+ option[127]: -Mcsrc=/home/dungpc/projects/cpu_fx1/ibex/dv/cosim/cosim_dpi.cc
+ option[128]: -Mcsrc=/home/dungpc/projects/cpu_fx1/ibex/dv/cosim/spike_cosim.cc
+ option[129]: -Xfile_end
+ option[130]: -load
+ option[131]: /opt/synopsys/verdi/X-2025.06/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+ option[132]: nusym_mode
+ option[133]: timescale=1ns/10ps
+Chronologic Simulation VCS Release X-2025.06_Full64
+Linux 5.14.0-687.5.3.el9_8.x86_64 #1 SMP PREEMPT_DYNAMIC Tue May 19 14:53:22 EDT 2026 x86_64
+CPU cores: 24
+Limit information:
+======================================
+cputime		unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8340 kbytes
+coredumpsize		unlimited
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		524288
+memorylocked		8192 kbytes
+maxproc		252873
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+COV=0
+XDG_SESSION_CLASS=user
+VSCODE_CRASH_REPORTER_PROCESS_TYPE=extensionHost
+XDG_SESSION_TYPE=tty
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
+METADATA-DIR=out_fx1_pc/metadata
+DEBUGINFOD_IMA_CERT_PATH=/etc/keys/ima:
+COREPACK_ENABLE_AUTO_PIN=0
+XMODIFIERS=@im=ibus
+CURDIR=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex
+SHELL=/bin/bash
+VSCODE_NLS_CONFIG={"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
+_=/opt/arm/developmentstudio-2025.0-2/bin/make
+DUT_COV_RTL_PATH="ibex_top"
+XILINXD_LICENSE_FILE=27024@172.27.218.250
+MAKEFILE_LIST= Makefile
+CLAUDE_CODE_ENTRYPOINT=claude-vscode
+HISTCONTROL=ignoredups
+SNPSLMD_LICENSE_FILE=27021@172.27.218.250
+GNUMAKEFLAGS=
+PRJ_DIR=/home/dungpc/projects/cpu_fx1/ibex
+XDG_DATA_DIRS=/home/dungpc/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+MAXCORE_HOME=/opt/arm/fastmodels/FastModelsTools_11.30
+DUT_TOP=ibex_top
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+GIT_EDITOR=true
+VSCODE_CWD=/home/dungpc
+MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD
+GOAL=all
+SSH_CONNECTION=172.19.160.19 60049 172.27.54.6 2702
+NO_PROXY=localhost,127.0.0.0/8,::1
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/4012,unix/unix:/tmp/.ICE-unix/4012
+SSH_TTY=/dev/pts/0
+XDG_RUNTIME_DIR=/run/user/1007
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+ISS=spike
+CLAUDE_CODE_ENABLE_TASKS=0
+AI_AGENT=claude-code_2-1-277_agent
+XDG_MENU_PREFIX=gnome-
+ELECTRON_RUN_AS_NODE=1
+HOSTNAME=hw-station-4
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:
+SSH_AUTH_SOCK=/run/user/1007/keyring/ssh
+GIO_LAUNCHED_DESKTOP_FILE_PID=4847
+CPLUS_INCLUDE_PATH=/opt/arm/fastmodels/SystemC/Accellera/SystemC/include:/opt/arm/fastmodels/SystemC/Accellera/SystemC/include:
+CLAUDE_CODE_SESSION_ATTENDED=1
+DISPLAY=:9
+XA_HOME=/opt/synopsys/xa/X-2025.06-SP2-2
+no_proxy=localhost,127.0.0.0/8,::1
+IBEX_CONFIG=fx1_secure
+GTK_IM_MODULE=ibus
+HOME=/home/dungpc
+VCS_HOME=/opt/synopsys/vcs/X-2025.06
+RISCV_GCC=/home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-gcc
+PWD=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex
+ARM_GCC_HOME=/opt/arm/arm-gnu-toolchain/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi
+SSH_AGENT_PID=4042
+PKG_CONFIG_PATH=/home/dungpc/tools/spike-cosim/lib/pkgconfig:/home/dungpc/tools/spike-cosim/lib/pkgconfig:/home/dungpc/tools/spike-cosim/lib/pkgconfig:/home/dungpc/tools/spike-cosim/lib/pkgconfig:
+RISCV_OBJCOPY=/home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-objcopy
+SIMULATOR=vcs
+VERDI_HOME=/opt/synopsys/verdi/X-2025.06
+CLAUDE_CODE_SESSION_ID=1f570218-0bf2-4612-88ba-f1efd4c36392
+dv_root=/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip/dv
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-FDgJvP6EyP,guid=0725ffa3d0ca427b5bf558ee6aadf479
+EXT_DIR=riscv_dv_extension
+LD_LIBRARY_PATH=/opt/arm/fastmodels/SystemC/Accellera/SystemC/lib64:/opt/arm/fastmodels/SystemC/Accellera/SystemC/lib64:
+VSCODE_CODE_CACHE_PATH=/home/dungpc/.config/Code/CachedData/c9d77990917f3102ada88be140d28b038d1dd7c7
+LOGNAME=dungpc
+TERM=xterm
+PVLIB_HOME=/opt/arm/fastmodels/FastModelsPortfolio_11.30
+IBEX_ROOT=/home/dungpc/projects/cpu_fx1/ibex
+CLAUDE_CODE_CHILD_SESSION=1
+PETALINUX=/opt/xilinx
+CLAUDE_AGENT_SDK_VERSION=0.3.277
+VSCODE_HANDLES_UNCAUGHT_ERRORS=true
+WAVES=1
+TEST=riscv_pc_intg_test
+CLAUDE_CODE_EXECPATH=/home/dungpc/.vscode/extensions/anthropic.claude-code-2.1.277-linux-x64/resources/native-binary/claude
+VERBOSE=0
+QT_IM_MODULE=ibus
+FC_FONTATIONS=1
+SHLVL=3
+VSCODE_ESM_ENTRYPOINT=vs/workbench/api/node/extensionHostProcess
+MAKEOVERRIDES=${-*-command-variables-*-}
+CLAUDECODE=1
+USER=dungpc
+XDG_CURRENT_DESKTOP=GNOME
+NoDefaultCurrentDirectoryInExePath=1
+VNCDESKTOP=hw-station-4:9 (dungpc)
+CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING=true
+MCP_CONNECTION_NONBLOCKING=true
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+VSCODE_IPC_HOOK=/run/user/1007/vscode-4dd05c49-1.10-main.sock
+BASH_FUNC_module%%=() {  local _mlredir=0;
+ if [ -n "${MODULES_REDIRECT_OUTPUT+x}" ]; then
+ if [ "$MODULES_REDIRECT_OUTPUT" = '0' ]; then
+ _mlredir=0;
+ else
+ if [ "$MODULES_REDIRECT_OUTPUT" = '1' ]; then
+ _mlredir=1;
+ fi;
+ fi;
+ fi;
+ case " $@ " in 
+ *' --no-redirect '*)
+ _mlredir=0
+ ;;
+ *' --redirect '*)
+ _mlredir=1
+ ;;
+ esac;
+ if [ $_mlredir -eq 0 ]; then
+ _module_raw "$@";
+ else
+ _module_raw "$@" 2>&1;
+ fi
+}
+PYTHONPATH=/home/dungpc/projects/cpu_fx1/ibex:/home/dungpc/projects/cpu_fx1/ibex/util:/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/scripts:/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension:/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/yaml:/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/scripts
+MAKEFLAGS=e -j4 --jobserver-auth=3,4 --no-print-directory -- $(MAKEOVERRIDES)
+MFLAGS=-e -j4 --jobserver-auth=3,4 --no-print-directory
+SSH_CLIENT=172.19.160.19 60049 2702
+MAIL=/var/spool/mail/dungpc
+CLAUDE_CODE_MESSAGING_SOCKET=/run/user/1007/cc-socks/6272.sock
+VSCODE_L10N_BUNDLE_LOCATION=
+GDK_BACKEND=x11
+MODULESHOME=/usr/share/Modules
+NO_AT_BRIDGE=1
+BASH_FUNC_which%%=() {  ( alias;
+ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
+SPIKE_PATH=/home/dungpc/tools/spike-cosim/bin
+HTTP_PROXY=http://proxy.hcm.fpt.vn:80
+CLAUDE_CODE_MESSAGING_TOKEN=4aa31a246ac2eb4487af2c91218a01b9
+EXTRA_COSIM_CFLAGS=
+https_proxy=http://proxy.hcm.fpt.vn:80
+LOWRISC_IP_DIR=/home/dungpc/projects/cpu_fx1/ibex/vendor/lowrisc_ip
+OUT-DIR=out_fx1_pc/
+OUT=out_fx1_pc
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+PATH=/home/dungpc/.local/bin:/home/dungpc/.local/bin:/home/dungpc/tools/spike-cosim/bin:/home/dungpc/tools/dtc-install/bin:/home/dungpc/tools/dtc-install/bin:/home/dungpc/riscv-tools/bin-alias:/home/dungpc/riscv-tools/xpack-riscv-none-elf-gcc-14.2.0-3/bin:/home/dungpc/riscv-install/bin:/opt/xilinx/Vitis_HLS/2024.1/bin:/opt/xilinx/Vitis/2024.1/bin:/mnt/hdd/tools/Xilinx/2025.2/Vivado/bin:/opt/xilinx/license/lnx64.o:/opt/arm/arm-gnu-toolchain/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin:/opt/arm/fastmodels/FastModelsTools_11.30/bin:/opt/arm/developmentstudio-2025.0-2/bin:/opt/arm/ArmCompilerforEmbedded6.24/bin:/opt/flexnetls-armlmd/bin:/opt/synopsys/fpga/X-2025.09/bin:/opt/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/opt/synopsys/fm/X-2025.06-SP4/bin:/opt/synopsys/wv/X-2025.06-SP2/bin:/opt/synopsys/syn/X-2025.06-SP5/bin:/opt/synopsys/starrc/X-2025.06-SP3/bin:/opt/synopsys/primesim/X-2025.06-SP2-2/bin:/opt/synopsys/prime/X-2025.06-SP2/bin:/opt/synopsys/lc/X-2025.06-SP2/bin:/opt/synopsys/icvalidator/X-2025.06-SP2/bin:/opt/synopsys/icc2/X-2025.06-SP2/bin:/opt/synopsys/icc/X-2025.06/bin:/opt/synopsys/hspice/X-2025.06-SP2/hspice/bin:/opt/synopsys/fusioncompiler/X-2025.06-SP1/bin:/opt/synopsys/customcompiler/X-2025.06-SP2/bin:/opt/synopsys/verdi/X-2025.06/bin:/opt/synopsys/xa/X-2025.06-SP2-2/bin:/opt/synopsys/vcs/X-2025.06/bin:/opt/synopsys/scl/scl/2025.03/linux64/bin:/home/dungpc/.local/bin:/home/dungpc/.local/bin:/home/dungpc/tools/spike-cosim/bin:/home/dungpc/tools/dtc-install/bin:/home/dungpc/tools/dtc-install/bin:/home/dungpc/riscv-tools/bin-alias:/home/dungpc/riscv-tools/xpack-riscv-none-elf-gcc-14.2.0-3/bin:/home/dungpc/riscv-install/bin:/opt/xilinx/Vitis_HLS/2024.1/bin:/opt/xilinx/Vitis/2024.1/bin:/mnt/hdd/tools/Xilinx/2025.2/Vivado/bin:/opt/xilinx/license/lnx64.o:/opt/arm/arm-gnu-toolchain/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin:/opt/arm/fastmodels/FastModelsTools_11.30/bin:/opt/arm/developmentstudio-2025.0-2/bin:/opt/arm/ArmCompilerforEmbedded6.24/bin:/opt/flexnetls-armlmd/bin:/opt/synopsys/fpga/X-2025.09/bin:/opt/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/opt/synopsys/fm/X-2025.06-SP4/bin:/opt/synopsys/wv/X-2025.06-SP2/bin:/opt/synopsys/syn/X-2025.06-SP5/bin:/opt/synopsys/starrc/X-2025.06-SP3/bin:/opt/synopsys/primesim/X-2025.06-SP2-2/bin:/opt/synopsys/prime/X-2025.06-SP2/bin:/opt/synopsys/lc/X-2025.06-SP2/bin:/opt/synopsys/icvalidator/X-2025.06-SP2/bin:/opt/synopsys/icc2/X-2025.06-SP2/bin:/opt/synopsys/icc/X-2025.06/bin:/opt/synopsys/hspice/X-2025.06-SP2/hspice/bin:/opt/synopsys/fusioncompiler/X-2025.06-SP1/bin:/opt/synopsys/customcompiler/X-2025.06-SP2/bin:/opt/synopsys/verdi/X-2025.06/bin:/opt/synopsys/xa/X-2025.06-SP2-2/bin:/opt/synopsys/vcs/X-2025.06/bin:/opt/synopsys/scl/scl/2025.03/linux64/bin:/home/dungpc/.local/bin:/home/dungpc/.local/bin:/home/dungpc/tools/spike-cosim/bin:/home/dungpc/tools/dtc-install/bin:/home/dungpc/tools/dtc-install/bin:/home/dungpc/riscv-tools/bin-alias:/home/dungpc/riscv-tools/xpack-riscv-none-elf-gcc-14.2.0-3/bin:/home/dungpc/riscv-install/bin:/home/dungpc/.local/bin:/home/dungpc/bin:/usr/share/Modules/bin:/opt/xilinx/Vitis_HLS/2024.1/bin:/opt/xilinx/Vitis/2024.1/bin:/mnt/hdd/tools/Xilinx/2025.2/Vivado/bin:/opt/xilinx/license/lnx64.o:/opt/arm/arm-gnu-toolchain/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin:/opt/arm/fastmodels/FastModelsTools_11.30/bin:/opt/arm/developmentstudio-2025.0-2/bin:/opt/arm/ArmCompilerforEmbedded6.24/bin:/opt/flexnetls-armlmd/bin:/opt/synopsys/fpga/X-2025.09/bin:/opt/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/opt/synopsys/fm/X-2025.06-SP4/bin:/opt/synopsys/wv/X-2025.06-SP2/bin:/opt/synopsys/syn/X-2025.06-SP5/bin:/opt/synopsys/starrc/X-2025.06-SP3/bin:/opt/synopsys/primesim/X-2025.06-SP2-2/bin:/opt/synopsys/prime/X-2025.06-SP2/bin:/opt/synopsys/lc/X-2025.06-SP2/bin:/opt/synopsys/icvalidator/X-2025.06-SP2/bin:/opt/synopsys/icc2/X-2025.06-SP2/bin:/opt/synopsys/icc/X-2025.06/bin:/opt/synopsys/hspice/X-2025.06-SP2/hspice/bin:/opt/synopsys/fusioncompiler/X-2025.06-SP1/bin:/opt/synopsys/customcompiler/X-2025.06-SP2/bin:/opt/synopsys/verdi/X-2025.06/bin:/opt/synopsys/xa/X-2025.06-SP2-2/bin:/opt/synopsys/vcs/X-2025.06/bin:/opt/synopsys/scl/scl/2025.03/linux64/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/dungpc/.claude/plugins/synced/eec69f5c-ce07-405c-be60-f0e42cab7e0f_e9f09986-683c-4be1-8094-9542baf7a1d8/product-management/bin:/home/dungpc/.claude/plugins/synced/eec69f5c-ce07-405c-be60-f0e42cab7e0f_e9f09986-683c-4be1-8094-9542baf7a1d8/engineering/bin:/home/dungpc/.claude/plugins/synced/eec69f5c-ce07-405c-be60-f0e42cab7e0f_e9f09986-683c-4be1-8094-9542baf7a1d8/design/bin:/home/dungpc/.claude/plugins/synced/eec69f5c-ce07-405c-be60-f0e42cab7e0f_e9f09986-683c-4be1-8094-9542baf7a1d8/productivity/bin
+SEED=1
+KDEDIRS=/usr
+HTTPS_PROXY=http://proxy.hcm.fpt.vn:80
+ITERATIONS=1
+HISTSIZE=1000
+CHROME_DESKTOP=code.desktop
+SIGNATURE_ADDR=8ffffffc
+CLAUDE_PID=6272
+GJS_DEBUG_OUTPUT=stderr
+SYSTEMC_HOME=/opt/arm/fastmodels/SystemC/Accellera/SystemC
+http_proxy=http://proxy.hcm.fpt.vn:80
+RISCV_TOOLCHAIN=/home/dungpc/tools/lowrisc-toolchain-rv32imcb
+CLAUDE_EFFORT=high
+GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/code.desktop
+LANG=en_US.UTF-8
+which_declare=declare -f
+VSCODE_PID=4847
+BASH_FUNC__module_raw%%=() {  eval "$(/usr/bin/tclsh '/usr/share/Modules/libexec/modulecmd.tcl' bash "$@")";
+ _mlstatus=$?;
+ return $_mlstatus
+}
+MOTD_SHOWN=pam
+__MODULES_LMINIT=module use --append /usr/share/Modules/modulefiles:module use --append /etc/modulefiles:module use --append /usr/share/modulefiles
+MAKELEVEL=2
+SIM_DIR=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_STACK_EXEC=true
+VCS_EXEC_DONE=1
+LC_ALL=C
+VCS_STOP_SAFE=1
+DVE=/opt/synopsys/vcs/X-2025.06/gui/dve
+SPECMAN_OUTPUT_TO_TTY=1
+FLEXLM_BORROWFILE=/home/dungpc/.hw-station-4-borrow.txt
+Runtime command line arguments:
+argv[0]=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv
+argv[1]=+vcs+lic+wait
+argv[2]=+ntb_random_seed=1
+argv[3]=+UVM_TESTNAME=core_ibex_pc_intg_test
+argv[4]=+UVM_VERBOSITY=UVM_LOW
+argv[5]=+bin=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/test.bin
+argv[6]=+ibex_tracer_file_base=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/trace_core
+argv[7]=+cosim_log_file=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/spike_cosim_trace_core_00000000.log
+argv[8]=-l
+argv[9]=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/rtl_sim.log
+argv[10]=+signature_addr=8ffffffc
+argv[11]=+test_timeout_s=1800
+argv[12]=-ucli
+argv[13]=-do
+argv[14]=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/vcs.tcl
+**********Message Rewind**************
+405 profile - 100
+          CPU/Mem usage: 0.030 sys,  0.110 user,  455.79M mem
+406 Elapsed time:    0:00:00    Sat Sep 19 12:07:46 2026
+407 User CPU time used: 0 seconds
+408 System CPU time used: 0 seconds
+409 pliAppInit
+410 FSDB_GATE is set.
+411 FSDB_RTL is set.
+412 FSDB_DYNAMIC_ALIAS is enabled.
+413 libnuma.so open fail. libnuma.so: cannot open shared object file: No such file or directory
+414 FSDB NUMA optimize not available.
+415 FSDB_PACKED_MODE is enabled.
+416 FSDB_GATE_PACKED is enabled.
+417 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+418 FSDB_REDUCE_VC_MEM is enabled.
+419 Enable Parallel Dumping.
+420 pliAppMiscSet: New Sim Round
+421 pliEntryInit
+422 LIBSSCORE=found /opt/synopsys/verdi/X-2025.06/share/PLI/lib/LINUXAMD64/libsscore_vcs202506.so through $NOVAS_HOME setting.
+423 FSDB Dumper for VCS, Release Verdi_X-2025.06, Linux x86_64/64bit, 05/31/2025
+424 (C) 1996 - 2025 by Synopsys, Inc.
+425 sps_tcl_fsdbDumpfile_main at 0
+426 argv[0]: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/waves.fsdb
+427 *Verdi* : Create FSDB file '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/waves.fsdb'
+428 [spi_vcs_vd_ppi_create_root]: no upf option
+429 DUMPER_MEMORY_REDUCTION is enabled.
+430 compile option from '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv.daidir/vcs_rebuild'.
+431   "vcs '-full64' '-f' '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/ibex_dv_defines.f' '-f' '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/ibex_dv.f' '-l' '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/compile_tb.log' '-sverilog' '-ntb_opts' 'uvm-1.2' '+define+UVM' '+define+UVM_REGEX_NO_DPI' '-timescale=1ns/10ps' '-licqueue' '-LDFLAGS' '-Wl,--no-as-needed' '-Mdir=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv.csrc' '-o' '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv' '-debug_access+pp' '-xlrm' 'uniq_prior_final' '-CFLAGS' '--std=c99 -fno-extended-identifiers' '-lca' '-kdb' '-debug_access+f' '-Xcflags=-Wno-error=implicit-function-declaration -Wno-error=int-conversion' '+define+IBEX_CFG_BaseIsa=ibex_pkg::BaseIsaRV32IorCHERIoT' '-pvalue+core_ibex_tb_top.RV32E=0' '+define+IBEX_CFG_RV32M=ibex_pkg::RV32MFast' '+define+IBEX_CFG_RV32B=ibex_pkg::RV32BOTEarlGrey' '+define+IBEX_CFG_RV32ZC=ibex_pkg::RV32Zca' '+define+IBEX_CFG_RegFile=ibex_pkg::RegFileFF' '-pvalue+core_ibex_tb_top.BranchTargetALU=1' '-pvalue+core_ibex_tb_top.WritebackStage=1' '-pvalue+core_ibex_tb_top.ICache=0' '-pvalue+core_ibex_tb_top.ICacheECC=0' '-pvalue+core_ibex_tb_top.ICacheScramble=0' '-pvalue+core_ibex_tb_top.BranchPredictor=0' '-pvalue+core_ibex_tb_top.DbgTriggerEn=1' '-pvalue+core_ibex_tb_top.SecureIbex=1' '-pvalue+core_ibex_tb_top.PMPEnable=1' '-pvalue+core_ibex_tb_top.PMPGranularity=0' '-pvalue+core_ibex_tb_top.PMPNumRegions=16' '-pvalue+core_ibex_tb_top.MHPMCounterNum=4' '-pvalue+core_ibex_tb_top.MHPMCounterWidth=32' '+define+DM_ADDR=1A11_0000' '+define+DM_ADDR_MASK=0000_0FFF' '+define+BOOT_ADDR=8000_0000' '+define+DEBUG_MODE_HALT_ADDR=8000_0000' '+define+DEBUG_MODE_EXCEPTION_ADDR=8000_0008' '-debug_access+all' '-ucli' '-f' '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/ibex_dv_cosim_dpi.f' '-LDFLAGS' '-Wl,-rpath,/home/dungpc/tools/spike-cosim/lib' '-CFLAGS' '-I/home/dungpc/tools/spike-cosim/include -I/home/dungpc/tools/spike-cosim/include/softfloat ' '-CFLAGS' '-I/home/dungpc/projects/cpu_fx1/ibex/dv/cosim' '-lriscv' '-lsoftfloat' '-ldl' '-ldisasm' '-lfdt' '-lfesvr' '-L/home/dungpc/tools/spike-cosim/lib' '-lstdc++' 2>&1"
+432 DVDI_is_vir_unload_enabled is enable
+433 FSDB_VCS_ENABLE_NATIVE_VC is enable
+434 FSDB_VCS_ENABLE_MEMORY_NATIVE_VC is enabled
+435 sps_tcl_fsdbDumpvars_vd_main
+436 argv[0]: 0
+437 argv[1]: core_ibex_tb_top
+438 argv[2]: +all
+439 *Verdi* : Begin traversing the scope (core_ibex_tb_top), layer (0).
+440 *Verdi* : Enable +all dumping.
+441 *Verdi* : End of traversing.
+442 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.040 sys,  0.150 user,  575.68M mem
+                   incr: 0.000 sys,  0.040 user,  29.41M mem
+                   accu: 0.000 sys,  0.040 user,  29.41M mem
+              accu incr: 0.000 sys,  0.040 user,  29.41M mem
+
+          Count usage: 8524 var,  7054 idcode,  2993 callback
+                 incr: 8524 var,  7054 idcode,  2993 callback
+                 accu: 8524 var,  7054 idcode,  2993 callback
+            accu incr: 8524 var,  7054 idcode,  2993 callback
+443 Idcode  0 - bc1:0  mda:1703
+444 Elapsed time:    0:00:00    Sat Sep 19 12:07:46 2026
+445 User CPU time used: 0 seconds
+446 System CPU time used: 0 seconds
+447 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.040 sys,  0.150 user,  575.68M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.040 user,  29.41M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 8524 var,  7054 idcode,  2993 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 8524 var,  7054 idcode,  2993 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+448 Idcode  0 - bc1:0  mda:1703
+449 Elapsed time:    0:00:00    Sat Sep 19 12:07:46 2026
+450 User CPU time used: 0 seconds
+451 System CPU time used: 0 seconds
+452 sps_tcl_fsdbDumpsva_vd_main at 0 : N/A(0)
+453 *Verdi* : Begin traversing the SVA assertions under scope (core_ibex_tb_top.dut), layer (0).
+454 *Verdi* : End of traversing the SVA assertions.
+455 pliAppHDL_DumpSVAComplete traverse var: profile - 
+          CPU/Mem usage: 0.040 sys,  0.150 user,  575.68M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 9003 var,  7533 idcode,  2993 callback
+                 incr: 479 var,  479 idcode,  0 callback
+                 accu: 479 var,  479 idcode,  0 callback
+            accu incr: 479 var,  479 idcode,  0 callback
+456 Idcode  0 - bc1:0  mda:1703
+457 Elapsed time:    0:00:00    Sat Sep 19 12:07:46 2026
+458 User CPU time used: 0 seconds
+459 System CPU time used: 0 seconds
+460 pliAppHDL_DumpSVAComplete: profile - 
+          CPU/Mem usage: 0.040 sys,  0.150 user,  575.68M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 9003 var,  7533 idcode,  2993 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 479 var,  479 idcode,  0 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+461 Idcode  0 - bc1:0  mda:1703
+462 Elapsed time:    0:00:00    Sat Sep 19 12:07:46 2026
+463 User CPU time used: 0 seconds
+464 System CPU time used: 0 seconds
+465 End of simulation at 1957435
+466 Memory usage: 672.809 M
+467 Maximum resident set size: 290 MB
+468 Hard page faults: 0
+469 Soft page faults: 23379
+470 Elapsed time:    0:00:01    Sat Sep 19 12:07:47 2026
+471 User CPU time used: 0 seconds
+472 System CPU time used: 0 seconds
+473 Begin FSDB profile info:
+474 FSDB Writer : bc1(33070) bcn(229503) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.015986) io wait(0.000000) theadpool wait(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+475 End FSDB profile info
+476 FSDB closed. Name: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/waves.fsdb Size: 378650
+477 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+478                      - BlockUsed:4 Acquire:0 BufferUsed:5483046
+479                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:2
+480                      - MainProducerTime:0.987148553 TotalConsumerTime:0.011809536
+481                      - ElapsedTime:0.876617000
+482 Producer   0 profile - BlockUsed:4 Acquire:0 BufferUsed:5483046
+483 Consumer   0 profile - Affinity:-1 CPUTime:0.011809536 LifeTime:0.071584362 (0.16%)
+484                      - BlockUsed:4 Acquire:0 BufferUsed:5483046
+485 SimExit
+486 Elapsed time:    0:00:01    Sat Sep 19 12:07:47 2026
+487 User CPU time used: 0 seconds
+488 System CPU time used: 0 seconds
+489 Sim process exit

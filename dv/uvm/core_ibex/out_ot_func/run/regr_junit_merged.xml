@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="2" tests="8" time="0.0">
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_arithmetic_basic_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_arithmetic_basic_test">
+			<system-out>
+riscv_arithmetic_basic_test.1
+-----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_rand_instr_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_rand_instr_test">
+			<system-out>
+riscv_rand_instr_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_jump_stress_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_jump_stress_test">
+			<system-out>
+riscv_jump_stress_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_mmu_stress_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_mmu_stress_test">
+			<system-out>
+riscv_mmu_stress_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_debug_basic_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_debug_basic_test">
+			<system-out>
+riscv_debug_basic_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_csr_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_csr_test">
+			<system-out>
+riscv_csr_test.1
+----------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_illegal_instr_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_illegal_instr_test">
+			<failure type="failure">
+riscv_illegal_instr_test.1
+--------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    336: 168541400: Illegal instruction (hart 0) at PC 0x80007ebc: 0x6e922c73
+    337: 172069400: Illegal instruction (hart 0) at PC 0x80007fac: 0x0000b538
+    338: 172071400: Illegal instruction (hart 0) at PC 0x80007fac: 0x0000b538
+    339: 174379400: Illegal instruction (hart 0) at PC 0x80007ffc: 0x00000000
+    340: 174381400: Illegal instruction (hart 0) at PC 0x80007ffc: 0x00000000
+[E] 341: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 174382400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 80007ffa
+    342: 
+    343: 
+    344: --- RISC-V UVM TEST FAILED ---
+    345: 
+--------------------------------------------
+
+</failure>
+			<system-out>
+riscv_illegal_instr_test.1
+--------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    336: 168541400: Illegal instruction (hart 0) at PC 0x80007ebc: 0x6e922c73
+    337: 172069400: Illegal instruction (hart 0) at PC 0x80007fac: 0x0000b538
+    338: 172071400: Illegal instruction (hart 0) at PC 0x80007fac: 0x0000b538
+    339: 174379400: Illegal instruction (hart 0) at PC 0x80007ffc: 0x00000000
+    340: 174381400: Illegal instruction (hart 0) at PC 0x80007ffc: 0x00000000
+[E] 341: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 174382400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 80007ffa
+    342: 
+    343: 
+    344: --- RISC-V UVM TEST FAILED ---
+    345: 
+--------------------------------------------
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_debug_triggers_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_debug_triggers_test">
+			<failure type="failure">
+riscv_debug_triggers_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    118: 231101400: Illegal instruction (hart 0) at PC 0x800053b0: 0xe8699bf3
+    119: 234827400: Illegal instruction (hart 0) at PC 0x800054e4: 0x92e7b4e7
+    120: 234829400: Illegal instruction (hart 0) at PC 0x800054e4: 0x92e7b4e7
+    121: 237489400: Illegal instruction (hart 0) at PC 0x800055e2: 0x00000000
+    122: 237491400: Illegal instruction (hart 0) at PC 0x800055e2: 0x00000000
+[E] 123: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 237492400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 800055e0
+    124: 
+    125: 
+    126: --- RISC-V UVM TEST FAILED ---
+    127: 
+--------------------------------------------
+
+</failure>
+			<system-out>
+riscv_debug_triggers_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    118: 231101400: Illegal instruction (hart 0) at PC 0x800053b0: 0xe8699bf3
+    119: 234827400: Illegal instruction (hart 0) at PC 0x800054e4: 0x92e7b4e7
+    120: 234829400: Illegal instruction (hart 0) at PC 0x800054e4: 0x92e7b4e7
+    121: 237489400: Illegal instruction (hart 0) at PC 0x800055e2: 0x00000000
+    122: 237491400: Illegal instruction (hart 0) at PC 0x800055e2: 0x00000000
+[E] 123: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 237492400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 800055e0
+    124: 
+    125: 
+    126: --- RISC-V UVM TEST FAILED ---
+    127: 
+--------------------------------------------
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+</testsuites>

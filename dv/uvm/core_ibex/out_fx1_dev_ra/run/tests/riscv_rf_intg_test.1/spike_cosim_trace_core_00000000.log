@@ -1,0 +1,942 @@
+core   0: 0x80000080 (0x40001537) lui     a0, 0x40001
+core   0: 3 0x80000080 (0x40001537) x10 0x40001000
+core   0: 0x80000084 (0x10450513) addi    a0, a0, 260
+core   0: 3 0x80000084 (0x10450513) x10 0x40001104
+core   0: 0x80000088 (0x30151073) csrw    misa, a0
+core   0: 3 0x80000088 (0x30151073) c769_misa 0x40101104
+core   0: 0x8000008c (0x0002d617) auipc   a2, 0x2d
+core   0: 3 0x8000008c (0x0002d617) x12 0x8002d08c
+core   0: 0x80000090 (0xc5860613) addi    a2, a2, -936
+core   0: 3 0x80000090 (0xc5860613) x12 0x8002cce4
+core   0: 0x80000094 (0x00002517) auipc   a0, 0x2
+core   0: 3 0x80000094 (0x00002517) x10 0x80002094
+core   0: 0x80000098 (0x66c50513) addi    a0, a0, 1644
+core   0: 3 0x80000098 (0x66c50513) x10 0x80002700
+core   0: 0x8000009c (0x00156513) ori     a0, a0, 1
+core   0: 3 0x8000009c (0x00156513) x10 0x80002701
+core   0: 0x800000a0 (0x30551073) csrw    mtvec, a0
+core   0: 3 0x800000a0 (0x30551073) c773_mtvec 0x80002701
+core   0: 0x800000a4 (0x74725073) csrwi   mseccfg, 4
+core   0: 3 0x800000a4 (0x74725073) c1863_mseccfg 0x00000004
+core   0: 0x800000a8 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x800000a8 (0x00003117) x2  0x800030a8
+core   0: 0x800000ac (0x2b010113) addi    sp, sp, 688
+core   0: 3 0x800000ac (0x2b010113) x2  0x80003358
+core   0: 0x800000b0 (0x00004501) c.li    a0, 0
+core   0: 3 0x800000b0 (0x4501) x10 0x00000000
+core   0: 0x800000b2 (0x0000912a) c.add   sp, a0
+core   0: 3 0x800000b2 (0x912a) x2  0x80003358
+core   0: 0x800000b4 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x800000b4 (0x00215113) x2  0x20000cd6
+core   0: 0x800000b8 (0x3b011073) csrw    pmpaddr0, sp
+core   0: 3 0x800000b8 (0x3b011073) c944_pmpaddr0 0x20000cd6
+core   0: 0x800000bc (0x00003117) auipc   sp, 0x3
+core   0: 3 0x800000bc (0x00003117) x2  0x800030bc
+core   0: 0x800000c0 (0x29c10113) addi    sp, sp, 668
+core   0: 3 0x800000c0 (0x29c10113) x2  0x80003358
+core   0: 0x800000c4 (0x11111537) lui     a0, 0x11111
+core   0: 3 0x800000c4 (0x11111537) x10 0x11111000
+core   0: 0x800000c8 (0x11150513) addi    a0, a0, 273
+core   0: 3 0x800000c8 (0x11150513) x10 0x11111111
+core   0: 0x800000cc (0x0000912a) c.add   sp, a0
+core   0: 3 0x800000cc (0x912a) x2  0x91114469
+core   0: 0x800000ce (0x00215113) srli    sp, sp, 2
+core   0: 3 0x800000ce (0x00215113) x2  0x2444511a
+core   0: 0x800000d2 (0x3b111073) csrw    pmpaddr1, sp
+core   0: 3 0x800000d2 (0x3b111073) c945_pmpaddr1 0x2444511a
+core   0: 0x800000d6 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x800000d6 (0x00003117) x2  0x800030d6
+core   0: 0x800000da (0x28210113) addi    sp, sp, 642
+core   0: 3 0x800000da (0x28210113) x2  0x80003358
+core   0: 0x800000de (0x22222537) lui     a0, 0x22222
+core   0: 3 0x800000de (0x22222537) x10 0x22222000
+core   0: 0x800000e2 (0x22250513) addi    a0, a0, 546
+core   0: 3 0x800000e2 (0x22250513) x10 0x22222222
+core   0: 0x800000e6 (0x0000912a) c.add   sp, a0
+core   0: 3 0x800000e6 (0x912a) x2  0xa222557a
+core   0: 0x800000e8 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x800000e8 (0x00215113) x2  0x2888955e
+core   0: 0x800000ec (0x3b211073) csrw    pmpaddr2, sp
+core   0: 3 0x800000ec (0x3b211073) c946_pmpaddr2 0x2888955e
+core   0: 0x800000f0 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x800000f0 (0x00003117) x2  0x800030f0
+core   0: 0x800000f4 (0x26810113) addi    sp, sp, 616
+core   0: 3 0x800000f4 (0x26810113) x2  0x80003358
+core   0: 0x800000f8 (0x33333537) lui     a0, 0x33333
+core   0: 3 0x800000f8 (0x33333537) x10 0x33333000
+core   0: 0x800000fc (0x33350513) addi    a0, a0, 819
+core   0: 3 0x800000fc (0x33350513) x10 0x33333333
+core   0: 0x80000100 (0x0000912a) c.add   sp, a0
+core   0: 3 0x80000100 (0x912a) x2  0xb333668b
+core   0: 0x80000102 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x80000102 (0x00215113) x2  0x2cccd9a2
+core   0: 0x80000106 (0x3b311073) csrw    pmpaddr3, sp
+core   0: 3 0x80000106 (0x3b311073) c947_pmpaddr3 0x2cccd9a2
+core   0: 0x8000010a (0x0f0f1137) lui     sp, 0xf0f1
+core   0: 3 0x8000010a (0x0f0f1137) x2  0x0f0f1000
+core   0: 0x8000010e (0xf0f10113) addi    sp, sp, -241
+core   0: 3 0x8000010e (0xf0f10113) x2  0x0f0f0f0f
+core   0: 0x80000112 (0x3a011073) csrw    pmpcfg0, sp
+core   0: 3 0x80000112 (0x3a011073) c928_pmpcfg0 0x0f0f0f0f
+core   0: 0x80000116 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x80000116 (0x00003117) x2  0x80003116
+core   0: 0x8000011a (0x24210113) addi    sp, sp, 578
+core   0: 3 0x8000011a (0x24210113) x2  0x80003358
+core   0: 0x8000011e (0x44444537) lui     a0, 0x44444
+core   0: 3 0x8000011e (0x44444537) x10 0x44444000
+core   0: 0x80000122 (0x44450513) addi    a0, a0, 1092
+core   0: 3 0x80000122 (0x44450513) x10 0x44444444
+core   0: 0x80000126 (0x0000912a) c.add   sp, a0
+core   0: 3 0x80000126 (0x912a) x2  0xc444779c
+core   0: 0x80000128 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x80000128 (0x00215113) x2  0x31111de7
+core   0: 0x8000012c (0x3b411073) csrw    pmpaddr4, sp
+core   0: 3 0x8000012c (0x3b411073) c948_pmpaddr4 0x31111de7
+core   0: 0x80000130 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x80000130 (0x00003117) x2  0x80003130
+core   0: 0x80000134 (0x22810113) addi    sp, sp, 552
+core   0: 3 0x80000134 (0x22810113) x2  0x80003358
+core   0: 0x80000138 (0x55555537) lui     a0, 0x55555
+core   0: 3 0x80000138 (0x55555537) x10 0x55555000
+core   0: 0x8000013c (0x55550513) addi    a0, a0, 1365
+core   0: 3 0x8000013c (0x55550513) x10 0x55555555
+core   0: 0x80000140 (0x0000912a) c.add   sp, a0
+core   0: 3 0x80000140 (0x912a) x2  0xd55588ad
+core   0: 0x80000142 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x80000142 (0x00215113) x2  0x3555622b
+core   0: 0x80000146 (0x3b511073) csrw    pmpaddr5, sp
+core   0: 3 0x80000146 (0x3b511073) c949_pmpaddr5 0x3555622b
+core   0: 0x8000014a (0x00003117) auipc   sp, 0x3
+core   0: 3 0x8000014a (0x00003117) x2  0x8000314a
+core   0: 0x8000014e (0x20e10113) addi    sp, sp, 526
+core   0: 3 0x8000014e (0x20e10113) x2  0x80003358
+core   0: 0x80000152 (0x66666537) lui     a0, 0x66666
+core   0: 3 0x80000152 (0x66666537) x10 0x66666000
+core   0: 0x80000156 (0x66650513) addi    a0, a0, 1638
+core   0: 3 0x80000156 (0x66650513) x10 0x66666666
+core   0: 0x8000015a (0x0000912a) c.add   sp, a0
+core   0: 3 0x8000015a (0x912a) x2  0xe66699be
+core   0: 0x8000015c (0x00215113) srli    sp, sp, 2
+core   0: 3 0x8000015c (0x00215113) x2  0x3999a66f
+core   0: 0x80000160 (0x3b611073) csrw    pmpaddr6, sp
+core   0: 3 0x80000160 (0x3b611073) c950_pmpaddr6 0x3999a66f
+core   0: 0x80000164 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x80000164 (0x00003117) x2  0x80003164
+core   0: 0x80000168 (0x1f410113) addi    sp, sp, 500
+core   0: 3 0x80000168 (0x1f410113) x2  0x80003358
+core   0: 0x8000016c (0x77777537) lui     a0, 0x77777
+core   0: 3 0x8000016c (0x77777537) x10 0x77777000
+core   0: 0x80000170 (0x77750513) addi    a0, a0, 1911
+core   0: 3 0x80000170 (0x77750513) x10 0x77777777
+core   0: 0x80000174 (0x0000912a) c.add   sp, a0
+core   0: 3 0x80000174 (0x912a) x2  0xf777aacf
+core   0: 0x80000176 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x80000176 (0x00215113) x2  0x3dddeab3
+core   0: 0x8000017a (0x3b711073) csrw    pmpaddr7, sp
+core   0: 3 0x8000017a (0x3b711073) c951_pmpaddr7 0x3dddeab3
+core   0: 0x8000017e (0x0f0f1137) lui     sp, 0xf0f1
+core   0: 3 0x8000017e (0x0f0f1137) x2  0x0f0f1000
+core   0: 0x80000182 (0xf0f10113) addi    sp, sp, -241
+core   0: 3 0x80000182 (0xf0f10113) x2  0x0f0f0f0f
+core   0: 0x80000186 (0x3a111073) csrw    pmpcfg1, sp
+core   0: 3 0x80000186 (0x3a111073) c929_pmpcfg1 0x0f0f0f0f
+core   0: 0x8000018a (0x00003117) auipc   sp, 0x3
+core   0: 3 0x8000018a (0x00003117) x2  0x8000318a
+core   0: 0x8000018e (0x1ce10113) addi    sp, sp, 462
+core   0: 3 0x8000018e (0x1ce10113) x2  0x80003358
+core   0: 0x80000192 (0x88889537) lui     a0, 0x88889
+core   0: 3 0x80000192 (0x88889537) x10 0x88889000
+core   0: 0x80000196 (0x88850513) addi    a0, a0, -1912
+core   0: 3 0x80000196 (0x88850513) x10 0x88888888
+core   0: 0x8000019a (0x0000912a) c.add   sp, a0
+core   0: 3 0x8000019a (0x912a) x2  0x0888bbe0
+core   0: 0x8000019c (0x00215113) srli    sp, sp, 2
+core   0: 3 0x8000019c (0x00215113) x2  0x02222ef8
+core   0: 0x800001a0 (0x3b811073) csrw    pmpaddr8, sp
+core   0: 3 0x800001a0 (0x3b811073) c952_pmpaddr8 0x02222ef8
+core   0: 0x800001a4 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x800001a4 (0x00003117) x2  0x800031a4
+core   0: 0x800001a8 (0x1b410113) addi    sp, sp, 436
+core   0: 3 0x800001a8 (0x1b410113) x2  0x80003358
+core   0: 0x800001ac (0x9999a537) lui     a0, 0x9999a
+core   0: 3 0x800001ac (0x9999a537) x10 0x9999a000
+core   0: 0x800001b0 (0x99950513) addi    a0, a0, -1639
+core   0: 3 0x800001b0 (0x99950513) x10 0x99999999
+core   0: 0x800001b4 (0x0000912a) c.add   sp, a0
+core   0: 3 0x800001b4 (0x912a) x2  0x1999ccf1
+core   0: 0x800001b6 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x800001b6 (0x00215113) x2  0x0666733c
+core   0: 0x800001ba (0x3b911073) csrw    pmpaddr9, sp
+core   0: 3 0x800001ba (0x3b911073) c953_pmpaddr9 0x0666733c
+core   0: 0x800001be (0x00003117) auipc   sp, 0x3
+core   0: 3 0x800001be (0x00003117) x2  0x800031be
+core   0: 0x800001c2 (0x19a10113) addi    sp, sp, 410
+core   0: 3 0x800001c2 (0x19a10113) x2  0x80003358
+core   0: 0x800001c6 (0xaaaab537) lui     a0, 0xaaaab
+core   0: 3 0x800001c6 (0xaaaab537) x10 0xaaaab000
+core   0: 0x800001ca (0xaaa50513) addi    a0, a0, -1366
+core   0: 3 0x800001ca (0xaaa50513) x10 0xaaaaaaaa
+core   0: 0x800001ce (0x0000912a) c.add   sp, a0
+core   0: 3 0x800001ce (0x912a) x2  0x2aaade02
+core   0: 0x800001d0 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x800001d0 (0x00215113) x2  0x0aaab780
+core   0: 0x800001d4 (0x3ba11073) csrw    pmpaddr10, sp
+core   0: 3 0x800001d4 (0x3ba11073) c954_pmpaddr10 0x0aaab780
+core   0: 0x800001d8 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x800001d8 (0x00003117) x2  0x800031d8
+core   0: 0x800001dc (0x18010113) addi    sp, sp, 384
+core   0: 3 0x800001dc (0x18010113) x2  0x80003358
+core   0: 0x800001e0 (0xbbbbc537) lui     a0, 0xbbbbc
+core   0: 3 0x800001e0 (0xbbbbc537) x10 0xbbbbc000
+core   0: 0x800001e4 (0xbbb50513) addi    a0, a0, -1093
+core   0: 3 0x800001e4 (0xbbb50513) x10 0xbbbbbbbb
+core   0: 0x800001e8 (0x0000912a) c.add   sp, a0
+core   0: 3 0x800001e8 (0x912a) x2  0x3bbbef13
+core   0: 0x800001ea (0x00215113) srli    sp, sp, 2
+core   0: 3 0x800001ea (0x00215113) x2  0x0eeefbc4
+core   0: 0x800001ee (0x3bb11073) csrw    pmpaddr11, sp
+core   0: 3 0x800001ee (0x3bb11073) c955_pmpaddr11 0x0eeefbc4
+core   0: 0x800001f2 (0x0f0f1137) lui     sp, 0xf0f1
+core   0: 3 0x800001f2 (0x0f0f1137) x2  0x0f0f1000
+core   0: 0x800001f6 (0xf0f10113) addi    sp, sp, -241
+core   0: 3 0x800001f6 (0xf0f10113) x2  0x0f0f0f0f
+core   0: 0x800001fa (0x3a211073) csrw    pmpcfg2, sp
+core   0: 3 0x800001fa (0x3a211073) c930_pmpcfg2 0x0f0f0f0f
+core   0: 0x800001fe (0x00003117) auipc   sp, 0x3
+core   0: 3 0x800001fe (0x00003117) x2  0x800031fe
+core   0: 0x80000202 (0x15a10113) addi    sp, sp, 346
+core   0: 3 0x80000202 (0x15a10113) x2  0x80003358
+core   0: 0x80000206 (0xccccd537) lui     a0, 0xccccd
+core   0: 3 0x80000206 (0xccccd537) x10 0xccccd000
+core   0: 0x8000020a (0xccc50513) addi    a0, a0, -820
+core   0: 3 0x8000020a (0xccc50513) x10 0xcccccccc
+core   0: 0x8000020e (0x0000912a) c.add   sp, a0
+core   0: 3 0x8000020e (0x912a) x2  0x4ccd0024
+core   0: 0x80000210 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x80000210 (0x00215113) x2  0x13334009
+core   0: 0x80000214 (0x3bc11073) csrw    pmpaddr12, sp
+core   0: 3 0x80000214 (0x3bc11073) c956_pmpaddr12 0x13334009
+core   0: 0x80000218 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x80000218 (0x00003117) x2  0x80003218
+core   0: 0x8000021c (0x14010113) addi    sp, sp, 320
+core   0: 3 0x8000021c (0x14010113) x2  0x80003358
+core   0: 0x80000220 (0xdddde537) lui     a0, 0xdddde
+core   0: 3 0x80000220 (0xdddde537) x10 0xdddde000
+core   0: 0x80000224 (0xddd50513) addi    a0, a0, -547
+core   0: 3 0x80000224 (0xddd50513) x10 0xdddddddd
+core   0: 0x80000228 (0x0000912a) c.add   sp, a0
+core   0: 3 0x80000228 (0x912a) x2  0x5dde1135
+core   0: 0x8000022a (0x00215113) srli    sp, sp, 2
+core   0: 3 0x8000022a (0x00215113) x2  0x1777844d
+core   0: 0x8000022e (0x3bd11073) csrw    pmpaddr13, sp
+core   0: 3 0x8000022e (0x3bd11073) c957_pmpaddr13 0x1777844d
+core   0: 0x80000232 (0x00003117) auipc   sp, 0x3
+core   0: 3 0x80000232 (0x00003117) x2  0x80003232
+core   0: 0x80000236 (0x12610113) addi    sp, sp, 294
+core   0: 3 0x80000236 (0x12610113) x2  0x80003358
+core   0: 0x8000023a (0xeeeef537) lui     a0, 0xeeeef
+core   0: 3 0x8000023a (0xeeeef537) x10 0xeeeef000
+core   0: 0x8000023e (0xeee50513) addi    a0, a0, -274
+core   0: 3 0x8000023e (0xeee50513) x10 0xeeeeeeee
+core   0: 0x80000242 (0x0000912a) c.add   sp, a0
+core   0: 3 0x80000242 (0x912a) x2  0x6eef2246
+core   0: 0x80000244 (0x00215113) srli    sp, sp, 2
+core   0: 3 0x80000244 (0x00215113) x2  0x1bbbc891
+core   0: 0x80000248 (0x3be11073) csrw    pmpaddr14, sp
+core   0: 3 0x80000248 (0x3be11073) c958_pmpaddr14 0x1bbbc891
+core   0: 0x8000024c (0x00003117) auipc   sp, 0x3
+core   0: 3 0x8000024c (0x00003117) x2  0x8000324c
+core   0: 0x80000250 (0x10c10113) addi    sp, sp, 268
+core   0: 3 0x80000250 (0x10c10113) x2  0x80003358
+core   0: 0x80000254 (0xfff00513) li      a0, -1
+core   0: 3 0x80000254 (0xfff00513) x10 0xffffffff
+core   0: 0x80000258 (0x0000912a) c.add   sp, a0
+core   0: 3 0x80000258 (0x912a) x2  0x80003357
+core   0: 0x8000025a (0x00215113) srli    sp, sp, 2
+core   0: 3 0x8000025a (0x00215113) x2  0x20000cd5
+core   0: 0x8000025e (0x3bf11073) csrw    pmpaddr15, sp
+core   0: 3 0x8000025e (0x3bf11073) c959_pmpaddr15 0x20000cd5
+core   0: 0x80000262 (0x0f0f1137) lui     sp, 0xf0f1
+core   0: 3 0x80000262 (0x0f0f1137) x2  0x0f0f1000
+core   0: 0x80000266 (0xf0f10113) addi    sp, sp, -241
+core   0: 3 0x80000266 (0xf0f10113) x2  0x0f0f0f0f
+core   0: 0x8000026a (0x3a311073) csrw    pmpcfg3, sp
+core   0: 3 0x8000026a (0x3a311073) c931_pmpcfg3 0x0f0f0f0f
+core   0: 0x8000026e (0x00000517) auipc   a0, 0x0
+core   0: 3 0x8000026e (0x00000517) x10 0x8000026e
+core   0: 0x80000272 (0x05850513) addi    a0, a0, 88
+core   0: 3 0x80000272 (0x05850513) x10 0x800002c6
+core   0: 0x80000276 (0x34151073) csrw    mepc, a0
+core   0: 3 0x80000276 (0x34151073) c833_mepc 0x800002c6
+core   0: 0x8000027a (0x7c00d073) csrwi   cpuctrlsts, 1
+core   0: 3 0x8000027a (0x7c00d073) c1984_cpuctrlsts 0x00000000
+core   0: 0x8000027e (0x00006509) c.lui   a0, 0x2
+core   0: 3 0x8000027e (0x6509) x10 0x00002000
+core   0: 0x80000280 (0x80050513) addi    a0, a0, -2048
+core   0: 3 0x80000280 (0x80050513) x10 0x00001800
+core   0: 0x80000284 (0x30051073) csrw    mstatus, a0
+core   0: 3 0x80000284 (0x30051073) c768_mstatus 0x00001800
+core   0: 0x80000288 (0x00004501) c.li    a0, 0
+core   0: 3 0x80000288 (0x4501) x10 0x00000000
+core   0: 0x8000028a (0x30451073) csrw    mie, a0
+core   0: 3 0x8000028a (0x30451073) c772_mie 0x00000000
+core   0: 0x8000028e (0x90000eb7) lui     t4, 0x90000
+core   0: 3 0x8000028e (0x90000eb7) x29 0x90000000
+core   0: 0x80000292 (0x00001ef1) c.addi  t4, -4
+core   0: 3 0x80000292 (0x1ef1) x29 0x8ffffffc
+core   0: 0x80000294 (0x30000513) li      a0, 768
+core   0: 3 0x80000294 (0x30000513) x10 0x00000300
+core   0: 0x80000298 (0x00000522) c.slli  a0, 8
+core   0: 3 0x80000298 (0x0522) x10 0x00030000
+core   0: 0x8000029a (0x0000050d) c.addi  a0, 3
+core   0: 3 0x8000029a (0x050d) x10 0x00030003
+core   0: 0x8000029c (0x00aea023) sw      a0, 0(t4)
+core   0: 3 0x8000029c (0x00aea023) mem 0x8ffffffc 0x00030003
+core   0: 0x800002a0 (0x30002573) csrr    a0, mstatus
+core   0: 3 0x800002a0 (0x30002573) x10 0x00001800
+core   0: 0x800002a4 (0x00aea023) sw      a0, 0(t4)
+core   0: 3 0x800002a4 (0x00aea023) mem 0x8ffffffc 0x00001800
+core   0: 0x800002a8 (0x90000eb7) lui     t4, 0x90000
+core   0: 3 0x800002a8 (0x90000eb7) x29 0x90000000
+core   0: 0x800002ac (0x00001ef1) c.addi  t4, -4
+core   0: 3 0x800002ac (0x1ef1) x29 0x8ffffffc
+core   0: 0x800002ae (0x30400513) li      a0, 772
+core   0: 3 0x800002ae (0x30400513) x10 0x00000304
+core   0: 0x800002b2 (0x00000522) c.slli  a0, 8
+core   0: 3 0x800002b2 (0x0522) x10 0x00030400
+core   0: 0x800002b4 (0x0000050d) c.addi  a0, 3
+core   0: 3 0x800002b4 (0x050d) x10 0x00030403
+core   0: 0x800002b6 (0x00aea023) sw      a0, 0(t4)
+core   0: 3 0x800002b6 (0x00aea023) mem 0x8ffffffc 0x00030403
+core   0: 0x800002ba (0x30402573) csrr    a0, mie
+core   0: 3 0x800002ba (0x30402573) x10 0x00000000
+core   0: 0x800002be (0x00aea023) sw      a0, 0(t4)
+core   0: 3 0x800002be (0x00aea023) mem 0x8ffffffc 0x00000000
+core   0: 0x800002c2 (0x30200073) mret
+core   0: 3 0x800002c2 (0x30200073) c768_mstatus 0x00000080
+core   0: 0x800002c6 (0x80000037) lui     zero, 0x80000
+core   0: 3 0x800002c6 (0x80000037)
+core   0: 0x800002ca (0x00000001) c.nop
+core   0: 3 0x800002ca (0x0001)
+core   0: 0x800002cc (0xf2a2a0b7) lui     ra, 0xf2a2a
+core   0: 3 0x800002cc (0xf2a2a0b7) x1  0xf2a2a000
+core   0: 0x800002d0 (0xfc808093) addi    ra, ra, -56
+core   0: 3 0x800002d0 (0xfc808093) x1  0xf2a29fc8
+core   0: 0x800002d4 (0x00004101) c.li    sp, 0
+core   0: 3 0x800002d4 (0x4101) x2  0x00000000
+core   0: 0x800002d6 (0x00004181) c.li    gp, 0
+core   0: 3 0x800002d6 (0x4181) x3  0x00000000
+core   0: 0x800002d8 (0xf55af237) lui     tp, 0xf55af
+core   0: 3 0x800002d8 (0xf55af237) x4  0xf55af000
+core   0: 0x800002dc (0x98620213) addi    tp, tp, -1658
+core   0: 3 0x800002dc (0x98620213) x4  0xf55ae986
+core   0: 0x800002e0 (0x800002b7) lui     t0, 0x80000
+core   0: 3 0x800002e0 (0x800002b7) x5  0x80000000
+core   0: 0x800002e4 (0x00004319) c.li    t1, 6
+core   0: 3 0x800002e4 (0x4319) x6  0x00000006
+core   0: 0x800002e6 (0x0000438d) c.li    t2, 3
+core   0: 3 0x800002e6 (0x438d) x7  0x00000003
+core   0: 0x800002e8 (0xf4f78437) lui     s0, 0xf4f78
+core   0: 3 0x800002e8 (0xf4f78437) x8  0xf4f78000
+core   0: 0x800002ec (0xd4b40413) addi    s0, s0, -693
+core   0: 3 0x800002ec (0xd4b40413) x8  0xf4f77d4b
+core   0: 0x800002f0 (0x000044ad) c.li    s1, 11
+core   0: 3 0x800002f0 (0x44ad) x9  0x0000000b
+core   0: 0x800002f2 (0x02e3b537) lui     a0, 0x2e3b
+core   0: 3 0x800002f2 (0x02e3b537) x10 0x02e3b000
+core   0: 0x800002f6 (0x97b50513) addi    a0, a0, -1669
+core   0: 3 0x800002f6 (0x97b50513) x10 0x02e3a97b
+core   0: 0x800002fa (0x00004589) c.li    a1, 2
+core   0: 3 0x800002fa (0x4589) x11 0x00000002
+core   0: 0x800002fc (0xd38676b7) lui     a3, 0xd3867
+core   0: 3 0x800002fc (0xd38676b7) x13 0xd3867000
+core   0: 0x80000300 (0x23168693) addi    a3, a3, 561
+core   0: 3 0x80000300 (0x23168693) x13 0xd3867231
+core   0: 0x80000304 (0x304a5737) lui     a4, 0x304a5
+core   0: 3 0x80000304 (0x304a5737) x14 0x304a5000
+core   0: 0x80000308 (0x26d70713) addi    a4, a4, 621
+core   0: 3 0x80000308 (0x26d70713) x14 0x304a526d
+core   0: 0x8000030c (0x0a4a87b7) lui     a5, 0xa4a8
+core   0: 3 0x8000030c (0x0a4a87b7) x15 0x0a4a8000
+core   0: 0x80000310 (0xca878793) addi    a5, a5, -856
+core   0: 3 0x80000310 (0xca878793) x15 0x0a4a7ca8
+core   0: 0x80000314 (0x00004801) c.li    a6, 0
+core   0: 3 0x80000314 (0x4801) x16 0x00000000
+core   0: 0x80000316 (0x00004881) c.li    a7, 0
+core   0: 3 0x80000316 (0x4881) x17 0x00000000
+core   0: 0x80000318 (0x80000937) lui     s2, 0x80000
+core   0: 3 0x80000318 (0x80000937) x18 0x80000000
+core   0: 0x8000031c (0x800009b7) lui     s3, 0x80000
+core   0: 3 0x8000031c (0x800009b7) x19 0x80000000
+core   0: 0x80000320 (0x73c43a37) lui     s4, 0x73c43
+core   0: 3 0x80000320 (0x73c43a37) x20 0x73c43000
+core   0: 0x80000324 (0xca1a0a13) addi    s4, s4, -863
+core   0: 3 0x80000324 (0xca1a0a13) x20 0x73c42ca1
+core   0: 0x80000328 (0x00004a81) c.li    s5, 0
+core   0: 3 0x80000328 (0x4a81) x21 0x00000000
+core   0: 0x8000032a (0x8cbc7b37) lui     s6, 0x8cbc7
+core   0: 3 0x8000032a (0x8cbc7b37) x22 0x8cbc7000
+core   0: 0x8000032e (0xcdab0b13) addi    s6, s6, -806
+core   0: 3 0x8000032e (0xcdab0b13) x22 0x8cbc6cda
+core   0: 0x80000332 (0x00004bb1) c.li    s7, 12
+core   0: 3 0x80000332 (0x4bb1) x23 0x0000000c
+core   0: 0x80000334 (0x80000c37) lui     s8, 0x80000
+core   0: 3 0x80000334 (0x80000c37) x24 0x80000000
+core   0: 0x80000338 (0x00004c81) c.li    s9, 0
+core   0: 3 0x80000338 (0x4c81) x25 0x00000000
+core   0: 0x8000033a (0x00004d81) c.li    s11, 0
+core   0: 3 0x8000033a (0x4d81) x27 0x00000000
+core   0: 0x8000033c (0x00004e01) c.li    t3, 0
+core   0: 3 0x8000033c (0x4e01) x28 0x00000000
+core   0: 0x8000033e (0x35fc0eb7) lui     t4, 0x35fc0
+core   0: 3 0x8000033e (0x35fc0eb7) x29 0x35fc0000
+core   0: 0x80000342 (0xb61e8e93) addi    t4, t4, -1183
+core   0: 3 0x80000342 (0xb61e8e93) x29 0x35fbfb61
+core   0: 0x80000346 (0xfcf46f37) lui     t5, 0xfcf46
+core   0: 3 0x80000346 (0xfcf46f37) x30 0xfcf46000
+core   0: 0x8000034a (0xd11f0f13) addi    t5, t5, -751
+core   0: 3 0x8000034a (0xd11f0f13) x30 0xfcf45d11
+core   0: 0x8000034e (0x00004f95) c.li    t6, 5
+core   0: 3 0x8000034e (0x4f95) x31 0x00000005
+core   0: 0x80000350 (0x00029d17) auipc   s10, 0x29
+core   0: 3 0x80000350 (0x00029d17) x26 0x80029350
+core   0: 0x80000354 (0xb14d0d13) addi    s10, s10, -1260
+core   0: 3 0x80000354 (0xb14d0d13) x26 0x80028e64
+core   0: 0x80000358 (0x90000eb7) lui     t4, 0x90000
+core   0: 3 0x80000358 (0x90000eb7) x29 0x90000000
+core   0: 0x8000035c (0x00001ef1) c.addi  t4, -4
+core   0: 3 0x8000035c (0x1ef1) x29 0x8ffffffc
+core   0: 0x8000035e (0x00004501) c.li    a0, 0
+core   0: 3 0x8000035e (0x4501) x10 0x00000000
+core   0: 0x80000360 (0x00000522) c.slli  a0, 8
+core   0: 3 0x80000360 (0x0522) x10 0x00000000
+core   0: 0x80000362 (0x00050513) mv      a0, a0
+core   0: 3 0x80000362 (0x00050513) x10 0x00000000
+core   0: 0x80000366 (0x00aea023) sw      a0, 0(t4)
+core   0: 3 0x80000366 (0x00aea023) mem 0x8ffffffc 0x00000000
+core   0: 0x8000036a (0x7ef0206f) j       pc + 0x2fee
+core   0: 3 0x8000036a (0x7ef0206f)
+core   0: 0x80003358 (0x00e000ef) jal     pc + 0xe
+core   0: 3 0x80003358 (0x00e000ef) x1  0x8000335c
+core   0: 0x80003366 (0x00400def) jal     s11, pc + 0x4
+core   0: 3 0x80003366 (0x00400def) x27 0x8000336a
+core   0: 0x8000336a (0x0000bfdd) c.j     pc - 10
+core   0: 3 0x8000336a (0xbfdd)
+core   0: 0x80003360 (0x018000ef) jal     pc + 0x18
+core   0: 3 0x80003360 (0x018000ef) x1  0x80003364
+core   0: 0x80003378 (0x000037dd) c.jal   pc - 26
+core   0: 3 0x80003378 (0x37dd) x1  0x8000337a
+core   0: 0x8000335e (0x0000a821) c.j     pc + 24
+core   0: 3 0x8000335e (0xa821)
+core   0: 0x80003376 (0x0000bfdd) c.j     pc - 10
+core   0: 3 0x80003376 (0xbfdd)
+core   0: 0x8000336c (0x0000a019) c.j     pc + 6
+core   0: 3 0x8000336c (0xa019)
+core   0: 0x80003372 (0x00003fcd) c.jal   pc - 14
+core   0: 3 0x80003372 (0x3fcd) x1  0x80003374
+core   0: 0x80003364 (0x0000a029) c.j     pc + 10
+core   0: 3 0x80003364 (0xa029)
+core   0: 0x8000336e (0x000037fd) c.jal   pc - 18
+core   0: 3 0x8000336e (0x37fd) x1  0x80003370
+core   0: 0x8000335c (0x0000a821) c.j     pc + 24
+core   0: 3 0x8000335c (0xa821)
+core   0: 0x80003374 (0x0000bff5) c.j     pc - 4
+core   0: 3 0x80003374 (0xbff5)
+core   0: 0x80003370 (0x0000a029) c.j     pc + 10
+core   0: 3 0x80003370 (0xa029)
+core   0: 0x8000337a (0x00008ed9) c.or    a3, a4
+core   0: 3 0x8000337a (0x8ed9) x13 0xf3ce727d
+core   0: 0x8000337c (0x0001f897) auipc   a7, 0x1f
+core   0: 3 0x8000337c (0x0001f897) x17 0x8002237c
+core   0: 0x80003380 (0xa3988893) addi    a7, a7, -1479
+core   0: 3 0x80003380 (0xa3988893) x17 0x80021db5
+core   0: 0x80003384 (0xfd68ce03) lbu     t3, -42(a7)
+core   0: 3 0x80003384 (0xfd68ce03) x28 0x00000000 mem 0x80021d8b
+core   0: 0x80003388 (0x00011217) auipc   tp, 0x11
+core   0: 3 0x80003388 (0x00011217) x4  0x80014388
+core   0: 0x8000338c (0x73920213) addi    tp, tp, 1849
+core   0: 3 0x8000338c (0x73920213) x4  0x80014ac1
+core   0: 0x80003390 (0xfd088a03) lb      s4, -48(a7)
+core   0: 3 0x80003390 (0xfd088a03) x20 0x00000000 mem 0x80021d85
+core   0: 0x80003394 (0x00020997) auipc   s3, 0x20
+core   0: 3 0x80003394 (0x00020997) x19 0x80023394
+core   0: 0x80003398 (0xc5b98993) addi    s3, s3, -933
+core   0: 3 0x80003398 (0xc5b98993) x19 0x80022fef
+core   0: 0x8000339c (0x068989a3) sb      s0, 115(s3)
+core   0: 3 0x8000339c (0x068989a3) mem 0x80023062 0x4b
+core   0: 0x800033a0 (0x34d20223) sb      a3, 836(tp)
+core   0: 3 0x800033a0 (0x34d20223) mem 0x80014e05 0x7d
+core   0: 0x800033a4 (0xe8a20423) sb      a0, -376(tp)
+core   0: 3 0x800033a4 (0xe8a20423) mem 0x80014949 0x0
+core   0: 0x800033a8 (0x0209c683) lbu     a3, 32(s3)
+core   0: 3 0x800033a8 (0x0209c683) x13 0x00000000 mem 0x8002300f
+core   0: 0x800033ac (0x0c798d23) sb      t2, 218(s3)
+core   0: 3 0x800033ac (0x0c798d23) mem 0x800230c9 0x3
+core   0: 0x800033b0 (0xff48a5a3) sw      s4, -21(a7)
+core   0: 3 0x800033b0 (0xff48a5a3) mem 0x80021da0 0x00000000
+core   0: 0x800033b4 (0xfe18d803) lhu     a6, -31(a7)
+core   0: 3 0x800033b4 (0xfe18d803) x16 0x00000000 mem 0x80021d96
+core   0: 0x800033b8 (0x34020823) sb      zero, 848(tp)
+core   0: 3 0x800033b8 (0x34020823) mem 0x80014e11 0x0
+core   0: 0x800033bc (0xbbb25403) lhu     s0, -1093(tp)
+core   0: 3 0x800033bc (0xbbb25403) x8  0x00000000 mem 0x8001467c
+core   0: 0x800033c0 (0x00e88ea3) sb      a4, 29(a7)
+core   0: 3 0x800033c0 (0x00e88ea3) mem 0x80021dd2 0x6d
+core   0: 0x800033c4 (0x01688c23) sb      s6, 24(a7)
+core   0: 3 0x800033c4 (0x01688c23) mem 0x80021dcd 0xda
+core   0: 0x800033c8 (0x0ec20123) sb      a2, 226(tp)
+core   0: 3 0x800033c8 (0x0ec20123) mem 0x80014ba3 0xe4
+core   0: 0x800033cc (0x1cc24303) lbu     t1, 460(tp)
+core   0: 3 0x800033cc (0x1cc24303) x6  0x00000000 mem 0x80014c8d
+core   0: 0x800033d0 (0xed6205a3) sb      s6, -309(tp)
+core   0: 3 0x800033d0 (0xed6205a3) mem 0x8001498c 0xda
+core   0: 0x800033d4 (0xfa49aaa3) sw      tp, -75(s3)
+core   0: 3 0x800033d4 (0xfa49aaa3) mem 0x80022fa4 0x80014ac1
+core   0: 0x800033d8 (0xffb898a3) sh      s11, -15(a7)
+core   0: 3 0x800033d8 (0xffb898a3) mem 0x80021da6 0x336a
+core   0: 0x800033dc (0x07b9d003) lhu     zero, 123(s3)
+core   0: 3 0x800033dc (0x07b9d003) mem 0x8002306a
+core   0: 0x800033e0 (0xa3c20483) lb      s1, -1476(tp)
+core   0: 3 0x800033e0 (0xa3c20483) x9  0x00000000 mem 0x800144fd
+core   0: 0x800033e4 (0xda925f83) lhu     t6, -599(tp)
+core   0: 3 0x800033e4 (0xda925f83) x31 0x00000000 mem 0x8001486a
+core   0: 0x800033e8 (0x0001a317) auipc   t1, 0x1a
+core   0: 3 0x800033e8 (0x0001a317) x6  0x8001d3e8
+core   0: 0x800033ec (0x56d30313) addi    t1, t1, 1389
+core   0: 3 0x800033ec (0x56d30313) x6  0x8001d955
+core   0: 0x800033f0 (0x01bdb733) sltu    a4, s11, s11
+core   0: 3 0x800033f0 (0x01bdb733) x14 0x00000000
+core   0: 0x800033f4 (0xb84e9ef3) csrrw   t4, mhpmcounter4h, t4
+core   0: 3 0x800033f4 (0xb84e9ef3) x29 0x00000000 c2948_mhpmcounter4h 0x8ffffffc
+core   0: 0x800033f8 (0xf1d313a3) sh      t4, -249(t1)
+core   0: 3 0x800033f8 (0xf1d313a3) mem 0x8001d85c 0x0000
+core   0: 0x800033fc (0xa8bde993) ori     s3, s11, -1397
+core   0: 3 0x800033fc (0xa8bde993) x19 0xfffffbeb
+core   0: 0x80003400 (0x033df933) remu    s2, s11, s3
+core   0: 3 0x80003400 (0x033df933) x18 0x8000336a
+core   0: 0x80003404 (0x00a709b3) add     s3, a4, a0
+core   0: 3 0x80003404 (0x00a709b3) x19 0x00000000
+core   0: 0x80003408 (0x30f32983) lw      s3, 783(t1)
+core   0: 3 0x80003408 (0x30f32983) x19 0x00000000 mem 0x8001dc64
+core   0: 0x8000340c (0x9f2ea913) slti    s2, t4, -1550
+core   0: 3 0x8000340c (0x9f2ea913) x18 0x00000000
+core   0: 0x80003410 (0x39834503) lbu     a0, 920(t1)
+core   0: 3 0x80003410 (0x39834503) x10 0x00000000 mem 0x8001dced
+core   0: 0x80003414 (0x413ed9b3) sra     s3, t4, s3
+core   0: 3 0x80003414 (0x413ed9b3) x19 0x00000000
+core   0: 0x80003418 (0x03be9933) mulh    s2, t4, s11
+core   0: 3 0x80003418 (0x03be9933) x18 0x00000000
+core   0: 0x8000341c (0x36e30123) sb      a4, 866(t1)
+core   0: 3 0x8000341c (0x36e30123) mem 0x8001dcb7 0x0
+core   0: 0x80003420 (0x03bee533) rem     a0, t4, s11
+core   0: 3 0x80003420 (0x03bee533) x10 0x00000000
+core   0: 0x80003424 (0x8db30e83) lb      t4, -1829(t1)
+core   0: 3 0x80003424 (0x8db30e83) x29 0x00000000 mem 0x8001d230
+core   0: 0x80003428 (0x2ef34903) lbu     s2, 751(t1)
+core   0: 3 0x80003428 (0x2ef34903) x18 0x00000000 mem 0x8001dc44
+core   0: 0x8000342c (0xa7b301a3) sb      s11, -1437(t1)
+core   0: 3 0x8000342c (0xa7b301a3) mem 0x8001d3b8 0x6a
+core   0: 0x80003430 (0x40e55db3) sra     s11, a0, a4
+core   0: 3 0x80003430 (0x40e55db3) x27 0x00000000
+core   0: 0x80003434 (0x0000994a) c.add   s2, s2
+core   0: 3 0x80003434 (0x994a) x18 0x00000000
+core   0: 0x80003436 (0x81230b23) sb      s2, -2026(t1)
+core   0: 3 0x80003436 (0x81230b23) mem 0x8001d16b 0x0
+core   0: 0x8000343a (0x01393533) sltu    a0, s2, s3
+core   0: 3 0x8000343a (0x01393533) x10 0x00000000
+core   0: 0x8000343e (0x03d9d9b3) divu    s3, s3, t4
+core   0: 3 0x8000343e (0x03d9d9b3) x19 0xffffffff
+core   0: 0x80003442 (0x772305a3) sb      s2, 1899(t1)
+core   0: 3 0x80003442 (0x772305a3) mem 0x8001e0c0 0x0
+core   0: 0x80003446 (0xea534e83) lbu     t4, -347(t1)
+core   0: 3 0x80003446 (0xea534e83) x29 0x00000000 mem 0x8001d7fa
+core   0: 0x8000344a (0x88b34983) lbu     s3, -1909(t1)
+core   0: 3 0x8000344a (0x88b34983) x19 0x00000000 mem 0x8001d1e0
+core   0: 0x8000344e (0x00016f17) auipc   t5, 0x16
+core   0: 3 0x8000344e (0x00016f17) x30 0x8001944e
+core   0: 0x80003452 (0x0eaf0f13) addi    t5, t5, 234
+core   0: 3 0x80003452 (0x0eaf0f13) x30 0x80019538
+core   0: 0x80003456 (0x00011217) auipc   tp, 0x11
+core   0: 3 0x80003456 (0x00011217) x4  0x80014456
+core   0: 0x8000345a (0xa5320213) addi    tp, tp, -1453
+core   0: 3 0x8000345a (0xa5320213) x4  0x80013ea9
+core   0: 0x8000345e (0xff2f5703) lhu     a4, -14(t5)
+core   0: 3 0x8000345e (0xff2f5703) x14 0x00000000 mem 0x8001952a
+core   0: 0x80003462 (0xffe20d23) sb      t5, -6(tp)
+core   0: 3 0x80003462 (0xffe20d23) mem 0x80013ea3 0x38
+core   0: 0x80003466 (0xffff0c03) lb      s8, -1(t5)
+core   0: 3 0x80003466 (0xffff0c03) x24 0x00000000 mem 0x80019537
+core   0: 0x8000346a (0x00320003) lb      zero, 3(tp)
+core   0: 3 0x8000346a (0x00320003) mem 0x80013eac
+core   0: 0x8000346e (0xff925803) lhu     a6, -7(tp)
+core   0: 3 0x8000346e (0xff925803) x16 0x00003800 mem 0x80013ea2
+core   0: 0x80003472 (0x006f1323) sh      t1, 6(t5)
+core   0: 3 0x80003472 (0x006f1323) mem 0x8001953e 0xd955
+core   0: 0x80003476 (0x00c20e03) lb      t3, 12(tp)
+core   0: 3 0x80003476 (0x00c20e03) x28 0x00000000 mem 0x80013eb5
+core   0: 0x8000347a (0xfedf0923) sb      a3, -14(t5)
+core   0: 3 0x8000347a (0xfedf0923) mem 0x8001952a 0x0
+core   0: 0x8000347e (0xff9f0083) lb      ra, -7(t5)
+core   0: 3 0x8000347e (0xff9f0083) x1  0x00000000 mem 0x80019531
+core   0: 0x80003482 (0x00b24e83) lbu     t4, 11(tp)
+core   0: 3 0x80003482 (0x00b24e83) x29 0x00000000 mem 0x80013eb4
+core   0: 0x80003486 (0xfe520a23) sb      t0, -12(tp)
+core   0: 3 0x80003486 (0xfe520a23) mem 0x80013e9d 0x0
+core   0: 0x8000348a (0x01520223) sb      s5, 4(tp)
+core   0: 3 0x8000348a (0x01520223) mem 0x80013ead 0x0
+core   0: 0x8000348e (0x00005fe5) c.li    t6, -7
+core   0: 3 0x8000348e (0x5fe5) x31 0xfffffff9
+core   0: 0x80003490 (0x00004f2d) c.li    t5, 11
+core   0: 3 0x80003490 (0x4f2d) x30 0x0000000b
+core   0: 0x80003492 (0x000090de) c.add   ra, s7
+core   0: 3 0x80003492 (0x90de) x1  0x0000000c
+core   0: 0x80003494 (0x02e4cdb3) div     s11, s1, a4
+core   0: 3 0x80003494 (0x02e4cdb3) x27 0xffffffff
+core   0: 0x80003498 (0x00000f99) c.addi  t6, 6
+core   0: 3 0x80003498 (0x0f99) x31 0xffffffff
+core   0: 0x8000349a (0x0000547d) c.li    s0, -1
+core   0: 3 0x8000349a (0x547d) x8  0xffffffff
+core   0: 0x8000349c (0x00004b95) c.li    s7, 5
+core   0: 3 0x8000349c (0x4b95) x23 0x00000005
+core   0: 0x8000349e (0x000085b2) c.mv    a1, a2
+core   0: 3 0x8000349e (0x85b2) x11 0x8002cce4
+core   0: 0x800034a0 (0x00000429) c.addi  s0, 10
+core   0: 3 0x800034a0 (0x0429) x8  0x00000009
+core   0: 0x800034a2 (0xccdce993) ori     s3, s9, -819
+core   0: 3 0x800034a2 (0xccdce993) x19 0xfffffccd
+core   0: 0x800034a6 (0xff746ce3) bltu    s0, s7, pc - 8
+core   0: 3 0x800034a6 (0xff746ce3)
+core   0: 0x800034aa (0xffef84e3) beq     t6, t5, pc - 24
+core   0: 3 0x800034aa (0xffef84e3)
+core   0: 0x800034ae (0xb84c5073) csrwi   mhpmcounter4h, 24
+core   0: 3 0x800034ae (0xb84c5073) c2948_mhpmcounter4h 0x00000018
+core   0: 0x800034b2 (0x00011097) auipc   ra, 0x11
+core   0: 3 0x800034b2 (0x00011097) x1  0x800144b2
+core   0: 0x800034b6 (0xabd08093) addi    ra, ra, -1347
+core   0: 3 0x800034b6 (0xabd08093) x1  0x80013f6f
+core   0: 0x800034ba (0xfa208423) sb      sp, -88(ra)
+core   0: 3 0x800034ba (0xfa208423) mem 0x80013f17 0x0
+core   0: 0x800034be (0xfa008423) sb      zero, -88(ra)
+core   0: 3 0x800034be (0xfa008423) mem 0x80013f17 0x0
+core   0: 0x800034c2 (0x0990a283) lw      t0, 153(ra)
+core   0: 3 0x800034c2 (0x0990a283) x5  0x00000000 mem 0x80014008
+core   0: 0x800034c6 (0x09908383) lb      t2, 153(ra)
+core   0: 3 0x800034c6 (0x09908383) x7  0x00000000 mem 0x80014008
+core   0: 0x800034ca (0xf63084a3) sb      gp, -151(ra)
+core   0: 3 0x800034ca (0xf63084a3) mem 0x80013ed8 0x0
+core   0: 0x800034ce (0x000065fd) c.lui   a1, 0x1f
+core   0: 3 0x800034ce (0x65fd) x11 0x0001f000
+core   0: 0x800034d0 (0xf6e094a3) sh      a4, -151(ra)
+core   0: 3 0x800034d0 (0xf6e094a3) mem 0x80013ed8 0x0000
+core   0: 0x800034d4 (0xf690ad83) lw      s11, -151(ra)
+core   0: 3 0x800034d4 (0xf690ad83) x27 0x00000000 mem 0x80013ed8
+core   0: 0x800034d8 (0x00d7b5b3) sltu    a1, a5, a3
+core   0: 3 0x800034d8 (0x00d7b5b3) x11 0x00000000
+core   0: 0x800034dc (0xf690a903) lw      s2, -151(ra)
+core   0: 3 0x800034dc (0xf690a903) x18 0x00000000 mem 0x80013ed8
+core   0: 0x800034e0 (0xf790a4a3) sw      s9, -151(ra)
+core   0: 3 0x800034e0 (0xf790a4a3) mem 0x80013ed8 0x00000000
+core   0: 0x800034e4 (0xf6c094a3) sh      a2, -151(ra)
+core   0: 3 0x800034e4 (0xf6c094a3) mem 0x80013ed8 0xcce4
+core   0: 0x800034e8 (0xf6908383) lb      t2, -151(ra)
+core   0: 3 0x800034e8 (0xf6908383) x7  0xffffffe4 mem 0x80013ed8
+core   0: 0x800034ec (0x005fedb3) or      s11, t6, t0
+core   0: 3 0x800034ec (0x005fedb3) x27 0xffffffff
+core   0: 0x800034f0 (0xf64094a3) sh      tp, -151(ra)
+core   0: 3 0x800034f0 (0xf64094a3) mem 0x80013ed8 0x3ea9
+core   0: 0x800034f4 (0x97a3cb13) xori    s6, t2, -1670
+core   0: 3 0x800034f4 (0x97a3cb13) x22 0x0000069e
+core   0: 0x800034f8 (0x00eba333) slt     t1, s7, a4
+core   0: 3 0x800034f8 (0x00eba333) x6  0x00000000
+core   0: 0x800034fc (0xf690a983) lw      s3, -151(ra)
+core   0: 3 0x800034fc (0xf690a983) x19 0x00003ea9 mem 0x80013ed8
+core   0: 0x80003500 (0xf6908c03) lb      s8, -151(ra)
+core   0: 3 0x80003500 (0xf6908c03) x24 0xffffffa9 mem 0x80013ed8
+core   0: 0x80003504 (0xf71094a3) sh      a7, -151(ra)
+core   0: 3 0x80003504 (0xf71094a3) mem 0x80013ed8 0x1db5
+core   0: 0x80003508 (0xb0027af3) csrrci  s5, mcycle, 4
+core   0: 3 0x80003508 (0xb0027af3) x21 0x00000d2f c2816_mcycle 0x00000d2b
+core   0: 0x8000350c (0xf7c0a4a3) sw      t3, -151(ra)
+core   0: 3 0x8000350c (0xf7c0a4a3) mem 0x80013ed8 0x00000000
+core   0: 0x80003510 (0xf690d883) lhu     a7, -151(ra)
+core   0: 3 0x80003510 (0xf690d883) x17 0x00000000 mem 0x80013ed8
+core   0: 0x80003514 (0x0352ccb3) div     s9, t0, s5
+core   0: 3 0x80003514 (0x0352ccb3) x25 0x00000000
+core   0: 0x80003518 (0x00008c75) c.and   s0, a3
+core   0: 3 0x80003518 (0x8c75) x8  0x00000000
+core   0: 0x8000351a (0x000088d5) c.andi  s1, 21
+core   0: 3 0x8000351a (0x88d5) x9  0x00000000
+core   0: 0x8000351c (0x406adb33) sra     s6, s5, t1
+core   0: 3 0x8000351c (0x406adb33) x22 0x00000d2f
+core   0: 0x80003520 (0x40d3df93) srai    t6, t2, 13
+core   0: 3 0x80003520 (0x40d3df93) x31 0xffffffff
+core   0: 0x80003524 (0xa2a83e93) sltiu   t4, a6, -1494
+core   0: 3 0x80003524 (0xa2a83e93) x29 0x00000001
+core   0: 0x80003528 (0x00008db5) c.xor   a1, a3
+core   0: 3 0x80003528 (0x8db5) x11 0x00000000
+core   0: 0x8000352a (0x0000ca91) c.beqz  a3, pc + 20
+core   0: 3 0x8000352a (0xca91)
+core   0: 0x8000353e (0x00008031) c.srli  s0, 12
+core   0: 3 0x8000353e (0x8031) x8  0x00000000
+core   0: 0x80003540 (0x03fca9b3) mulhsu  s3, s9, t6
+core   0: 3 0x80003540 (0x03fca9b3) x19 0x00000000
+core   0: 0x80003544 (0xc42a0c93) addi    s9, s4, -958
+core   0: 3 0x80003544 (0xc42a0c93) x25 0xfffffc42
+core   0: 0x80003548 (0x028617b3) mulh    a5, a2, s0
+core   0: 3 0x80003548 (0x028617b3) x15 0x00000000
+core   0: 0x8000354c (0xb03ce773) csrrsi  a4, mhpmcounter3, 25
+core   0: 3 0x8000354c (0xb03ce773) x14 0x0000011c c2819_mhpmcounter3 0x0000011d
+core   0: 0x80003550 (0x83cde713) ori     a4, s11, -1988
+core   0: 3 0x80003550 (0x83cde713) x14 0xffffffff
+core   0: 0x80003554 (0xb80063f3) csrrsi  t2, mcycleh, 0
+core   0: 3 0x80003554 (0xb80063f3) x7  0x00000000
+core   0: 0x80003558 (0x480b6913) ori     s2, s6, 1152
+core   0: 3 0x80003558 (0x480b6913) x18 0x00000daf
+core   0: 0x8000355c (0x00008f09) c.sub   a4, a0
+core   0: 3 0x8000355c (0x8f09) x14 0xffffffff
+core   0: 0x8000355e (0x00281cb3) sll     s9, a6, sp
+core   0: 3 0x8000355e (0x00281cb3) x25 0x00003800
+core   0: 0x80003562 (0x00000345) c.addi  t1, 17
+core   0: 3 0x80003562 (0x0345) x6  0x00000011
+core   0: 0x80003564 (0x000081f9) c.srli  a1, 30
+core   0: 3 0x80003564 (0x81f9) x11 0x00000000
+core   0: 0x80003566 (0x02790a33) mul     s4, s2, t2
+core   0: 3 0x80003566 (0x02790a33) x20 0x00000000
+core   0: 0x8000356a (0x023dbeb3) mulhu   t4, s11, gp
+core   0: 3 0x8000356a (0x023dbeb3) x29 0x00000000
+core   0: 0x8000356e (0x00008a8a) c.mv    s5, sp
+core   0: 3 0x8000356e (0x8a8a) x21 0x00000000
+core   0: 0x80003570 (0xb808b7f3) csrrc   a5, mcycleh, a7
+core   0: 3 0x80003570 (0xb808b7f3) x15 0x00000000 c2944_mcycleh 0x00000000
+core   0: 0x80003574 (0x013cbcb3) sltu    s9, s9, s3
+core   0: 3 0x80003574 (0x013cbcb3) x25 0x00000000
+core   0: 0x80003578 (0x01525c33) srl     s8, tp, s5
+core   0: 3 0x80003578 (0x01525c33) x24 0x80013ea9
+core   0: 0x8000357c (0x00008c3d) c.xor   s0, a5
+core   0: 3 0x8000357c (0x8c3d) x8  0x00000000
+core   0: 0x8000357e (0x01aee6b3) or      a3, t4, s10
+core   0: 3 0x8000357e (0x01aee6b3) x13 0x80028e64
+core   0: 0x80003582 (0x03c408b3) mul     a7, s0, t3
+core   0: 3 0x80003582 (0x03c408b3) x17 0x00000000
+core   0: 0x80003586 (0x0052de63) bge     t0, t0, pc + 28
+core   0: 3 0x80003586 (0x0052de63)
+core   0: 0x800035a2 (0x7eff6593) ori     a1, t5, 2031
+core   0: 3 0x800035a2 (0x7eff6593) x11 0x000007ef
+core   0: 0x800035a6 (0x0000100f) fence.i
+core   0: 3 0x800035a6 (0x0000100f)
+core   0: 0x800035aa (0x00034bb3) xor     s7, t1, zero
+core   0: 3 0x800035aa (0x00034bb3) x23 0x00000011
+core   0: 0x800035ae (0x033c56b3) divu    a3, s8, s3
+core   0: 3 0x800035ae (0x033c56b3) x13 0xffffffff
+core   0: 0x800035b2 (0x01f4fe33) and     t3, s1, t6
+core   0: 3 0x800035b2 (0x01f4fe33) x28 0x00000000
+core   0: 0x800035b6 (0xcb7a0313) addi    t1, s4, -841
+core   0: 3 0x800035b6 (0xcb7a0313) x6  0xfffffcb7
+core   0: 0x800035ba (0x00000001) c.nop
+core   0: 3 0x800035ba (0x0001)
+core   0: 0x800035bc (0x0000e791) c.bnez  a5, pc + 12
+core   0: 3 0x800035bc (0xe791)
+core   0: 0x800035be (0x03822c33) mulhsu  s8, tp, s8
+core   0: 3 0x800035be (0x03822c33) x24 0xc0000001
+core   0: 0x800035c2 (0x00000001) c.nop
+core   0: 3 0x800035c2 (0x0001)
+core   0: 0x800035c4 (0x30053b73) csrrc   s6, mstatus, a0
+core   0: 3 0x800035c4 (0x30053b73) x22 0x00000080 c768_mstatus 0x00000080
+core   0: 0x800035c8 (0x03943233) mulhu   tp, s0, s9
+core   0: 3 0x800035c8 (0x03943233) x4  0x00000000
+core   0: 0x800035cc (0x00b05313) srli    t1, zero, 11
+core   0: 3 0x800035cc (0x00b05313) x6  0x00000000
+core   0: 0x800035d0 (0x00000001) c.nop
+core   0: 3 0x800035d0 (0x0001)
+core   0: 0x800035d2 (0xd2d1cd93) xori    s11, gp, -723
+core   0: 3 0x800035d2 (0xd2d1cd93) x27 0xfffffd2d
+core   0: 0x800035d6 (0x03665e33) divu    t3, a2, s6
+core   0: 3 0x800035d6 (0x03665e33) x28 0x01000599
+core   0: 0x800035da (0x00008aba) c.mv    s5, a4
+core   0: 3 0x800035da (0x8aba) x21 0xffffffff
+core   0: 0x800035dc (0x00bd9263) bne     s11, a1, pc + 4
+core   0: 3 0x800035dc (0x00bd9263)
+core   0: 0x800035e0 (0x40acdb13) srai    s6, s9, 10
+core   0: 3 0x800035e0 (0x40acdb13) x22 0x00000000
+core   0: 0x800035e4 (0x30a2ba73) csrrc   s4, menvcfg, t0
+core   0: 3 0x800035e4 (0x30a2ba73) x20 0x00000000 c778_menvcfg 0x00000000
+core   0: 0x800035e8 (0x0000e789) c.bnez  a5, pc + 10
+core   0: 3 0x800035e8 (0xe789)
+core   0: 0x800035ea (0x01d2f533) and     a0, t0, t4
+core   0: 3 0x800035ea (0x01d2f533) x10 0x00000000
+core   0: 0x800035ee (0xd7b0eb93) ori     s7, ra, -645
+core   0: 3 0x800035ee (0xd7b0eb93) x23 0xffffff7f
+core   0: 0x800035f2 (0xc0ca7c93) andi    s9, s4, -1012
+core   0: 3 0x800035f2 (0xc0ca7c93) x25 0x00000000
+core   0: 0x800035f6 (0x7827a813) slti    a6, a5, 1922
+core   0: 3 0x800035f6 (0x7827a813) x16 0x00000001
+core   0: 0x800035fa (0xb04055f3) csrrwi  a1, mhpmcounter4, 0
+core   0: 3 0x800035fa (0xb04055f3) x11 0x000006f4 c2820_mhpmcounter4 0x00000000
+core   0: 0x800035fe (0x01b81263) bne     a6, s11, pc + 4
+core   0: 3 0x800035fe (0x01b81263)
+core   0: 0x80003602 (0x01d619b3) sll     s3, a2, t4
+core   0: 3 0x80003602 (0x01d619b3) x19 0x8002cce4
+core   0: 0x80003606 (0x342a2373) csrrs   t1, mcause, s4
+core   0: 3 0x80003606 (0x342a2373) x6  0x00000000 c834_mcause 0x00000000
+core   0: 0x8000360a (0x019220b3) slt     ra, tp, s9
+core   0: 3 0x8000360a (0x019220b3) x1  0x00000000
+core   0: 0x8000360e (0x00610533) add     a0, sp, t1
+core   0: 3 0x8000360e (0x00610533) x10 0x00000000
+core   0: 0x80003612 (0x03c6cb33) div     s6, a3, t3
+core   0: 3 0x80003612 (0x03c6cb33) x22 0x00000000
+core   0: 0x80003616 (0x021a2fb3) mulhsu  t6, s4, ra
+core   0: 3 0x80003616 (0x021a2fb3) x31 0x00000000
+core   0: 0x8000361a (0x00008dd1) c.or    a1, a2
+core   0: 3 0x8000361a (0x8dd1) x11 0x8002cef4
+core   0: 0x8000361c (0x0163f763) bgeu    t2, s6, pc + 14
+core   0: 3 0x8000361c (0x0163f763)
+core   0: 0x8000362a (0x00008551) c.srai  a0, 20
+core   0: 3 0x8000362a (0x8551) x10 0x00000000
+core   0: 0x8000362c (0x02b14233) div     tp, sp, a1
+core   0: 3 0x8000362c (0x02b14233) x4  0x00000000
+core   0: 0x80003630 (0x00b99f93) slli    t6, s3, 11
+core   0: 3 0x80003630 (0x00b99f93) x31 0x16672000
+core   0: 0x80003634 (0x022278b3) remu    a7, tp, sp
+core   0: 3 0x80003634 (0x022278b3) x17 0x00000000
+core   0: 0x80003638 (0x00008a4a) c.mv    s4, s2
+core   0: 3 0x80003638 (0x8a4a) x20 0x00000daf
+core   0: 0x8000363a (0xb855d273) csrrwi  tp, mhpmcounter5h, 11
+core   0: 3 0x8000363a (0xb855d273) x4  0x00000000 c2949_mhpmcounter5h 0x0000000b
+core   0: 0x8000363e (0x01315c63) bge     sp, s3, pc + 24
+core   0: 3 0x8000363e (0x01315c63)
+core   0: 0x80003656 (0x000094ea) c.add   s1, s10
+core   0: 3 0x80003656 (0x94ea) x9  0x80028e64
+core   0: 0x80003658 (0x00000001) c.nop
+core   0: 3 0x80003658 (0x0001)
+core   0: 0x8000365a (0x0052dc93) srli    s9, t0, 5
+core   0: 3 0x8000365a (0x0052dc93) x25 0x00000000
+core   0: 0x8000365e (0x080f7563) bgeu    t5, zero, pc + 138
+core   0: 3 0x8000365e (0x080f7563)
+core   0: 0x800036e8 (0x02485433) divu    s0, a6, tp
+core   0: 3 0x800036e8 (0x02485433) x8  0xffffffff
+core   0: 0x800036ec (0x34677093) andi    ra, a4, 838
+core   0: 3 0x800036ec (0x34677093) x1  0x00000346
+core   0: 0x800036f0 (0x01609e63) bne     ra, s6, pc + 28
+core   0: 3 0x800036f0 (0x01609e63)
+core   0: 0x8000370c (0x0ff0000f) fence   iorw,iorw
+core   0: 3 0x8000370c (0x0ff0000f)
+core   0: 0x80003710 (0x01371b93) slli    s7, a4, 19
+core   0: 3 0x80003710 (0x01371b93) x23 0xfff80000
+core   0: 0x80003714 (0x00000001) c.nop
+core   0: 3 0x80003714 (0x0001)
+core   0: 0x80003716 (0x00006ce9) c.lui   s9, 0x1a
+core   0: 3 0x80003716 (0x6ce9) x25 0x0001a000
+core   0: 0x80003718 (0x031c02b3) mul     t0, s8, a7
+core   0: 3 0x80003718 (0x031c02b3) x5  0x00000000
+core   0: 0x8000371c (0x41e75793) srai    a5, a4, 30
+core   0: 3 0x8000371c (0x41e75793) x15 0xffffffff
+core   0: 0x80003720 (0x0377e233) rem     tp, a5, s7
+core   0: 3 0x80003720 (0x0377e233) x4  0xffffffff
+core   0: 0x80003724 (0x00009eda) c.add   t4, s6
+core   0: 3 0x80003724 (0x9eda) x29 0x00000000
+core   0: 0x80003726 (0x0435d763) bge     a1, gp, pc + 78
+core   0: 3 0x80003726 (0x0435d763)
+core   0: 0x8000372a (0x00af8a33) add     s4, t6, a0
+core   0: 3 0x8000372a (0x00af8a33) x20 0x16672000
+core   0: 0x8000372e (0x0048ba33) sltu    s4, a7, tp
+core   0: 3 0x8000372e (0x0048ba33) x20 0x00000001
+core   0: 0x80003732 (0x00008de1) c.and   a1, s0
+core   0: 3 0x80003732 (0x8de1) x11 0x8002cef4
+core   0: 0x80003734 (0x0310c7b3) div     a5, ra, a7
+core   0: 3 0x80003734 (0x0310c7b3) x15 0xffffffff
+core   0: 0x80003738 (0x017cab33) slt     s6, s9, s7
+core   0: 3 0x80003738 (0x017cab33) x22 0x00000000
+core   0: 0x8000373c (0x7c0eb873) csrrc   a6, cpuctrlsts, t4
+core   0: 3 0x8000373c (0x7c0eb873) x16 0x00000000 c1984_cpuctrlsts 0x00000000
+core   0: 0x80003740 (0x5cd17f93) andi    t6, sp, 1485
+core   0: 3 0x80003740 (0x5cd17f93) x31 0x00000000
+core   0: 0x80003744 (0x02a6bcb3) mulhu   s9, a3, a0
+core   0: 3 0x80003744 (0x02a6bcb3) x25 0x00000000
+core   0: 0x80003748 (0x67a42993) slti    s3, s0, 1658
+core   0: 3 0x80003748 (0x67a42993) x19 0x00000001
+core   0: 0x8000374c (0xb045d773) csrrwi  a4, mhpmcounter4, 11
+core   0: 3 0x8000374c (0xb045d773) x14 0x000000f0 c2820_mhpmcounter4 0x0000000b
+core   0: 0x80003750 (0x033cc2b3) div     t0, s9, s3
+core   0: 3 0x80003750 (0x033cc2b3) x5  0x00000000
+core   0: 0x80003754 (0x6b468297) auipc   t0, 0x6b468
+core   0: 3 0x80003754 (0x6b468297) x5  0xeb46b754
+core   0: 0x80003758 (0x00006ec5) c.lui   t4, 0x11
+core   0: 3 0x80003758 (0x6ec5) x29 0x00011000
+core   0: 0x8000375a (0x00003d97) auipc   s11, 0x3
+core   0: 3 0x8000375a (0x00003d97) x27 0x8000675a
+core   0: 0x8000375e (0x772d8d93) addi    s11, s11, 1906
+core   0: 3 0x8000375e (0x772d8d93) x27 0x80006ecc
+core   0: 0x80003762 (0xc40f4a13) xori    s4, t5, -960
+core   0: 3 0x80003762 (0xc40f4a13) x20 0xfffffc4b
+core   0: 0x80003766 (0xdbad8d93) addi    s11, s11, -582
+core   0: 3 0x80003766 (0xdbad8d93) x27 0x80006c86
+core   0: 0x8000376a (0x000086e1) c.srai  a3, 24
+core   0: 3 0x8000376a (0x86e1) x13 0xffffffff
+core   0: 0x8000376c (0x246d80e7) jalr    ra, s11, 582
+core   0: 3 0x8000376c (0x246d80e7) x1  0x80003770
+core   0: 0x80006ecc (0x01555863) bge     a0, s5, pc + 16
+core   0: 3 0x80006ecc (0x01555863)
+core   0: 0x80006edc (0xfc8d0d13) addi    s10, s10, -56
+core   0: 3 0x80006edc (0xfc8d0d13) x26 0x80028e2c
+core   0: 0x80006ee0 (0x0000100f) fence.i
+core   0: 3 0x80006ee0 (0x0000100f)
+core   0: 0x80006ee4 (0x40e2d5b3) sra     a1, t0, a4
+core   0: 3 0x80006ee4 (0x40e2d5b3) x11 0xffffeb46
+core   0: 0x80006ee8 (0x00000001) c.nop
+core   0: 3 0x80006ee8 (0x0001)
+core   0: 0x80006eea (0x00008c86) c.mv    s9, ra
+core   0: 3 0x80006eea (0x8c86) x25 0x80003770
+core   0: 0x80006eec (0x000082b1) c.srli  a3, 12
+core   0: 3 0x80006eec (0x82b1) x13 0x000fffff
+core   0: 0x80006eee (0x036e8cb3) mul     s9, t4, s6
+core   0: 3 0x80006eee (0x036e8cb3) x25 0x00000000
+core   0: 0x80006ef2 (0x001d2223) sw      ra, 4(s10)
+core   0: 3 0x80006ef2 (0x001d2223) mem 0x80028e30 0x80003770
+core   0: 0x80006ef6 (0x0000095a) c.slli  s2, 22
+core   0: 3 0x80006ef6 (0x095a) x18 0x6bc00000
+core   0: 0x80006ef8 (0x0000d717) auipc   a4, 0xd
+core   0: 3 0x80006ef8 (0x0000d717) x14 0x80013ef8
+core   0: 0x80006efc (0xb0b70713) addi    a4, a4, -1269
+core   0: 3 0x80006efc (0xb0b70713) x14 0x80013a03
+core   0: 0x80006f00 (0x01972903) lw      s2, 25(a4)
+core   0: 3 0x80006f00 (0x01972903) x18 0x00000000 mem 0x80013a1c
+core   0: 0x80006f04 (0xfe870623) sb      s0, -20(a4)
+core   0: 3 0x80006f04 (0xfe870623) mem 0x800139ef 0xff
+core   0: 0x80006f08 (0x4094d513) srai    a0, s1, 9
+core   0: 3 0x80006f08 (0x4094d513) x10 0xffc00147
+core   0: 0x80006f0c (0x00008d1d) c.sub   a0, a5
+core   0: 3 0x80006f0c (0x8d1d) x10 0xffc00148
+core   0: 0x80006f0e (0x00008ca1) c.xor   s1, s0
+core   0: 3 0x80006f0e (0x8ca1) x9  0x7ffd719b
+core   0: 0x80006f10 (0x00008ac9) c.andi  a3, 18
+core   0: 3 0x80006f10 (0x8ac9) x13 0x00000012
+core   0: 0x80006f12 (0x00008d9d) c.sub   a1, a5
+core   0: 3 0x80006f12 (0x8d9d) x11 0xffffeb47
+core   0: 0x80006f14 (0x01b75f83) lhu     t6, 27(a4)
+core   0: 3 0x80006f14 (0x01b75f83) x31 0x00000000 mem 0x80013a1e
+core   0: 0x80006f18 (0x02c6ae33) mulhsu  t3, a3, a2
+core   0: 3 0x80006f18 (0x02c6ae33) x28 0x00000009
+core   0: 0x80006f1c (0x406f5ab3) sra     s5, t5, t1
+core   0: 3 0x80006f1c (0x406f5ab3) x21 0x0000000b
+core   0: 0x80006f20 (0x00008dad) c.xor   a1, a1
+core   0: 3 0x80006f20 (0x8dad) x11 0x00000000
+core   0: 0x80006f22 (0x00008c99) c.sub   s1, a4
+core   0: 3 0x80006f22 (0x8c99) x9  0xfffc3798
+core   0: 0x80006f24 (0xfe474d83) lbu     s11, -28(a4)
+core   0: 3 0x80006f24 (0xfe474d83) x27 0x00000000 mem 0x800139e7
+core   0: 0x80006f28 (0x912e3813) sltiu   a6, t3, -1774
+core   0: 3 0x80006f28 (0x912e3813) x16 0x00000001
+core   0: 0x80006f2c (0xfe771203) lh      tp, -25(a4)
+core   0: 3 0x80006f2c (0xfe771203) x4  0x00000000 mem 0x800139ea
+core   0: 0x80006f30 (0x0000893a) c.mv    s2, a4
+core   0: 3 0x80006f30 (0x893a) x18 0x80013a03
+core   0: 0x80006f32 (0xfce70083) lb      ra, -50(a4)
+core   0: 3 0x80006f32 (0xfce70083) x1  0x00000000 mem 0x800139d1
+core   0: 0x80006f36 (0xfee722a3) sw      a4, -27(a4)
+core   0: 3 0x80006f36 (0xfee722a3) mem 0x800139e8 0x80013a03
+core   0: 0x80006f3a (0x0000100f) fence.i
+core   0: 3 0x80006f3a (0x0000100f)
+core   0: 0x80006f3e (0xfe770003) lb      zero, -25(a4)
+core   0: 3 0x80006f3e (0xfe770003) mem 0x800139ea
+core   0: 0x80006f42 (0xff771da3) sh      s7, -5(a4)
+core   0: 3 0x80006f42 (0xff771da3) mem 0x800139fe 0x0000

@@ -59,6 +59,108 @@ opentitan:
   MHPMCounterNum           : 10
   MHPMCounterWidth         : 32
 
+# FX1 candidate adjusted for OpenTitan (see doc/fx1_secure_config_eval.md, section 2):
+# MemECC/Dummy/ResetAll follow SecureIbex, RV32B kept so OpenTitan firmware runs.
+fx1_secure_adj:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32IorCHERIoT"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MFast"
+  RV32B                    : "ibex_pkg::RV32BOTEarlGrey"
+  RV32ZC                   : "ibex_pkg::RV32Zca"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 0
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 1
+  SecureIbex               : 1
+  PMPEnable                : 1
+  PMPGranularity           : 0
+  PMPNumRegions            : 16
+  MHPMCounterNum           : 4
+  MHPMCounterWidth         : 32
+
+# FX1 secure CPU exactly as in ibex_configuration.xlsx ("fx1_secure" profile, DEV and PROD).
+# Only deviation: RV32ZC "off" does not exist in RTL, RV32Zca is the minimum.
+fx1_secure_dev:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32IorCHERIoT"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MFast"
+  RV32B                    : "ibex_pkg::RV32BNone"
+  RV32ZC                   : "ibex_pkg::RV32Zca"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 0
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 1
+  SecureIbex               : 1
+  PMPEnable                : 1
+  PMPGranularity           : 0
+  PMPNumRegions            : 16
+  MHPMCounterNum           : 4
+  MHPMCounterWidth         : 32
+  MemECC                   : 0
+  DummyInstructions        : 0
+  ResetAll                 : 0
+  DbgHwBreakNum            : 2
+
+
+# Diagnostic: fx1_secure_dev with only ResetAll=1 (isolates the ResetAll=0 + lockstep issue).
+fx1_secure_dev_resetall:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32IorCHERIoT"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MFast"
+  RV32B                    : "ibex_pkg::RV32BNone"
+  RV32ZC                   : "ibex_pkg::RV32Zca"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 0
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 1
+  SecureIbex               : 1
+  PMPEnable                : 1
+  PMPGranularity           : 0
+  PMPNumRegions            : 16
+  MHPMCounterNum           : 4
+  MHPMCounterWidth         : 32
+  MemECC                   : 0
+  DummyInstructions        : 0
+  ResetAll                 : 1
+  DbgHwBreakNum            : 2
+
+fx1_secure_prod:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32IorCHERIoT"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MFast"
+  RV32B                    : "ibex_pkg::RV32BNone"
+  RV32ZC                   : "ibex_pkg::RV32Zca"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 0
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 0
+  SecureIbex               : 1
+  PMPEnable                : 1
+  PMPGranularity           : 0
+  PMPNumRegions            : 16
+  MHPMCounterNum           : 0
+  MHPMCounterWidth         : 32
+  MemECC                   : 0
+  DummyInstructions        : 0
+  ResetAll                 : 0
+  DbgHwBreakNum            : 2
+
 # Three-stage pipeline with additional branch traget ALU and 1 cycle multiplier
 # (2 cycles for mulh) so mul does not stall (mulh stall 1 cycles). This is the
 # maximum performance configuration ignoring the branch predictor (which isn't

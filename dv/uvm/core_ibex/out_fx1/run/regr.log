@@ -1,0 +1,326 @@
+83.33% PASS 20 PASSED, 4 FAILED
+riscv_arithmetic_basic_test.1:        PASS
+riscv_rand_instr_test.1:              PASS
+riscv_jump_stress_test.1:             PASS
+riscv_mmu_stress_test.1:              PASS
+riscv_illegal_instr_test.1:           FAILED
+riscv_debug_basic_test.1:             PASS
+riscv_debug_triggers_test.1:          FAILED
+riscv_csr_test.1:                     PASS
+riscv_mem_error_test.1:               PASS
+riscv_mem_intg_error_test.1:          PASS
+riscv_pc_intg_test.1:                 FAILED
+riscv_rf_intg_test.1:                 PASS
+riscv_rf_addr_intg_test.1:            PASS
+riscv_ram_intg_test.1:                FAILED
+riscv_pmp_basic_test.1:               PASS
+riscv_pmp_disable_all_regions_test.1: PASS
+riscv_pmp_out_of_bounds_test.1:       PASS
+riscv_pmp_full_random_test.1:         PASS
+riscv_pmp_region_exec_test.1:         PASS
+riscv_epmp_mml_test.1:                PASS
+riscv_epmp_mml_execute_only_test.1:   PASS
+riscv_epmp_mml_read_only_test.1:      PASS
+riscv_epmp_mmwp_test.1:               PASS
+riscv_epmp_rlb_test.1:                PASS
+
+
+################################################################################
+# Details of failing tests
+################################################################################
+
+riscv_illegal_instr_test.1
+--------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    32: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+    33: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+    34: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_illegal_instr_test.1/trace_core_00000000.log
+    35: 3589400: Illegal instruction (hart 0) at PC 0x800033aa: 0x00000000
+    36: 3591400: Illegal instruction (hart 0) at PC 0x800033aa: 0x00000000
+[E] 37: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 3592400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 800033a8
+    38: 
+    39: 
+    40: --- RISC-V UVM TEST FAILED ---
+    41: 
+--------------------------------------------
+
+
+
+riscv_debug_triggers_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    34: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_debug_triggers_test.1/trace_core_00000000.log
+    35: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_seq_lib.sv(46) @ 3314400: reporter@@debug_seq_single_h [debug_seq_single_h] Starting sequence...
+    36: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_seq_lib.sv(58) @ 3464400: reporter@@debug_seq_single_h [debug_seq_single_h] Exiting sequence
+    37: 12329400: Illegal instruction (hart 0) at PC 0x80003410: 0x00000000
+    38: 12331400: Illegal instruction (hart 0) at PC 0x80003410: 0x00000000
+[E] 39: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 12332400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Synchronous trap was expected at ISS PC: 80002700 but the DUT didn't report one at PC 8000340e
+    40: 
+    41: 
+    42: --- RISC-V UVM TEST FAILED ---
+    43: 
+--------------------------------------------
+
+
+
+riscv_pc_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    31: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+    32: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+    33: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+    34: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_pc_intg_test.1/trace_core_00000000.log
+    35: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(59) @ 1957400: uvm_test_top [uvm_test_top] Forcing core_ibex_tb_top.dut.u_ibex_top.u_ibex_core.if_stage_i.pc_if_o to value 'h82000248
+[E] 36: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(65) @ 1957400: reporter [uvm_test_top] Check failed (!$isunknown(exp_alert))
+    37: 
+    38: --- RISC-V UVM TEST FAILED ---
+    39: 
+    40: UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1957400: reporter [UVM/REPORT/CATCHER]
+--------------------------------------------
+
+
+
+riscv_ram_intg_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    31: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+    32: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+    33: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+    34: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1/run/tests/riscv_ram_intg_test.1/trace_core_00000000.log
+    35: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(390) @ 3859400: uvm_test_top [uvm_test_top] Reading value of core_ibex_tb_top.dut.u_ibex_top.gen_rams.gen_rams_inner[0].gen_scramble_rams.data_bank.u_prim_ram_1p_adv.write_d
+[E] 36: UVM_ERROR /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/dpi/uvm_hdl_vcs.c(1416) @ 3859400: reporter [UVM/DPI/HDL_SET] set: unable to locate hdl path (core_ibex_tb_top.dut.u_ibex_top.gen_rams.gen_rams_inner[0].gen_scramble_rams.data_bank.u_prim_ram_1p_adv.write_d)
+    37: Either the name is incorrect, or you may not have PLI/ACC visibility to that name
+    38: 
+    39: --- RISC-V UVM TEST FAILED ---
+    40: 
+--------------------------------------------
+
+
+
+################################################################################
+# Details of passing tests
+################################################################################
+
+riscv_arithmetic_basic_test.1
+-----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_rand_instr_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_jump_stress_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_mmu_stress_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_debug_basic_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_csr_test.1
+----------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_mem_error_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_mem_intg_error_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_rf_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_rf_addr_intg_test.1
+-------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_basic_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_disable_all_regions_test.1
+------------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_out_of_bounds_test.1
+------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_full_random_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_pmp_region_exec_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_mml_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_mml_execute_only_test.1
+----------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_mml_read_only_test.1
+-------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_mmwp_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_epmp_rlb_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+

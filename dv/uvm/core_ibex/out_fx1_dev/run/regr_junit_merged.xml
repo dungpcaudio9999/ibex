@@ -1,0 +1,578 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="23" tests="23" time="0.0">
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_arithmetic_basic_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_arithmetic_basic_test">
+			<failure type="failure">
+riscv_arithmetic_basic_test.1
+-----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_arithmetic_basic_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_arithmetic_basic_test.1
+-----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_arithmetic_basic_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_rand_instr_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_rand_instr_test">
+			<failure type="failure">
+riscv_rand_instr_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_rand_instr_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_rand_instr_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_rand_instr_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_jump_stress_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_jump_stress_test">
+			<failure type="failure">
+riscv_jump_stress_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_jump_stress_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_jump_stress_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_jump_stress_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_mmu_stress_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_mmu_stress_test">
+			<failure type="failure">
+riscv_mmu_stress_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_mmu_stress_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_mmu_stress_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_mmu_stress_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_illegal_instr_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_illegal_instr_test">
+			<failure type="failure">
+riscv_illegal_instr_test.1
+--------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_illegal_instr_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_illegal_instr_test.1
+--------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_illegal_instr_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_debug_basic_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_debug_basic_test">
+			<failure type="failure">
+riscv_debug_basic_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_debug_basic_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_debug_basic_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_debug_basic_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_debug_triggers_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_debug_triggers_test">
+			<failure type="failure">
+riscv_debug_triggers_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_debug_triggers_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_debug_triggers_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_debug_triggers_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_csr_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_csr_test">
+			<failure type="failure">
+riscv_csr_test.1
+----------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_csr_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_csr_test.1
+----------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_csr_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_mem_error_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_mem_error_test">
+			<failure type="failure">
+riscv_mem_error_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_mem_error_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_mem_error_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_mem_error_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_mem_intg_error_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_mem_intg_error_test">
+			<failure type="failure">
+riscv_mem_intg_error_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_mem_intg_error_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_mem_intg_error_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_mem_intg_error_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_pc_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pc_intg_test">
+			<failure type="failure">
+riscv_pc_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pc_intg_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_pc_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pc_intg_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_rf_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_rf_intg_test">
+			<failure type="failure">
+riscv_rf_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_rf_intg_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_rf_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_rf_intg_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_rf_addr_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_rf_addr_intg_test">
+			<failure type="failure">
+riscv_rf_addr_intg_test.1
+-------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_rf_addr_intg_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_rf_addr_intg_test.1
+-------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_rf_addr_intg_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_pmp_basic_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_basic_test">
+			<failure type="failure">
+riscv_pmp_basic_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_basic_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_pmp_basic_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_basic_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_pmp_disable_all_regions_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_disable_all_regions_test">
+			<failure type="failure">
+riscv_pmp_disable_all_regions_test.1
+------------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_disable_all_regions_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_pmp_disable_all_regions_test.1
+------------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_disable_all_regions_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_pmp_out_of_bounds_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_out_of_bounds_test">
+			<failure type="failure">
+riscv_pmp_out_of_bounds_test.1
+------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_out_of_bounds_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_pmp_out_of_bounds_test.1
+------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_out_of_bounds_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_pmp_full_random_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_full_random_test">
+			<failure type="failure">
+riscv_pmp_full_random_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_full_random_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_pmp_full_random_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_full_random_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_pmp_region_exec_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_region_exec_test">
+			<failure type="failure">
+riscv_pmp_region_exec_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_region_exec_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_pmp_region_exec_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_pmp_region_exec_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_epmp_mml_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_mml_test">
+			<failure type="failure">
+riscv_epmp_mml_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_mml_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_epmp_mml_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_mml_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_epmp_mml_execute_only_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_mml_execute_only_test">
+			<failure type="failure">
+riscv_epmp_mml_execute_only_test.1
+----------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_mml_execute_only_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_epmp_mml_execute_only_test.1
+----------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_mml_execute_only_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_epmp_mml_read_only_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_mml_read_only_test">
+			<failure type="failure">
+riscv_epmp_mml_read_only_test.1
+-------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_mml_read_only_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_epmp_mml_read_only_test.1
+-------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_mml_read_only_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_epmp_mmwp_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_mmwp_test">
+			<failure type="failure">
+riscv_epmp_mmwp_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_mmwp_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_epmp_mmwp_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_mmwp_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="1" name="riscv_epmp_rlb_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_rlb_test">
+			<failure type="failure">
+riscv_epmp_rlb_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_rlb_test.1/trace_core_00000000.log not found
+
+</failure>
+			<system-out>
+riscv_epmp_rlb_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+[FAILED]: Processing the ibex trace failed: Logfile /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_dev/run/tests/riscv_epmp_rlb_test.1/trace_core_00000000.log not found
+
+
+</system-out>
+		</testcase>
+	</testsuite>
+</testsuites>

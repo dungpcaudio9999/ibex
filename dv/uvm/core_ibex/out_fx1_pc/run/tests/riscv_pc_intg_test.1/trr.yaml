@@ -1,0 +1,65 @@
+passed:                   
+failure_mode:             LOG_ERROR(3)
+failure_message:          |-
+  
+  [FAILED]: error seen in 'rtl_sim_stdstreams.log'
+  ---------------*LOG-EXTRACT*----------------
+      81: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+      82: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+      83: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+      84: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/trace_core_00000000.log
+      85: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(59) @ 1957400: uvm_test_top [uvm_test_top] Forcing core_ibex_tb_top.dut.u_ibex_top.u_ibex_core.if_stage_i.pc_if_o to value 'h82000248
+  [E] 86: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(65) @ 1957400: reporter [uvm_test_top] Check failed (!$isunknown(exp_alert))
+      87: 
+      88: --- RISC-V UVM TEST FAILED ---
+      89: 
+      90: UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1957400: reporter [UVM/REPORT/CATCHER]
+  --------------------------------------------
+  
+timeout_s:                1800
+testtype:                 TestType.RISCVDV
+testdotseed:              riscv_pc_intg_test.1
+testname:                 riscv_pc_intg_test
+seed:                     1
+binary:                   test.bin
+rtl_simulator:            vcs
+iss_cosim:                spike
+is_discrete_debug_module: 
+binary_main:              
+binary_dm:                
+vmem_main:                
+vmem_dm:                  
+ddm_sim_opts:             
+gen_test:                 riscv_rand_instr_test
+gen_opts:                 
+rtl_test:                 core_ibex_pc_intg_test
+sim_opts:                 
+directed_data:            
+dir_test:                 .
+assembly:                 test.S
+objectfile:               test.o
+riscvdv_run_gen_log:      
+riscvdv_run_gen_stdout:   /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/instr_gen/riscvdv_cmds.log
+riscvdv_run_log:          
+riscvdv_run_stdout:       /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/instr_gen/riscvdv_run.log
+compile_asm_gen_log:      compile_gen.riscv-dv.log
+compile_asm_log:          compile.riscvdv.log
+rtl_log:                  rtl_sim_stdstreams.log
+rtl_stdout:               rtl_sim_stdstreams.log
+rtl_trace:                trace_core_00000000.log
+iss_cosim_log:            
+iss_cosim_trace:          spike_cosim_trace_core_00000000.log
+dir_fcov:                 
+riscvdv_run_gen_cmds:     |-
+  [['python3', '/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/run.py', '--testlist', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml', '--gcc_opts=-mno-strict-align', '--custom_target', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension', '--csr_yaml', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/csr_description.yaml', '--mabi=ilp32', '--so', '--steps=gen', '--output', '/tmp/tmpvub1zg21/@@PLACEHOLDER@@', '--simulator', 'vcs', '--isa', 'rv32imcb', '--test', 'riscv_pc_intg_test', '--start_seed', '1', '--iterations', '1', '--end_signature_addr', '8ffffffc', '--debug', '/tmp/tmpvub1zg21/cmds.list', '--sim_opts', '+uvm_set_inst_override=riscv_asm_program_gen,ibex_asm_program_gen,uvm_test_top.asm_gen +require_signature_addr=1 +signature_addr=8ffffffc +pmp_num_regions=16 +pmp_granularity=0 +tvec_alignment=8']]
+riscvdv_run_cmds:         |-
+  [['/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/instr_gen/vcs_simv', '+vcs+lic+wait', '+uvm_set_inst_override=riscv_asm_program_gen,ibex_asm_program_gen,uvm_test_top.asm_gen', '+require_signature_addr=1', '+signature_addr=8ffffffc', '+pmp_num_regions=16', '+pmp_granularity=0', '+tvec_alignment=8', '+ntb_random_seed=1', '+UVM_TESTNAME=riscv_rand_instr_test', '+num_of_tests=1', '+start_idx=0', '+asm_file_name=/tmp/tmpvub1zg21/test', '-l', '/tmp/tmpvub1zg21/gen.log']]
+compile_asm_gen_cmds:     |-
+  [['python3', '/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/run.py', '--testlist', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml', '--gcc_opts=-mno-strict-align', '--custom_target', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension', '--csr_yaml', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/csr_description.yaml', '--mabi=ilp32', '--verbose', '--output', '/tmp/tmphmakj5z9/@@PLACEHOLDER@@', '--steps=gcc_compile', '--test', 'riscv_pc_intg_test', '--start_seed', '1', '--iterations', '1', '--isa', 'rv32imcb', '--debug', '/tmp/tmphmakj5z9/orig-cmds.list']]
+compile_asm_cmds:         |-
+  [['/home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-gcc', '-static', '-mcmodel=medany', '-fvisibility=hidden', '-nostdlib', '-nostartfiles', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/test.S', '-I/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/user_extension', '-T/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/scripts/link.ld', '-mno-strict-align', '-o', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/test.o', '-march=rv32imcb', '-mabi=ilp32'], ['/home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-objcopy', '-O', 'binary', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/test.o', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/test.bin']]
+rtl_cmds:                 |-
+  [['env', 'SIM_DIR=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/build/tb/vcs_simv', '+vcs+lic+wait', '+ntb_random_seed=1', '+UVM_TESTNAME=core_ibex_pc_intg_test', '+UVM_VERBOSITY=UVM_LOW', '+bin=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/test.bin', '+ibex_tracer_file_base=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/trace_core', '+cosim_log_file=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/spike_cosim_trace_core_00000000.log', '-l', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/run/tests/riscv_pc_intg_test.1/rtl_sim.log', '+signature_addr=8ffffffc', '+test_timeout_s=1800', '-ucli', '-do', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/vcs.tcl']]
+metadata_pickle_file:     /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/metadata/metadata.pickle
+pickle_file:              /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_fx1_pc/metadata/riscv_pc_intg_test.1.pickle
+yaml_file:                trr.yaml

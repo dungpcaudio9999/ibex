@@ -1,0 +1,51 @@
+passed:                   True
+failure_mode:             
+failure_message:          
+timeout_s:                300
+testtype:                 TestType.RISCVDV
+testdotseed:              riscv_epmp_rlb_test.1
+testname:                 riscv_epmp_rlb_test
+seed:                     1
+binary:                   test.bin
+rtl_simulator:            vcs
+iss_cosim:                spike
+is_discrete_debug_module: 
+binary_main:              
+binary_dm:                
+vmem_main:                
+vmem_dm:                  
+ddm_sim_opts:             
+gen_test:                 riscv_rand_instr_test
+gen_opts:                 |-
+  +instr_cnt=6000 +set_mstatus_mprv=1 +pmp_max_offset=00024000 +pmp_region_0=L:1,X:1,W:1,R:1 +pmp_region_1=L:1,X:1,W:1,R:1 +pmp_region_2=L:1,X:1,W:1,R:1 +pmp_region_3=L:1,X:1,W:1,R:1 +pmp_region_4=L:1,X:1,W:1,R:1 +pmp_region_5=L:1,X:1,W:1,R:1 +pmp_region_6=L:1,X:1,W:1,R:1 +pmp_region_7=L:1,X:1,W:1,R:1 +pmp_region_8=L:1,X:1,W:1,R:1 +pmp_region_9=L:1,X:1,W:1,R:1 +pmp_region_10=L:1,X:1,W:1,R:1 +pmp_region_11=L:1,X:1,W:1,R:1 +pmp_region_12=L:1,X:1,W:1,R:1 +pmp_region_13=L:1,X:1,W:1,R:1 +pmp_region_14=L:1,X:1,W:1,R:1 +pmp_region_15=L:1,X:1,W:1,R:1 +enable_write_pmp_csr=1 +mseccfg=MML:0,MMWP:0,RLB:1
+rtl_test:                 core_ibex_base_test
+sim_opts:                 
+directed_data:            
+dir_test:                 .
+assembly:                 test.S
+objectfile:               test.o
+riscvdv_run_gen_log:      
+riscvdv_run_gen_stdout:   /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/build/instr_gen/riscvdv_cmds.log
+riscvdv_run_log:          
+riscvdv_run_stdout:       /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/build/instr_gen/riscvdv_run.log
+compile_asm_gen_log:      compile_gen.riscv-dv.log
+compile_asm_log:          compile.riscvdv.log
+rtl_log:                  rtl_sim_stdstreams.log
+rtl_stdout:               rtl_sim_stdstreams.log
+rtl_trace:                trace_core_00000000.log
+iss_cosim_log:            
+iss_cosim_trace:          spike_cosim_trace_core_00000000.log
+dir_fcov:                 
+riscvdv_run_gen_cmds:     |-
+  [['python3', '/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/run.py', '--testlist', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml', '--gcc_opts=-mno-strict-align', '--custom_target', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension', '--csr_yaml', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/csr_description.yaml', '--mabi=ilp32', '--so', '--steps=gen', '--output', '/tmp/tmp3euxierc/@@PLACEHOLDER@@', '--simulator', 'vcs', '--isa', 'rv32imcb', '--test', 'riscv_epmp_rlb_test', '--start_seed', '1', '--iterations', '1', '--end_signature_addr', '8ffffffc', '--debug', '/tmp/tmp3euxierc/cmds.list', '--sim_opts', '+uvm_set_inst_override=riscv_asm_program_gen,ibex_asm_program_gen,uvm_test_top.asm_gen +require_signature_addr=1 +signature_addr=8ffffffc +pmp_num_regions=16 +pmp_granularity=0 +tvec_alignment=8']]
+riscvdv_run_cmds:         |-
+  [['/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/build/instr_gen/vcs_simv', '+vcs+lic+wait', '+uvm_set_inst_override=riscv_asm_program_gen,ibex_asm_program_gen,uvm_test_top.asm_gen', '+require_signature_addr=1', '+signature_addr=8ffffffc', '+pmp_num_regions=16', '+pmp_granularity=0', '+tvec_alignment=8', '+ntb_random_seed=1', '+UVM_TESTNAME=riscv_rand_instr_test', '+num_of_tests=1', '+start_idx=0', '+asm_file_name=/tmp/tmp3euxierc/test', '-l', '/tmp/tmp3euxierc/gen.log', '+instr_cnt=6000', '+set_mstatus_mprv=1', '+pmp_max_offset=00024000', '+pmp_region_0=L:1,X:1,W:1,R:1', '+pmp_region_1=L:1,X:1,W:1,R:1', '+pmp_region_2=L:1,X:1,W:1,R:1', '+pmp_region_3=L:1,X:1,W:1,R:1', '+pmp_region_4=L:1,X:1,W:1,R:1', '+pmp_region_5=L:1,X:1,W:1,R:1', '+pmp_region_6=L:1,X:1,W:1,R:1', '+pmp_region_7=L:1,X:1,W:1,R:1', '+pmp_region_8=L:1,X:1,W:1,R:1', '+pmp_region_9=L:1,X:1,W:1,R:1', '+pmp_region_10=L:1,X:1,W:1,R:1', '+pmp_region_11=L:1,X:1,W:1,R:1', '+pmp_region_12=L:1,X:1,W:1,R:1', '+pmp_region_13=L:1,X:1,W:1,R:1', '+pmp_region_14=L:1,X:1,W:1,R:1', '+pmp_region_15=L:1,X:1,W:1,R:1', '+enable_write_pmp_csr=1', '+mseccfg=MML:0,MMWP:0,RLB:1']]
+compile_asm_gen_cmds:     |-
+  [['python3', '/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/run.py', '--testlist', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml', '--gcc_opts=-mno-strict-align', '--custom_target', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension', '--csr_yaml', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/csr_description.yaml', '--mabi=ilp32', '--verbose', '--output', '/tmp/tmpj0bvmvd9/@@PLACEHOLDER@@', '--steps=gcc_compile', '--test', 'riscv_epmp_rlb_test', '--start_seed', '1', '--iterations', '1', '--isa', 'rv32imcb', '--debug', '/tmp/tmpj0bvmvd9/orig-cmds.list']]
+compile_asm_cmds:         |-
+  [['/home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-gcc', '-static', '-mcmodel=medany', '-fvisibility=hidden', '-nostdlib', '-nostartfiles', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1/test.S', '-I/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/user_extension', '-T/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/scripts/link.ld', '-mno-strict-align', '-o', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1/test.o', '-march=rv32imcb', '-mabi=ilp32'], ['/home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-objcopy', '-O', 'binary', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1/test.o', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1/test.bin']]
+rtl_cmds:                 |-
+  [['env', 'SIM_DIR=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/build/tb/vcs_simv', '+vcs+lic+wait', '+ntb_random_seed=1', '+UVM_TESTNAME=core_ibex_base_test', '+UVM_VERBOSITY=UVM_LOW', '+bin=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1/test.bin', '+ibex_tracer_file_base=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1/trace_core', '+cosim_log_file=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1/spike_cosim_trace_core_00000000.log', '-l', '/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/run/tests/riscv_epmp_rlb_test.1/rtl_sim.log', '+signature_addr=8ffffffc', '+test_timeout_s=300']]
+metadata_pickle_file:     /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/metadata/metadata.pickle
+pickle_file:              /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_secure/metadata/riscv_epmp_rlb_test.1.pickle
+yaml_file:                trr.yaml

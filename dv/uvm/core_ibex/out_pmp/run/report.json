@@ -1,0 +1,1 @@
+{"tool": "vcs", "block_name": "ibex", "block_variant": "opentitan", "results": {"coverage": {}, "testpoints": [], "unmapped_tests": [{"name": "riscv_pmp_basic_test", "max_runtime_s": 0, "simulated_time_us": 0, "passing_runs": 1, "total_runs": 1, "pass_rate": 100.0}]}}

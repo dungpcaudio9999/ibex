@@ -1,0 +1,8 @@
+Sat, 19 Sep 2026 14:19:37 lib.py:259   INFO     Creating output directory: /tmp/tmpbtjmocxw/@@PLACEHOLDER@@
+Sat, 19 Sep 2026 14:19:37 lib.py:196   DEBUG    mkdir -p /tmp/tmpbtjmocxw/@@PLACEHOLDER@@/asm_test
+Sat, 19 Sep 2026 14:19:37 lib.py:224   INFO     Processing regression test list : /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml, test: riscv_epmp_mml_execute_only_test
+Sat, 19 Sep 2026 14:19:38 lib.py:238   INFO     Found matched tests: riscv_epmp_mml_execute_only_test, iterations:1
+Sat, 19 Sep 2026 14:19:38 run.py:452   INFO     Compiling /tmp/tmpbtjmocxw/@@PLACEHOLDER@@/asm_test/riscv_epmp_mml_execute_only_test_0.S
+Sat, 19 Sep 2026 14:19:38 lib.py:196   DEBUG    /home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-gcc -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles /tmp/tmpbtjmocxw/@@PLACEHOLDER@@/asm_test/riscv_epmp_mml_execute_only_test_0.S -I/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/user_extension -T/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/scripts/link.ld -mno-strict-align -o /tmp/tmpbtjmocxw/@@PLACEHOLDER@@/asm_test/riscv_epmp_mml_execute_only_test_0.o -march=rv32imc -mabi=ilp32
+Sat, 19 Sep 2026 14:19:38 run.py:455   INFO     Converting to /tmp/tmpbtjmocxw/@@PLACEHOLDER@@/asm_test/riscv_epmp_mml_execute_only_test_0.bin
+Sat, 19 Sep 2026 14:19:38 lib.py:196   DEBUG    /home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-objcopy -O binary /tmp/tmpbtjmocxw/@@PLACEHOLDER@@/asm_test/riscv_epmp_mml_execute_only_test_0.o /tmp/tmpbtjmocxw/@@PLACEHOLDER@@/asm_test/riscv_epmp_mml_execute_only_test_0.bin

@@ -1,0 +1,196 @@
+Magic 271485
+Revision Verdi_X-2025.06
+
+; Verdi/nWave signal file cho Ibex cau hinh 'opentitan' (CHERIoT-Ibex)
+; Sinh & kiem chung tu RTL thuc te. Nap bang:
+;   verdi -ssf <waves.fsdb> -sswr ibex_opentitan.rc &
+; hoac trong nWave: File > Restore Signal ...
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 29 1600 900 320 110
+
+signalSpacing 5
+top 0
+markerPos 0
+curSTATUS ByChange
+
+addGroup "00_TB_CLK"
+addSignal -h 16 /core_ibex_tb_top/clk
+addSignal -h 16 /core_ibex_tb_top/rst_n
+
+addGroup "01_RVFI_RETIRE"
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/valid
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/order
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/insn
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/pc_rdata
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/pc_wdata
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/rd_addr
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/rd_wdata
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/trap
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/intr
+addSignal -h 16 /core_ibex_tb_top/rvfi_if/mode
+
+addGroup "02_IF_FETCH_BUS"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_req_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_gnt_i
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_rvalid_i
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_addr_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_err_i
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/pc_if
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_req_gated
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_exec
+
+addGroup "03_ICACHE"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/lookup_req_ic0
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/lookup_addr_ic0
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/lookup_valid_ic1
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/tag_hit_ic1
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/ecc_err_ic1
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/fb_fill_level
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/fill_busy_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/fill_stale_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/inval_state_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/skid_valid_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/if_stage_i/gen_icache/icache_i/output_valid
+
+addGroup "04_IF_ID_REG"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_valid_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/pc_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_rdata_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_is_compressed_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_gets_expanded_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_fetch_err
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_fetch_cheriot_acc_vio
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_fetch_cheriot_bound_vio
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/dummy_instr_id
+
+addGroup "05_ID_CONTROLLER"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/controller_i/ctrl_fsm_cs
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/id_fsm_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/instr_executing
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/instr_first_cycle
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/instr_done
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/en_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/illegal_insn_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/pc_set
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/pc_mux_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/exc_pc_mux_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/exc_cause
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/controller_i/halt_if
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/controller_i/flush_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/controller_i/retain_id
+
+addGroup "06_STALL_HAZARD"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/stall_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/stall_mem
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/stall_ld_hz
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/stall_multdiv
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/stall_branch
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/stall_jump
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/stall_alu
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/ready_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/multicycle_done
+
+addGroup "07_REGFILE"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_raddr_a
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_rdata_a
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_raddr_b
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_rdata_b
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_waddr_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_wdata_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_we_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/rf_rdata_a_fwd
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/rf_rdata_b_fwd
+
+addGroup "08_EX_ALU_MULDIV"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/alu_operator_ex
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/alu_operand_a_ex
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/alu_operand_b_ex
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/result_ex
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/ex_valid
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/branch_decision
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/branch_target_ex
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/mult_en_ex
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/div_en_ex
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast/multdiv_i/md_state_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/ex_block_i/gen_multdiv_fast/multdiv_i/div_counter_q
+
+addGroup "09_CHERIOT_EX"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_is_cheriot_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cheriot_exec_id
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cheriot_operator
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cheriot_result_data
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/g_cheriot_ex/u_ibex_cheriot_ex/addr_bound_vio
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/g_cheriot_ex/u_ibex_cheriot_ex/perm_vio
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/g_cheriot_ex/u_ibex_cheriot_ex/perm_vio_vec
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cheriot_ex_err
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cheriot_wb_err
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_cheriot_err
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/g_cheriot_ex/u_ibex_cheriot_ex/branch_req_o
+
+addGroup "10_LSU_FSM"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/load_store_unit_i/ls_fsm_cs
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/load_store_unit_i/cap_rx_fsm_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_req
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_we
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_addr
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_type
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_wdata
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/load_store_unit_i/lsu_req_done
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_resp_valid
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_load_err
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/lsu_store_err
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/load_store_unit_i/handle_misaligned_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/load_store_unit_i/addr_last_q
+
+addGroup "11_DATA_BUS"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_req_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_gnt_i
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_rvalid_i
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_we_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_be_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_addr_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_wdata_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_rdata_i
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_tag_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/data_tag_i
+
+addGroup "12_WB_STAGE"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_write_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/outstanding_load_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/outstanding_store_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/instr_done_wb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/pc_wb
+
+addGroup "13_CSR"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/priv_lvl_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/mstatus_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/mepc_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/mcause_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/mtval_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/mtvec_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/mip
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/mie_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/dcsr_q
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cs_registers_i/depc_q
+
+addGroup "14_IRQ_DEBUG"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/irq_pending_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/nmi_mode
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/debug_mode
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/debug_req_i
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/controller_i/handle_irq
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/id_stage_i/controller_i/enter_debug_mode
+
+addGroup "15_ALERT_SECURITY"
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/alert_minor_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/alert_major_internal_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/alert_major_bus_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/rf_ecc_err_comb
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/pc_mismatch_alert
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/cheriot_fatal_err
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/u_ibex_core/core_busy_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/core_sleep_o
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/gen_lockstep/u_ibex_lockstep/outputs_mismatch
+addSignal -h 16 /core_ibex_tb_top/dut/u_ibex_top/gen_lockstep/u_ibex_lockstep/enable_cmp_q
+

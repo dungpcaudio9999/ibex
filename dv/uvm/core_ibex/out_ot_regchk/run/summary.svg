@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="365" height="20"><style>
+.text { font: 12px sans-serif;
+        text-anchor: middle;
+        dominant-baseline: middle;}
+.name { fill: white; }
+.value { fill: black; }
+</style><g transform="translate(0 0)"><g><rect stroke-width="0" x="0" y="0" width="120" height="20" fill="#666"/><text class="text name" x="60.0" y="10.0">Total Tests</text></g><g transform="translate(120 0)"><rect stroke-width="0" x="0" y="0" width="60" height="20" fill="#6cf"/><text class="text value" x="30.0" y="10.0">6</text></g></g><g transform="translate(185 0)"><g><rect stroke-width="0" x="0" y="0" width="120" height="20" fill="#666"/><text class="text name" x="60.0" y="10.0">Tests Passing</text></g><g transform="translate(120 0)"><rect stroke-width="0" x="0" y="0" width="60" height="20" fill="rgb(0,255,0)"/><text class="text value" x="30.0" y="10.0">100.0%</text></g></g></svg>

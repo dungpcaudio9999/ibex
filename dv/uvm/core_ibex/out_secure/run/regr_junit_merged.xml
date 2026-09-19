@@ -1,0 +1,243 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="16" time="0.0">
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_mem_error_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_mem_error_test">
+			<system-out>
+riscv_mem_error_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_mem_intg_error_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_mem_intg_error_test">
+			<system-out>
+riscv_mem_intg_error_test.1
+---------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_pc_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pc_intg_test">
+			<system-out>
+riscv_pc_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_rf_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_rf_intg_test">
+			<system-out>
+riscv_rf_intg_test.1
+--------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_rf_addr_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_rf_addr_intg_test">
+			<system-out>
+riscv_rf_addr_intg_test.1
+-------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_ram_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_ram_intg_test">
+			<system-out>
+riscv_ram_intg_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_icache_intg_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_icache_intg_test">
+			<system-out>
+riscv_icache_intg_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_pmp_disable_all_regions_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_disable_all_regions_test">
+			<system-out>
+riscv_pmp_disable_all_regions_test.1
+------------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_pmp_out_of_bounds_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_out_of_bounds_test">
+			<system-out>
+riscv_pmp_out_of_bounds_test.1
+------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_pmp_full_random_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_full_random_test">
+			<system-out>
+riscv_pmp_full_random_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_pmp_region_exec_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_pmp_region_exec_test">
+			<system-out>
+riscv_pmp_region_exec_test.1
+----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_epmp_mml_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_mml_test">
+			<system-out>
+riscv_epmp_mml_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_epmp_mml_execute_only_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_mml_execute_only_test">
+			<system-out>
+riscv_epmp_mml_execute_only_test.1
+----------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_epmp_mml_read_only_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_mml_read_only_test">
+			<system-out>
+riscv_epmp_mml_read_only_test.1
+-------------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_epmp_mmwp_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_mmwp_test">
+			<system-out>
+riscv_epmp_mmwp_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+	<testsuite disabled="0" errors="0" failures="0" name="riscv_epmp_rlb_test" skipped="0" tests="1" time="0">
+		<testcase name="riscv_epmp_rlb_test">
+			<system-out>
+riscv_epmp_rlb_test.1
+---------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+</system-out>
+		</testcase>
+	</testsuite>
+</testsuites>
