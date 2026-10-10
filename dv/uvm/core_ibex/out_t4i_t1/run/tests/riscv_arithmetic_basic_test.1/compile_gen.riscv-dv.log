@@ -1,0 +1,8 @@
+Thu, 01 Oct 2026 19:40:07 lib.py:259   INFO     Creating output directory: /tmp/tmp0qwsx_5h/@@PLACEHOLDER@@
+Thu, 01 Oct 2026 19:40:07 lib.py:196   DEBUG    mkdir -p /tmp/tmp0qwsx_5h/@@PLACEHOLDER@@/asm_test
+Thu, 01 Oct 2026 19:40:07 lib.py:224   INFO     Processing regression test list : /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/riscv_dv_extension/testlist.yaml, test: riscv_arithmetic_basic_test
+Thu, 01 Oct 2026 19:40:07 lib.py:238   INFO     Found matched tests: riscv_arithmetic_basic_test, iterations:1
+Thu, 01 Oct 2026 19:40:07 run.py:452   INFO     Compiling /tmp/tmp0qwsx_5h/@@PLACEHOLDER@@/asm_test/riscv_arithmetic_basic_test_0.S
+Thu, 01 Oct 2026 19:40:07 lib.py:196   DEBUG    /home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-gcc -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles /tmp/tmp0qwsx_5h/@@PLACEHOLDER@@/asm_test/riscv_arithmetic_basic_test_0.S -I/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/user_extension -T/home/dungpc/projects/cpu_fx1/ibex/vendor/google_riscv-dv/scripts/link.ld -mno-strict-align -o /tmp/tmp0qwsx_5h/@@PLACEHOLDER@@/asm_test/riscv_arithmetic_basic_test_0.o -march=rv32imc -mabi=ilp32
+Thu, 01 Oct 2026 19:40:07 run.py:455   INFO     Converting to /tmp/tmp0qwsx_5h/@@PLACEHOLDER@@/asm_test/riscv_arithmetic_basic_test_0.bin
+Thu, 01 Oct 2026 19:40:07 lib.py:196   DEBUG    /home/dungpc/tools/lowrisc-toolchain-rv32imcb/bin/riscv32-unknown-elf-objcopy -O binary /tmp/tmp0qwsx_5h/@@PLACEHOLDER@@/asm_test/riscv_arithmetic_basic_test_0.o /tmp/tmp0qwsx_5h/@@PLACEHOLDER@@/asm_test/riscv_arithmetic_basic_test_0.bin

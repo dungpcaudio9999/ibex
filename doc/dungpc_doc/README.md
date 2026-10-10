@@ -29,6 +29,7 @@ cho **cấu hình `opentitan`** khai báo trong [`ibex_configs.yaml`](../ibex/ib
 | 12 | [12_pipeline_timing.md](12_pipeline_timing.md) | Timing pipeline, bảng stall, hazard, exception/interrupt/debug |
 | 13 | [13_mo_phong_vcs.md](13_mo_phong_vcs.md) | **Hướng dẫn mô phỏng bằng VCS** (đã chạy kiểm chứng trên máy này) |
 | 14 | [14_flow_test_riscv_arithmetic_basic.md](14_flow_test_riscv_arithmetic_basic.md) | Flow test `riscv_arithmetic_basic_test`: sinh gì, test gì, kiểm tra ra sao |
+| 15 | [15_flow_fx1_secure.md](15_flow_fx1_secure.md) | **Flow gộp cho `fx1_secure`**: config → lint → compile → mô phỏng, kèm các gotcha đã gặp |
 | — | [verdi/](verdi/) | Verdi signal file (`.rc`) + script mở waveform — 148 tín hiệu / 16 nhóm |
 
 ## Cách đọc

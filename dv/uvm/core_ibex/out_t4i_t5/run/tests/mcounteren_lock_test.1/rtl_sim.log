@@ -1,0 +1,274 @@
+Command: /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_t4i_t5/build/tb/vcs_simv +vcs+lic+wait +ntb_random_seed=1 +UVM_TESTNAME=core_ibex_mcounteren_lock_test +UVM_VERBOSITY=UVM_LOW +bin=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_t4i_t5/run/tests/mcounteren_lock_test.1/test.bin +ibex_tracer_file_base=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_t4i_t5/run/tests/mcounteren_lock_test.1/trace_core +cosim_log_file=/home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_t4i_t5/run/tests/mcounteren_lock_test.1/spike_cosim_trace_core_00000000.log -l /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_t4i_t5/run/tests/mcounteren_lock_test.1/rtl_sim.log +signature_addr=8ffffffc +test_timeout_s=300
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06_Full64; Runtime version X-2025.06_Full64;  Oct  1 19:39 2026
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test core_ibex_mcounteren_lock_test...
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_base_test.sv(265) @ 202400: uvm_test_top [uvm_test_top] Loading single test binary into memory now.
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_base_test.sv(368) @ 202400: uvm_test_top [uvm_test_top] Test wall-clock timeout is set to : 300s
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_t4i_t5/run/tests/mcounteren_lock_test.1/trace_core_00000000.log
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(2048) @ 1100400: uvm_test_top [uvm_test_top] Write to MCYCLE: locking mcounteren!
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1204400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch Register write data mismatch to x6 DUT: 5 expected: 0
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv(2053) @ 1262400: uvm_test_top [uvm_test_top] Write to MCYCLEH: unlocking mcounteren!
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1266400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000224 , but the ISS retired: 80000246
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1288400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000228 , but the ISS retired: 8000024a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1290400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 8000022a , but the ISS retired: 8000024e
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1306400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 8000022c , but the ISS retired: 80000250
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1308400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch A store at address 8ffffff8 was expected but there are no pending accesses
+Synchronous trap was expected at ISS PC: 80000100 but the DUT didn't report one at PC 8000022e
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1324400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000230 , but the ISS retired: 80000100
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1326400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000232 , but the ISS retired: 80000104
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1328400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000234 , but the ISS retired: 80000106
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1334400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000238 , but the ISS retired: 8000010a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1336400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 8000023c , but the ISS retired: 8000010c
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1362400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000240 , but the ISS retired: 80000110
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1398400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 8000025e , but the ISS retired: 80000112
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1432400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000262 , but the ISS retired: 80000116
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1434400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000266 , but the ISS retired: 8000011a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1436400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000268 , but the ISS retired: 80000120
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1472400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 8000026c , but the ISS retired: 80000124
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1474400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 8000026e , but the ISS retired: 8000012a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_base_test.sv(338) @ 1478400: uvm_test_top [uvm_test_top] Test done due to RISCV-DV handshake (payload=TEST_PASS)
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1480400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000270 , but the ISS retired: 8000012e
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1482400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch DUT generated store at address 8ffffff8 but store at address 80001000 was expected
+Synchronous trap was expected at ISS PC: 80000100 but the DUT didn't report one at PC 80000272
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1490400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000100
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 1498400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000104
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5428400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000106
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5472400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5504400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010c
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5512400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000110
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5530400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000112
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5534400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000116
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5560400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000011a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5586400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000120
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5594400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000124
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5642400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5666400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012e
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5702400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch DUT generated store at address 8ffffff8 but store at address 80001000 was expected
+Synchronous trap was expected at ISS PC: 80000100 but the DUT didn't report one at PC 80000272
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5706400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000100
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5712400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000104
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5738400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000106
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5770400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5778400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010c
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5798400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000110
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5852400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000112
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5878400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000116
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5898400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000011a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 5974400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000120
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6018400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000124
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6042400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6050400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012e
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6100400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch DUT generated store at address 8ffffff8 but store at address 80001000 was expected
+Synchronous trap was expected at ISS PC: 80000100 but the DUT didn't report one at PC 80000272
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6138400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000100
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6174400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000104
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6212400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000106
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6250400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6280400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010c
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6304400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000110
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6308400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000112
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6370400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000116
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6428400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000011a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6450400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000120
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6536400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000124
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6590400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6602400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012e
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6642400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch DUT generated store at address 8ffffff8 but store at address 80001000 was expected
+Synchronous trap was expected at ISS PC: 80000100 but the DUT didn't report one at PC 80000272
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6650400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000100
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6654400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000104
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6700400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000106
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6736400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6794400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010c
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6838400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000110
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6852400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000112
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6896400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000116
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6956400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000011a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6972400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000120
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 6980400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000124
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7006400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7014400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012e
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7018400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch DUT generated store at address 8ffffff8 but store at address 80001000 was expected
+Synchronous trap was expected at ISS PC: 80000100 but the DUT didn't report one at PC 80000272
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7054400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000100
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7098400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000104
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7140400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000106
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7172400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7176400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010c
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7194400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000110
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7204400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000112
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7248400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000116
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7280400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000011a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7300400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000120
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7312400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000124
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7332400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012a
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7378400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000012e
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7408400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch DUT generated store at address 8ffffff8 but store at address 80001000 was expected
+Synchronous trap was expected at ISS PC: 80000100 but the DUT didn't report one at PC 80000272
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7460400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000100
+
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 7498400: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7526400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000104
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7554400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 80000106
+
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(170) @ 7562400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch PC mismatch, DUT retired : 80000272 , but the ISS retired: 8000010a
+
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 7598400: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(346) @ 7598400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Co-simulation matched         74 instructions
+
+--- RISC-V UVM TEST PASSED ---
+
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 7598400: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 7598400: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+Quit count :     0 of     1
+** Report counts by severity
+UVM_INFO :  108
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     2
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[fetch_enable_seq_h]     1
+[uvm_test_top]     5
+[uvm_test_top.env.cosim_agent.scoreboard]    95
+[uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq]     1
+[uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq]     1
+
+$finish called from file "/opt/synopsys/vcs/X-2025.06/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time              7598435
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 75984350 ps
+CPU Time:      0.260 seconds;       Data structure size:   1.6Mb
+Thu Oct  1 19:39:13 2026

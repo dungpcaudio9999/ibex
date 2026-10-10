@@ -1,0 +1,22 @@
+100.00% PASS 1 PASSED, 0 FAILED
+riscv_arithmetic_basic_test.1: PASS
+
+
+################################################################################
+# Details of failing tests
+################################################################################
+No failing tests. Nice job!
+
+################################################################################
+# Details of passing tests
+################################################################################
+
+riscv_arithmetic_basic_test.1
+-----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+

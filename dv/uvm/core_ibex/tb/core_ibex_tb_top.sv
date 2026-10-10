@@ -40,8 +40,11 @@ module core_ibex_tb_top;
   // `define is used that can be set from the command line. If no value has been specified, this
   // gives a default. Other simulators don't take the detour via `define and can override the
   // corresponding parameters directly.
-  `ifndef IBEX_CFG_BASE_ISA
-    `define IBEX_CFG_BASE_ISA ibex_pkg::BaseIsaRV32IorCHERIoT
+  // Macro names must match what util/ibex_config.py emits (--string_define_prefix +
+  // field name verbatim, e.g. IBEX_CFG_BaseIsa) — a mismatched name here means a
+  // config's override is silently dropped in favour of the default below.
+  `ifndef IBEX_CFG_BaseIsa
+    `define IBEX_CFG_BaseIsa ibex_pkg::BaseIsaRV32IorCHERIoT
   `endif
 
   `ifndef IBEX_CFG_RV32M
@@ -52,16 +55,115 @@ module core_ibex_tb_top;
     `define IBEX_CFG_RV32B ibex_pkg::RV32BNone
   `endif
 
-  `ifndef IBEX_CFG_REG_FILE
-    `define IBEX_CFG_REG_FILE ibex_pkg::RegFileFF
+  `ifndef IBEX_CFG_RegFile
+    `define IBEX_CFG_RegFile ibex_pkg::RegFileFF
   `endif
 
   `ifndef IBEX_CFG_RV32ZC
     `define IBEX_CFG_RV32ZC ibex_pkg::RV32ZcaZcbZcmp
   `endif
 
+  // PMP reset values (ibex_config.py PMPRstCfg/PMPRstAddr lists). Default: ibex_pkg's
+  // PmpCfgRst/PmpAddrRst (all regions OFF).
+  `ifndef IBEX_CFG_PMPRstCfg_0
+    `define IBEX_CFG_PMPRstCfg_0 ibex_pkg::PmpCfgRst[0]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_0
+    `define IBEX_CFG_PMPRstAddr_0 ibex_pkg::PmpAddrRst[0]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_1
+    `define IBEX_CFG_PMPRstCfg_1 ibex_pkg::PmpCfgRst[1]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_1
+    `define IBEX_CFG_PMPRstAddr_1 ibex_pkg::PmpAddrRst[1]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_2
+    `define IBEX_CFG_PMPRstCfg_2 ibex_pkg::PmpCfgRst[2]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_2
+    `define IBEX_CFG_PMPRstAddr_2 ibex_pkg::PmpAddrRst[2]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_3
+    `define IBEX_CFG_PMPRstCfg_3 ibex_pkg::PmpCfgRst[3]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_3
+    `define IBEX_CFG_PMPRstAddr_3 ibex_pkg::PmpAddrRst[3]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_4
+    `define IBEX_CFG_PMPRstCfg_4 ibex_pkg::PmpCfgRst[4]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_4
+    `define IBEX_CFG_PMPRstAddr_4 ibex_pkg::PmpAddrRst[4]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_5
+    `define IBEX_CFG_PMPRstCfg_5 ibex_pkg::PmpCfgRst[5]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_5
+    `define IBEX_CFG_PMPRstAddr_5 ibex_pkg::PmpAddrRst[5]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_6
+    `define IBEX_CFG_PMPRstCfg_6 ibex_pkg::PmpCfgRst[6]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_6
+    `define IBEX_CFG_PMPRstAddr_6 ibex_pkg::PmpAddrRst[6]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_7
+    `define IBEX_CFG_PMPRstCfg_7 ibex_pkg::PmpCfgRst[7]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_7
+    `define IBEX_CFG_PMPRstAddr_7 ibex_pkg::PmpAddrRst[7]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_8
+    `define IBEX_CFG_PMPRstCfg_8 ibex_pkg::PmpCfgRst[8]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_8
+    `define IBEX_CFG_PMPRstAddr_8 ibex_pkg::PmpAddrRst[8]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_9
+    `define IBEX_CFG_PMPRstCfg_9 ibex_pkg::PmpCfgRst[9]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_9
+    `define IBEX_CFG_PMPRstAddr_9 ibex_pkg::PmpAddrRst[9]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_10
+    `define IBEX_CFG_PMPRstCfg_10 ibex_pkg::PmpCfgRst[10]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_10
+    `define IBEX_CFG_PMPRstAddr_10 ibex_pkg::PmpAddrRst[10]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_11
+    `define IBEX_CFG_PMPRstCfg_11 ibex_pkg::PmpCfgRst[11]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_11
+    `define IBEX_CFG_PMPRstAddr_11 ibex_pkg::PmpAddrRst[11]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_12
+    `define IBEX_CFG_PMPRstCfg_12 ibex_pkg::PmpCfgRst[12]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_12
+    `define IBEX_CFG_PMPRstAddr_12 ibex_pkg::PmpAddrRst[12]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_13
+    `define IBEX_CFG_PMPRstCfg_13 ibex_pkg::PmpCfgRst[13]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_13
+    `define IBEX_CFG_PMPRstAddr_13 ibex_pkg::PmpAddrRst[13]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_14
+    `define IBEX_CFG_PMPRstCfg_14 ibex_pkg::PmpCfgRst[14]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_14
+    `define IBEX_CFG_PMPRstAddr_14 ibex_pkg::PmpAddrRst[14]
+  `endif
+  `ifndef IBEX_CFG_PMPRstCfg_15
+    `define IBEX_CFG_PMPRstCfg_15 ibex_pkg::PmpCfgRst[15]
+  `endif
+  `ifndef IBEX_CFG_PMPRstAddr_15
+    `define IBEX_CFG_PMPRstAddr_15 ibex_pkg::PmpAddrRst[15]
+  `endif
+
   // Ibex Parameters
-  parameter ibex_pkg::base_isa_e BaseIsa  = `IBEX_CFG_BASE_ISA;
+  parameter ibex_pkg::base_isa_e BaseIsa  = `IBEX_CFG_BaseIsa;
   parameter bit          PMPEnable        = 1'b0;
   parameter int unsigned PMPGranularity   = 0;
   parameter int unsigned PMPNumRegions    = 4;
@@ -70,7 +172,7 @@ module core_ibex_tb_top;
   parameter bit RV32E                     = 1'b0;
   parameter ibex_pkg::rv32m_e RV32M       = `IBEX_CFG_RV32M;
   parameter ibex_pkg::rv32b_e RV32B       = `IBEX_CFG_RV32B;
-  parameter ibex_pkg::regfile_e RegFile   = `IBEX_CFG_REG_FILE;
+  parameter ibex_pkg::regfile_e RegFile   = `IBEX_CFG_RegFile;
   parameter bit BranchTargetALU           = 1'b0;
   parameter bit WritebackStage            = 1'b0;
   parameter bit ICache                    = 1'b0;
@@ -91,6 +193,45 @@ module core_ibex_tb_top;
   parameter int unsigned DmAddrMask       = 32'h`DM_ADDR_MASK;
   parameter int unsigned DmHaltAddr       = 32'h`DEBUG_MODE_HALT_ADDR;
   parameter int unsigned DmExceptionAddr  = 32'h`DEBUG_MODE_EXCEPTION_ADDR;
+  parameter ibex_pkg::pmp_cfg_t PMPRstCfg[ibex_pkg::PMP_MAX_REGIONS] = '{
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_0),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_1),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_2),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_3),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_4),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_5),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_6),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_7),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_8),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_9),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_10),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_11),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_12),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_13),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_14),
+    ibex_pkg::pmp_cfg_t'(`IBEX_CFG_PMPRstCfg_15)
+  };
+  parameter logic [ibex_pkg::PMP_ADDR_MSB:0] PMPRstAddr[ibex_pkg::PMP_MAX_REGIONS] = '{
+    34'(`IBEX_CFG_PMPRstAddr_0),
+    34'(`IBEX_CFG_PMPRstAddr_1),
+    34'(`IBEX_CFG_PMPRstAddr_2),
+    34'(`IBEX_CFG_PMPRstAddr_3),
+    34'(`IBEX_CFG_PMPRstAddr_4),
+    34'(`IBEX_CFG_PMPRstAddr_5),
+    34'(`IBEX_CFG_PMPRstAddr_6),
+    34'(`IBEX_CFG_PMPRstAddr_7),
+    34'(`IBEX_CFG_PMPRstAddr_8),
+    34'(`IBEX_CFG_PMPRstAddr_9),
+    34'(`IBEX_CFG_PMPRstAddr_10),
+    34'(`IBEX_CFG_PMPRstAddr_11),
+    34'(`IBEX_CFG_PMPRstAddr_12),
+    34'(`IBEX_CFG_PMPRstAddr_13),
+    34'(`IBEX_CFG_PMPRstAddr_14),
+    34'(`IBEX_CFG_PMPRstAddr_15)
+  };
+  parameter ibex_pkg::pmp_mseccfg_t PMPRstMsecCfg = ibex_pkg::PmpMseccfgRst;
+  parameter logic [31:0] CsrMvendorId     = 32'b0;
+  parameter logic [31:0] CsrMimpId        = 32'b0;
   // Ibex Inputs
   parameter int unsigned BootAddr         = 32'h`BOOT_ADDR; // ResetVec = BootAddr/256b + 0x80
 
@@ -138,7 +279,12 @@ module core_ibex_tb_top;
     .DmBaseAddr           (DmBaseAddr          ),
     .DmAddrMask           (DmAddrMask          ),
     .DmHaltAddr           (DmHaltAddr          ),
-    .DmExceptionAddr      (DmExceptionAddr     )
+    .DmExceptionAddr      (DmExceptionAddr     ),
+    .PMPRstCfg            (PMPRstCfg           ),
+    .PMPRstAddr           (PMPRstAddr          ),
+    .PMPRstMsecCfg        (PMPRstMsecCfg       ),
+    .CsrMvendorId         (CsrMvendorId        ),
+    .CsrMimpId            (CsrMimpId           )
 
   ) dut (
     .clk_i                     (clk                        ),

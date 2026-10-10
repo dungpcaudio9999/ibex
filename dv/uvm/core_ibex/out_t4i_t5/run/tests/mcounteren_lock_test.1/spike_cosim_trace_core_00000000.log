@@ -1,0 +1,343 @@
+core   0: 0x80000080 (0x0000a865) c.j     pc + 184
+core   0: 3 0x80000080 (0xa865)
+core   0: 0x80000138 (0x00004081) c.li    ra, 0
+core   0: 3 0x80000138 (0x4081) x1  0x00000000
+core   0: 0x8000013a (0x00004101) c.li    sp, 0
+core   0: 3 0x8000013a (0x4101) x2  0x00000000
+core   0: 0x8000013c (0x00004181) c.li    gp, 0
+core   0: 3 0x8000013c (0x4181) x3  0x00000000
+core   0: 0x8000013e (0x00004201) c.li    tp, 0
+core   0: 3 0x8000013e (0x4201) x4  0x00000000
+core   0: 0x80000140 (0x00004281) c.li    t0, 0
+core   0: 3 0x80000140 (0x4281) x5  0x00000000
+core   0: 0x80000142 (0x00004301) c.li    t1, 0
+core   0: 3 0x80000142 (0x4301) x6  0x00000000
+core   0: 0x80000144 (0x00004381) c.li    t2, 0
+core   0: 3 0x80000144 (0x4381) x7  0x00000000
+core   0: 0x80000146 (0x00004401) c.li    s0, 0
+core   0: 3 0x80000146 (0x4401) x8  0x00000000
+core   0: 0x80000148 (0x00004481) c.li    s1, 0
+core   0: 3 0x80000148 (0x4481) x9  0x00000000
+core   0: 0x8000014a (0x00004501) c.li    a0, 0
+core   0: 3 0x8000014a (0x4501) x10 0x00000000
+core   0: 0x8000014c (0x00004581) c.li    a1, 0
+core   0: 3 0x8000014c (0x4581) x11 0x00000000
+core   0: 0x8000014e (0x00004601) c.li    a2, 0
+core   0: 3 0x8000014e (0x4601) x12 0x00000000
+core   0: 0x80000150 (0x00004681) c.li    a3, 0
+core   0: 3 0x80000150 (0x4681) x13 0x00000000
+core   0: 0x80000152 (0x00004701) c.li    a4, 0
+core   0: 3 0x80000152 (0x4701) x14 0x00000000
+core   0: 0x80000154 (0x00004781) c.li    a5, 0
+core   0: 3 0x80000154 (0x4781) x15 0x00000000
+core   0: 0x80000156 (0x00004801) c.li    a6, 0
+core   0: 3 0x80000156 (0x4801) x16 0x00000000
+core   0: 0x80000158 (0x00004881) c.li    a7, 0
+core   0: 3 0x80000158 (0x4881) x17 0x00000000
+core   0: 0x8000015a (0x00004901) c.li    s2, 0
+core   0: 3 0x8000015a (0x4901) x18 0x00000000
+core   0: 0x8000015c (0x00004981) c.li    s3, 0
+core   0: 3 0x8000015c (0x4981) x19 0x00000000
+core   0: 0x8000015e (0x00004a01) c.li    s4, 0
+core   0: 3 0x8000015e (0x4a01) x20 0x00000000
+core   0: 0x80000160 (0x00004a81) c.li    s5, 0
+core   0: 3 0x80000160 (0x4a81) x21 0x00000000
+core   0: 0x80000162 (0x00004b01) c.li    s6, 0
+core   0: 3 0x80000162 (0x4b01) x22 0x00000000
+core   0: 0x80000164 (0x00004b81) c.li    s7, 0
+core   0: 3 0x80000164 (0x4b81) x23 0x00000000
+core   0: 0x80000166 (0x00004c01) c.li    s8, 0
+core   0: 3 0x80000166 (0x4c01) x24 0x00000000
+core   0: 0x80000168 (0x00004c81) c.li    s9, 0
+core   0: 3 0x80000168 (0x4c81) x25 0x00000000
+core   0: 0x8000016a (0x00004d01) c.li    s10, 0
+core   0: 3 0x8000016a (0x4d01) x26 0x00000000
+core   0: 0x8000016c (0x00004d81) c.li    s11, 0
+core   0: 3 0x8000016c (0x4d81) x27 0x00000000
+core   0: 0x8000016e (0x00004e01) c.li    t3, 0
+core   0: 3 0x8000016e (0x4e01) x28 0x00000000
+core   0: 0x80000170 (0x00004e81) c.li    t4, 0
+core   0: 3 0x80000170 (0x4e81) x29 0x00000000
+core   0: 0x80000172 (0x00004f01) c.li    t5, 0
+core   0: 3 0x80000172 (0x4f01) x30 0x00000000
+core   0: 0x80000174 (0x00004f81) c.li    t6, 0
+core   0: 3 0x80000174 (0x4f81) x31 0x00000000
+core   0: 0x80000176 (0xf1402573) csrr    a0, mhartid
+core   0: 3 0x80000176 (0xf1402573) x10 0x00000000
+core   0: 0x8000017a (0x0000e101) c.bnez  a0, pc + 0
+core   0: 3 0x8000017a (0xe101)
+core   0: 0x8000017c (0x00000297) auipc   t0, 0x0
+core   0: 3 0x8000017c (0x00000297) x5  0x8000017c
+core   0: 0x80000180 (0x01c28293) addi    t0, t0, 28
+core   0: 3 0x80000180 (0x01c28293) x5  0x80000198
+core   0: 0x80000184 (0x30529073) csrw    mtvec, t0
+core   0: 3 0x80000184 (0x30529073) c773_mtvec 0x80000198
+core   0: 0x80000188 (0x800002b7) lui     t0, 0x80000
+core   0: 3 0x80000188 (0x800002b7) x5  0x80000000
+core   0: 0x8000018c (0x000012fd) c.addi  t0, -1
+core   0: 3 0x8000018c (0x12fd) x5  0x7fffffff
+core   0: 0x8000018e (0x3b029073) csrw    pmpaddr0, t0
+core   0: 3 0x8000018e (0x3b029073) c944_pmpaddr0 0x7fffffff
+core   0: 0x80000192 (0x000042fd) c.li    t0, 31
+core   0: 3 0x80000192 (0x42fd) x5  0x0000001f
+core   0: 0x80000194 (0x3a029073) csrw    pmpcfg0, t0
+core   0: 3 0x80000194 (0x3a029073) c928_pmpcfg0 0x0000001f
+core   0: 0x80000198 (0x00004181) c.li    gp, 0
+core   0: 3 0x80000198 (0x4181) x3  0x00000000
+core   0: 0x8000019a (0x00000297) auipc   t0, 0x0
+core   0: 3 0x8000019a (0x00000297) x5  0x8000019a
+core   0: 0x8000019e (0xf6628293) addi    t0, t0, -154
+core   0: 3 0x8000019e (0xf6628293) x5  0x80000100
+core   0: 0x800001a2 (0x30529073) csrw    mtvec, t0
+core   0: 3 0x800001a2 (0x30529073) c773_mtvec 0x80000100
+core   0: 0x800001a6 (0x00004505) c.li    a0, 1
+core   0: 3 0x800001a6 (0x4505) x10 0x00000001
+core   0: 0x800001a8 (0x0000057e) c.slli  a0, 31
+core   0: 3 0x800001a8 (0x057e) x10 0x80000000
+core   0: 0x800001aa (0x00054d63) bltz    a0, pc + 26
+core   0: 3 0x800001aa (0x00054d63)
+core   0: 0x800001c4 (0x00000293) li      t0, 0
+core   0: 3 0x800001c4 (0x00000293) x5  0x00000000
+core   0: 0x800001c8 (0x00028763) beqz    t0, pc + 14
+core   0: 3 0x800001c8 (0x00028763)
+core   0: 0x800001d6 (0x30005073) csrwi   mstatus, 0
+core   0: 3 0x800001d6 (0x30005073) c768_mstatus 0x00000000
+core   0: 0x800001da (0x00006509) c.lui   a0, 0x2
+core   0: 3 0x800001da (0x6509) x10 0x00002000
+core   0: 0x800001dc (0x80050513) addi    a0, a0, -2048
+core   0: 3 0x800001dc (0x80050513) x10 0x00001800
+core   0: 0x800001e0 (0x30052073) csrs    mstatus, a0
+core   0: 3 0x800001e0 (0x30052073) c768_mstatus 0x00001800
+core   0: 0x800001e4 (0x00000297) auipc   t0, 0x0
+core   0: 3 0x800001e4 (0x00000297) x5  0x800001e4
+core   0: 0x800001e8 (0x01428293) addi    t0, t0, 20
+core   0: 3 0x800001e8 (0x01428293) x5  0x800001f8
+core   0: 0x800001ec (0x34129073) csrw    mepc, t0
+core   0: 3 0x800001ec (0x34129073) c833_mepc 0x800001f8
+core   0: 0x800001f0 (0xf1402573) csrr    a0, mhartid
+core   0: 3 0x800001f0 (0xf1402573) x10 0x00000000
+core   0: 0x800001f4 (0x30200073) mret
+core   0: 3 0x800001f4 (0x30200073) c768_mstatus 0x00000080
+core   0: 0x800001f8 (0x00004415) c.li    s0, 5
+core   0: 3 0x800001f8 (0x4415) x8  0x00000005
+core   0: 0x800001fa (0x30641073) csrw    mcounteren, s0
+core   0: 3 0x800001fa (0x30641073) c774_mcounteren 0x00000005
+core   0: 0x800001fe (0x30602373) csrr    t1, mcounteren
+core   0: 3 0x800001fe (0x30602373) x6  0x00000005
+core   0: 0x80000202 (0x00004395) c.li    t2, 5
+core   0: 3 0x80000202 (0x4395) x7  0x00000005
+core   0: 0x80000204 (0x04731163) bne     t1, t2, pc + 66
+core   0: 3 0x80000204 (0x04731163)
+core   0: 0x80000208 (0xb0001073) csrw    mcycle, zero
+core   0: 3 0x80000208 (0xb0001073) c2816_mcycle 0x00000000
+core   0: 0x8000020c (0x00000001) c.nop
+core   0: 3 0x8000020c (0x0001)
+core   0: 0x8000020e (0x00000001) c.nop
+core   0: 3 0x8000020e (0x0001)
+core   0: 0x80000210 (0x00000001) c.nop
+core   0: 3 0x80000210 (0x0001)
+core   0: 0x80000212 (0x00000001) c.nop
+core   0: 3 0x80000212 (0x0001)
+core   0: 0x80000214 (0x00000001) c.nop
+core   0: 3 0x80000214 (0x0001)
+core   0: 0x80000216 (0x00004481) c.li    s1, 0
+core   0: 3 0x80000216 (0x4481) x9  0x00000000
+core   0: 0x80000218 (0x30649073) csrw    mcounteren, s1
+core   0: 3 0x80000218 (0x30649073) c774_mcounteren 0x00000000
+core   0: 0x8000021c (0x30602373) csrr    t1, mcounteren
+core   0: 3 0x8000021c (0x30602373) x6  0x00000000
+core   0: 0x80000220 (0x02831363) bne     t1, s0, pc + 38
+core   0: 3 0x80000220 (0x02831363)
+core   0: 0x80000246 (0x0ff0000f) fence   iorw,iorw
+core   0: 3 0x80000246 (0x0ff0000f)
+core   0: 0x8000024a (0x90000137) lui     sp, 0x90000
+core   0: 3 0x8000024a (0x90000137) x2  0x90000000
+core   0: 0x8000024e (0x00001161) c.addi  sp, -8
+core   0: 3 0x8000024e (0x1161) x2  0x8ffffff8
+core   0: 0x80000250 (0x70000093) li      ra, 1792
+core   0: 3 0x80000250 (0x70000093) x1  0x00000700
+core   0: 0x80000254 (0x0000c006) c.swsp  ra, 0(sp)
+core   0: exception trap_store_access_fault, epc 0x80000254
+core   0:           tval 0x8ffffff8
+core   0: 0x80000100 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000100 (0x34202f73) x30 0x00000007
+core   0: 0x80000104 (0x00004fa1) c.li    t6, 8
+core   0: 3 0x80000104 (0x4fa1) x31 0x00000008
+core   0: 0x80000106 (0x03ff0463) beq     t5, t6, pc + 40
+core   0: 3 0x80000106 (0x03ff0463)
+core   0: 0x8000010a (0x00004fa5) c.li    t6, 9
+core   0: 3 0x8000010a (0x4fa5) x31 0x00000009
+core   0: 0x8000010c (0x03ff0163) beq     t5, t6, pc + 34
+core   0: 3 0x8000010c (0x03ff0163)
+core   0: 0x80000110 (0x00004fad) c.li    t6, 11
+core   0: 3 0x80000110 (0x4fad) x31 0x0000000b
+core   0: 0x80000112 (0x01ff0e63) beq     t5, t6, pc + 28
+core   0: 3 0x80000112 (0x01ff0e63)
+core   0: 0x80000116 (0x00000f13) li      t5, 0
+core   0: 3 0x80000116 (0x00000f13) x30 0x00000000
+core   0: 0x8000011a (0x000f0363) beqz    t5, pc + 6
+core   0: 3 0x8000011a (0x000f0363)
+core   0: 0x80000120 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000120 (0x34202f73) x30 0x00000007
+core   0: 0x80000124 (0x000f5363) bgez    t5, pc + 6
+core   0: 3 0x80000124 (0x000f5363)
+core   0: 0x8000012a (0x5391e193) ori     gp, gp, 1337
+core   0: 3 0x8000012a (0x5391e193) x3  0x00000539
+core   0: 0x8000012e (0x00001f17) auipc   t5, 0x1
+core   0: 3 0x8000012e (0x00001f17) x30 0x8000112e
+core   0: 0x80000132 (0xec3f2923) sw      gp, -302(t5)
+core   0: exception trap_store_access_fault, epc 0x80000132
+core   0:           tval 0x80001000
+core   0: 0x80000100 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000100 (0x34202f73) x30 0x00000007
+core   0: 0x80000104 (0x00004fa1) c.li    t6, 8
+core   0: 3 0x80000104 (0x4fa1) x31 0x00000008
+core   0: 0x80000106 (0x03ff0463) beq     t5, t6, pc + 40
+core   0: 3 0x80000106 (0x03ff0463)
+core   0: 0x8000010a (0x00004fa5) c.li    t6, 9
+core   0: 3 0x8000010a (0x4fa5) x31 0x00000009
+core   0: 0x8000010c (0x03ff0163) beq     t5, t6, pc + 34
+core   0: 3 0x8000010c (0x03ff0163)
+core   0: 0x80000110 (0x00004fad) c.li    t6, 11
+core   0: 3 0x80000110 (0x4fad) x31 0x0000000b
+core   0: 0x80000112 (0x01ff0e63) beq     t5, t6, pc + 28
+core   0: 3 0x80000112 (0x01ff0e63)
+core   0: 0x80000116 (0x00000f13) li      t5, 0
+core   0: 3 0x80000116 (0x00000f13) x30 0x00000000
+core   0: 0x8000011a (0x000f0363) beqz    t5, pc + 6
+core   0: 3 0x8000011a (0x000f0363)
+core   0: 0x80000120 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000120 (0x34202f73) x30 0x00000007
+core   0: 0x80000124 (0x000f5363) bgez    t5, pc + 6
+core   0: 3 0x80000124 (0x000f5363)
+core   0: 0x8000012a (0x5391e193) ori     gp, gp, 1337
+core   0: 3 0x8000012a (0x5391e193) x3  0x00000539
+core   0: 0x8000012e (0x00001f17) auipc   t5, 0x1
+core   0: 3 0x8000012e (0x00001f17) x30 0x8000112e
+core   0: 0x80000132 (0xec3f2923) sw      gp, -302(t5)
+core   0: exception trap_store_access_fault, epc 0x80000132
+core   0:           tval 0x80001000
+core   0: 0x80000100 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000100 (0x34202f73) x30 0x00000007
+core   0: 0x80000104 (0x00004fa1) c.li    t6, 8
+core   0: 3 0x80000104 (0x4fa1) x31 0x00000008
+core   0: 0x80000106 (0x03ff0463) beq     t5, t6, pc + 40
+core   0: 3 0x80000106 (0x03ff0463)
+core   0: 0x8000010a (0x00004fa5) c.li    t6, 9
+core   0: 3 0x8000010a (0x4fa5) x31 0x00000009
+core   0: 0x8000010c (0x03ff0163) beq     t5, t6, pc + 34
+core   0: 3 0x8000010c (0x03ff0163)
+core   0: 0x80000110 (0x00004fad) c.li    t6, 11
+core   0: 3 0x80000110 (0x4fad) x31 0x0000000b
+core   0: 0x80000112 (0x01ff0e63) beq     t5, t6, pc + 28
+core   0: 3 0x80000112 (0x01ff0e63)
+core   0: 0x80000116 (0x00000f13) li      t5, 0
+core   0: 3 0x80000116 (0x00000f13) x30 0x00000000
+core   0: 0x8000011a (0x000f0363) beqz    t5, pc + 6
+core   0: 3 0x8000011a (0x000f0363)
+core   0: 0x80000120 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000120 (0x34202f73) x30 0x00000007
+core   0: 0x80000124 (0x000f5363) bgez    t5, pc + 6
+core   0: 3 0x80000124 (0x000f5363)
+core   0: 0x8000012a (0x5391e193) ori     gp, gp, 1337
+core   0: 3 0x8000012a (0x5391e193) x3  0x00000539
+core   0: 0x8000012e (0x00001f17) auipc   t5, 0x1
+core   0: 3 0x8000012e (0x00001f17) x30 0x8000112e
+core   0: 0x80000132 (0xec3f2923) sw      gp, -302(t5)
+core   0: exception trap_store_access_fault, epc 0x80000132
+core   0:           tval 0x80001000
+core   0: 0x80000100 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000100 (0x34202f73) x30 0x00000007
+core   0: 0x80000104 (0x00004fa1) c.li    t6, 8
+core   0: 3 0x80000104 (0x4fa1) x31 0x00000008
+core   0: 0x80000106 (0x03ff0463) beq     t5, t6, pc + 40
+core   0: 3 0x80000106 (0x03ff0463)
+core   0: 0x8000010a (0x00004fa5) c.li    t6, 9
+core   0: 3 0x8000010a (0x4fa5) x31 0x00000009
+core   0: 0x8000010c (0x03ff0163) beq     t5, t6, pc + 34
+core   0: 3 0x8000010c (0x03ff0163)
+core   0: 0x80000110 (0x00004fad) c.li    t6, 11
+core   0: 3 0x80000110 (0x4fad) x31 0x0000000b
+core   0: 0x80000112 (0x01ff0e63) beq     t5, t6, pc + 28
+core   0: 3 0x80000112 (0x01ff0e63)
+core   0: 0x80000116 (0x00000f13) li      t5, 0
+core   0: 3 0x80000116 (0x00000f13) x30 0x00000000
+core   0: 0x8000011a (0x000f0363) beqz    t5, pc + 6
+core   0: 3 0x8000011a (0x000f0363)
+core   0: 0x80000120 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000120 (0x34202f73) x30 0x00000007
+core   0: 0x80000124 (0x000f5363) bgez    t5, pc + 6
+core   0: 3 0x80000124 (0x000f5363)
+core   0: 0x8000012a (0x5391e193) ori     gp, gp, 1337
+core   0: 3 0x8000012a (0x5391e193) x3  0x00000539
+core   0: 0x8000012e (0x00001f17) auipc   t5, 0x1
+core   0: 3 0x8000012e (0x00001f17) x30 0x8000112e
+core   0: 0x80000132 (0xec3f2923) sw      gp, -302(t5)
+core   0: exception trap_store_access_fault, epc 0x80000132
+core   0:           tval 0x80001000
+core   0: 0x80000100 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000100 (0x34202f73) x30 0x00000007
+core   0: 0x80000104 (0x00004fa1) c.li    t6, 8
+core   0: 3 0x80000104 (0x4fa1) x31 0x00000008
+core   0: 0x80000106 (0x03ff0463) beq     t5, t6, pc + 40
+core   0: 3 0x80000106 (0x03ff0463)
+core   0: 0x8000010a (0x00004fa5) c.li    t6, 9
+core   0: 3 0x8000010a (0x4fa5) x31 0x00000009
+core   0: 0x8000010c (0x03ff0163) beq     t5, t6, pc + 34
+core   0: 3 0x8000010c (0x03ff0163)
+core   0: 0x80000110 (0x00004fad) c.li    t6, 11
+core   0: 3 0x80000110 (0x4fad) x31 0x0000000b
+core   0: 0x80000112 (0x01ff0e63) beq     t5, t6, pc + 28
+core   0: 3 0x80000112 (0x01ff0e63)
+core   0: 0x80000116 (0x00000f13) li      t5, 0
+core   0: 3 0x80000116 (0x00000f13) x30 0x00000000
+core   0: 0x8000011a (0x000f0363) beqz    t5, pc + 6
+core   0: 3 0x8000011a (0x000f0363)
+core   0: 0x80000120 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000120 (0x34202f73) x30 0x00000007
+core   0: 0x80000124 (0x000f5363) bgez    t5, pc + 6
+core   0: 3 0x80000124 (0x000f5363)
+core   0: 0x8000012a (0x5391e193) ori     gp, gp, 1337
+core   0: 3 0x8000012a (0x5391e193) x3  0x00000539
+core   0: 0x8000012e (0x00001f17) auipc   t5, 0x1
+core   0: 3 0x8000012e (0x00001f17) x30 0x8000112e
+core   0: 0x80000132 (0xec3f2923) sw      gp, -302(t5)
+core   0: exception trap_store_access_fault, epc 0x80000132
+core   0:           tval 0x80001000
+core   0: 0x80000100 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000100 (0x34202f73) x30 0x00000007
+core   0: 0x80000104 (0x00004fa1) c.li    t6, 8
+core   0: 3 0x80000104 (0x4fa1) x31 0x00000008
+core   0: 0x80000106 (0x03ff0463) beq     t5, t6, pc + 40
+core   0: 3 0x80000106 (0x03ff0463)
+core   0: 0x8000010a (0x00004fa5) c.li    t6, 9
+core   0: 3 0x8000010a (0x4fa5) x31 0x00000009
+core   0: 0x8000010c (0x03ff0163) beq     t5, t6, pc + 34
+core   0: 3 0x8000010c (0x03ff0163)
+core   0: 0x80000110 (0x00004fad) c.li    t6, 11
+core   0: 3 0x80000110 (0x4fad) x31 0x0000000b
+core   0: 0x80000112 (0x01ff0e63) beq     t5, t6, pc + 28
+core   0: 3 0x80000112 (0x01ff0e63)
+core   0: 0x80000116 (0x00000f13) li      t5, 0
+core   0: 3 0x80000116 (0x00000f13) x30 0x00000000
+core   0: 0x8000011a (0x000f0363) beqz    t5, pc + 6
+core   0: 3 0x8000011a (0x000f0363)
+core   0: 0x80000120 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000120 (0x34202f73) x30 0x00000007
+core   0: 0x80000124 (0x000f5363) bgez    t5, pc + 6
+core   0: 3 0x80000124 (0x000f5363)
+core   0: 0x8000012a (0x5391e193) ori     gp, gp, 1337
+core   0: 3 0x8000012a (0x5391e193) x3  0x00000539
+core   0: 0x8000012e (0x00001f17) auipc   t5, 0x1
+core   0: 3 0x8000012e (0x00001f17) x30 0x8000112e
+core   0: 0x80000132 (0xec3f2923) sw      gp, -302(t5)
+core   0: exception trap_store_access_fault, epc 0x80000132
+core   0:           tval 0x80001000
+core   0: 0x80000100 (0x34202f73) csrr    t5, mcause
+core   0: 3 0x80000100 (0x34202f73) x30 0x00000007
+core   0: 0x80000104 (0x00004fa1) c.li    t6, 8
+core   0: 3 0x80000104 (0x4fa1) x31 0x00000008
+core   0: 0x80000106 (0x03ff0463) beq     t5, t6, pc + 40
+core   0: 3 0x80000106 (0x03ff0463)
+core   0: 0x8000010a (0x00004fa5) c.li    t6, 9
+core   0: 3 0x8000010a (0x4fa5) x31 0x00000009

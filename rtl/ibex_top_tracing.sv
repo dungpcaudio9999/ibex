@@ -14,6 +14,9 @@ module ibex_top_tracing import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
   parameter int unsigned PMPNumRegions             = 4,
   parameter int unsigned MHPMCounterNum            = 0,
   parameter int unsigned MHPMCounterWidth          = 40,
+  parameter pmp_cfg_t     PMPRstCfg[PMP_MAX_REGIONS]  = PmpCfgRst,
+  parameter logic [PMP_ADDR_MSB:0] PMPRstAddr[PMP_MAX_REGIONS] = PmpAddrRst,
+  parameter pmp_mseccfg_t PMPRstMsecCfg             = PmpMseccfgRst,
   parameter bit          RV32E                     = 1'b0,
   parameter rv32m_e      RV32M                     = RV32MFast,
   parameter rv32b_e      RV32B                     = RV32BNone,
@@ -41,7 +44,9 @@ module ibex_top_tracing import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
   parameter int unsigned DmHaltAddr                = 32'h1A110800,
   parameter int unsigned DmExceptionAddr           = 32'h1A110808,
   parameter int unsigned CheriotRevBitmapAddrWidth = 32'd11,
-  parameter int unsigned CheriotRevBitmapBaseAddr  = 32'h0
+  parameter int unsigned CheriotRevBitmapBaseAddr  = 32'h0,
+  parameter logic [31:0] CsrMvendorId              = 32'b0,
+  parameter logic [31:0] CsrMimpId                 = 32'b0
 ) (
   // Clock and Reset
   input  logic                                                         clk_i,
@@ -229,6 +234,9 @@ module ibex_top_tracing import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
     .PMPNumRegions        ( PMPNumRegions        ),
     .MHPMCounterNum       ( MHPMCounterNum       ),
     .MHPMCounterWidth     ( MHPMCounterWidth     ),
+    .PMPRstCfg            ( PMPRstCfg            ),
+    .PMPRstAddr           ( PMPRstAddr           ),
+    .PMPRstMsecCfg        ( PMPRstMsecCfg        ),
     .RV32E                ( RV32E                ),
     .RV32M                ( RV32M                ),
     .RV32B                ( RV32B                ),
@@ -256,7 +264,9 @@ module ibex_top_tracing import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
     .DmHaltAddr                ( DmHaltAddr                ),
     .DmExceptionAddr           ( DmExceptionAddr           ),
     .CheriotRevBitmapAddrWidth ( CheriotRevBitmapAddrWidth ),
-    .CheriotRevBitmapBaseAddr  ( CheriotRevBitmapBaseAddr  )
+    .CheriotRevBitmapBaseAddr  ( CheriotRevBitmapBaseAddr  ),
+    .CsrMvendorId              ( CsrMvendorId              ),
+    .CsrMimpId                 ( CsrMimpId                 )
   ) u_ibex_top (
     .clk_i,
     .rst_ni,

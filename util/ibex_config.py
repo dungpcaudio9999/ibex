@@ -14,6 +14,9 @@ import yaml
 _DEFAULT_CONFIG_FILE = 'ibex_configs.yaml'
 
 
+_PMP_MAX_REGIONS = 16
+
+
 class ConfigException(Exception):
     pass
 
@@ -48,7 +51,22 @@ class Config:
         ('MemECC', bool),
         ('DummyInstructions', bool),
         ('ResetAll', bool),
-        ('DbgHwBreakNum', int)
+        ('DbgHwBreakNum', int),
+        # Packed bits of ibex_pkg::pmp_mseccfg_t {rlb, mmwp, mml}, e.g. rlb=1,
+        # mmwp=1, mml=0 -> 3'b110 -> 6. Memory-map independent, unlike
+        # PMPRstCfg/PMPRstAddr which are not yet configurable via this file
+        # (see rtl/ibex_top_tracing.sv).
+        ('PMPRstMsecCfg', int),
+        # Lists of PMP_MAX_REGIONS (16) ints. PMPRstCfg entries are the packed
+        # bits of ibex_pkg::pmp_cfg_t {lock, mode[1:0], exec, write, read};
+        # PMPRstAddr entries are 34-bit byte-granularity addresses (pmpaddr << 2),
+        # as in ibex_pkg::PmpAddrRst. Passed to the tb through defines
+        # <prefix>PMPRstCfg_<i> / <prefix>PMPRstAddr_<i> since unpacked-array
+        # parameters cannot be set from the simulator command line.
+        ('PMPRstCfg', list),
+        ('PMPRstAddr', list),
+        ('CsrMvendorId', int),
+        ('CsrMimpId', int)
     ]
 
     def __init__(self, yml):
@@ -93,8 +111,12 @@ class Config:
 
         for fld, typ in Config.optional_fields:
             if fld in yml:
-                reader = Config.read_bool if typ is bool else Config.read_int
-                reader(fld, yml)
+                if typ is list:
+                    Config.read_int_list(fld, yml, _PMP_MAX_REGIONS)
+                else:
+                    reader = (Config.read_bool if typ is bool
+                              else Config.read_int)
+                    reader(fld, yml)
 
     @staticmethod
     def read_bool(fld, yml):
@@ -115,6 +137,16 @@ class Config:
         if isinstance(val, int):
             return val
         raise ValueError(f'{fld} value is {val!r}, but we expected an int.')
+
+    @staticmethod
+    def read_int_list(fld, yml, length):
+        val = yml[fld]
+        if (isinstance(val, list) and len(val) == length and
+                all(isinstance(v, int) and not isinstance(v, bool)
+                    for v in val)):
+            return val
+        raise ValueError(f'{fld} value is {val!r}, but we expected a list of '
+                         f'{length} ints.')
 
     @staticmethod
     def read_str(fld, yml):
@@ -149,6 +181,8 @@ class FusesocOpts:
         fields = Config.known_fields + [(fld, typ) for (fld, typ) in Config.optional_fields
                                         if fld in config.params]
         for fld, typ in fields:
+            if typ is list:
+                continue
             val = config.params[fld]
             fusesoc_cmd.append(shlex.quote(f'--{fld}={val}'))
 
@@ -214,7 +248,16 @@ class SimOpts:
         for fld, typ in fields:
             val = config.params[fld]
 
-            if typ is str:
+            if typ is list:
+                for idx, elem in enumerate(val):
+                    # Sized literal: an unsized decimal >= 2**31 is a negative
+                    # 32-bit int in SV and would sign-extend into 34 bits.
+                    elem_str = (f"34'h{elem:x}" if fld == 'PMPRstAddr'
+                                else str(elem))
+                    define_opts = self.define_set_fn(
+                        f'{args.string_define_prefix}{fld}_{idx}', elem_str)
+                    sim_opts += [shlex.quote(arg) for arg in define_opts]
+            elif typ is str:
                 parameter_define = args.string_define_prefix + fld
                 define_opts = self.define_set_fn(parameter_define, val)
                 sim_opts += [shlex.quote(arg) for arg in define_opts]

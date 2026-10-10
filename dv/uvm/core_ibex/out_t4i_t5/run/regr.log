@@ -1,0 +1,66 @@
+100.00% PASS 5 PASSED, 0 FAILED
+riscv_arithmetic_basic_test.1: PASS
+riscv_rand_instr_test.1:       PASS
+riscv_debug_basic_test.1:      PASS
+mcounteren_test.1:             PASS
+mcounteren_lock_test.1:        PASS
+
+
+################################################################################
+# Details of failing tests
+################################################################################
+No failing tests. Nice job!
+
+################################################################################
+# Details of passing tests
+################################################################################
+
+riscv_arithmetic_basic_test.1
+-----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_rand_instr_test.1
+-----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+riscv_debug_basic_test.1
+------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+mcounteren_test.1
+-----------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+
+
+mcounteren_lock_test.1
+----------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[PASSED]
+

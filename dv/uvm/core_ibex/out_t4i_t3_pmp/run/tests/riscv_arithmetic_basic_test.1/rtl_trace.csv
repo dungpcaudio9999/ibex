@@ -1,0 +1,2 @@
+pc,instr,gpr,csr,binary,mode,instr_str,operand,pad
+80000080,-->lui,,,40001537,,"-->lui	x0,0x40001","zero,0x40001",

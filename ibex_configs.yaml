@@ -161,6 +161,147 @@ fx1_secure_prod:
   ResetAll                 : 0
   DbgHwBreakNum            : 2
 
+# FX1 secure CPU exactly as chốt trong doc/info/FTEL_FX1_Secure_CPU.xlsx, sheet
+# FX1-Config2, cột "Final FX1" (2026-09-28). Khác các profile fx1_secure_* ở trên:
+# - BaseIsa: RV32I thuần (bỏ hẳn CHERIoT, không chỉ tắt bằng cấu hình runtime).
+# - RV32ZC: giữ Zca+Zcb (bỏ Zcmp để dành chỗ cho phần cứng tăng tốc crypto).
+# - MemECC = 1 (đóng finding FX1-H2 trong 20_fx1_findings.md — bus integrity bật lại).
+# - DbgHwBreakNum = 4 (khớp OpenTitan/core DV thay vì rút xuống 2).
+# - ResetAll/DummyInstructions không bị ghi đè -> mặc định theo SecureIbex = 1
+#   (khác fx1_secure_dev vốn tắt hai cái này để cô lập lỗi X-prop).
+# - PMPRstMsecCfg CHƯA bật ở đây. Final FX1 muốn rlb=1,mmwp=1,mml=0 (mã hoá 6,
+#   xem util/ibex_config.py) nhưng mmwp=1 (default-deny) chỉ an toàn nếu
+#   PMPRstCfg/PMPRstAddr có entry ROM/MMIO permissive cấu hình CÙNG LÚC — đã
+#   kiểm chứng bằng simulation: bật mmwp=1 một mình (PMPRstCfg vẫn "tất cả OFF"
+#   vì chưa có memory map) khiến M-mode bị chặn truy cập mọi vùng nhớ ngay từ
+#   reset → cosim mismatch ngay lệnh đầu (xem 20_fx1_findings.md mục 9).
+# Các tham số PMPRstCfg/PMPRstAddr (ROM/MMIO NAPOT/TOR) và CsrMvendorId/CsrMimpId
+# CHƯA có giá trị ở đây: chúng phụ thuộc memory map thật của FX1 SoC, hiện chưa tồn
+# tại trong repo (sheet Ref-MemoryMap chỉ có tham chiếu Simple System/OpenTitan Earl
+# Grey). Plumbing đã sẵn sàng ở rtl/ibex_top_tracing.sv + tb/core_ibex_tb_top.sv;
+# CsrMvendorId/CsrMimpId/PMPRstMsecCfg override được qua field optional bên dưới
+# một khi có giá trị (PMPRstMsecCfg phải đi kèm PMPRstCfg/PMPRstAddr thật).
+fx1_secure:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32I"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MFast"
+  RV32B                    : "ibex_pkg::RV32BNone"
+  RV32ZC                   : "ibex_pkg::RV32ZcaZcb"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 0
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 1
+  SecureIbex               : 1
+  PMPEnable                : 1
+  PMPGranularity           : 0
+  PMPNumRegions            : 16
+  MHPMCounterNum           : 2
+  MHPMCounterWidth         : 32
+  MemECC                   : 1
+  DbgHwBreakNum            : 4
+
+# fx1_secure + PMP reset đầy đủ (cột "Final FX1": ROM LRX NAPOT, MMIO LRW TOR,
+# rlb=1 mmwp=1 mml=0) — dùng cho test bring-up trong Ibex core DV, xem
+# doc/test4integrate/PLAN.md. Cấu trúc entry giống ibex_pmp_reset_pkg của
+# OpenTitan Earl Grey (bỏ entry DV_ROM), nhưng ĐỊA CHỈ trỏ vào memory map của
+# core DV (code/data @0x8000_0000, signature @0x8ffffffc), không phải map Earl Grey.
+# PMPRstCfg = bit packed {lock, mode[1:0], exec, write, read}; PMPRstAddr = byte
+# address (pmpaddr << 2), 16 phần tử.
+#   rgn 2  : 0x8000_0000, 2 KiB, NAPOT, L R X    (cfg 61)  "ROM"  (vector + startup)
+#   rgn 10 : TOR low  = 0x8FFF_0000                          (cfg 0)
+#   rgn 11 : TOR high = 0x9000_0000, L R W       (cfg 43)  "MMIO" (vùng signature)
+#   rgn 12 : 0x8000_0000, 256 MiB, NAPOT, R W X, KHÔNG lock (cfg 31)
+#            -> chỉ tồn tại để M-mode không bị mmwp chặn ở phần RAM còn lại của DV
+#               (riscv-dv đặt code và data trong cùng một RAM). KHÔNG có trong Final;
+#               là ngoại lệ chỉ của DV, entry không khóa nên chỉ áp cho U/S-mode.
+# CsrMvendorId/CsrMimpId CHƯA đặt (=0): Spike cosim cố định mvendorid/mimpid = 0, đặt giá trị
+# khác làm riscv_rand_instr_test (csrrci mimpid) fail cosim 'Register write data mismatch'.
+# Khi có giá trị thật phải cấu hình tương ứng phía Spike.
+fx1_secure_pmp:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32I"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MFast"
+  RV32B                    : "ibex_pkg::RV32BNone"
+  RV32ZC                   : "ibex_pkg::RV32ZcaZcb"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 0
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 1
+  SecureIbex               : 1
+  PMPEnable                : 1
+  PMPGranularity           : 0
+  PMPNumRegions            : 16
+  MHPMCounterNum           : 2
+  MHPMCounterWidth         : 32
+  MemECC                   : 1
+  DbgHwBreakNum            : 4
+  PMPRstMsecCfg            : 6
+  PMPRstCfg                : [0, 0, 61, 0, 0, 0, 0, 0, 0, 0, 0, 43, 31, 0, 0, 0]
+  PMPRstAddr               : [0, 0, 0x800003FC, 0, 0, 0, 0, 0, 0, 0, 0x8FFF0000, 0x90000000, 0x87FFFFFC, 0, 0, 0]
+
+# Test âm của doc/test4integrate/PLAN.md (T3-neg): giống fx1_secure_pmp nhưng bỏ rgn 12 (RAM RWX).
+# Với mmwp=1, M-mode truy cập RAM ngoài rgn 2/11 PHẢI bị chặn -> test phải FAIL.
+fx1_secure_pmp_neg:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32I"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MFast"
+  RV32B                    : "ibex_pkg::RV32BNone"
+  RV32ZC                   : "ibex_pkg::RV32ZcaZcb"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 0
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 1
+  SecureIbex               : 1
+  PMPEnable                : 1
+  PMPGranularity           : 0
+  PMPNumRegions            : 16
+  MHPMCounterNum           : 2
+  MHPMCounterWidth         : 32
+  MemECC                   : 1
+  DbgHwBreakNum            : 4
+  PMPRstMsecCfg            : 6
+  PMPRstCfg                : [0, 0, 61, 0, 0, 0, 0, 0, 0, 0, 0, 43, 0, 0, 0, 0]
+  PMPRstAddr               : [0, 0, 0x800003FC, 0, 0, 0, 0, 0, 0, 0, 0x8FFF0000, 0x90000000, 0x87FFFFFC, 0, 0, 0]
+
+# T2 của doc/test4integrate/PLAN.md: giống fx1_secure_pmp nhưng mmwp=0 (rlb=1 mmwp=0 mml=0 -> 4)
+fx1_secure_pmp_nommwp:
+  BaseIsa                  : "ibex_pkg::BaseIsaRV32I"
+  RV32E                    : 0
+  RV32M                    : "ibex_pkg::RV32MFast"
+  RV32B                    : "ibex_pkg::RV32BNone"
+  RV32ZC                   : "ibex_pkg::RV32ZcaZcb"
+  RegFile                  : "ibex_pkg::RegFileFF"
+  BranchTargetALU          : 1
+  WritebackStage           : 1
+  ICache                   : 0
+  ICacheECC                : 0
+  ICacheScramble           : 0
+  BranchPredictor          : 0
+  DbgTriggerEn             : 1
+  SecureIbex               : 1
+  PMPEnable                : 1
+  PMPGranularity           : 0
+  PMPNumRegions            : 16
+  MHPMCounterNum           : 2
+  MHPMCounterWidth         : 32
+  MemECC                   : 1
+  DbgHwBreakNum            : 4
+  PMPRstMsecCfg            : 4
+  PMPRstCfg                : [0, 0, 61, 0, 0, 0, 0, 0, 0, 0, 0, 43, 31, 0, 0, 0]
+  PMPRstAddr               : [0, 0, 0x800003FC, 0, 0, 0, 0, 0, 0, 0, 0x8FFF0000, 0x90000000, 0x87FFFFFC, 0, 0, 0]
+
 # Three-stage pipeline with additional branch traget ALU and 1 cycle multiplier
 # (2 cycles for mulh) so mul does not stall (mulh stall 1 cycles). This is the
 # maximum performance configuration ignoring the branch predictor (which isn't

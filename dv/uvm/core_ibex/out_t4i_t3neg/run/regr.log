@@ -1,0 +1,35 @@
+0.00% PASS 0 PASSED, 1 FAILED
+riscv_arithmetic_basic_test.1: FAILED
+
+
+################################################################################
+# Details of failing tests
+################################################################################
+
+riscv_arithmetic_basic_test.1
+-----------------------------
+binary:          test.bin
+rtl_log:         rtl_sim_stdstreams.log
+rtl_trace:       trace_core_00000000.log
+iss_cosim_trace: spike_cosim_trace_core_00000000.log
+
+[FAILED]: error seen in 'rtl_sim_stdstreams.log'
+---------------*LOG-EXTRACT*----------------
+    30: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_base_test.sv(368) @ 202400: uvm_test_top [uvm_test_top] Test wall-clock timeout is set to : 1800s
+    31: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.instr_if_response_agent.sequencer@@instr_intf_seq [uvm_test_top.env.instr_if_response_agent.sequencer.instr_intf_seq] is_dmem_seq: 0x0
+    32: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv(44) @ 202400: uvm_test_top.env.data_if_response_agent.sequencer@@data_intf_seq [uvm_test_top.env.data_if_response_agent.sequencer.data_intf_seq] is_dmem_seq: 0x1
+    33: UVM_INFO /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv(64) @ 202400: reporter@@fetch_enable_seq_h [fetch_enable_seq_h] Running the "InfiniteRuns" schedule for stimulus generation
+    34: core_ibex_tb_top.dut.u_ibex_tracer.unnamed$$_1.unnamed$$_2: Writing execution trace to /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/out_t4i_t3neg/run/tests/riscv_arithmetic_basic_test.1/trace_core_00000000.log
+[E] 35: UVM_FATAL /home/dungpc/projects/cpu_fx1/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv(172) @ 738400: uvm_test_top.env.cosim_agent.scoreboard [uvm_test_top.env.cosim_agent.scoreboard] Cosim mismatch DUT didn't write to register x2, but a write was expected
+    36: 
+    37: 
+    38: --- RISC-V UVM TEST FAILED ---
+    39: 
+--------------------------------------------
+
+
+
+################################################################################
+# Details of passing tests
+################################################################################
+No passing tests. Hmmmm...
